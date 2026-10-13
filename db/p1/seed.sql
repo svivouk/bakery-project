@@ -52,7 +52,7 @@ INSERT INTO dbo.Products
 GO
 
 INSERT INTO dbo.ProductRatings (ProductId, AvgRating, ReviewCount, RatingVersion) VALUES
-    ('b0000000-0000-4000-8000-000000000001', 4.33, 12, 12);
+    ('a0000000-0000-4000-8000-000000000001', 4.33, 12, 12);
 GO
 
 /* ---------- Варіанти та залишки -------------------------------------- */

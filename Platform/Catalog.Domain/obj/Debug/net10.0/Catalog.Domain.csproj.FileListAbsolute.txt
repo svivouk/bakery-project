@@ -1,0 +1,14 @@
+C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Catalog.Domain\bin\Debug\net10.0\Catalog.Domain.deps.json
+C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Catalog.Domain\bin\Debug\net10.0\Catalog.Domain.dll
+C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Catalog.Domain\bin\Debug\net10.0\Catalog.Domain.pdb
+C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Catalog.Domain\obj\Debug\net10.0\Catalog.Domain.csproj.AssemblyReference.cache
+C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Catalog.Domain\obj\Debug\net10.0\Catalog.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Catalog.Domain\obj\Debug\net10.0\Catalog.Domain.AssemblyInfoInputs.cache
+C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Catalog.Domain\obj\Debug\net10.0\Catalog.Domain.AssemblyInfo.cs
+C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Catalog.Domain\obj\Debug\net10.0\Catalog.Domain.csproj.CoreCompileInputs.cache
+C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Catalog.Domain\obj\Debug\net10.0\Catalog.Domain.sourcelink.json
+C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Catalog.Domain\obj\Debug\net10.0\Catalog.Domain.dll
+C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Catalog.Domain\obj\Debug\net10.0\refint\Catalog.Domain.dll
+C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Catalog.Domain\obj\Debug\net10.0\Catalog.Domain.pdb
+C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Catalog.Domain\obj\Debug\net10.0\ref\Catalog.Domain.dll
+C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Catalog.Domain\obj\Debug\net10.0\Catalog..A0AFAC00.Up2Date

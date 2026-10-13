@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "nQvCog/HuCI=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\krnkr\\OneDrive\\Рабочий стол\\bakery-project\\Platform\\Catalog.Domain\\Catalog.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\krnkr\\.nuget\\packages\\dapper\\2.1.89\\dapper.2.1.89.nupkg.sha512"
+  ],
+  "logs": []
+}

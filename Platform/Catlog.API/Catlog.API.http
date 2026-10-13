@@ -1,0 +1,6 @@
+@Catlog.API_HostAddress = http://localhost:5065
+
+GET {{Catlog.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

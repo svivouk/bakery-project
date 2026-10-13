@@ -1,0 +1,10 @@
+<Solution>
+  <Folder Name="/Services/" />
+  <Folder Name="/Services/Catalog/">
+    <Project Path="Catalog.Domain/Catalog.Domain.csproj" Id="e19452c7-9411-4490-beff-6177da51eaf0" />
+    <Project Path="Catlog.API/Catalog.API.csproj" />
+    <Project Path="Catlog.BLL/Catalog.BLL.csproj" />
+    <Project Path="Catlog.DAL/Catalog.DAL.csproj" />
+  </Folder>
+  <Project Path="Playform.AppHost/Platform.AppHost.csproj" Id="681b2cc7-46c9-4d6d-ae94-00035bf05053" />
+</Solution>
