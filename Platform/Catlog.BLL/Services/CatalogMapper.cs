@@ -4,7 +4,7 @@ using Catalog.Domain.Models;
 
 namespace Catalog.Bll.Services;
 
-/// <summary>Ручний мапінг модель → DTO (без AutoMapper: кілька сутностей, прозорий код).</summary>
+///  Ручний мапінг модель → DTO (без AutoMapper: кілька сутностей, прозорий код). 
 internal static class CatalogMapper
 {
     public static CategoryDto ToDto(this Category c) =>

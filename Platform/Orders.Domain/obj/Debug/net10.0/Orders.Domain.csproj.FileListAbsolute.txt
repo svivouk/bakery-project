@@ -1,0 +1,13 @@
+C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Orders.Domain\obj\Debug\net10.0\Orders.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Orders.Domain\obj\Debug\net10.0\Orders.Domain.AssemblyInfoInputs.cache
+C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Orders.Domain\obj\Debug\net10.0\Orders.Domain.AssemblyInfo.cs
+C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Orders.Domain\obj\Debug\net10.0\Orders.Domain.csproj.CoreCompileInputs.cache
+C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Orders.Domain\obj\Debug\net10.0\Orders.Domain.sourcelink.json
+C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Orders.Domain\bin\Debug\net10.0\Orders.Domain.deps.json
+C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Orders.Domain\bin\Debug\net10.0\Orders.Domain.dll
+C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Orders.Domain\bin\Debug\net10.0\Orders.Domain.pdb
+C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Orders.Domain\obj\Debug\net10.0\Orders.Domain.dll
+C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Orders.Domain\obj\Debug\net10.0\refint\Orders.Domain.dll
+C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Orders.Domain\obj\Debug\net10.0\Orders.Domain.pdb
+C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Orders.Domain\obj\Debug\net10.0\ref\Orders.Domain.dll
+C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Orders.Domain\obj\Debug\net10.0\Orders.Domain.csproj.AssemblyReference.cache

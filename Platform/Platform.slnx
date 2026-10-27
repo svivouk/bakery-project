@@ -6,5 +6,11 @@
     <Project Path="Catlog.BLL/Catalog.BLL.csproj" />
     <Project Path="Catlog.DAL/Catalog.DAL.csproj" />
   </Folder>
+  <Folder Name="/Services/Orders/">
+    <Project Path="Orders.Api/Orders.Api.csproj" />
+    <Project Path="Orders.Bll/Orders.Bll.csproj" Id="15b07bda-3828-4257-b460-f0484c52af81" />
+    <Project Path="Orders.Dal/Orders.Dal.csproj" Id="f05ab44e-3074-4447-9dc6-6a5c924e268d" />
+    <Project Path="Orders.Domain/Orders.Domain.csproj" Id="5bbcea99-a09c-413c-a44e-f658bb64a100" />
+  </Folder>
   <Project Path="Playform.AppHost/Platform.AppHost.csproj" Id="681b2cc7-46c9-4d6d-ae94-00035bf05053" />
 </Solution>

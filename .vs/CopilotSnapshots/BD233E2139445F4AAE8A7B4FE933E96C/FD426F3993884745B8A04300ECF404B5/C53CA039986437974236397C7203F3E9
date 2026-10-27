@@ -1,0 +1,92 @@
+﻿using OOrders.Domain;
+
+namespace Orders.Domain.Orders;
+
+/// Доставка або самовивіз для замовлення (1:1, спільний ключ OrderId).
+/// Створюється фабриками <see cref="Pickup"/> / <see cref="ToAddress"/> і передається в конструктор замовлення.
+public sealed class Delivery
+{
+    public const int CityMaxLength = 100;
+    public const int StreetMaxLength = 150;
+    public const int BuildingMaxLength = 20;
+    public const int ApartmentMaxLength = 20;
+    public const int AddressNoteMaxLength = 200;
+    public const int CourierNameMaxLength = 150;
+    public const int CourierPhoneMaxLength = 20;
+
+    private Delivery() { } // для EF Core
+
+    private Delivery(DeliveryType type)
+    {
+        Type = type;
+        Status = DeliveryStatus.Pending;
+    }
+
+    public static Delivery Pickup() => new(DeliveryType.Pickup);
+
+    public static Delivery ToAddress(string city, string street, string building,
+        string? apartment = null, string? addressNote = null)
+        => new(DeliveryType.Delivery)
+        {
+            City = Guard.Required(city, "Місто", CityMaxLength),
+            Street = Guard.Required(street, "Вулиця", StreetMaxLength),
+            Building = Guard.Required(building, "Будинок", BuildingMaxLength),
+            Apartment = Guard.Optional(apartment, "Квартира", ApartmentMaxLength),
+            AddressNote = Guard.Optional(addressNote, "Примітка до адреси", AddressNoteMaxLength)
+        };
+
+    public Guid OrderId { get; private set; }
+
+    public DeliveryType Type { get; private set; }
+    public DeliveryStatus Status { get; private set; }
+    public string? City { get; private set; }
+    public string? Street { get; private set; }
+    public string? Building { get; private set; }
+    public string? Apartment { get; private set; }
+    public string? AddressNote { get; private set; }
+    public string? CourierName { get; private set; }
+    public string? CourierPhone { get; private set; }
+    public DateTime? DeliveredAt { get; private set; }
+
+    public void AssignCourier(string name, string phone)
+    {
+        if (Type != DeliveryType.Delivery)
+            throw new DomainException("Кур'єра можна призначити лише на доставку.");
+        Require(DeliveryStatus.Pending, DeliveryStatus.Assigned);
+        CourierName = Guard.Required(name, "Ім'я кур'єра", CourierNameMaxLength);
+        CourierPhone = Guard.Phone(phone, "Телефон кур'єра");
+        Status = DeliveryStatus.Assigned;
+    }
+
+    public void MarkOutForDelivery()
+    {
+        Require(DeliveryStatus.Assigned);
+        Status = DeliveryStatus.OutForDelivery;
+    }
+
+    public void MarkDelivered(DateTime utcNow)
+    {
+        if (Type == DeliveryType.Pickup) Require(DeliveryStatus.Pending);
+        else Require(DeliveryStatus.OutForDelivery);
+        Status = DeliveryStatus.Delivered;
+        DeliveredAt = utcNow;
+    }
+
+    public void MarkFailed()
+    {
+        Require(DeliveryStatus.OutForDelivery);
+        Status = DeliveryStatus.Failed;
+    }
+
+    public void Cancel()
+    {
+        Require(DeliveryStatus.Pending, DeliveryStatus.Assigned);
+        Status = DeliveryStatus.Cancelled;
+    }
+
+    private void Require(params DeliveryStatus[] allowed)
+    {
+        if (!allowed.Contains(Status))
+            throw new DomainException($"Дію не можна виконати для доставки у статусі {Status}.");
+    }
+}

@@ -93,10 +93,10 @@ public sealed class ReferenceController : ControllerBase
         Ok(await _products.GetAllergensAsync(ct));
 }
 
-/// <summary>
+///  
 /// HTTP-вхід для Inbox: імітує споживача RatingSummaryChanged з контексту «Відгуки».
 /// У реальній системі це був би обробник повідомлень брокера, що викликає той самий сервіс.
-/// </summary>
+///  
 [ApiController]
 [Route("api/events")]
 public sealed class InboxController : ControllerBase

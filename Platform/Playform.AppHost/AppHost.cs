@@ -12,4 +12,6 @@ builder.AddProject<Projects.Catalog_API>("catalog-api")
        .WithReference(catalogDb)
        .WaitFor(catalogDb);
 
+builder.AddProject<Projects.Orders_Api>("orders-api");
+
 builder.Build().Run();

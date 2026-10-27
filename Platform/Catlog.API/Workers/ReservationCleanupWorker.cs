@@ -2,11 +2,11 @@ using Catalog.Bll.Interfaces;
 
 namespace Catalog.Api.Workers;
 
-/// <summary>
+///  
 /// Раз на хвилину повертає на склад прострочені резервації (usp_Stock_ReleaseExpired).
 /// Операція ідемпотентна, тому безпечна при кількох інстансах і перезапусках.
 /// Щоденне скидання норми сюди свідомо не входить: його запускають ззовні (POST /api/stock/maintenance/reset-daily).
-/// </summary>
+///  
 public sealed class ReservationCleanupWorker : BackgroundService
 {
     private readonly IServiceScopeFactory _scopes;

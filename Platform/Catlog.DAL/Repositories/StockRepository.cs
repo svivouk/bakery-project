@@ -7,10 +7,10 @@ using Microsoft.Data.SqlClient;
 
 namespace Catalog.Dal.Repositories;
 
-/// <summary>
+///  
 /// Залишки. Рядок StockItems змінюється з кожним замовленням, тому всі зміни — атомарні UPDATE з умовою
 /// всередині збережених процедур; жодного «прочитав → змінив → записав» у C#.
-/// </summary>
+///  
 public sealed class StockRepository : BaseDapperRepository<StockItem>, IStockRepository
 {
     public StockRepository(SqlConnection connection, Func<SqlTransaction?> currentTransaction)

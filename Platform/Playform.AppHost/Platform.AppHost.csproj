@@ -1,4 +1,4 @@
-<Project Sdk="Aspire.AppHost.Sdk/13.6.1">
+﻿<Project Sdk="Aspire.AppHost.Sdk/13.6.1">
 
 	<PropertyGroup>
 		<OutputType>Exe</OutputType>
@@ -15,6 +15,7 @@
 
 	<ItemGroup>
 		<ProjectReference Include="..\Catlog.API\Catalog.API.csproj" />
+		<ProjectReference Include="..\Orders.Api\Orders.Api.csproj" />
 	</ItemGroup>
 
 </Project>

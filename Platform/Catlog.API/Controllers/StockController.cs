@@ -19,7 +19,7 @@ public sealed class StockController : ControllerBase
     public async Task<ActionResult<StockDto>> Adjust(Guid variantId, AdjustStockRequest request, CancellationToken ct) =>
         Ok(await _stock.AdjustAsync(variantId, request, ct));
 
-    /// <summary>Атомарно резервує всі позиції замовлення (все або нічого). 409, якщо залишку не вистачає.</summary>
+    ///  Атомарно резервує всі позиції замовлення (все або нічого). 409, якщо залишку не вистачає. 
     [HttpPost("reservations")]
     public async Task<ActionResult<ReservationDto>> Reserve(ReserveRequest request, CancellationToken ct) =>
         Ok(await _stock.ReserveAsync(request, ct));

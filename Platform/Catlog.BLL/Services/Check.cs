@@ -28,7 +28,7 @@ internal static partial class Check
         return trimmed;
     }
 
-    /// <summary>Slug: лише a-z, 0-9 і дефіс (CK_*_Slug).</summary>
+    ///  Slug: лише a-z, 0-9 і дефіс (CK_*_Slug). 
     public static string Slug(string? value, string field, int maxLength)
     {
         var slug = Text(value, field, maxLength);

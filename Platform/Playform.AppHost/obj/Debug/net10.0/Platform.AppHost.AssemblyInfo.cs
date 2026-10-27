@@ -12,19 +12,14 @@ using System;
 using System.Reflection;
 
 [assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("ccafa016-31a0-4f1e-8d76-490e365275ad")]
-[assembly: System.Reflection.AssemblyMetadata("dcpclipath", "C:\\Users\\krnkr\\.aspire\\bundle\\dcp\\dcp.exe")]
-[assembly: System.Reflection.AssemblyMetadata("dcpextensionpaths", "C:\\Users\\krnkr\\.aspire\\bundle\\dcp\\ext\\")]
 [assembly: System.Reflection.AssemblyMetadata("apphostprojectpath", "C:\\Users\\krnkr\\OneDrive\\Рабочий стол\\bakery-project\\Platform\\Playform.AppHost")]
 [assembly: System.Reflection.AssemblyMetadata("apphostprojectname", "Platform.AppHost.csproj")]
-[assembly: System.Reflection.AssemblyMetadata("aspiredashboardpath", "C:\\Users\\krnkr\\.aspire\\bundle\\dashboard\\Aspire.Dashboard.exe")]
-[assembly: System.Reflection.AssemblyMetadata("aspireterminalhostpath", "C:\\Users\\krnkr\\.aspire\\bundle\\managed\\aspire-managed.exe")]
-[assembly: System.Reflection.AssemblyMetadata("aspireterminalhostinvocationargs", "terminalhost")]
 [assembly: System.Reflection.AssemblyMetadataAttribute("apphostprojectbaseintermediateoutputpath", "C:\\Users\\krnkr\\OneDrive\\Рабочий стол\\bakery-project\\Platform\\Playform.AppHost\\obj" +
     "\\")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("Platform.AppHost")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c9ce7cb5ff96c2fca0b772e433ab724428467a00")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4cbee87bb7c4b9eea449679091e6b2edc1e152ca")]
 [assembly: System.Reflection.AssemblyProductAttribute("Platform.AppHost")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Platform.AppHost")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
