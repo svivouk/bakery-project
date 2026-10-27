@@ -90,8 +90,7 @@
               "RelativeToolTip": "Orders.Api\\Controllers\\OrdersController.cs",
               "ViewState": "AgIAAA4AAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-27T06:55:33.925Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-27T06:55:33.925Z"
             },
             {
               "$type": "Document",
@@ -103,8 +102,7 @@
               "RelativeToolTip": "Orders.Api\\Program.cs",
               "ViewState": "AgIAAB0AAAAAAAAAAAAlwDEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-27T06:53:42.715Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-27T06:53:42.715Z"
             },
             {
               "$type": "Document",
@@ -116,8 +114,7 @@
               "RelativeToolTip": "Orders.Api\\ServiceCollectionExtensions.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-27T06:04:58.791Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-27T06:04:58.791Z"
             },
             {
               "$type": "Document",
@@ -142,8 +139,7 @@
               "RelativeToolTip": "Orders.Bll\\Validators\\ChangeOrderStatusRequestValidator.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-27T06:03:27.999Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-27T06:03:27.999Z"
             },
             {
               "$type": "Document",
@@ -155,8 +151,7 @@
               "RelativeToolTip": "Orders.Bll\\Validators\\CreatePromoCodeRequestValidator.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAwwBQAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-27T06:02:33.245Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-27T06:02:33.245Z"
             },
             {
               "$type": "Document",
@@ -168,8 +163,7 @@
               "RelativeToolTip": "Orders.Bll\\Validators\\PlaceOrderRequestValidator.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-27T06:01:41.891Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-27T06:01:41.891Z"
             },
             {
               "$type": "Document",
@@ -181,8 +175,7 @@
               "RelativeToolTip": "Orders.Bll\\Validators\\RefundRequestValidator.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-27T06:00:37.248Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-27T06:00:37.248Z"
             },
             {
               "$type": "Document",
@@ -194,8 +187,7 @@
               "RelativeToolTip": "Orders.Bll\\Validators\\ValidationRules.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-27T05:59:16.72Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-27T05:59:16.72Z"
             },
             {
               "$type": "Document",
@@ -207,8 +199,7 @@
               "RelativeToolTip": "Orders.Bll\\Validation\\OrderValidation.cs",
               "ViewState": "AgIAABMAAAAAAAAAAAAQwBgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-27T05:48:24.296Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-27T05:48:24.296Z"
             },
             {
               "$type": "Document",
@@ -220,8 +211,7 @@
               "RelativeToolTip": "Orders.Bll\\Validation\\PromoCodeValidator.cs",
               "ViewState": "AgIAACUAAAAAAAAAAAAQwDUAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-27T05:55:21.981Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-27T05:55:21.981Z"
             },
             {
               "$type": "Document",
@@ -233,8 +223,7 @@
               "RelativeToolTip": "Orders.Bll\\Validation\\PaymentValidator.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-27T05:54:56.034Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-27T05:54:56.034Z"
             },
             {
               "$type": "Document",
@@ -246,8 +235,7 @@
               "RelativeToolTip": "Orders.Bll\\Validation\\PagedQueryValidator.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-27T05:54:24.643Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-27T05:54:24.643Z"
             },
             {
               "$type": "Document",
@@ -259,8 +247,7 @@
               "RelativeToolTip": "Orders.Bll\\Dtos\\PaymentDtos.cs",
               "ViewState": "AgIAACQAAAAAAAAAAAAiwCMAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-27T05:47:16.608Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-27T05:47:16.608Z"
             },
             {
               "$type": "Document",
@@ -272,8 +259,7 @@
               "RelativeToolTip": "Orders.Bll\\Dtos\\OrderDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-27T05:44:43.868Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-27T05:44:43.868Z"
             },
             {
               "$type": "Document",
@@ -285,8 +271,7 @@
               "RelativeToolTip": "Orders.Bll\\Mapping\\OrdersMappingProfile.cs",
               "ViewState": "AgIAAAoAAAAAAAAAAAAzwBUAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-27T05:43:15.119Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-27T05:43:15.119Z"
             },
             {
               "$type": "Document",
@@ -298,8 +283,7 @@
               "RelativeToolTip": "Orders.Bll\\Dtos\\Paging.cs",
               "ViewState": "AgIAABwAAAAAAAAAAAAqwCUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-27T05:39:51.912Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-27T05:39:51.912Z"
             }
           ]
         }

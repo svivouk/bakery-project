@@ -3,6 +3,42 @@
   "WorkspaceRootPath": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{15B07BDA-3828-4257-B460-F0484C52AF81}|Orders.Bll\\Orders.Bll.csproj|c:\\users\\krnkr\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\platform\\orders.bll\\validators\\changediscountrequestvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15B07BDA-3828-4257-B460-F0484C52AF81}|Orders.Bll\\Orders.Bll.csproj|solutionrelative:orders.bll\\validators\\changediscountrequestvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15B07BDA-3828-4257-B460-F0484C52AF81}|Orders.Bll\\Orders.Bll.csproj|c:\\users\\krnkr\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\platform\\orders.bll\\validators\\changeorderstatusrequestvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15B07BDA-3828-4257-B460-F0484C52AF81}|Orders.Bll\\Orders.Bll.csproj|solutionrelative:orders.bll\\validators\\changeorderstatusrequestvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FDB36138-4173-FEDA-D601-7755DA2C2484}|Orders.Api\\Orders.Api.csproj|c:\\users\\krnkr\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\platform\\orders.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FDB36138-4173-FEDA-D601-7755DA2C2484}|Orders.Api\\Orders.Api.csproj|solutionrelative:orders.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FDB36138-4173-FEDA-D601-7755DA2C2484}|Orders.Api\\Orders.Api.csproj|c:\\users\\krnkr\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\platform\\orders.api\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FDB36138-4173-FEDA-D601-7755DA2C2484}|Orders.Api\\Orders.Api.csproj|solutionrelative:orders.api\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FDB36138-4173-FEDA-D601-7755DA2C2484}|Orders.Api\\Orders.Api.csproj|c:\\users\\krnkr\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\platform\\orders.api\\servicecollectionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FDB36138-4173-FEDA-D601-7755DA2C2484}|Orders.Api\\Orders.Api.csproj|solutionrelative:orders.api\\servicecollectionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15B07BDA-3828-4257-B460-F0484C52AF81}|Orders.Bll\\Orders.Bll.csproj|c:\\users\\krnkr\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\platform\\orders.bll\\validators\\createpromocoderequestvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15B07BDA-3828-4257-B460-F0484C52AF81}|Orders.Bll\\Orders.Bll.csproj|solutionrelative:orders.bll\\validators\\createpromocoderequestvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15B07BDA-3828-4257-B460-F0484C52AF81}|Orders.Bll\\Orders.Bll.csproj|c:\\users\\krnkr\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\platform\\orders.bll\\validators\\placeorderrequestvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15B07BDA-3828-4257-B460-F0484C52AF81}|Orders.Bll\\Orders.Bll.csproj|solutionrelative:orders.bll\\validators\\placeorderrequestvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15B07BDA-3828-4257-B460-F0484C52AF81}|Orders.Bll\\Orders.Bll.csproj|c:\\users\\krnkr\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\platform\\orders.bll\\validators\\refundrequestvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15B07BDA-3828-4257-B460-F0484C52AF81}|Orders.Bll\\Orders.Bll.csproj|solutionrelative:orders.bll\\validators\\refundrequestvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15B07BDA-3828-4257-B460-F0484C52AF81}|Orders.Bll\\Orders.Bll.csproj|c:\\users\\krnkr\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\platform\\orders.bll\\validators\\validationrules.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15B07BDA-3828-4257-B460-F0484C52AF81}|Orders.Bll\\Orders.Bll.csproj|solutionrelative:orders.bll\\validators\\validationrules.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{15B07BDA-3828-4257-B460-F0484C52AF81}|Orders.Bll\\Orders.Bll.csproj|c:\\users\\krnkr\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\platform\\orders.bll\\validation\\ordervalidation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{15B07BDA-3828-4257-B460-F0484C52AF81}|Orders.Bll\\Orders.Bll.csproj|solutionrelative:orders.bll\\validation\\ordervalidation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -42,11 +78,128 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "OrdersController.cs",
+              "DocumentMoniker": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Orders.Api\\Controllers\\OrdersController.cs",
+              "RelativeDocumentMoniker": "Orders.Api\\Controllers\\OrdersController.cs",
+              "ToolTip": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Orders.Api\\Controllers\\OrdersController.cs",
+              "RelativeToolTip": "Orders.Api\\Controllers\\OrdersController.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-27T06:55:33.925Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Orders.Api\\Program.cs",
+              "RelativeDocumentMoniker": "Orders.Api\\Program.cs",
+              "ToolTip": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Orders.Api\\Program.cs",
+              "RelativeToolTip": "Orders.Api\\Program.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAlwDEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-27T06:53:42.715Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ServiceCollectionExtensions.cs",
+              "DocumentMoniker": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Orders.Api\\ServiceCollectionExtensions.cs",
+              "RelativeDocumentMoniker": "Orders.Api\\ServiceCollectionExtensions.cs",
+              "ToolTip": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Orders.Api\\ServiceCollectionExtensions.cs",
+              "RelativeToolTip": "Orders.Api\\ServiceCollectionExtensions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-27T06:04:58.791Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "ChangeDiscountRequestValidator.cs",
+              "DocumentMoniker": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Orders.Bll\\Validators\\ChangeDiscountRequestValidator.cs",
+              "RelativeDocumentMoniker": "Orders.Bll\\Validators\\ChangeDiscountRequestValidator.cs",
+              "ToolTip": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Orders.Bll\\Validators\\ChangeDiscountRequestValidator.cs",
+              "RelativeToolTip": "Orders.Bll\\Validators\\ChangeDiscountRequestValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-27T06:04:00.26Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ChangeOrderStatusRequestValidator.cs",
+              "DocumentMoniker": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Orders.Bll\\Validators\\ChangeOrderStatusRequestValidator.cs",
+              "RelativeDocumentMoniker": "Orders.Bll\\Validators\\ChangeOrderStatusRequestValidator.cs",
+              "ToolTip": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Orders.Bll\\Validators\\ChangeOrderStatusRequestValidator.cs",
+              "RelativeToolTip": "Orders.Bll\\Validators\\ChangeOrderStatusRequestValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-27T06:03:27.999Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CreatePromoCodeRequestValidator.cs",
+              "DocumentMoniker": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Orders.Bll\\Validators\\CreatePromoCodeRequestValidator.cs",
+              "RelativeDocumentMoniker": "Orders.Bll\\Validators\\CreatePromoCodeRequestValidator.cs",
+              "ToolTip": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Orders.Bll\\Validators\\CreatePromoCodeRequestValidator.cs",
+              "RelativeToolTip": "Orders.Bll\\Validators\\CreatePromoCodeRequestValidator.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAwwBQAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-27T06:02:33.245Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "PlaceOrderRequestValidator.cs",
+              "DocumentMoniker": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Orders.Bll\\Validators\\PlaceOrderRequestValidator.cs",
+              "RelativeDocumentMoniker": "Orders.Bll\\Validators\\PlaceOrderRequestValidator.cs",
+              "ToolTip": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Orders.Bll\\Validators\\PlaceOrderRequestValidator.cs",
+              "RelativeToolTip": "Orders.Bll\\Validators\\PlaceOrderRequestValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-27T06:01:41.891Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "RefundRequestValidator.cs",
+              "DocumentMoniker": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Orders.Bll\\Validators\\RefundRequestValidator.cs",
+              "RelativeDocumentMoniker": "Orders.Bll\\Validators\\RefundRequestValidator.cs",
+              "ToolTip": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Orders.Bll\\Validators\\RefundRequestValidator.cs",
+              "RelativeToolTip": "Orders.Bll\\Validators\\RefundRequestValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-27T06:00:37.248Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ValidationRules.cs",
+              "DocumentMoniker": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Orders.Bll\\Validators\\ValidationRules.cs",
+              "RelativeDocumentMoniker": "Orders.Bll\\Validators\\ValidationRules.cs",
+              "ToolTip": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Orders.Bll\\Validators\\ValidationRules.cs",
+              "RelativeToolTip": "Orders.Bll\\Validators\\ValidationRules.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-27T05:59:16.72Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "OrderValidation.cs",
               "DocumentMoniker": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Orders.Bll\\Validation\\OrderValidation.cs",
               "RelativeDocumentMoniker": "Orders.Bll\\Validation\\OrderValidation.cs",
@@ -59,7 +212,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 10,
               "Title": "PromoCodeValidator.cs",
               "DocumentMoniker": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Orders.Bll\\Validation\\PromoCodeValidator.cs",
               "RelativeDocumentMoniker": "Orders.Bll\\Validation\\PromoCodeValidator.cs",
@@ -72,7 +225,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 11,
               "Title": "PaymentValidator.cs",
               "DocumentMoniker": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Orders.Bll\\Validation\\PaymentValidator.cs",
               "RelativeDocumentMoniker": "Orders.Bll\\Validation\\PaymentValidator.cs",
@@ -85,7 +238,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 12,
               "Title": "PagedQueryValidator.cs",
               "DocumentMoniker": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Orders.Bll\\Validation\\PagedQueryValidator.cs",
               "RelativeDocumentMoniker": "Orders.Bll\\Validation\\PagedQueryValidator.cs",
@@ -98,7 +251,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 13,
               "Title": "PaymentDtos.cs",
               "DocumentMoniker": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Orders.Bll\\Dtos\\PaymentDtos.cs",
               "RelativeDocumentMoniker": "Orders.Bll\\Dtos\\PaymentDtos.cs",
@@ -111,7 +264,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 14,
               "Title": "OrderDto.cs",
               "DocumentMoniker": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Orders.Bll\\Dtos\\OrderDto.cs",
               "RelativeDocumentMoniker": "Orders.Bll\\Dtos\\OrderDto.cs",
@@ -124,7 +277,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 15,
               "Title": "OrdersMappingProfile.cs",
               "DocumentMoniker": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Orders.Bll\\Mapping\\OrdersMappingProfile.cs",
               "RelativeDocumentMoniker": "Orders.Bll\\Mapping\\OrdersMappingProfile.cs",
@@ -137,7 +290,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 16,
               "Title": "Paging.cs",
               "DocumentMoniker": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Orders.Bll\\Dtos\\Paging.cs",
               "RelativeDocumentMoniker": "Orders.Bll\\Dtos\\Paging.cs",

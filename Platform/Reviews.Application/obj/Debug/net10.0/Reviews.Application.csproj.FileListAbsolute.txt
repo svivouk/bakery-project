@@ -1,0 +1,15 @@
+C:\Users\krnkr\OneDrive\Рабочий стол\Review\Reviews.Application\obj\Debug\net10.0\Reviews.Application.csproj.AssemblyReference.cache
+C:\Users\krnkr\OneDrive\Рабочий стол\Review\Reviews.Application\obj\Debug\net10.0\Reviews.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\krnkr\OneDrive\Рабочий стол\Review\Reviews.Application\obj\Debug\net10.0\Reviews.Application.AssemblyInfoInputs.cache
+C:\Users\krnkr\OneDrive\Рабочий стол\Review\Reviews.Application\obj\Debug\net10.0\Reviews.Application.AssemblyInfo.cs
+C:\Users\krnkr\OneDrive\Рабочий стол\Review\Reviews.Application\obj\Debug\net10.0\Reviews.Application.csproj.CoreCompileInputs.cache
+C:\Users\krnkr\OneDrive\Рабочий стол\Review\Reviews.Application\bin\Debug\net10.0\Reviews.Application.deps.json
+C:\Users\krnkr\OneDrive\Рабочий стол\Review\Reviews.Application\bin\Debug\net10.0\Reviews.Application.dll
+C:\Users\krnkr\OneDrive\Рабочий стол\Review\Reviews.Application\bin\Debug\net10.0\Reviews.Application.pdb
+C:\Users\krnkr\OneDrive\Рабочий стол\Review\Reviews.Application\bin\Debug\net10.0\Reviews.Domain.dll
+C:\Users\krnkr\OneDrive\Рабочий стол\Review\Reviews.Application\bin\Debug\net10.0\Reviews.Domain.pdb
+C:\Users\krnkr\OneDrive\Рабочий стол\Review\Reviews.Application\obj\Debug\net10.0\Reviews..8D316EFA.Up2Date
+C:\Users\krnkr\OneDrive\Рабочий стол\Review\Reviews.Application\obj\Debug\net10.0\Reviews.Application.dll
+C:\Users\krnkr\OneDrive\Рабочий стол\Review\Reviews.Application\obj\Debug\net10.0\refint\Reviews.Application.dll
+C:\Users\krnkr\OneDrive\Рабочий стол\Review\Reviews.Application\obj\Debug\net10.0\Reviews.Application.pdb
+C:\Users\krnkr\OneDrive\Рабочий стол\Review\Reviews.Application\obj\Debug\net10.0\ref\Reviews.Application.dll

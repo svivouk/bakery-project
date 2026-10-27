@@ -1,0 +1,48 @@
+{
+  "version": 2,
+  "dgSpecHash": "iDferP+uvCg=",
+  "success": false,
+  "projectFilePath": "C:\\Users\\krnkr\\OneDrive\\Рабочий стол\\bakery-project\\Platform\\Reviews.WebApi\\Reviews.WebApi.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\krnkr\\.nuget\\packages\\automapper\\16.2.0\\automapper.16.2.0.nupkg.sha512",
+    "C:\\Users\\krnkr\\.nuget\\packages\\fluentvalidation\\12.2.0\\fluentvalidation.12.2.0.nupkg.sha512",
+    "C:\\Users\\krnkr\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\12.2.0\\fluentvalidation.dependencyinjectionextensions.12.2.0.nupkg.sha512",
+    "C:\\Users\\krnkr\\.nuget\\packages\\mediatr\\14.2.0\\mediatr.14.2.0.nupkg.sha512",
+    "C:\\Users\\krnkr\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
+    "C:\\Users\\krnkr\\.nuget\\packages\\microsoft.aspnetcore.openapi\\10.0.12\\microsoft.aspnetcore.openapi.10.0.12.nupkg.sha512",
+    "C:\\Users\\krnkr\\.nuget\\packages\\microsoft.extensions.apidescription.server\\10.0.0\\microsoft.extensions.apidescription.server.10.0.0.nupkg.sha512",
+    "C:\\Users\\krnkr\\.nuget\\packages\\microsoft.identitymodel.abstractions\\8.14.0\\microsoft.identitymodel.abstractions.8.14.0.nupkg.sha512",
+    "C:\\Users\\krnkr\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\8.14.0\\microsoft.identitymodel.jsonwebtokens.8.14.0.nupkg.sha512",
+    "C:\\Users\\krnkr\\.nuget\\packages\\microsoft.identitymodel.logging\\8.14.0\\microsoft.identitymodel.logging.8.14.0.nupkg.sha512",
+    "C:\\Users\\krnkr\\.nuget\\packages\\microsoft.identitymodel.tokens\\8.14.0\\microsoft.identitymodel.tokens.8.14.0.nupkg.sha512",
+    "C:\\Users\\krnkr\\.nuget\\packages\\microsoft.openapi\\2.12.0\\microsoft.openapi.2.12.0.nupkg.sha512",
+    "C:\\Users\\krnkr\\.nuget\\packages\\swashbuckle.aspnetcore\\10.3.1\\swashbuckle.aspnetcore.10.3.1.nupkg.sha512",
+    "C:\\Users\\krnkr\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\10.3.1\\swashbuckle.aspnetcore.swagger.10.3.1.nupkg.sha512",
+    "C:\\Users\\krnkr\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\10.3.1\\swashbuckle.aspnetcore.swaggergen.10.3.1.nupkg.sha512",
+    "C:\\Users\\krnkr\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\10.3.1\\swashbuckle.aspnetcore.swaggerui.10.3.1.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1105",
+      "level": "Error",
+      "message": "Unable to find project information for 'C:\\Users\\krnkr\\OneDrive\\Рабочий стол\\bakery-project\\Platform\\Reviews.Infrastructure\\Reviews.Infrastructure.csproj'. If you are using Visual Studio, this may be because the project is unloaded or not part of the current solution so run a restore from the command-line. Otherwise, the project file may be invalid or missing targets required for restore.",
+      "projectPath": "C:\\Users\\krnkr\\OneDrive\\Рабочий стол\\bakery-project\\Platform\\Reviews.WebApi\\Reviews.WebApi.csproj",
+      "filePath": "C:\\Users\\krnkr\\OneDrive\\Рабочий стол\\bakery-project\\Platform\\Reviews.WebApi\\Reviews.WebApi.csproj",
+      "libraryId": "C:\\Users\\krnkr\\OneDrive\\Рабочий стол\\bakery-project\\Platform\\Reviews.Infrastructure\\Reviews.Infrastructure.csproj",
+      "targetGraphs": [
+        "net10.0"
+      ]
+    },
+    {
+      "code": "NU1105",
+      "level": "Error",
+      "message": "Unable to find project information for 'C:\\Users\\krnkr\\OneDrive\\Рабочий стол\\bakery-project\\Platform\\Reviews.Domain\\Reviews.Domain.csproj'. If you are using Visual Studio, this may be because the project is unloaded or not part of the current solution so run a restore from the command-line. Otherwise, the project file may be invalid or missing targets required for restore.",
+      "projectPath": "C:\\Users\\krnkr\\OneDrive\\Рабочий стол\\bakery-project\\Platform\\Reviews.WebApi\\Reviews.WebApi.csproj",
+      "filePath": "C:\\Users\\krnkr\\OneDrive\\Рабочий стол\\bakery-project\\Platform\\Reviews.WebApi\\Reviews.WebApi.csproj",
+      "libraryId": "C:\\Users\\krnkr\\OneDrive\\Рабочий стол\\bakery-project\\Platform\\Reviews.Domain\\Reviews.Domain.csproj",
+      "targetGraphs": [
+        "net10.0"
+      ]
+    }
+  ]
+}
