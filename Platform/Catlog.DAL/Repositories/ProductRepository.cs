@@ -7,7 +7,7 @@ using Microsoft.Data.SqlClient;
 
 namespace Catalog.Dal.Repositories;
 
-/// <summary>Dapper: CRUD з базового класу + multi-mapping, QueryMultiple, читання з view і виклик процедури.</summary>
+///  Dapper: CRUD з базового класу + multi-mapping, QueryMultiple, читання з view і виклик процедури. 
 public sealed class ProductRepository : BaseDapperRepository<Product>, IProductRepository
 {
     public ProductRepository(SqlConnection connection, Func<SqlTransaction?> currentTransaction)

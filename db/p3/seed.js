@@ -12,14 +12,14 @@ const croissantId = UUID("a0000000-0000-4000-8000-000000000003");   // Круа�
 const customer1 = UUID("CUST01");     // Олена Коваленко (Замовлення)
 const customer2 = UUID("CUST02");     // Андрій Мельник (Замовлення)
 
-const order1 = UUID("ORD01");
-const order2 = UUID("ORD02");
+const order1 = UUID("i0000000-0000-0000-000-000000000001");//i0000000-0000-0000-000-000000000001
+const order2 = UUID("i0000000-0000-0000-000-000000000002");
 
 const orderItemMedovyk1  = UUID("a0000000-0000-4000-8000-000000000001");  // замовлення №1, Медовик
 const orderItemMedovyk2  = UUID("a0000000-0000-4000-8000-000000000001");  // замовлення №2, Медовик
 const orderItemCroissant = UUID("a0000000-0000-4000-8000-000000000003");  // замовлення №1, Круасани
 
-const moderator = UUID("EMP1");     // працівник пекарні
+const moderator = UUID("p0000000-0000-0000-000-000000000001");     // працівник пекарні p0000000-0000-0000-000-000000000001
 
 const review1Id = new ObjectId();
 const review2Id = new ObjectId();
@@ -55,7 +55,7 @@ db.reviews.insertOne({
   createdAt: new Date("2026-10-08T18:02:00Z"),
   updatedAt: new Date("2026-10-09T10:00:00Z"),
   createdBy: "customer:CUST01",
-  updatedBy: "staff:EMP1",
+  updatedBy: "staff:p0000000-0000-0000-000-000000000001",
   isDeleted: false,
   version: NumberInt(3)            // 1 = створено, 2 = модерація, 3 = відповідь (скарга version не змінила)
 });
@@ -93,7 +93,7 @@ db.reviewReports.insertOne({
   resolution: "Покупку підтверджено (orderItemId), скаргу відхилено.",
   createdBy: "customer:CUST02",
   updatedAt: new Date("2026-10-09T12:05:00Z"),
-  updatedBy: "staff:EMP1",
+  updatedBy: "staff:p0000000-0000-0000-000-000000000001",
   version: NumberInt(2)            // 1 = подано, 2 = розглянуто
 });
 

@@ -2,10 +2,10 @@ using System.Data;
 
 namespace Catalog.Dal.Interfaces;
 
-/// <summary>
+///  
 /// Одне з'єднання і (за потреби) одна транзакція на HTTP-запит (Scoped).
 /// Усі репозиторії, отримані з одного UoW, працюють у спільній транзакції.
-/// </summary>
+///  
 public interface IUnitOfWork : IAsyncDisposable
 {
     ICategoryRepository Categories { get; }
@@ -21,7 +21,7 @@ public interface IUnitOfWork : IAsyncDisposable
     Task CommitAsync(CancellationToken ct = default);
     Task RollbackAsync(CancellationToken ct = default);
 
-    /// <summary>Begin → work → Commit; при будь-якому винятку — Rollback і повторне викидання.</summary>
+    ///  Begin → work → Commit; при будь-якому винятку — Rollback і повторне викидання. 
     Task<T> InTransactionAsync<T>(Func<Task<T>> work, CancellationToken ct = default);
     Task InTransactionAsync(Func<Task> work, CancellationToken ct = default);
 }

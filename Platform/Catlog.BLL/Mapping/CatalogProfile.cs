@@ -5,11 +5,11 @@ using Catalog.Domain.Models;
 
 namespace Catalog.Bll.Mapping;
 
-/// <summary>
+///  
 /// Єдиний профіль AutoMapper для контексту «Каталог»: модель домену → DTO API-контракту.
 /// DTO — позиційні record-и, тому нетривіальні поля задаються через ForCtorParam.
 /// Реєструється в DI одним викликом AddAutoMapper (див. Program.cs).
-/// </summary>
+///  
 public sealed class CatalogProfile : Profile
 {
     public CatalogProfile()

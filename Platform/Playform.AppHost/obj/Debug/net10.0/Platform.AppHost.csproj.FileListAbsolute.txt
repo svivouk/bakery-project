@@ -155,3 +155,4 @@ C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Playform
 C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Playform.AppHost\obj\Debug\net10.0\Platform.AppHost.pdb
 C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Playform.AppHost\obj\Debug\net10.0\Platform.AppHost.genruntimeconfig.cache
 C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Playform.AppHost\obj\Debug\net10.0\ref\Platform.AppHost.dll
+C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Playform.AppHost\obj\Debug\net10.0\Aspire\references\Orders_Api.ProjectMetadata.g.cs

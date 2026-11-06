@@ -263,7 +263,7 @@ public sealed class ProductService : IProductService
             throw new NotFoundException("Variant", variantId);
     }
 
-    /// <summary>Створює варіант і його рядок залишків. Викликається всередині транзакції.</summary>
+    ///  Створює варіант і його рядок залишків. Викликається всередині транзакції. 
     private async Task<Guid> AddVariantCoreAsync(Guid productId, CreateVariantRequest request, CancellationToken ct)
     {
         var variant = new ProductVariant

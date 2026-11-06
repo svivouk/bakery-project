@@ -1,6 +1,6 @@
 namespace Catalog.Bll.Dto;
 
-/// <summary>Шаблони повідомлень для DataAnnotations ({0} — ім'я поля, {1}/{2} — межі).</summary>
+///  Шаблони повідомлень для DataAnnotations ({0} — ім'я поля, {1}/{2} — межі). 
 internal static class Msg
 {
     public const string Required = "Поле '{0}' обов'язкове.";

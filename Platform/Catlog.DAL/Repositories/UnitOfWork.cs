@@ -4,10 +4,10 @@ using Microsoft.Data.SqlClient;
 
 namespace Catalog.Dal.Repositories;
 
-/// <summary>
+///  
 /// Володіє єдиним SqlConnection і поточною SqlTransaction. Репозиторії створюються ліниво й отримують
 /// з'єднання та делегат на поточну транзакцію. Реєструється як Scoped: один екземпляр на HTTP-запит.
-/// </summary>
+///  
 public sealed class UnitOfWork : IUnitOfWork
 {
     private readonly SqlConnection _connection;

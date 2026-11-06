@@ -1,0 +1,16 @@
+C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Orders.Dal\obj\Debug\net10.0\Orders.Dal.csproj.AssemblyReference.cache
+C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Orders.Dal\obj\Debug\net10.0\Orders.Dal.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Orders.Dal\obj\Debug\net10.0\Orders.Dal.AssemblyInfoInputs.cache
+C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Orders.Dal\obj\Debug\net10.0\Orders.Dal.AssemblyInfo.cs
+C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Orders.Dal\obj\Debug\net10.0\Orders.Dal.csproj.CoreCompileInputs.cache
+C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Orders.Dal\obj\Debug\net10.0\Orders.Dal.sourcelink.json
+C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Orders.Dal\bin\Debug\net10.0\Orders.Dal.deps.json
+C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Orders.Dal\bin\Debug\net10.0\Orders.Dal.dll
+C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Orders.Dal\bin\Debug\net10.0\Orders.Dal.pdb
+C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Orders.Dal\bin\Debug\net10.0\Orders.Domain.dll
+C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Orders.Dal\bin\Debug\net10.0\Orders.Domain.pdb
+C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Orders.Dal\obj\Debug\net10.0\Orders.Dal.csproj.Up2Date
+C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Orders.Dal\obj\Debug\net10.0\Orders.Dal.dll
+C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Orders.Dal\obj\Debug\net10.0\refint\Orders.Dal.dll
+C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Orders.Dal\obj\Debug\net10.0\Orders.Dal.pdb
+C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Orders.Dal\obj\Debug\net10.0\ref\Orders.Dal.dll

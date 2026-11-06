@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "j1hcbir0sC0=",
+  "dgSpecHash": "7eYH7fiD6UA=",
   "success": true,
   "projectFilePath": "C:\\Users\\krnkr\\OneDrive\\Рабочий стол\\bakery-project\\Platform\\Catlog.API\\Catalog.API.csproj",
   "expectedPackageFiles": [
@@ -36,7 +36,7 @@
     "C:\\Users\\krnkr\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.8.1\\swashbuckle.aspnetcore.swaggerui.6.8.1.nupkg.sha512",
     "C:\\Users\\krnkr\\.nuget\\packages\\system.configuration.configurationmanager\\9.0.18\\system.configuration.configurationmanager.9.0.18.nupkg.sha512",
     "C:\\Users\\krnkr\\.nuget\\packages\\system.identitymodel.tokens.jwt\\8.16.0\\system.identitymodel.tokens.jwt.8.16.0.nupkg.sha512",
-    "C:\\Users\\krnkr\\.nuget\\packages\\system.security.cryptography.pkcs\\9.0.18\\system.security.cryptography.pkcs.9.0.18.nupkg.sha512",
+    "C:\\Users\\krnkr\\.nuget\\packages\\system.security.cryptography.pkcs\\10.0.13\\system.security.cryptography.pkcs.10.0.13.nupkg.sha512",
     "C:\\Users\\krnkr\\.nuget\\packages\\system.security.cryptography.protecteddata\\9.0.18\\system.security.cryptography.protecteddata.9.0.18.nupkg.sha512"
   ],
   "logs": []
