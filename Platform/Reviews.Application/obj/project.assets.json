@@ -272,6 +272,32 @@
             "related": ".xml"
           }
         }
+      },
+      "MongoDB.Bson/3.13.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/MongoDB.Bson.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/MongoDB.Bson.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Reviews.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "MongoDB.Bson": "3.13.0"
+        },
+        "compile": {
+          "bin/placeholder/Reviews.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Reviews.Domain.dll": {}
+        }
       }
     }
   },
@@ -728,17 +754,41 @@
         "microsoft.identitymodel.tokens.8.14.0.nupkg.sha512",
         "microsoft.identitymodel.tokens.nuspec"
       ]
+    },
+    "MongoDB.Bson/3.13.0": {
+      "sha512": "jb4fGQIS1bTFSK2336FP3rBHDQ+UiVKdTAZcoWHeed1xlxvmclnHA8Y4CAQa+Y2KWw3Fz9OIAkXH/KXJL9yRGg==",
+      "type": "package",
+      "path": "mongodb.bson/3.13.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "lib/net472/MongoDB.Bson.dll",
+        "lib/net472/MongoDB.Bson.xml",
+        "lib/net6.0/MongoDB.Bson.dll",
+        "lib/net6.0/MongoDB.Bson.xml",
+        "lib/netstandard2.1/MongoDB.Bson.dll",
+        "lib/netstandard2.1/MongoDB.Bson.xml",
+        "mongodb.bson.3.13.0.nupkg.sha512",
+        "mongodb.bson.nuspec",
+        "packageIcon.png"
+      ]
+    },
+    "Reviews.Domain/1.0.0": {
+      "type": "project",
+      "path": "../Reviews.Domain/Reviews.Domain.csproj",
+      "msbuildProject": "../Reviews.Domain/Reviews.Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net10.0": [
       "AutoMapper >= 16.2.0",
-      "C:\\Users\\krnkr\\OneDrive\\Рабочий стол\\bakery-project\\Platform\\Reviews.Domain\\Reviews.Domain.csproj",
       "FluentValidation >= 12.2.0",
       "FluentValidation.DependencyInjectionExtensions >= 12.2.0",
       "MediatR >= 14.2.0",
       "Microsoft.Extensions.Caching.Abstractions >= 10.0.14",
-      "Microsoft.Extensions.Configuration >= 10.0.14"
+      "Microsoft.Extensions.Configuration >= 10.0.14",
+      "Reviews.Domain >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -1116,16 +1166,5 @@
         }
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1105",
-      "level": "Error",
-      "message": "Unable to find project information for 'C:\\Users\\krnkr\\OneDrive\\Рабочий стол\\bakery-project\\Platform\\Reviews.Domain\\Reviews.Domain.csproj'. If you are using Visual Studio, this may be because the project is unloaded or not part of the current solution so run a restore from the command-line. Otherwise, the project file may be invalid or missing targets required for restore.",
-      "libraryId": "C:\\Users\\krnkr\\OneDrive\\Рабочий стол\\bakery-project\\Platform\\Reviews.Domain\\Reviews.Domain.csproj",
-      "targetGraphs": [
-        "net10.0"
-      ]
-    }
-  ]
+  }
 }

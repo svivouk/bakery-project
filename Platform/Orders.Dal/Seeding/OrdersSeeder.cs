@@ -1,8 +1,7 @@
-﻿using Microsoft.Data.SqlClient;
+using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using Orders.Domain.Carts;
-using Orders.Domain.Catalog;
 using Orders.Domain.Customers;
 using Orders.Domain.Promotions;
 using System.Data;
@@ -30,41 +29,28 @@ public sealed class OrdersDbSeeder
         await using var transaction = await _db.Database.BeginTransactionAsync(cancellationToken);
         await AcquireLockAsync(cancellationToken);
 
-        var references = await SeedReferenceDataAsync(cancellationToken);   // 1. довідники
+        await EnsureReferenceDataAsync(cancellationToken);                          // 1. довідники (з HasData): лише перевірка
         var independent = await SeedCustomersAndPromoCodesAsync(cancellationToken); // 2. самостійні агрегати
-        var dependent = await SeedCartsAsync(cancellationToken);            // 3. залежні від клієнта
+        var dependent = await SeedCartsAsync(cancellationToken);                    // 3. залежні від клієнта
 
         await transaction.CommitAsync(cancellationToken);
 
         _logger.LogInformation(
-            "Сідінг завершено. Додано: довідників {References}, клієнтів/промокодів {Independent}, кошиків {Carts}. Нуль означає, що дані вже були.",
-            references, independent, dependent);
+            "Сідінг завершено. Додано: клієнтів/промокодів {Independent}, кошиків {Carts}. Нуль означає, що дані вже були.",
+            independent, dependent);
     }
-
-    private async Task<int> SeedReferenceDataAsync(CancellationToken ct)
+    private async Task EnsureReferenceDataAsync(CancellationToken ct)
     {
         var productIds = ReferenceData.Products.Select(p => p.Id).ToList();
-        var existingProducts = (await _db.ProductRefs.AsNoTracking()
-                .Where(p => productIds.Contains(p.Id))
-                .Select(p => p.Id)
-                .ToListAsync(ct))
-            .ToHashSet();
-
-        foreach (var p in ReferenceData.Products.Where(p => !existingProducts.Contains(p.Id)))
-            _db.ProductRefs.Add(new ProductRef(p.Id, p.Name, isActive: true, sourceVersion: 1));
-        var added = await _db.SaveChangesAsync(ct);
-
         var variantIds = ReferenceData.Variants.Select(v => v.Id).ToList();
-        var existingVariants = (await _db.VariantRefs.AsNoTracking()
-                .Where(v => variantIds.Contains(v.Id))
-                .Select(v => v.Id)
-                .ToListAsync(ct))
-            .ToHashSet();
 
-        foreach (var v in ReferenceData.Variants.Where(v => !existingVariants.Contains(v.Id)))
-            _db.VariantRefs.Add(new VariantRef(v.Id, v.ProductId, v.Name, v.Price, isActive: true, sourceVersion: 1));
+        var products = await _db.ProductRefs.CountAsync(p => productIds.Contains(p.Id), ct);
+        var variants = await _db.VariantRefs.CountAsync(v => variantIds.Contains(v.Id), ct);
 
-        return added + await _db.SaveChangesAsync(ct);
+        if (products != productIds.Count || variants != variantIds.Count)
+            throw new InvalidOperationException(
+                $"Довідники відсутні або неповні (товарів {products}/{productIds.Count}, варіантів {variants}/{variantIds.Count}). " +
+                "Вони додаються міграцією (HasData): застосуйте міграції (Database:MigrateOnStartup або dotnet ef database update) і повторіть сідінг.");
     }
 
     private async Task<int> SeedCustomersAndPromoCodesAsync(CancellationToken ct)

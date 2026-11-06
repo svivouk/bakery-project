@@ -3,6 +3,7 @@ using Orders.Bll.Dtos;
 using Orders.Dal.Repositories.Interfaces;
 using Orders.Domain;
 using Orders.Domain.Promotions;
+using Orders.Domain.Specification;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -27,6 +28,23 @@ namespace Orders.Bll.Services
 
         public async Task<PromoCodeDto> GetAsync(Guid id, CancellationToken cancellationToken = default)
             => mapper.Map<PromoCodeDto>(await LoadAsync(id, cancellationToken));
+
+        public async Task<PagedResult<PromoCodeDto>> ListAsync(PromoCodeListQuery query, CancellationToken cancellationToken = default)
+        {
+            ArgumentNullException.ThrowIfNull(query);
+
+            var pageSize = query.GetPageSize();
+            var spec = new PromoCodeListSpecification(query.Search, query.IsActive, query.DiscountType, query.ValidOn,
+                query.ResolveSort(), query.Page, pageSize);
+
+            var total = await uow.PromoCodes.CountAsync(spec, cancellationToken);
+            var items = total == 0
+                ? []
+                : await uow.PromoCodes.ListAsync(spec, cancellationToken);
+
+            return new PagedResult<PromoCodeDto>(
+                mapper.Map<IReadOnlyList<PromoCodeDto>>(items), query.Page, pageSize, total);
+        }
 
         public async Task<PromoCodeDto> ChangeDiscountAsync(Guid id, ChangeDiscountRequest request,
             CancellationToken cancellationToken = default)

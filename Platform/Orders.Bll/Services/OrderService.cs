@@ -1,13 +1,14 @@
 ﻿using AutoMapper;
 using Orders.Bll.Dtos;
+using Orders.Dal.Repositories;
 using Orders.Dal.Repositories.Interfaces;
 using Orders.Domain;
 using Orders.Domain.Messaging;
 using Orders.Domain.Orders;
 using Orders.Domain.Payments;
 using Orders.Domain.Promotions;
+using Orders.Domain.Specification;
 using System.Text.Json;
-using Orders.Dal.Repositories;
 
 namespace Orders.Bll.Services
 {
@@ -99,6 +100,22 @@ namespace Orders.Bll.Services
         private async Task<Order> LoadAsync(Guid id, CancellationToken cancellationToken)
             => await uow.Orders.GetWithDetailsAsync(id, cancellationToken)
                ?? throw NotFoundException.For("Замовлення", id);
+        public async Task<PagedResult<OrderSummaryDto>> ListAsync(OrderListQuery query, CancellationToken cancellationToken = default)
+        {
+            ArgumentNullException.ThrowIfNull(query);
+
+            var pageSize = query.GetPageSize();
+            var spec = new OrderListSpecification(query.CustomerId, query.Status, query.CreatedFrom, query.CreatedTo,
+                query.MinTotal, query.MaxTotal, query.OrderNumber, query.ResolveSort(), query.Page, pageSize);
+
+            var total = await uow.Orders.CountAsync(spec, cancellationToken);
+            var items = total == 0
+                ? []
+                : await uow.Orders.ListAsync(spec, cancellationToken);
+
+            return new PagedResult<OrderSummaryDto>(
+                mapper.Map<IReadOnlyList<OrderSummaryDto>>(items), query.Page, pageSize, total);
+        }
     }
 
 }

@@ -9,6 +9,8 @@
       "Orders.Bll/1.0.0": {
         "dependencies": {
           "AutoMapper": "16.2.0",
+          "FluentValidation": "12.2.0",
+          "Microsoft.Data.Edm": "5.8.5",
           "Microsoft.EntityFrameworkCore": "10.0.13",
           "Microsoft.EntityFrameworkCore.SqlServer": "10.0.13",
           "Orders.Dal": "1.0.0",
@@ -31,11 +33,56 @@
           }
         }
       },
+      "FluentValidation/12.2.0": {
+        "runtime": {
+          "lib/net8.0/FluentValidation.dll": {
+            "assemblyVersion": "12.0.0.0",
+            "fileVersion": "12.2.0.0"
+          }
+        }
+      },
       "Microsoft.Bcl.Cryptography/9.0.18": {
         "runtime": {
           "lib/net9.0/Microsoft.Bcl.Cryptography.dll": {
             "assemblyVersion": "9.0.0.18",
             "fileVersion": "9.0.1826.31522"
+          }
+        }
+      },
+      "Microsoft.Data.Edm/5.8.5": {
+        "runtime": {
+          "lib/netstandard1.1/Microsoft.Data.Edm.dll": {
+            "assemblyVersion": "5.8.5.0",
+            "fileVersion": "5.8.5.64339"
+          }
+        },
+        "resources": {
+          "lib/netstandard1.1/de/Microsoft.Data.Edm.resources.dll": {
+            "locale": "de"
+          },
+          "lib/netstandard1.1/es/Microsoft.Data.Edm.resources.dll": {
+            "locale": "es"
+          },
+          "lib/netstandard1.1/fr/Microsoft.Data.Edm.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/netstandard1.1/it/Microsoft.Data.Edm.resources.dll": {
+            "locale": "it"
+          },
+          "lib/netstandard1.1/ja/Microsoft.Data.Edm.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/netstandard1.1/ko/Microsoft.Data.Edm.resources.dll": {
+            "locale": "ko"
+          },
+          "lib/netstandard1.1/ru/Microsoft.Data.Edm.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/netstandard1.1/zh-Hans/Microsoft.Data.Edm.resources.dll": {
+            "locale": "zh-Hans"
+          },
+          "lib/netstandard1.1/zh-Hant/Microsoft.Data.Edm.resources.dll": {
+            "locale": "zh-Hant"
           }
         }
       },
@@ -467,6 +514,7 @@
       },
       "Orders.Dal/1.0.0": {
         "dependencies": {
+          "FluentValidation": "12.2.0",
           "Microsoft.EntityFrameworkCore": "10.0.13",
           "Microsoft.EntityFrameworkCore.SqlServer": "10.0.13",
           "Microsoft.Identity.Client": "4.91.1",
@@ -482,6 +530,7 @@
       },
       "Orders.Domain/1.0.0": {
         "dependencies": {
+          "FluentValidation": "12.2.0",
           "Microsoft.Data.SqlClient": "7.1.1",
           "Microsoft.Extensions.Logging.Abstractions": "10.0.13"
         },
@@ -507,12 +556,26 @@
       "path": "automapper/16.2.0",
       "hashPath": "automapper.16.2.0.nupkg.sha512"
     },
+    "FluentValidation/12.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-DR3lFbdnKucaaj1/8zMNOACMz/64igzox1yVZSFVsLxYB5mxAB+wFP1WZ8fjwrZnbU1KA1DoMzHKYKxUfuZ4wQ==",
+      "path": "fluentvalidation/12.2.0",
+      "hashPath": "fluentvalidation.12.2.0.nupkg.sha512"
+    },
     "Microsoft.Bcl.Cryptography/9.0.18": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-42XcqOGj0jTNW6FphUEuhNLCdVQsYbYCf2pPlkWdz1uDyxxirpcxyjg7pWIBgPCjzk6rv/irgLya/2tDJKIpYg==",
       "path": "microsoft.bcl.cryptography/9.0.18",
       "hashPath": "microsoft.bcl.cryptography.9.0.18.nupkg.sha512"
+    },
+    "Microsoft.Data.Edm/5.8.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-1wETMHqyPqxM3VLFtg9iA5iHCaBjPxgyO+Ff+z9T0tfw5TybXR28uiOLZES/OSJVmBcbqSy669ttvsCOZPTp9Q==",
+      "path": "microsoft.data.edm/5.8.5",
+      "hashPath": "microsoft.data.edm.5.8.5.nupkg.sha512"
     },
     "Microsoft.Data.SqlClient/7.1.1": {
       "type": "package",

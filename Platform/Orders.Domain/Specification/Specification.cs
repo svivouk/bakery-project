@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Orders.Domain.Promotions;
+using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Text;
@@ -60,10 +61,13 @@ public abstract class Specification<T> : ISpecification<T> where T : class
         return Expression.Lambda<Func<T, bool>>(Expression.AndAlso(left.Body, rightBody), parameter);
     }
 
-    private sealed class ReplaceParameter(ParameterExpression from, ParameterExpression to) : ExpressionVisitor
+
+
+private sealed class ReplaceParameter(ParameterExpression from, ParameterExpression to) : ExpressionVisitor
     {
         protected override Expression VisitParameter(ParameterExpression node) => node == from ? to : base.VisitParameter(node);
     }
+
 }
 
 

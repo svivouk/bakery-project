@@ -1,6 +1,6 @@
 ﻿using Orders.Dal;
 
-namespace Orders.Api.Middlewear
+namespace Orders.Api.Middleware
 {
     public sealed class HttpContextActor(IHttpContextAccessor accessor) : ICurrentActor
     {

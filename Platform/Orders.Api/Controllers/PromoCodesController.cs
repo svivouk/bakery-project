@@ -42,5 +42,13 @@ namespace Orders.Api.Controllers
             await service.DeleteAsync(id, cancellationToken);
             return NoContent();
         }
+        [HttpGet]
+        [ProducesResponseType(typeof(PagedResult<PromoCodeDto>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(ValidationProblemDetails), StatusCodes.Status400BadRequest)]
+        public async Task<ActionResult<PagedResult<PromoCodeDto>>> List([FromQuery] PromoCodeListQuery query, CancellationToken cancellationToken)
+        {
+            var page = await service.ListAsync(query, cancellationToken);
+            return Ok(page);
+        }
     }
 }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "VNqsemmNuXc=",
+  "dgSpecHash": "X6xdAlLOXMI=",
   "success": true,
-  "projectFilePath": "C:\\Users\\krnkr\\OneDrive\\Рабочий стол\\Review\\Reviews.Infrastructure\\Reviews.Infrastructure.csproj",
+  "projectFilePath": "C:\\Users\\krnkr\\OneDrive\\Рабочий стол\\bakery-project\\Platform\\Reviews.Infrastructure\\Reviews.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\krnkr\\.nuget\\packages\\automapper\\16.2.0\\automapper.16.2.0.nupkg.sha512",
     "C:\\Users\\krnkr\\.nuget\\packages\\dnsclient\\1.6.1\\dnsclient.1.6.1.nupkg.sha512",

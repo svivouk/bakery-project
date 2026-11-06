@@ -13,9 +13,9 @@
     <Project Path="Orders.Domain/Orders.Domain.csproj" Id="5bbcea99-a09c-413c-a44e-f658bb64a100" />
   </Folder>
   <Folder Name="/Services/Reviews/">
-    <Project Path="../../Review/Reviews.Domain/Reviews.Domain.csproj" />
-    <Project Path="../../Review/Reviews.Infrastructure/Reviews.Infrastructure.csproj" />
     <Project Path="Reviews.Application/Reviews.Application.csproj" />
+    <Project Path="Reviews.Domain/Reviews.Domain.csproj" />
+    <Project Path="Reviews.Infrastructure/Reviews.Infrastructure.csproj" />
     <Project Path="Reviews.WebApi/Reviews.WebApi.csproj" />
   </Folder>
   <Project Path="Playform.AppHost/Platform.AppHost.csproj" Id="681b2cc7-46c9-4d6d-ae94-00035bf05053" />

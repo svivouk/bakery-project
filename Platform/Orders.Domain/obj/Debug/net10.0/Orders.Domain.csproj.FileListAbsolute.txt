@@ -11,3 +11,4 @@ C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Orders.D
 C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Orders.Domain\obj\Debug\net10.0\Orders.Domain.pdb
 C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Orders.Domain\obj\Debug\net10.0\ref\Orders.Domain.dll
 C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Orders.Domain\obj\Debug\net10.0\Orders.Domain.csproj.AssemblyReference.cache
+C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Orders.Domain\obj\Debug\net10.0\Orders.D.8F48B1DD.Up2Date

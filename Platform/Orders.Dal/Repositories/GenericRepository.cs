@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Orders.Dal.Repositories.Interfaces;
+using Orders.Domain.Specification;
 
 namespace Orders.Dal.Repositories
 {
@@ -22,5 +23,13 @@ namespace Orders.Dal.Repositories
         public void Delete(T entity) => Set.Remove(entity);
         public Task<int> SaveChangesAsync(CancellationToken ct = default)
             => Context.SaveChangesAsync(ct);
+        public virtual async Task<IReadOnlyList<T>> ListAsync(ISpecification<T> specification, CancellationToken ct = default)
+            => await Set.WithSpecification(specification).ToListAsync(ct);
+
+        public virtual Task<T?> FirstOrDefaultAsync(ISpecification<T> specification, CancellationToken ct = default)
+            => Set.WithSpecification(specification).FirstOrDefaultAsync(ct);
+
+        public virtual Task<int> CountAsync(ISpecification<T> specification, CancellationToken ct = default)
+            => Set.AsNoTracking().WithCriteria(specification).CountAsync(ct);
     }
 }

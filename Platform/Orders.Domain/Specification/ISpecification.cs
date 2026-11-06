@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Orders.Domain.Promotions;
+using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Text;
@@ -16,5 +17,6 @@ public interface ISpecification<T> where T : class
     int? Skip { get; }
     int? Take { get; }
     bool AsNoTracking { get; }
+
 }
 

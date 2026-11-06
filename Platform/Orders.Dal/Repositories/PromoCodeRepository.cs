@@ -1,6 +1,7 @@
-﻿using Orders.Dal.Repositories.Interfaces;
+﻿using Microsoft.EntityFrameworkCore;
+using Orders.Dal.Repositories.Interfaces;
 using Orders.Domain.Promotions;
-using Microsoft.EntityFrameworkCore;
+using Orders.Domain.Specification;
 
 namespace Orders.Dal.Repositories
 {
@@ -15,5 +16,10 @@ namespace Orders.Dal.Repositories
 
         public Task<PromoCode?> GetByCodeAsync(string code, CancellationToken cancellationToken = default)
             => Set.Include(p => p.Usage).FirstOrDefaultAsync(p => p.Code == code && !p.IsDeleted, cancellationToken);
+        public async Task<IReadOnlyList<PromoCode>> ListAsync(ISpecification<PromoCode> specification, CancellationToken ct = default)
+            => await Set.WithSpecification(specification).ToListAsync(ct);
+
+        public Task<int> CountAsync(ISpecification<PromoCode> specification, CancellationToken ct = default)
+            => Set.AsNoTracking().WithCriteria(specification).CountAsync(ct);
     }
 }

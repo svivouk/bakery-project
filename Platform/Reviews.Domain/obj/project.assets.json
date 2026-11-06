@@ -50,11 +50,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\krnkr\\OneDrive\\Рабочий стол\\Review\\Reviews.Domain\\Reviews.Domain.csproj",
+      "projectUniqueName": "C:\\Users\\krnkr\\OneDrive\\Рабочий стол\\bakery-project\\Platform\\Reviews.Domain\\Reviews.Domain.csproj",
       "projectName": "Reviews.Domain",
-      "projectPath": "C:\\Users\\krnkr\\OneDrive\\Рабочий стол\\Review\\Reviews.Domain\\Reviews.Domain.csproj",
+      "projectPath": "C:\\Users\\krnkr\\OneDrive\\Рабочий стол\\bakery-project\\Platform\\Reviews.Domain\\Reviews.Domain.csproj",
       "packagesPath": "C:\\Users\\krnkr\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\krnkr\\OneDrive\\Рабочий стол\\Review\\Reviews.Domain\\obj\\",
+      "outputPath": "C:\\Users\\krnkr\\OneDrive\\Рабочий стол\\bakery-project\\Platform\\Reviews.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
