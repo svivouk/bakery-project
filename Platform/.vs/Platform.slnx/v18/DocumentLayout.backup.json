@@ -206,8 +206,7 @@
               "RelativeToolTip": "Orders.Dal\\Seeding\\DemoData.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-06T21:20:52.633Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-06T21:20:52.633Z"
             },
             {
               "$type": "Document",
@@ -245,8 +244,7 @@
               "RelativeToolTip": "Orders.Api\\Middleware\\ExceptionMapper.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-06T21:17:23.744Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-06T21:17:23.744Z"
             },
             {
               "$type": "Document",
@@ -258,8 +256,7 @@
               "RelativeToolTip": "Orders.Api\\ServiceCollectionExtensions.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-27T06:04:58.791Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-27T06:04:58.791Z"
             },
             {
               "$type": "Document",
@@ -271,8 +268,7 @@
               "RelativeToolTip": "Orders.Api\\Program.cs",
               "ViewState": "AgIAAFoAAAAAAAAAAAAAAGEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-27T06:53:42.715Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-27T06:53:42.715Z"
             },
             {
               "$type": "Document",
@@ -310,8 +306,7 @@
               "RelativeToolTip": "Orders.Api\\Middleware\\DatabaseOptions.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-06T20:29:08.994Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-06T20:29:08.994Z"
             },
             {
               "$type": "Document",
@@ -349,8 +344,7 @@
               "RelativeToolTip": "Orders.Api\\Controllers\\OrdersController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAD4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-27T06:55:33.925Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-27T06:55:33.925Z"
             },
             {
               "$type": "Document",
@@ -362,8 +356,7 @@
               "RelativeToolTip": "Orders.Api\\Middleware\\GlobalExceptionHandler.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-06T20:28:17.32Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-06T20:28:17.32Z"
             },
             {
               "$type": "Document",
@@ -388,8 +381,7 @@
               "RelativeToolTip": "Orders.Api\\Middleware\\ControllerValidationExtensions.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-06T21:13:58.059Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-06T21:13:58.059Z"
             },
             {
               "$type": "Document",
@@ -414,34 +406,31 @@
               "RelativeToolTip": "Orders.Api\\Controllers\\PaymentsController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAADcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-06T20:08:12.061Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-06T20:08:12.061Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 18,
-              "Title": "Orders.Bll",
+              "Title": "Orders.Bll.csproj",
               "DocumentMoniker": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Orders.Bll\\Orders.Bll.csproj",
               "RelativeDocumentMoniker": "Orders.Bll\\Orders.Bll.csproj",
               "ToolTip": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Orders.Bll\\Orders.Bll.csproj",
               "RelativeToolTip": "Orders.Bll\\Orders.Bll.csproj",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-11-06T20:56:22.522Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-06T20:56:22.522Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 19,
-              "Title": "Orders.Dal",
+              "Title": "Orders.Dal.csproj",
               "DocumentMoniker": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Orders.Dal\\Orders.Dal.csproj",
               "RelativeDocumentMoniker": "Orders.Dal\\Orders.Dal.csproj",
               "ToolTip": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Orders.Dal\\Orders.Dal.csproj",
               "RelativeToolTip": "Orders.Dal\\Orders.Dal.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-11-06T20:56:17.7Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-06T20:56:17.7Z"
             },
             {
               "$type": "Document",
@@ -466,8 +455,7 @@
               "RelativeToolTip": "Orders.Bll\\Dtos\\Paging.cs",
               "ViewState": "AgIAACYAAAAAAAAAAAAgwD0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-27T05:39:51.912Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-27T05:39:51.912Z"
             },
             {
               "$type": "Document",
@@ -479,8 +467,7 @@
               "RelativeToolTip": "Orders.Dal\\Repositories\\Interfaces\\IGenericRepository.cs",
               "ViewState": "AgIAAA4AAAAAAAAAAAAgwBMAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-06T20:16:04.399Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-06T20:16:04.399Z"
             },
             {
               "$type": "Document",
@@ -492,8 +479,7 @@
               "RelativeToolTip": "Orders.Bll\\Services\\PromoCodeServices.cs",
               "ViewState": "AgIAAEUAAAAAAAAAAAAowFgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-06T20:06:41.765Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-06T20:06:41.765Z"
             },
             {
               "$type": "Document",
@@ -505,8 +491,7 @@
               "RelativeToolTip": "Orders.Api\\Middleware\\HttpContextActor.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-06T20:28:38.729Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-06T20:28:38.729Z"
             },
             {
               "$type": "Document",
@@ -518,8 +503,7 @@
               "RelativeToolTip": "Orders.Api\\Middleware\\LogContextMiddleware.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAA7wBsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-06T20:22:44.067Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-06T20:22:44.067Z"
             },
             {
               "$type": "Document",
@@ -531,8 +515,7 @@
               "RelativeToolTip": "Orders.Bll\\Services\\PaymentService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-06T20:18:06.024Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-06T20:18:06.024Z"
             },
             {
               "$type": "Document",
@@ -544,8 +527,7 @@
               "RelativeToolTip": "Orders.Bll\\Services\\OrderService.cs",
               "ViewState": "AgIAAAQAAAAAAAAAAAAAAHQAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-06T20:16:52.569Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-06T20:16:52.569Z"
             },
             {
               "$type": "Document",
@@ -557,8 +539,7 @@
               "RelativeToolTip": "Orders.Dal\\Repositories\\SpecificationEvaluator.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-06T20:14:53.203Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-06T20:14:53.203Z"
             },
             {
               "$type": "Document",
@@ -570,8 +551,7 @@
               "RelativeToolTip": "Orders.Dal\\Repositories\\PromoCodeRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-06T20:11:35.597Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-06T20:11:35.597Z"
             },
             {
               "$type": "Document",
@@ -583,8 +563,7 @@
               "RelativeToolTip": "Orders.Dal\\Repositories\\Interfaces\\IPromoCodeRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAABmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-06T20:11:14.684Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-06T20:11:14.684Z"
             },
             {
               "$type": "Document",
@@ -596,8 +575,7 @@
               "RelativeToolTip": "Orders.Domain\\Specification\\ISpecification.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-06T20:09:06.829Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-06T20:09:06.829Z"
             },
             {
               "$type": "Document",
@@ -609,8 +587,7 @@
               "RelativeToolTip": "Orders.Domain\\Specification\\Specification.cs",
               "ViewState": "AgIAADcAAAAAAAAAAAAcwD8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-06T20:08:54.644Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-06T20:08:54.644Z"
             },
             {
               "$type": "Document",
@@ -622,8 +599,7 @@
               "RelativeToolTip": "Orders.Api\\Controllers\\PromoCodesController.cs",
               "ViewState": "AgIAABgAAAAAAAAAAAA1wDMAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-06T20:08:12.984Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-06T20:08:12.984Z"
             },
             {
               "$type": "Document",
@@ -635,8 +611,7 @@
               "RelativeToolTip": "Orders.Api\\appsettings.json",
               "ViewState": "AgIAABIAAAAAAAAAAAAAAB8AAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-11-06T20:04:29.286Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-06T20:04:29.286Z"
             },
             {
               "$type": "Document",
@@ -648,8 +623,7 @@
               "RelativeToolTip": "Catlog.API\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-11-06T20:04:12.914Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-06T20:04:12.914Z"
             },
             {
               "$type": "Document",
@@ -661,8 +635,7 @@
               "RelativeToolTip": "Orders.Bll\\Validators\\ChangeDiscountRequestValidator.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-27T06:04:00.26Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-27T06:04:00.26Z"
             },
             {
               "$type": "Document",
