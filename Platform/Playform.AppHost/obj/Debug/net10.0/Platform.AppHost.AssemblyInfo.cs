@@ -19,7 +19,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Platform.AppHost")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8dd06114330f7031cd0580d56cffa4e5b7446437")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+65ce3a0576192f03aae09b771e64405ab43fcc5e")]
 [assembly: System.Reflection.AssemblyProductAttribute("Platform.AppHost")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Platform.AppHost")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

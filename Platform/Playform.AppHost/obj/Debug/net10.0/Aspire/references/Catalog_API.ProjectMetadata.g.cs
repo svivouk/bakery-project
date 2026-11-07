@@ -15,7 +15,7 @@ public class Catalog_API : global::Aspire.Hosting.IProjectMetadata
     /// <summary>
     /// The path to the Catalog_API project.
     /// </summary>
-    public string ProjectPath => """C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Catlog.API\Catalog.API.csproj""";
+    public string ProjectPath => """C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Services\Catalog\Catlog.API\Catalog.API.csproj""";
 
     /// <summary>
     /// Gets a value indicating whether building the project before running it should be suppressed.

@@ -15,7 +15,7 @@ public class Orders_Api : global::Aspire.Hosting.IProjectMetadata
     /// <summary>
     /// The path to the Orders_Api project.
     /// </summary>
-    public string ProjectPath => """C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Orders.Api\Orders.Api.csproj""";
+    public string ProjectPath => """C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Services\Orders\Orders.Api\Orders.Api.csproj""";
 
     /// <summary>
     /// Gets a value indicating whether building the project before running it should be suppressed.

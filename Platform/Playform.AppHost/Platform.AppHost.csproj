@@ -10,12 +10,13 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Aspire.Hosting.SqlServer" Version="13.6.1" />
+	  <Content Include="..\..\..\..\Изображения\Roblox\RobloxScreenShot20261104_195839026.png" Link="RobloxScreenShot20261104_195839026.png" />
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\Catlog.API\Catalog.API.csproj" />
-		<ProjectReference Include="..\Orders.Api\Orders.Api.csproj" />
+		<ProjectReference Include="..\Services\Catalog\Catlog.API\Catalog.API.csproj" />
+		<ProjectReference Include="..\Services\Orders\Orders.Api\Orders.Api.csproj" />
+		<ProjectReference Include="..\Services\Reviews\Reviews.WebApi\Reviews.WebApi.csproj" />
 	</ItemGroup>
 
 </Project>
