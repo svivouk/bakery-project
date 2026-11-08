@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.Extensions.Logging;
 using Orders.Bll.Dtos;
 using Orders.Dal.Repositories.Interfaces;
 using Orders.Domain;
@@ -10,7 +11,7 @@ using System.Text;
 
 namespace Orders.Bll.Services
 {
-    public sealed class PromoCodeService(IUnitOfWork uow, IMapper mapper) : IPromoCodeService
+    public sealed class PromoCodeService(IUnitOfWork uow, IMapper mapper, ILogger<PromoCodeService> logger) : IPromoCodeService
     {
         public async Task<PromoCodeDto> CreateAsync(CreatePromoCodeRequest request, CancellationToken cancellationToken = default)
         {
@@ -23,6 +24,8 @@ namespace Orders.Bll.Services
 
             await uow.PromoCodes.AddAsync(promo, cancellationToken);
             await uow.SaveChangesAsync(cancellationToken);
+            logger.LogInformation("Promo code {PromoCode} created, discount {DiscountType} {DiscountValue}, valid from {ValidFrom} to {ValidTo}",
+                promo.Code, promo.DiscountType, promo.DiscountValue, promo.ValidFrom, promo.ValidTo);
             return mapper.Map<PromoCodeDto>(promo);
         }
 

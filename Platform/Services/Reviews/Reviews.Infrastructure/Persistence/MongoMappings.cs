@@ -1,5 +1,6 @@
 ﻿using MongoDB.Bson;
 using MongoDB.Bson.Serialization;
+using MongoDB.Bson.Serialization.Conventions;
 using MongoDB.Bson.Serialization.Serializers;
 using Reviews.Domain.Common;
 using Reviews.Domain.Entities;
@@ -12,6 +13,9 @@ public static class MongoMappings
     private static readonly object Sync = new();
     private static bool _registered;
 
+    /// <summary>Єдине місце, де задано правило іменування елементів BSON (camelCase).</summary>
+    private static readonly ConventionPack CamelCasePack = new() { new CamelCaseElementNameConvention() };
+
     public static void Register()
     {
         lock (Sync)
@@ -20,6 +24,11 @@ public static class MongoMappings
 
             // Guid → binData subtype 4 (UUID), як у схемі (bsonType: "binData").
             BsonSerializer.TryRegisterSerializer(new GuidSerializer(GuidRepresentation.Standard));
+
+            // Глобальна конвенція: імена елементів BSON у camelCase (CreatedAt → createdAt) для всіх типів цієї збірки.
+            // Для типів без явного мапінгу (їх драйвер мапить сам) цього достатньо; явні мапінги отримують те саме правило через MapClass.
+            var domainAssembly = typeof(Review).Assembly;
+            ConventionRegistry.Register("ReviewsCamelCase", CamelCasePack, type => type.Assembly == domainAssembly);
 
             MapBaseEntity();
             MapAuthor();
@@ -32,24 +41,46 @@ public static class MongoMappings
         }
     }
 
+    /// <summary>Реєструє явний мапінг класу й застосовує до його членів той самий пакет camelCase.
+    /// Конвенції з реєстру драйвер запускає лише для автомапінгу (<c>AutoMap()</c>), а для явного
+    /// <c>RegisterClassMap</c> ні. Автомапінг тут небажаний: домен має приватні сетери та конструктори,
+    /// і повний пакет конвенцій за замовчуванням сам домапив би зайве. Тому застосовуємо лише наш пакет
+    /// до вже заданих членів: імена задає конвенція, а не ручні <c>SetElementName</c>.</summary>
+    private static void MapClass<T>(Action<BsonClassMap<T>> map, Action<BsonClassMap<T>>? afterConventions = null)
+    {
+        BsonClassMap.RegisterClassMap<T>(cm =>
+        {
+            map(cm);
+
+            foreach (var memberMap in cm.DeclaredMemberMaps)
+                foreach (var convention in CamelCasePack.Conventions.OfType<IMemberMapConvention>())
+                    convention.Apply(memberMap);
+
+            // Ідентифікатор документа в MongoDB завжди _id, а не "id".
+            cm.IdMemberMap?.SetElementName("_id");
+
+            afterConventions?.Invoke(cm);
+        });
+    }
+
     private static void MapBaseEntity() =>
-        BsonClassMap.RegisterClassMap<BaseEntity>(cm =>
+        MapClass<BaseEntity>(cm =>
         {
             cm.MapIdMember(x => x.Id);                                  
-            cm.MapProperty(x => x.CreatedAt).SetElementName("createdAt");
-            cm.MapProperty(x => x.UpdatedAt).SetElementName("updatedAt");
-            cm.MapProperty(x => x.CreatedBy).SetElementName("createdBy");
-            cm.MapProperty(x => x.UpdatedBy).SetElementName("updatedBy");
-            cm.MapProperty(x => x.IsDeleted).SetElementName("isDeleted");
-            cm.MapProperty(x => x.Version).SetElementName("version");    
+            cm.MapProperty(x => x.CreatedAt);
+            cm.MapProperty(x => x.UpdatedAt);
+            cm.MapProperty(x => x.CreatedBy);
+            cm.MapProperty(x => x.UpdatedBy);
+            cm.MapProperty(x => x.IsDeleted);
+            cm.MapProperty(x => x.Version);    
             cm.SetIgnoreExtraElements(true);                           
         });
 
     private static void MapAuthor() =>
-        BsonClassMap.RegisterClassMap<Author>(cm =>
+        MapClass<Author>(cm =>
         {
-            cm.MapProperty(x => x.Id).SetElementName("id");
-            cm.MapProperty(x => x.DisplayName).SetElementName("displayName");
+            cm.MapProperty(x => x.Id);
+            cm.MapProperty(x => x.DisplayName);
             cm.MapConstructor(
                 typeof(Author).GetConstructor(new[] { typeof(Guid), typeof(string) })!,
                 nameof(Author.Id), nameof(Author.DisplayName));
@@ -57,11 +88,11 @@ public static class MongoMappings
         });
 
     private static void MapModeration() =>
-        BsonClassMap.RegisterClassMap<Moderation>(cm =>
+        MapClass<Moderation>(cm =>
         {
-            cm.MapProperty(x => x.ModeratedAt).SetElementName("moderatedAt");
-            cm.MapProperty(x => x.ModeratorId).SetElementName("moderatorId");
-            cm.MapProperty(x => x.Reason).SetElementName("reason").SetIgnoreIfNull(true);
+            cm.MapProperty(x => x.ModeratedAt);
+            cm.MapProperty(x => x.ModeratorId);
+            cm.MapProperty(x => x.Reason).SetIgnoreIfNull(true);
             cm.MapConstructor(
                 typeof(Moderation).GetConstructor(new[] { typeof(DateTime), typeof(Guid), typeof(string) })!,
                 nameof(Moderation.ModeratedAt), nameof(Moderation.ModeratorId), nameof(Moderation.Reason));
@@ -69,12 +100,12 @@ public static class MongoMappings
         });
 
     private static void MapReviewPhoto() =>
-        BsonClassMap.RegisterClassMap<ReviewPhoto>(cm =>
+        MapClass<ReviewPhoto>(cm =>
         {
-            cm.MapProperty(x => x.PhotoId).SetElementName("photoId");
-            cm.MapProperty(x => x.Url).SetElementName("url");
-            cm.MapProperty(x => x.Caption).SetElementName("caption").SetIgnoreIfNull(true);
-            cm.MapProperty(x => x.UploadedAt).SetElementName("uploadedAt");
+            cm.MapProperty(x => x.PhotoId);
+            cm.MapProperty(x => x.Url);
+            cm.MapProperty(x => x.Caption).SetIgnoreIfNull(true);
+            cm.MapProperty(x => x.UploadedAt);
             cm.MapConstructor(
                 typeof(ReviewPhoto).GetConstructor(new[] { typeof(ObjectId), typeof(string), typeof(string), typeof(DateTime) })!,
                 nameof(ReviewPhoto.PhotoId), nameof(ReviewPhoto.Url), nameof(ReviewPhoto.Caption), nameof(ReviewPhoto.UploadedAt));
@@ -82,28 +113,30 @@ public static class MongoMappings
         });
 
     private static void MapComment() =>
-        BsonClassMap.RegisterClassMap<Comment>(cm =>
+        MapClass<Comment>(cm =>
         {
-            cm.MapProperty(x => x.Text).SetElementName("text");
-            cm.MapProperty(x => x.Author).SetElementName("author");      
+            cm.MapProperty(x => x.Text);
+            cm.MapProperty(x => x.Author);      
             cm.SetIgnoreExtraElements(true);
         });
 
     private static void MapReview() =>
-        BsonClassMap.RegisterClassMap<Review>(cm =>
+        MapClass<Review>(cm =>
         {
-            cm.MapProperty(x => x.ProductId).SetElementName("productId");
-            cm.MapProperty(x => x.ProductName).SetElementName("productName");
-            cm.MapProperty(x => x.Author).SetElementName("author");
-            cm.MapProperty(x => x.OrderItemId).SetElementName("orderItemId");
-            cm.MapProperty(x => x.Rating).SetElementName("rating");
-            cm.MapProperty(x => x.Text).SetElementName("text").SetIgnoreIfNull(true);
-            cm.MapProperty(x => x.Status).SetElementName("status")
+            cm.MapProperty(x => x.ProductId);
+            cm.MapProperty(x => x.ProductName);
+            cm.MapProperty(x => x.Author);
+            cm.MapProperty(x => x.OrderItemId);
+            cm.MapProperty(x => x.Rating);
+            cm.MapProperty(x => x.Text).SetIgnoreIfNull(true);
+            cm.MapProperty(x => x.Status)
               .SetSerializer(new EnumSerializer<ReviewStatus>(BsonType.String));   
-            cm.MapProperty(x => x.Moderation).SetElementName("moderation").SetIgnoreIfNull(true);
-            cm.MapField("_photos").SetElementName("photos");                        
-            cm.MapProperty(x => x.Reply).SetElementName("reply").SetIgnoreIfNull(true);
-            cm.MapProperty(x => x.ReportCount).SetElementName("reportCount");
+            cm.MapProperty(x => x.Moderation).SetIgnoreIfNull(true);
+            cm.MapField("_photos");                        
+            cm.MapProperty(x => x.Reply).SetIgnoreIfNull(true);
+            cm.MapProperty(x => x.ReportCount);
             cm.SetIgnoreExtraElements(true);
-        });
+        },
+        // Приватне поле _photos: camelCase дав би "_photos", а в схемі колекції елемент називається "photos".
+        afterConventions: cm => cm.GetMemberMap("_photos").SetElementName("photos"));
 }

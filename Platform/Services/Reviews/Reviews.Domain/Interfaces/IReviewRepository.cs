@@ -17,7 +17,7 @@ public interface IReviewRepository
     Task<IReadOnlyList<Review>> SearchTextAsync(string query, ReviewCriteria? filter, int limit,
                                             CancellationToken ct = default);
     Task<RatingStats> AggregateRatingStatsAsync(Guid productId, CancellationToken ct = default);
-
+    Task<bool> ExistsByOrderItemIdAsync(Guid orderItemId, CancellationToken ct = default);
     Task AddAsync(Review review, CancellationToken ct = default);
     Task UpdateAsync(Review review, CancellationToken ct = default);
     Task IncrementReportCountAsync(ObjectId reviewId, CancellationToken ct = default);

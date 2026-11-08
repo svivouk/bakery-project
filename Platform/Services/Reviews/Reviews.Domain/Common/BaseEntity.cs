@@ -12,12 +12,16 @@ namespace Reviews.Domain.Common
         public ObjectId Id { get; protected set; } = ObjectId.GenerateNewId();
         public DateTime CreatedAt { get; private set; }
         public DateTime UpdatedAt { get; private set; }
-        public string CreatedBy { get; private set; } = string.Empty;   
-        public string UpdatedBy { get; private set; } = string.Empty;  
+        public string CreatedBy { get; private set; } = string.Empty;
+        public string UpdatedBy { get; private set; } = string.Empty;
         public bool IsDeleted { get; private set; }
         public int Version { get; private set; }
         public int ExpectedVersion => _versionBumped ? Version - 1 : Version;
         protected BaseEntity() { }
+
+        /// <summary>Викликає репозиторій після успішного запису: у базі тепер лежить поточна <see cref="Version"/>,
+        /// тож наступна зміна цього ж екземпляра знову збільшить версію й порівнюватиме з нею (а не з давнішою).</summary>
+        public void MarkPersisted() => _versionBumped = false;
 
         protected BaseEntity(string createdBy)
         {
@@ -25,7 +29,7 @@ namespace Reviews.Domain.Common
             CreatedAt = UpdatedAt = now;
             CreatedBy = UpdatedBy = Guard.NotBlank(createdBy, nameof(createdBy), 128);
             Version = 1;
-            _versionBumped = true;          
+            _versionBumped = true;
         }
         protected void Touch(string updatedBy)
         {

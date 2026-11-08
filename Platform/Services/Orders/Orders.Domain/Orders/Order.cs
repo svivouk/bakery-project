@@ -31,7 +31,8 @@ public sealed class Order : AuditableEntity
     {
         ArgumentNullException.ThrowIfNull(lines);
         ArgumentNullException.ThrowIfNull(delivery);
-
+       
+        Id = Guid.NewGuid();
         CustomerId = Guard.NotEmpty(customerId, "Клієнт");
         if (desiredReadyAt <= utcNow)
             throw new DomainException("Бажаний час отримання має бути в майбутньому.");

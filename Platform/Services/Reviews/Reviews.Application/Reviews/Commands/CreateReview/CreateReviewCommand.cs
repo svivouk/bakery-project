@@ -1,5 +1,6 @@
 ﻿using Reviews.Application.Common.Interfaces;
 using Reviews.Application.Common.Logging;
+using Reviews.Application.Reviews.Queries.GetReviewsList;
 
 namespace Reviews.Application.Reviews.Commands.CreateReview;
 
@@ -10,4 +11,4 @@ public sealed record CreateReviewCommand(
     [property: Sensitive] string AuthorName,
     Guid OrderItemId,
     int Rating,
-    [property: Sensitive] string? Text) : ICommand<string>;
+    [property: Sensitive] string? Text) : ICommand<ReviewDto>;

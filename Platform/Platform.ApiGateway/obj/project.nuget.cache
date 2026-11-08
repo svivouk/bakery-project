@@ -1,11 +1,81 @@
 {
   "version": 2,
-  "dgSpecHash": "0tw0F7x3D+g=",
+  "dgSpecHash": "kc7tL8Fgm58=",
   "success": true,
   "projectFilePath": "C:\\Users\\krnkr\\OneDrive\\Рабочий стол\\bakery-project\\Platform\\Platform.ApiGateway\\Platform.ApiGateway.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\krnkr\\.nuget\\packages\\dnsclient\\1.6.1\\dnsclient.1.6.1.nupkg.sha512",
     "C:\\Users\\krnkr\\.nuget\\packages\\microsoft.aspnetcore.openapi\\10.0.12\\microsoft.aspnetcore.openapi.10.0.12.nupkg.sha512",
-    "C:\\Users\\krnkr\\.nuget\\packages\\microsoft.openapi\\2.12.0\\microsoft.openapi.2.12.0.nupkg.sha512"
+    "C:\\Users\\krnkr\\.nuget\\packages\\microsoft.extensions.ambientmetadata.application\\10.10.0\\microsoft.extensions.ambientmetadata.application.10.10.0.nupkg.sha512",
+    "C:\\Users\\krnkr\\.nuget\\packages\\microsoft.extensions.compliance.abstractions\\10.10.0\\microsoft.extensions.compliance.abstractions.10.10.0.nupkg.sha512",
+    "C:\\Users\\krnkr\\.nuget\\packages\\microsoft.extensions.dependencyinjection.autoactivation\\10.10.0\\microsoft.extensions.dependencyinjection.autoactivation.10.10.0.nupkg.sha512",
+    "C:\\Users\\krnkr\\.nuget\\packages\\microsoft.extensions.dependencymodel\\10.0.0\\microsoft.extensions.dependencymodel.10.0.0.nupkg.sha512",
+    "C:\\Users\\krnkr\\.nuget\\packages\\microsoft.extensions.diagnostics.exceptionsummarization\\10.10.0\\microsoft.extensions.diagnostics.exceptionsummarization.10.10.0.nupkg.sha512",
+    "C:\\Users\\krnkr\\.nuget\\packages\\microsoft.extensions.http.diagnostics\\10.10.0\\microsoft.extensions.http.diagnostics.10.10.0.nupkg.sha512",
+    "C:\\Users\\krnkr\\.nuget\\packages\\microsoft.extensions.http.resilience\\10.10.0\\microsoft.extensions.http.resilience.10.10.0.nupkg.sha512",
+    "C:\\Users\\krnkr\\.nuget\\packages\\microsoft.extensions.resilience\\10.10.0\\microsoft.extensions.resilience.10.10.0.nupkg.sha512",
+    "C:\\Users\\krnkr\\.nuget\\packages\\microsoft.extensions.servicediscovery\\10.11.0\\microsoft.extensions.servicediscovery.10.11.0.nupkg.sha512",
+    "C:\\Users\\krnkr\\.nuget\\packages\\microsoft.extensions.servicediscovery.abstractions\\10.11.0\\microsoft.extensions.servicediscovery.abstractions.10.11.0.nupkg.sha512",
+    "C:\\Users\\krnkr\\.nuget\\packages\\microsoft.extensions.servicediscovery.yarp\\10.11.0\\microsoft.extensions.servicediscovery.yarp.10.11.0.nupkg.sha512",
+    "C:\\Users\\krnkr\\.nuget\\packages\\microsoft.extensions.telemetry\\10.10.0\\microsoft.extensions.telemetry.10.10.0.nupkg.sha512",
+    "C:\\Users\\krnkr\\.nuget\\packages\\microsoft.extensions.telemetry.abstractions\\10.10.0\\microsoft.extensions.telemetry.abstractions.10.10.0.nupkg.sha512",
+    "C:\\Users\\krnkr\\.nuget\\packages\\microsoft.openapi\\2.12.0\\microsoft.openapi.2.12.0.nupkg.sha512",
+    "C:\\Users\\krnkr\\.nuget\\packages\\mongodb.bson\\3.0.0\\mongodb.bson.3.0.0.nupkg.sha512",
+    "C:\\Users\\krnkr\\.nuget\\packages\\mongodb.driver\\3.0.0\\mongodb.driver.3.0.0.nupkg.sha512",
+    "C:\\Users\\krnkr\\.nuget\\packages\\mongodb.driver.core.extensions.diagnosticsources\\3.0.0\\mongodb.driver.core.extensions.diagnosticsources.3.0.0.nupkg.sha512",
+    "C:\\Users\\krnkr\\.nuget\\packages\\opentelemetry\\1.20.1\\opentelemetry.1.20.1.nupkg.sha512",
+    "C:\\Users\\krnkr\\.nuget\\packages\\opentelemetry.api\\1.20.1\\opentelemetry.api.1.20.1.nupkg.sha512",
+    "C:\\Users\\krnkr\\.nuget\\packages\\opentelemetry.api.providerbuilderextensions\\1.20.1\\opentelemetry.api.providerbuilderextensions.1.20.1.nupkg.sha512",
+    "C:\\Users\\krnkr\\.nuget\\packages\\opentelemetry.exporter.opentelemetryprotocol\\1.20.1\\opentelemetry.exporter.opentelemetryprotocol.1.20.1.nupkg.sha512",
+    "C:\\Users\\krnkr\\.nuget\\packages\\opentelemetry.extensions.hosting\\1.20.1\\opentelemetry.extensions.hosting.1.20.1.nupkg.sha512",
+    "C:\\Users\\krnkr\\.nuget\\packages\\opentelemetry.instrumentation.aspnetcore\\1.17.0\\opentelemetry.instrumentation.aspnetcore.1.17.0.nupkg.sha512",
+    "C:\\Users\\krnkr\\.nuget\\packages\\opentelemetry.instrumentation.http\\1.17.0\\opentelemetry.instrumentation.http.1.17.0.nupkg.sha512",
+    "C:\\Users\\krnkr\\.nuget\\packages\\opentelemetry.instrumentation.runtime\\1.17.0\\opentelemetry.instrumentation.runtime.1.17.0.nupkg.sha512",
+    "C:\\Users\\krnkr\\.nuget\\packages\\opentelemetry.instrumentation.sqlclient\\1.20.2\\opentelemetry.instrumentation.sqlclient.1.20.2.nupkg.sha512",
+    "C:\\Users\\krnkr\\.nuget\\packages\\polly.core\\8.4.2\\polly.core.8.4.2.nupkg.sha512",
+    "C:\\Users\\krnkr\\.nuget\\packages\\polly.extensions\\8.4.2\\polly.extensions.8.4.2.nupkg.sha512",
+    "C:\\Users\\krnkr\\.nuget\\packages\\polly.ratelimiting\\8.4.2\\polly.ratelimiting.8.4.2.nupkg.sha512",
+    "C:\\Users\\krnkr\\.nuget\\packages\\serilog\\4.3.0\\serilog.4.3.0.nupkg.sha512",
+    "C:\\Users\\krnkr\\.nuget\\packages\\serilog.aspnetcore\\10.0.0\\serilog.aspnetcore.10.0.0.nupkg.sha512",
+    "C:\\Users\\krnkr\\.nuget\\packages\\serilog.enrichers.environment\\3.0.1\\serilog.enrichers.environment.3.0.1.nupkg.sha512",
+    "C:\\Users\\krnkr\\.nuget\\packages\\serilog.enrichers.thread\\4.0.0\\serilog.enrichers.thread.4.0.0.nupkg.sha512",
+    "C:\\Users\\krnkr\\.nuget\\packages\\serilog.extensions.hosting\\10.0.0\\serilog.extensions.hosting.10.0.0.nupkg.sha512",
+    "C:\\Users\\krnkr\\.nuget\\packages\\serilog.extensions.logging\\10.0.0\\serilog.extensions.logging.10.0.0.nupkg.sha512",
+    "C:\\Users\\krnkr\\.nuget\\packages\\serilog.formatting.compact\\3.0.0\\serilog.formatting.compact.3.0.0.nupkg.sha512",
+    "C:\\Users\\krnkr\\.nuget\\packages\\serilog.settings.configuration\\10.0.0\\serilog.settings.configuration.10.0.0.nupkg.sha512",
+    "C:\\Users\\krnkr\\.nuget\\packages\\serilog.sinks.console\\6.1.1\\serilog.sinks.console.6.1.1.nupkg.sha512",
+    "C:\\Users\\krnkr\\.nuget\\packages\\serilog.sinks.debug\\3.0.0\\serilog.sinks.debug.3.0.0.nupkg.sha512",
+    "C:\\Users\\krnkr\\.nuget\\packages\\serilog.sinks.file\\7.0.0\\serilog.sinks.file.7.0.0.nupkg.sha512",
+    "C:\\Users\\krnkr\\.nuget\\packages\\sharpcompress\\0.30.1\\sharpcompress.0.30.1.nupkg.sha512",
+    "C:\\Users\\krnkr\\.nuget\\packages\\snappier\\1.0.0\\snappier.1.0.0.nupkg.sha512",
+    "C:\\Users\\krnkr\\.nuget\\packages\\system.io.hashing\\8.0.0\\system.io.hashing.8.0.0.nupkg.sha512",
+    "C:\\Users\\krnkr\\.nuget\\packages\\yarp.reverseproxy\\2.3.0\\yarp.reverseproxy.2.3.0.nupkg.sha512",
+    "C:\\Users\\krnkr\\.nuget\\packages\\zstdsharp.port\\0.7.3\\zstdsharp.port.0.7.3.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1902",
+      "level": "Warning",
+      "message": "Package 'SharpCompress' 0.30.1 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-6c8g-7p36-r338",
+      "projectPath": "C:\\Users\\krnkr\\OneDrive\\Рабочий стол\\bakery-project\\Platform\\Platform.ApiGateway\\Platform.ApiGateway.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\krnkr\\OneDrive\\Рабочий стол\\bakery-project\\Platform\\Platform.ApiGateway\\Platform.ApiGateway.csproj",
+      "libraryId": "SharpCompress",
+      "targetGraphs": [
+        "net10.0"
+      ]
+    },
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "message": "Package 'Snappier' 1.0.0 has a known high severity vulnerability, https://github.com/advisories/GHSA-pggp-6c3x-2xmx",
+      "projectPath": "C:\\Users\\krnkr\\OneDrive\\Рабочий стол\\bakery-project\\Platform\\Platform.ApiGateway\\Platform.ApiGateway.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\krnkr\\OneDrive\\Рабочий стол\\bakery-project\\Platform\\Platform.ApiGateway\\Platform.ApiGateway.csproj",
+      "libraryId": "Snappier",
+      "targetGraphs": [
+        "net10.0"
+      ]
+    }
+  ]
 }

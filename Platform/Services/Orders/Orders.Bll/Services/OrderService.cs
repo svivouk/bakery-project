@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.Extensions.Logging;
 using Orders.Bll.Dtos;
 using Orders.Dal.Repositories;
 using Orders.Dal.Repositories.Interfaces;
@@ -12,13 +13,14 @@ using System.Text.Json;
 
 namespace Orders.Bll.Services
 {
-    public sealed class OrderService(IUnitOfWork uow, IMapper mapper, TimeProvider? clock = null) : IOrderService
+    public sealed class OrderService(IUnitOfWork uow, IMapper mapper, ILogger<OrderService> logger, TimeProvider? clock = null) : IOrderService
     {
         private readonly TimeProvider _clock = clock ?? TimeProvider.System;
 
         public async Task<OrderDto> PlaceAsync(PlaceOrderRequest request, CancellationToken cancellationToken = default)
         {
             ArgumentNullException.ThrowIfNull(request);
+            using var activity = Telemetry.Source.StartActivity("PlaceOrder"); 
             var now = _clock.GetUtcNow().UtcDateTime;
 
             var customer = await uow.Customers.GetByIdAsync(request.CustomerId, cancellationToken)
@@ -74,6 +76,10 @@ namespace Orders.Bll.Services
             cart.Clear();
 
             await uow.SaveChangesAsync(cancellationToken);
+            activity?.SetTag("order.id", order.Id);
+            activity?.SetTag("order.items", order.Items.Count);
+            logger.LogInformation("Order {OrderId} placed by customer {CustomerId}: {ItemsCount} items, amount {Amount}, status {Status}",
+                                    order.Id, order.CustomerId, order.Items.Count, order.TotalAmount, order.Status);
             return mapper.Map<OrderDto>(order);
         }
 
@@ -83,7 +89,9 @@ namespace Orders.Bll.Services
         public async Task ChangeStatusAsync(Guid id, ChangeOrderStatusRequest request, CancellationToken cancellationToken = default)
         {
             ArgumentNullException.ThrowIfNull(request);
+            using var activity = Telemetry.Source.StartActivity("ChangeStatusOrder");
             var order = await LoadAsync(id, cancellationToken);
+            var oldStatus = order.Status;
             switch (request.Status)
             {
                 case OrderStatus.Confirmed: order.Confirm(); break;
@@ -95,6 +103,9 @@ namespace Orders.Bll.Services
             }
 
             await uow.SaveChangesAsync(cancellationToken);
+            activity?.SetTag("order.id", order.Id);
+            activity?.SetTag("order.Status", order.Status);
+            logger.LogInformation("Order {OrderId} status changed {OldStatus} → {NewStatus}", id, oldStatus, order.Status); 
         }
 
         private async Task<Order> LoadAsync(Guid id, CancellationToken cancellationToken)

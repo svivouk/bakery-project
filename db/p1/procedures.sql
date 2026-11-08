@@ -304,3 +304,44 @@ BEGIN
     COMMIT;
 END
 GO
+
+CREATE OR ALTER PROCEDURE dbo.usp_Stock_ReleaseExpired
+    @BatchSize INT = 100,
+    @Actor     NVARCHAR(128) = N'system:cleanup'
+AS
+BEGIN
+    SET NOCOUNT ON;
+    SET XACT_ABORT ON;
+
+    DECLARE @Released INT = 0;
+    DECLARE @Freed TABLE (VariantId UNIQUEIDENTIFIER NOT NULL, Quantity INT NOT NULL);
+
+    BEGIN TRAN;
+
+    ;WITH expired AS (
+        SELECT TOP (@BatchSize) r.ReservationId, r.Status, r.VariantId, r.Quantity
+        FROM   dbo.StockReservations r WITH (UPDLOCK, READPAST, ROWLOCK)
+        WHERE  r.Status = 0
+          AND  r.ExpiresAt IS NOT NULL
+          AND  r.ExpiresAt <= SYSUTCDATETIME()
+        ORDER BY r.ExpiresAt
+    )
+    UPDATE expired
+    SET    Status = 2
+    OUTPUT inserted.VariantId, inserted.Quantity INTO @Freed (VariantId, Quantity);
+
+    SET @Released = @@ROWCOUNT;
+
+    IF @Released > 0
+        UPDATE si
+        SET    QuantityAvailable = si.QuantityAvailable + f.Qty,
+               UpdatedAt = SYSUTCDATETIME(), UpdatedBy = @Actor
+        FROM   dbo.StockItems si
+        JOIN  (SELECT VariantId, SUM(Quantity) AS Qty FROM @Freed GROUP BY VariantId) f
+               ON f.VariantId = si.VariantId;
+
+    COMMIT;
+
+    SELECT @Released AS Released;
+END
+GO

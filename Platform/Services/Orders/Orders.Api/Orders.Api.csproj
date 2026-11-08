@@ -22,9 +22,9 @@
     <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="10.3.1" />
     <PackageReference Include="System.Security.Cryptography.Pkcs" Version="9.0.21" />
   </ItemGroup>
-
   <ItemGroup>
     <ProjectReference Include="..\Orders.Bll\Orders.Bll.csproj" />
+    <ProjectReference Include="..\..\..\Platform.ServiceDefaults\Platform.ServiceDefaults.csproj" />
   </ItemGroup>
 
 </Project>

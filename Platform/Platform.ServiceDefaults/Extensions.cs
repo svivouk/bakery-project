@@ -1,12 +1,16 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Diagnostics.HealthChecks;
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.ServiceDiscovery;
 using OpenTelemetry;
 using OpenTelemetry.Metrics;
 using OpenTelemetry.Trace;
+using Serilog;
+using Serilog.Events;
+using Serilog.Formatting.Compact;
+using System.Diagnostics;
 
 namespace Microsoft.Extensions.Hosting;
 
@@ -20,62 +24,91 @@ public static class Extensions
 
     public static TBuilder AddServiceDefaults<TBuilder>(this TBuilder builder) where TBuilder : IHostApplicationBuilder
     {
+        builder.Logging.ClearProviders();
+
+        var serviceName = builder.Configuration["OTEL_SERVICE_NAME"] ?? builder.Environment.ApplicationName;
+
+        builder.Services.AddSerilog((services, cfg) => cfg
+            .MinimumLevel.Is(builder.Environment.IsDevelopment() ? LogEventLevel.Debug : LogEventLevel.Information)
+            .MinimumLevel.Override("Microsoft.AspNetCore", LogEventLevel.Warning)
+            .MinimumLevel.Override("Microsoft.Hosting.Lifetime", LogEventLevel.Information)
+            .MinimumLevel.Override("Microsoft.EntityFrameworkCore", LogEventLevel.Warning)
+            .MinimumLevel.Override("System.Net.Http.HttpClient", LogEventLevel.Warning)
+            .MinimumLevel.Override("Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware", LogEventLevel.Fatal)
+            .ReadFrom.Configuration(builder.Configuration)
+            .Enrich.FromLogContext()                                        
+            .Enrich.WithProperty("ServiceName", serviceName)
+            .Enrich.WithProperty("Environment", builder.Environment.EnvironmentName)
+            .Enrich.WithMachineName()
+            .Enrich.WithThreadId()
+            .WriteTo.Console(new CompactJsonFormatter()),
+            writeToProviders: true);
+
+        builder.Services.AddHttpContextAccessor();
+        builder.Services.AddTransient<CorrelationIdHandler>();
         builder.ConfigureOpenTelemetry();
-
         builder.AddDefaultHealthChecks();
-
         builder.Services.AddServiceDiscovery();
-
+        builder.Services.AddHttpContextAccessor();
+        builder.Services.AddTransient<CorrelationIdHandler>();
         builder.Services.ConfigureHttpClientDefaults(http =>
         {
-            // Turn on resilience by default
             http.AddStandardResilienceHandler();
-
-            // Turn on service discovery by default
             http.AddServiceDiscovery();
+            http.AddHttpMessageHandler<CorrelationIdHandler>();
         });
+        return builder;
+    }
+    public static WebApplication UseCorrelationId(this WebApplication app)
+    {
+        app.UseMiddleware<CorrelationIdMiddleware>();
+        return app;
+    }
+    public static TBuilder ConfigureOpenTelemetry<TBuilder>(this TBuilder builder)
+    where TBuilder : IHostApplicationBuilder
+    {
+        var serviceName = builder.Environment.ApplicationName;
+        var envName = builder.Environment.EnvironmentName;
 
-        // Uncomment the following to restrict the allowed schemes for service discovery.
-        // builder.Services.Configure<ServiceDiscoveryOptions>(options =>
-        // {
-        //     options.AllowedSchemes = ["https"];
-        // });
+        builder.Logging.AddOpenTelemetry(o => { o.IncludeFormattedMessage = true; o.IncludeScopes = true; });
+        builder.Services.AddOpenTelemetry()
+            .WithMetrics(m => m
+                .AddAspNetCoreInstrumentation()
+                .AddHttpClientInstrumentation()
+                .AddRuntimeInstrumentation())
+            .WithTracing(t =>
+            {
+                t.AddSource(serviceName)                                            // власні spans (3.3)
+                 .AddSource("MongoDB.Driver.Core.Extensions.DiagnosticSources")     // MongoDB
+                 .AddAspNetCoreInstrumentation(o => o.Filter = ctx =>
+                     !ctx.Request.Path.StartsWithSegments("/health") &&
+                     !ctx.Request.Path.StartsWithSegments("/alive"))
+                 .AddHttpClientInstrumentation()
+                 .AddSqlClientInstrumentation()                                     // Dapper та EF Core
+                 .AddProcessor(new ServiceTagsProcessor(serviceName, envName));
+
+                if (builder.Environment.IsDevelopment())
+                    t.SetSampler(new AlwaysOnSampler());                            // 100 %
+                else
+                {
+                    var ratio = builder.Configuration.GetValue("Telemetry:SamplingRatio", 0.1);
+                    t.SetSampler(new ParentBasedSampler(new TraceIdRatioBasedSampler(ratio)));
+                }
+            });
+
+        if (!string.IsNullOrWhiteSpace(builder.Configuration["OTEL_EXPORTER_OTLP_ENDPOINT"]))
+            builder.Services.AddOpenTelemetry().UseOtlpExporter();                  // адресу задає Aspire; експорт батчевий
 
         return builder;
     }
 
-    public static TBuilder ConfigureOpenTelemetry<TBuilder>(this TBuilder builder) where TBuilder : IHostApplicationBuilder
+    internal sealed class ServiceTagsProcessor(string service, string environment) : BaseProcessor<Activity>
     {
-        builder.Logging.AddOpenTelemetry(logging =>
+        public override void OnStart(Activity activity)
         {
-            logging.IncludeFormattedMessage = true;
-            logging.IncludeScopes = true;
-        });
-
-        builder.Services.AddOpenTelemetry()
-            .WithMetrics(metrics =>
-            {
-                metrics.AddAspNetCoreInstrumentation()
-                    .AddHttpClientInstrumentation()
-                    .AddRuntimeInstrumentation();
-            })
-            .WithTracing(tracing =>
-            {
-                tracing.AddSource(builder.Environment.ApplicationName)
-                    .AddAspNetCoreInstrumentation(tracing =>
-                        // Exclude health check requests from tracing
-                        tracing.Filter = context =>
-                            !context.Request.Path.StartsWithSegments(HealthEndpointPath)
-                            && !context.Request.Path.StartsWithSegments(AlivenessEndpointPath)
-                    )
-                    // Uncomment the following line to enable gRPC instrumentation (requires the OpenTelemetry.Instrumentation.GrpcNetClient package)
-                    //.AddGrpcClientInstrumentation()
-                    .AddHttpClientInstrumentation();
-            });
-
-        builder.AddOpenTelemetryExporters();
-
-        return builder;
+            activity.SetTag("ServiceName", service);
+            activity.SetTag("Environment", environment);
+        }
     }
 
     private static TBuilder AddOpenTelemetryExporters<TBuilder>(this TBuilder builder) where TBuilder : IHostApplicationBuilder

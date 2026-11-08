@@ -1,4 +1,6 @@
-﻿using MediatR;
+﻿using AutoMapper;
+using MediatR;
+using Reviews.Application.Reviews.Queries.GetReviewsList;
 using Reviews.Domain.Entities;
 using Reviews.Domain.Exceptions;
 using Reviews.Domain.Interfaces;
@@ -10,9 +12,10 @@ public sealed class CreateReviewCommandHandler(
     IReviewRepository reviews,
     IReviewEligibilityService eligibilityService,
     IReviewEligibilityRepository eligibility,
-    IUnitOfWork unitOfWork) : IRequestHandler<CreateReviewCommand, string>
+    IUnitOfWork unitOfWork,
+    IMapper mapper) : IRequestHandler<CreateReviewCommand, ReviewDto>
 {
-    public async Task<string> Handle(CreateReviewCommand cmd, CancellationToken ct)
+    public async Task<ReviewDto> Handle(CreateReviewCommand cmd, CancellationToken ct)
     {
         var review = Review.Create(
             cmd.ProductId, cmd.ProductName,
@@ -29,9 +32,9 @@ public sealed class CreateReviewCommandHandler(
             await unitOfWork.ExecuteAsync(async token =>
             {
                 claimed = await eligibility.TryClaimAsync(cmd.OrderItemId, review.Id, token);
-                if (!claimed) throw new DomainException("Цю покупку вже оцінено.");
+                if (!claimed) throw new DuplicateReviewException(cmd.OrderItemId);   // гонка: валідатор пропустив, а місце вже зайняте
 
-                await reviews.AddAsync(review, token);     
+                await reviews.AddAsync(review, token);
             }, ct);
         }
         catch when (claimed)
@@ -40,6 +43,6 @@ public sealed class CreateReviewCommandHandler(
             throw;
         }
 
-        return review.Id.ToString();
+        return mapper.Map<ReviewDto>(review);   // ObjectId → string і VO розгортає MappingProfile
     }
 }

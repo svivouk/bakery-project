@@ -1,5 +1,6 @@
 ﻿using FluentValidation;
 using Reviews.Domain.Entities;
+using Reviews.Domain.Interfaces;
 using Reviews.Domain.ValueObjects;
 using System;
 using System.Collections.Generic;
@@ -9,10 +10,18 @@ namespace Reviews.Application.Reviews.Commands.CreateReview;
 
 public sealed class CreateReviewCommandValidator : AbstractValidator<CreateReviewCommand>
 {
-    public CreateReviewCommandValidator()
+    public CreateReviewCommandValidator(IReviewRepository reviews)
     {
         RuleFor(x => x.ProductId).NotEmpty().WithMessage("Вкажіть товар.");
-        RuleFor(x => x.OrderItemId).NotEmpty().WithMessage("Вкажіть покупку, яку оцінюєте.");
+        // Асинхронне правило з запитом до MongoDB: покупку можна оцінити лише один раз. Cascade.Stop: порожній Guid
+        // не доходить до бази. Перевірка раннього відхилення (зрозуміла 400-відповідь); остаточний захист від гонки —
+        // унікальний індекс orderItemId і TryClaimAsync в обробнику.
+        RuleFor(x => x.OrderItemId)
+            .Cascade(CascadeMode.Stop)
+            .NotEmpty().WithMessage("Вкажіть покупку, яку оцінюєте.")
+            .MustAsync(async (orderItemId, ct) => !await reviews.ExistsByOrderItemIdAsync(orderItemId, ct))
+            .WithErrorCode("DuplicateReview")
+            .WithMessage("Цю покупку вже оцінено.");
         RuleFor(x => x.AuthorId).NotEmpty().WithMessage("Вкажіть автора відгуку.");
 
         RuleFor(x => x.ProductName)

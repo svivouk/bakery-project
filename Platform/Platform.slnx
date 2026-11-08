@@ -1,5 +1,7 @@
 <Solution>
-  <Folder Name="/Services/" />
+  <Folder Name="/Services/">
+    <Project Path="Platform.ApiGateway/Platform.ApiGateway.csproj" />
+  </Folder>
   <Folder Name="/Services/Catalog/">
     <Project Path="Services/Catalog/Catalog.Domain/Catalog.Domain.csproj" />
     <Project Path="Services/Catalog/Catlog.API/Catalog.API.csproj" />
@@ -18,5 +20,7 @@
     <Project Path="Services/Reviews/Reviews.Infrastructure/Reviews.Infrastructure.csproj" />
     <Project Path="Services/Reviews/Reviews.WebApi/Reviews.WebApi.csproj" />
   </Folder>
-  <Project Path="Playform.AppHost/Platform.AppHost.csproj" Id="681b2cc7-46c9-4d6d-ae94-00035bf05053" />
+  <Project Path="Platform.Aggregator/Platform.Aggregator.csproj" />
+  <Project Path="Platform.AppHost/Platform.AppHost.csproj" />
+  <Project Path="Platform.ServiceDefaults/Platform.ServiceDefaults.csproj" />
 </Solution>

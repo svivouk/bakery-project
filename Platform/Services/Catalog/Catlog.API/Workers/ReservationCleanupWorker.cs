@@ -36,6 +36,7 @@ public sealed class ReservationCleanupWorker : BackgroundService
                     var released = await stock.ReleaseExpiredAsync(stoppingToken);
                     if (released > 0)
                         _logger.LogInformation("Звільнено прострочених резервацій: {Count}", released);
+
                 }
                 catch (Exception ex) when (ex is not OperationCanceledException)
                 {

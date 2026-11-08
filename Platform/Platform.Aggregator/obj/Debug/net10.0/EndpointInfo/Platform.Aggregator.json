@@ -1,0 +1,16 @@
+{
+  "openapi": "3.1.1",
+  "info": {
+    "title": "Platform.Aggregator | v1",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://localhost:13531"
+    },
+    {
+      "url": "http://localhost:13530"
+    }
+  ],
+  "paths": { }
+}

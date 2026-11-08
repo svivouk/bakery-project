@@ -1,32 +1,29 @@
-using System.Diagnostics;
-using System.Reflection;
-using System.Text.Json.Serialization;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi;
+using OpenTelemetry.Trace;
 using Orders.Api;
 using Orders.Api.Middleware;
+using Orders.Bll;
 using Orders.Dal;
 using Orders.Dal.Seeding;
 using Serilog;
+using System.Diagnostics;
+using System.Reflection;
+using System.Text.Json.Serialization;
 
 Log.Logger = new LoggerConfiguration().WriteTo.Console().CreateBootstrapLogger();   // ловить помилки старту
 try
 {
     var builder = WebApplication.CreateBuilder(args);
-
-    builder.Host.UseSerilog((ctx, services, cfg) => cfg
-        .ReadFrom.Configuration(ctx.Configuration)
-        .ReadFrom.Services(services)
-        .Enrich.FromLogContext());
+    builder.AddServiceDefaults();
 
     var connectionString = builder.Configuration.GetConnectionString("OrdersDb")
         ?? throw new InvalidOperationException("Не задано рядок підключення ConnectionStrings:OrdersDb.");
-
     builder.Services.AddHttpContextAccessor();
     builder.Services.AddScoped<ICurrentActor, HttpContextActor>();
     builder.Services.AddOrdersDb(connectionString);                                          // DbContext + Unit of Work + сідер
     builder.Services.AddOrdersApplication(builder.Configuration["AutoMapper:LicenseKey"]);   // BLL, валідатори, AutoMapper
-
+    builder.Services.ConfigureOpenTelemetryTracerProvider(t => t.AddSource(Telemetry.SourceName));
     builder.Services
         .AddControllers()
         // enum передаються рядками ("Percentage"), а не числами
@@ -59,7 +56,18 @@ try
     });
 
     var app = builder.Build();
+    using (var scope = app.Services.CreateScope())
+    {
+        var db = scope.ServiceProvider.GetRequiredService<OrdersDbContext>(); // ваша назва контексту
+        var log = scope.ServiceProvider.GetRequiredService<ILogger<Program>>();
 
+        if (app.Environment.IsDevelopment() || app.Configuration.GetValue<bool>("Database:ApplyMigrationsOnStartup"))
+        {
+            log.LogInformation("Застосування міграцій OrdersDb");
+            await db.Database.MigrateAsync();
+        }
+    }
+    app.UseCorrelationId();
     // Ініціалізація БД. Міграції: схема + довідники з HasData. Програмний сідер: лише демо-дані, і в Production
     // він пропускається, якщо явно не задано Database:AllowSeedInProduction=true.
     var dbOptions = app.Configuration.GetSection(DatabaseOptions.SectionName).Get<DatabaseOptions>() ?? new DatabaseOptions();
@@ -87,17 +95,17 @@ try
         }
     }
 
-    app.UseMiddleware<LogContextMiddleware>();   // CorrelationId/UserId/RequestPath: перед обробником винятків
     app.UseExceptionHandler();                   // невиловлені винятки → GlobalExceptionHandler
-    app.UseSerilogRequestLogging();              // один рядок на запит
     app.UseStatusCodePages();                    // порожні 4xx/5xx (невідомий маршрут, 405) → ProblemDetails
 
     if (app.Environment.IsDevelopment())
     {
-        app.UseSwagger();
+        app.UseSwagger();   
     }
+    if (!app.Environment.IsDevelopment())
+        app.UseHttpsRedirection();
 
-    app.UseHttpsRedirection();
+    app.MapDefaultEndpoints();
     app.MapControllers();
     app.Run();
 }

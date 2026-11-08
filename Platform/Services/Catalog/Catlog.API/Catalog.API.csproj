@@ -13,8 +13,11 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Catlog.BLL\Catalog.BLL.csproj" />
+    <ProjectReference Include="..\..\..\Platform.ServiceDefaults\Platform.ServiceDefaults.csproj" />
   </ItemGroup>
-
+	<ItemGroup>
+		<EmbeddedResource Include="Sql\*.sql" />
+	</ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />
   </ItemGroup>

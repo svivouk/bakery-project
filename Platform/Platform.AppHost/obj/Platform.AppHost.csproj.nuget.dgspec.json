@@ -57,6 +57,14 @@
               "target": "Package",
               "version": "[13.6.4, )",
               "autoReferenced": true
+            },
+            "Aspire.Hosting.MongoDB": {
+              "target": "Package",
+              "version": "[13.6.4, )"
+            },
+            "Aspire.Hosting.SqlServer": {
+              "target": "Package",
+              "version": "[13.6.4, )"
             }
           },
           "imports": [

@@ -1,0 +1,19 @@
+{
+  "openapi": "3.1.1",
+  "info": {
+    "title": "Platform.ApiGateway | v1",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://localhost:24283"
+    },
+    {
+      "url": "http://localhost:24282"
+    },
+    {
+      "url": "http://localhost:24281"
+    }
+  ],
+  "paths": { }
+}
