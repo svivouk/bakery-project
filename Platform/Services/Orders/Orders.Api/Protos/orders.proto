@@ -1,0 +1,38 @@
+syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+
+option csharp_namespace = "Orders.Grpc";
+package orders;
+
+service OrdersGrpc {
+  rpc GetOrder (GetOrderRequest) returns (OrderInfo);
+}
+
+message GetOrderRequest {
+  string order_id = 1;
+}
+
+message OrderItemInfo {
+  string id = 1;
+  string product_id = 2;
+  string variant_id = 3;
+  string product_name = 4;
+  string variant_name = 5;
+  string unit_price = 6;
+  int32 quantity = 7;
+  string line_total = 8;
+}
+
+message OrderInfo {
+  string id = 1;
+  int64 order_number = 2;
+  string customer_id = 3;
+  string status = 4;
+  google.protobuf.Timestamp desired_ready_at = 5;
+  string subtotal = 6;
+  string discount_amount = 7;
+  string delivery_fee = 8;
+  string total_amount = 9;
+  repeated OrderItemInfo items = 10;
+}

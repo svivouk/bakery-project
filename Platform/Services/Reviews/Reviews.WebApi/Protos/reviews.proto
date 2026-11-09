@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+
+option csharp_namespace = "Reviews.Grpc";
+package reviews;
+
+service ReviewsGrpc {
+  rpc GetReviewsForProducts (GetReviewsRequest) returns (GetReviewsReply);
+}
+
+message GetReviewsRequest {
+  repeated string product_ids = 1;
+  int32 page_size = 2;
+}
+
+message GetReviewsReply {
+  repeated ReviewInfo reviews = 1;
+}
+
+message ReviewInfo {
+  string id = 1;
+  string product_id = 2;
+  string product_name = 3;
+  string author_name = 4;
+  int32 rating = 5;
+  optional string text = 6;
+  google.protobuf.Timestamp created_at = 7;
+}

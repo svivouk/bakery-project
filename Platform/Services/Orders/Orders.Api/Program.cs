@@ -28,6 +28,7 @@ try
         .AddControllers()
         // enum передаються рядками ("Percentage"), а не числами
         .AddJsonOptions(o => o.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter()));
+   
 
     // Єдиний формат помилок (ProblemDetails): винятки обробляє GlobalExceptionHandler, порожні 404/405 — UseStatusCodePages.
     builder.Services.AddProblemDetails(options =>
@@ -56,20 +57,7 @@ try
     });
 
     var app = builder.Build();
-    using (var scope = app.Services.CreateScope())
-    {
-        var db = scope.ServiceProvider.GetRequiredService<OrdersDbContext>(); // ваша назва контексту
-        var log = scope.ServiceProvider.GetRequiredService<ILogger<Program>>();
-
-        if (app.Environment.IsDevelopment() || app.Configuration.GetValue<bool>("Database:ApplyMigrationsOnStartup"))
-        {
-            log.LogInformation("Застосування міграцій OrdersDb");
-            await db.Database.MigrateAsync();
-        }
-    }
     app.UseCorrelationId();
-    // Ініціалізація БД. Міграції: схема + довідники з HasData. Програмний сідер: лише демо-дані, і в Production
-    // він пропускається, якщо явно не задано Database:AllowSeedInProduction=true.
     var dbOptions = app.Configuration.GetSection(DatabaseOptions.SectionName).Get<DatabaseOptions>() ?? new DatabaseOptions();
     var isProduction = app.Environment.IsProduction();
     var runSeed = dbOptions.ShouldSeed(isProduction);
@@ -95,13 +83,14 @@ try
         }
     }
 
-    app.UseExceptionHandler();                   // невиловлені винятки → GlobalExceptionHandler
-    app.UseStatusCodePages();                    // порожні 4xx/5xx (невідомий маршрут, 405) → ProblemDetails
-
+    app.UseExceptionHandler();                   
+    app.UseStatusCodePages();
     if (app.Environment.IsDevelopment())
     {
-        app.UseSwagger();   
+        app.UseSwagger();
+        app.UseSwaggerUI();
     }
+
     if (!app.Environment.IsDevelopment())
         app.UseHttpsRedirection();
 

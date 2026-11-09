@@ -17,7 +17,7 @@ public sealed class GatewayLoggingMiddleware(RequestDelegate next, ILogger<Gatew
         await next(context);
         sw.Stop();
 
-        var feature = context.GetReverseProxyFeature();
+        var feature = context.Features.Get<Yarp.ReverseProxy.Model.IReverseProxyFeature>();
         var route = feature?.Route.Config.RouteId ?? "none";
         var destination = feature?.ProxiedDestination?.Model.Config.Address;
         var meta = feature?.Route.Config.Metadata;

@@ -1,1 +1,4 @@
-obj\Debug\net10.0\Protos/Catalog.cs: Protos/catalog.proto
+obj\Debug\net10.0\Protos/Catalog.cs \
+obj\Debug\net10.0\Protos/CatalogGrpc.cs: C:/Users/krnkr/.nuget/packages/grpc.tools/2.85.0/build/native/include/google/protobuf/empty.proto\
+ C:/Users/krnkr/.nuget/packages/grpc.tools/2.85.0/build/native/include/google/protobuf/timestamp.proto\
+ Protos/catalog.proto

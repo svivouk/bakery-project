@@ -12,10 +12,10 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.AddServiceDefaults();
 
-// MediatR + конвеєр (логування, валідація, продуктивність) + валідатори FluentValidation
 builder.Services.AddApplication(builder.Configuration);
 // MongoDB: контекст, транзакції, запис (MongoReviewRepository) і читання (ReviewQueries)
 builder.Services.AddInfrastructure(builder.Configuration);
+builder.AddRedisDistributedCache("redis");
 builder.Services.AddMemoryCache(o => o.SizeLimit = 10_000);
 // Aspire передає рядок підключення як ConnectionStrings:ReviewsDb (база береться з нього).
 builder.Services.PostConfigure<MongoDbSettings>(o =>

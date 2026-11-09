@@ -1,4 +1,5 @@
 using AutoMapper;
+using Catalog.Bll.Caching;
 using Catalog.Bll.Dto;
 using Catalog.Bll.Interfaces;
 using Catalog.Dal.Interfaces;
@@ -11,17 +12,31 @@ public sealed class CategoryService : ICategoryService
 {
     private readonly IUnitOfWork _uow;
     private readonly IMapper _mapper;
+    private readonly CatalogCache _cache;
 
-    public CategoryService(IUnitOfWork uow, IMapper mapper)
+    public CategoryService(IUnitOfWork uow, IMapper mapper, CatalogCache cache)
     {
         _uow = uow;
         _mapper = mapper;
+        _cache = cache;
     }
 
+    /// <summary>Довідник, що змінюється рідко: cache-aside з absolute TTL 1 год, скидається при зміні категорій.</summary>
     public async Task<IReadOnlyList<CategoryDto>> ListAsync(bool activeOnly, CancellationToken ct = default)
     {
-        var categories = await _uow.Categories.GetAllAsync(activeOnly, ct);
-        return _mapper.Map<List<CategoryDto>>(categories);
+        var categories = await _cache.GetOrCreateAsync<IReadOnlyList<CategoryDto>>(
+            CatalogCacheKeys.Categories(activeOnly),
+            async token => _mapper.Map<List<CategoryDto>>(await _uow.Categories.GetAllAsync(activeOnly, token)),
+            CachePolicies.Reference, ct);
+
+        return categories ?? [];
+    }
+
+    /// <summary>Після коміту: обидва списки категорій + усі лістинги товарів (вони містять категорію/slug).</summary>
+    private async Task InvalidateAsync(string reason, CancellationToken ct)
+    {
+        await _cache.InvalidateAsync(reason, ct, CatalogCacheKeys.CategoriesActive, CatalogCacheKeys.CategoriesAll);
+        await _cache.BumpListsVersionAsync(reason, ct);
     }
 
     public async Task<CategoryDto> GetAsync(Guid id, CancellationToken ct = default)
@@ -47,6 +62,7 @@ public sealed class CategoryService : ICategoryService
             throw new ConflictException($"Категорія зі slug '{category.Slug}' уже існує.");
 
         var id = await _uow.Categories.AddAsync(category, ct);
+        await InvalidateAsync("CategoryCreated", ct);
         return await GetAsync(id, ct);
     }
 
@@ -69,6 +85,7 @@ public sealed class CategoryService : ICategoryService
         if (!await _uow.Categories.UpdateAsync(category, ct))
             throw new NotFoundException("Category", id);
 
+        await InvalidateAsync("CategoryUpdated", ct);
         return await GetAsync(id, ct);
     }
 
@@ -79,5 +96,7 @@ public sealed class CategoryService : ICategoryService
 
         if (!await _uow.Categories.DeleteAsync(id, ct))
             throw new NotFoundException("Category", id);
+
+        await InvalidateAsync("CategoryDeleted", ct);
     }
 }

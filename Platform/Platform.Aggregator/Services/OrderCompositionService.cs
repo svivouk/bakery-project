@@ -1,6 +1,7 @@
-﻿using Platform.Aggregator.Clients;
-using Platform.Aggregator.Contracts;
 using System.Diagnostics;
+using Grpc.Core;
+using Platform.Aggregator.Clients;
+using Platform.Aggregator.Contracts;
 
 namespace Platform.Aggregator.Services;
 
@@ -14,15 +15,16 @@ public sealed class OrderCompositionService(
 
         logger.LogInformation("Calling orders-api for order {OrderId}", orderId);
         var sw = Stopwatch.StartNew();
-        var order = await orders.GetOrderAsync(orderId, ct);        
+        var order = await orders.GetOrderAsync(orderId, ct);
         logger.LogInformation("orders-api responded in {Elapsed} ms", sw.ElapsedMilliseconds);
         if (order is null) return null;
 
         var productIds = order.Items.Select(i => i.ProductId).Distinct().ToList();
 
+        // Незалежні виклики паралельно: Каталог (gRPC) і Відгуки (HTTP, доки в Reviews немає gRPC).
         var productsTask = SafeAsync(() => catalog.GetProductsAsync(productIds, ct), "catalog-api", warnings, ct);
         var reviewsTask = SafeAsync(() => reviews.GetForProductsAsync(productIds, ct), "reviews-api", warnings, ct);
-        await Task.WhenAll(productsTask, reviewsTask);              
+        await Task.WhenAll(productsTask, reviewsTask);
 
         // узгодженість: у відповіді лише товари й відгуки, що належать цьому замовленню
         var allowed = productIds.ToHashSet();
@@ -46,7 +48,15 @@ public sealed class OrderCompositionService(
             logger.LogInformation("{Service} responded in {Elapsed} ms", service, sw.ElapsedMilliseconds);
             return result;
         }
-        catch (Exception ex) when (!ct.IsCancellationRequested)    
+        catch (RpcException ex) when (!ct.IsCancellationRequested)
+        {
+            // gRPC: сервіс недоступний, дедлайн вичерпано або інша помилка статусу, у будь-якому разі часткова відповідь.
+            logger.LogWarning(ex, "{Service} gRPC failed with {StatusCode} after {Elapsed} ms",
+                service, ex.StatusCode, sw.ElapsedMilliseconds);
+            lock (warnings) warnings.Add($"{service} is unavailable");
+            return default;
+        }
+        catch (Exception ex) when (!ct.IsCancellationRequested)
         {
             logger.LogWarning(ex, "{Service} is unavailable after {Elapsed} ms", service, sw.ElapsedMilliseconds);
             lock (warnings) warnings.Add($"{service} is unavailable");

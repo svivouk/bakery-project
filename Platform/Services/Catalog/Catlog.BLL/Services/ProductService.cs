@@ -1,4 +1,5 @@
 using AutoMapper;
+using Catalog.Bll.Caching;
 using Catalog.Bll.Dto;
 using Catalog.Bll.Interfaces;
 using Catalog.Dal.Interfaces;
@@ -14,11 +15,32 @@ public sealed class ProductService : IProductService
 
     private readonly IUnitOfWork _uow;
     private readonly IMapper _mapper;
+    private readonly CatalogCache _cache;
 
-    public ProductService(IUnitOfWork uow, IMapper mapper)
+    public ProductService(IUnitOfWork uow, IMapper mapper, CatalogCache cache)
     {
         _uow = uow;
         _mapper = mapper;
+        _cache = cache;
+    }
+
+    // ====================== кеш ======================
+
+    /// <summary>Після коміту: картки за slug (якщо є) і, за потреби, усі лістинги/топ через ключ-версію.
+    /// Виконується синхронно в запиті запису, тому наступний GET уже не побачить старих даних.</summary>
+    private async Task InvalidateAsync(string reason, CancellationToken ct, bool lists, params string?[] slugs)
+    {
+        var keys = slugs.Where(s => !string.IsNullOrWhiteSpace(s))
+            .Select(s => CatalogCacheKeys.ProductDetails(s!)).Distinct().ToArray();
+        await _cache.InvalidateAsync(reason, ct, keys);
+        if (lists) await _cache.BumpListsVersionAsync(reason, ct);
+    }
+
+    /// <summary>Для змін варіантів: slug товару не відомий викликачу, тож беремо його з БД.</summary>
+    private async Task InvalidateProductByIdAsync(string reason, Guid productId, CancellationToken ct)
+    {
+        var product = await _uow.Products.GetByIdAsync(productId, ct);
+        await InvalidateAsync(reason, ct, lists: true, product?.Slug);
     }
 
     // ====================== вітрина ======================
@@ -44,26 +66,56 @@ public sealed class ProductService : IProductService
             Sort = query.Sort
         };
 
-        var result = await _uow.Products.GetListingAsync(filter, page, pageSize, ct);
-        return new PagedResultDto<ProductListItemDto>(
-            _mapper.Map<List<ProductListItemDto>>(result.Items), result.Total, page, pageSize);
+        // Ключ містить версію списків: будь-який запис у каталозі міняє версію й скидає всі лістинги разом.
+        // TTL 1 хв лишається страховкою від змін, що не проходять через цей сервіс (резерви залишків).
+        var version = await _cache.GetListsVersionAsync(ct);
+        var listing = await _cache.GetOrCreateAsync<PagedResultDto<ProductListItemDto>>(
+            CatalogCacheKeys.Listing(version, query, page, pageSize),
+            async token =>
+            {
+                var result = await _uow.Products.GetListingAsync(filter, page, pageSize, token);
+                return new PagedResultDto<ProductListItemDto>(
+                    _mapper.Map<List<ProductListItemDto>>(result.Items), result.Total, page, pageSize);
+            },
+            CachePolicies.Listing, ct);
+
+        return listing!;
     }
 
     public async Task<IReadOnlyList<ProductListItemDto>> GetTopRatedAsync(int count, CancellationToken ct = default)
     {
-        var items = await _uow.Products.GetTopRatedAsync(Math.Clamp(count, 1, MaxPageSize), ct);
-        return _mapper.Map<List<ProductListItemDto>>(items);
+        var n = Math.Clamp(count, 1, MaxPageSize);
+        var version = await _cache.GetListsVersionAsync(ct);
+        var items = await _cache.GetOrCreateAsync<IReadOnlyList<ProductListItemDto>>(
+            CatalogCacheKeys.TopRated(version, n),
+            async token => _mapper.Map<List<ProductListItemDto>>(await _uow.Products.GetTopRatedAsync(n, token)),
+            CachePolicies.TopRated, ct);
+
+        return items ?? [];
     }
 
     public async Task<ProductDetailsDto> GetDetailsBySlugAsync(string slug, CancellationToken ct = default)
     {
-        var details = await _uow.Products.GetDetailsBySlugAsync(slug.Trim().ToLowerInvariant(), ct)
-                      ?? throw new NotFoundException("Product", slug);
-        return _mapper.Map<ProductDetailsDto>(details);
+        var normalized = slug.Trim().ToLowerInvariant();
+
+        // Найчастіше читана сторінка: sliding 10 хв (максимум 1 год), скидається при зміні товару чи його варіантів.
+        // Відсутній товар у кеш не потрапляє (factory повертає null).
+        var details = await _cache.GetOrCreateAsync<ProductDetailsDto>(
+            CatalogCacheKeys.ProductDetails(normalized),
+            async token =>
+            {
+                var found = await _uow.Products.GetDetailsBySlugAsync(normalized, token);
+                return found is null ? null : _mapper.Map<ProductDetailsDto>(found);
+            },
+            CachePolicies.ProductCard, ct);
+
+        return details ?? throw new NotFoundException("Product", slug);
     }
 
     // ====================== адмін-частина ======================
 
+    // Адмін-читання навмисно без кешу: клієнт бере звідси RowVersion для оптимістичної конкурентності,
+    // і застарілий токен давав би хибні конфлікти 409.
     public async Task<ProductDto> GetByIdAsync(Guid id, CancellationToken ct = default)
     {
         var product = await _uow.Products.GetWithVariantsAsync(id, ct)
@@ -115,6 +167,8 @@ public sealed class ProductService : IProductService
             return id;
         }, ct);
 
+        await InvalidateAsync("ProductCreated", ct, lists: true, product.Slug);
+
         return await GetByIdAsync(productId, ct);
     }
 
@@ -135,10 +189,13 @@ public sealed class ProductService : IProductService
             RowVersion = Check.RowVersion(request.RowVersion)
         };
 
+        string? previousSlug = null;
+
         await _uow.InTransactionAsync(async () =>
         {
             var existing = await _uow.Products.GetByIdAsync(id, ct)
                            ?? throw new NotFoundException("Product", id);
+            previousSlug = existing.Slug;
 
             if (existing.CategoryId != updated.CategoryId
                 && await _uow.Categories.GetByIdAsync(updated.CategoryId, ct) is null)
@@ -178,11 +235,16 @@ public sealed class ProductService : IProductService
                     new { productId = id }, ct);
         }, ct);
 
+        // Після коміту: старий і новий slug (на випадок перейменування).
+        await InvalidateAsync("ProductUpdated", ct, lists: true, previousSlug, updated.Slug);
+
         return await GetByIdAsync(id, ct);
     }
 
     public async Task DeleteAsync(Guid id, CancellationToken ct = default)
     {
+        var slug = (await _uow.Products.GetByIdAsync(id, ct))?.Slug;   // після видалення slug уже не прочитати
+
         await _uow.InTransactionAsync(async () =>
         {
             if (!await _uow.Products.DeleteAsync(id, ct))
@@ -191,6 +253,8 @@ public sealed class ProductService : IProductService
             await EventPublisher.PublishAsync(_uow, EventTypes.ProductDeactivated, id,
                 new { productId = id }, ct);
         }, ct);
+
+        await InvalidateAsync("ProductDeleted", ct, lists: true, slug);
     }
 
     // ====================== варіанти ======================
@@ -205,6 +269,8 @@ public sealed class ProductService : IProductService
 
             return await AddVariantCoreAsync(productId, request, ct);
         }, ct);
+
+        await InvalidateProductByIdAsync("VariantAdded", productId, ct);
 
         var variant = await _uow.Variants.GetByIdAsync(variantId, ct)
                       ?? throw new NotFoundException("Variant", variantId);
@@ -247,6 +313,8 @@ public sealed class ProductService : IProductService
                 }, ct);
         }, ct);
 
+        await InvalidateProductByIdAsync("VariantUpdated", productId, ct);
+
         var variant = await _uow.Variants.GetByIdAsync(variantId, ct)
                       ?? throw new NotFoundException("Variant", variantId);
         return _mapper.Map<VariantDto>(variant);
@@ -261,6 +329,8 @@ public sealed class ProductService : IProductService
         // М'яке видалення: IsDeleted = 1, IsActive = 0 (варіант не видаляють фізично).
         if (!await _uow.Variants.DeleteAsync(variantId, ct))
             throw new NotFoundException("Variant", variantId);
+
+        await InvalidateProductByIdAsync("VariantDeleted", productId, ct);
     }
 
     ///  Створює варіант і його рядок залишків. Викликається всередині транзакції. 
@@ -312,17 +382,25 @@ public sealed class ProductService : IProductService
 
     public async Task<IReadOnlyList<IngredientDto>> GetIngredientsAsync(CancellationToken ct = default)
     {
-        var rows = await _uow.Reference.GetIngredientsAsync(ct);
-        return _mapper.Map<List<IngredientDto>>(rows);
+        var items = await _cache.GetOrCreateAsync<IReadOnlyList<IngredientDto>>(
+            CatalogCacheKeys.Ingredients,
+            async token => _mapper.Map<List<IngredientDto>>(await _uow.Reference.GetIngredientsAsync(token)),
+            CachePolicies.Reference, ct);
+
+        return items ?? [];
     }
 
     public async Task<IReadOnlyList<AllergenRefDto>> GetAllergensAsync(CancellationToken ct = default)
     {
-        var rows = await _uow.Reference.GetAllergensAsync(ct);
-        return _mapper.Map<List<AllergenRefDto>>(rows);
+        var items = await _cache.GetOrCreateAsync<IReadOnlyList<AllergenRefDto>>(
+            CatalogCacheKeys.Allergens,
+            async token => _mapper.Map<List<AllergenRefDto>>(await _uow.Reference.GetAllergensAsync(token)),
+            CachePolicies.Reference, ct);
+
+        return items ?? [];
     }
 
-    public Task<bool> ApplyRatingSummaryAsync(RatingSummaryChangedEvent e, CancellationToken ct = default)
+    public async Task<bool> ApplyRatingSummaryAsync(RatingSummaryChangedEvent e, CancellationToken ct = default)
     {
         if (e.EventId == Guid.Empty || e.ProductId == Guid.Empty)
             throw new ValidationException("eventId і productId обов'язкові.");
@@ -332,7 +410,13 @@ public sealed class ProductService : IProductService
             throw new ValidationException("reviewCount не може бути від'ємним.");
 
         // Ідемпотентність і відсікання застарілих версій — всередині usp_ProductRating_Apply (одна транзакція).
-        return _uow.Products.ApplyRatingAsync(
+        var applied = await _uow.Products.ApplyRatingAsync(
             e.EventId, e.ProductId, decimal.Round(e.AvgRating, 2), e.ReviewCount, e.Version, ct);
+
+        // Рейтинг показують картка, лістинг і топ: скидаємо їх лише якщо подію справді застосовано (не дубль/застаріла).
+        if (applied)
+            await InvalidateProductByIdAsync("RatingChanged", e.ProductId, ct);
+
+        return applied;
     }
 }

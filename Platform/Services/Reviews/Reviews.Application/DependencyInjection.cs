@@ -20,6 +20,11 @@ public static class DependencyInjection
             cfg.AddOpenBehavior(typeof(ValidationBehavior<,>));  
             cfg.AddOpenBehavior(typeof(PerformanceBehavior<,>));  
         });
+        services.AddSingleton(new PerformanceOptions
+        {
+            SlowRequestThreshold = TimeSpan.FromMilliseconds(
+        config.GetValue("Performance:SlowRequestThresholdMs", 500))
+        });
 
         services.AddValidatorsFromAssembly(assembly);
 

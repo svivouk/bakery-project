@@ -10,10 +10,16 @@
     <PackageReference Include="AutoMapper" Version="16.2.0" />
     <PackageReference Include="Dapper" Version="2.1.89" />
     <PackageReference Include="Microsoft.Data.SqlClient" Version="7.1.1" />
+	  <PackageReference Include="Microsoft.Extensions.Caching.Abstractions" Version="10.0.14" />
+	  <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="10.0.14" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Catlog.DAL\Catalog.DAL.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Caching\" />
   </ItemGroup>
 
 </Project>

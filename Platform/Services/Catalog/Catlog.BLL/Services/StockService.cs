@@ -1,4 +1,5 @@
 using AutoMapper;
+using Catalog.Bll.Caching;
 using Catalog.Bll.Dto;
 using Catalog.Bll.Interfaces;
 using Catalog.Dal.Interfaces;
@@ -17,11 +18,13 @@ public sealed class StockService : IStockService
 
     private readonly IUnitOfWork _uow;
     private readonly IMapper _mapper;
+    private readonly CatalogCache _cache;
 
-    public StockService(IUnitOfWork uow, IMapper mapper)
+    public StockService(IUnitOfWork uow, IMapper mapper, CatalogCache cache)
     {
         _uow = uow;
         _mapper = mapper;
+        _cache = cache;
     }
 
     public async Task<StockDto> GetAsync(Guid variantId, CancellationToken ct = default)
@@ -36,10 +39,13 @@ public sealed class StockService : IStockService
         var quantity = Check.NonNegative(request.QuantityAvailable, "quantityAvailable");
         var dailyLimit = Check.NonNegative(request.DailyLimit, "dailyLimit");
 
+        Guid productId = Guid.Empty;
+
         await _uow.InTransactionAsync(async () =>
         {
             var variant = await _uow.Variants.GetByIdAsync(variantId, ct)
                           ?? throw new NotFoundException("Variant", variantId);
+            productId = variant.ProductId;
 
             var updated = await _uow.Stock.UpdateAsync(new StockItem
             {
@@ -57,6 +63,12 @@ public sealed class StockService : IStockService
                 reason = "adjust"
             }, ct);
         }, ct);
+
+        // Адмін-коригування залишків: скидаємо картку товару та всі лістинги.
+        // Резерви/звільнення замовлень (гаряче місце) кеш не чіпають: лістинг самоочищається за TTL 1 хв.
+        var slug = (await _uow.Products.GetByIdAsync(productId, ct))?.Slug;
+        await _cache.InvalidateAsync("StockAdjusted", ct, slug is null ? null : CatalogCacheKeys.ProductDetails(slug));
+        await _cache.BumpListsVersionAsync("StockAdjusted", ct);
 
         return await GetAsync(variantId, ct);
     }
@@ -108,6 +120,10 @@ public sealed class StockService : IStockService
         return total;
     }
 
-    public Task<int> ResetDailyAsync(CancellationToken ct = default) =>
-        _uow.InTransactionAsync(() => _uow.Stock.ResetDailyAsync(ct), ct);
+    public async Task<int> ResetDailyAsync(CancellationToken ct = default)
+    {
+        var reset = await _uow.InTransactionAsync(() => _uow.Stock.ResetDailyAsync(ct), ct);
+        await _cache.BumpListsVersionAsync("DailyStockReset", ct);
+        return reset;
+    }
 }

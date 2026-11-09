@@ -35,5 +35,4 @@ builder.AddProject<Projects.Platform_ApiGateway>("gateway")
     .WithReference(orders).WithReference(catalog).WithReference(reviews)
     .WithReference(aggregator)
     .WaitFor(aggregator);
-
 builder.Build().Run();
