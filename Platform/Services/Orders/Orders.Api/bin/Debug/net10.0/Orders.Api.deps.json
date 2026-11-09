@@ -8,9 +8,11 @@
     ".NETCoreApp,Version=v10.0": {
       "Orders.Api/1.0.0": {
         "dependencies": {
+          "Aspire.StackExchange.Redis.DistributedCaching": "13.6.4",
           "AutoMapper": "16.2.0",
           "FluentValidation": "12.2.0",
           "FluentValidation.DependencyInjectionExtensions": "12.2.0",
+          "Grpc.AspNetCore": "2.85.0",
           "MicroElements.Swashbuckle.FluentValidation": "7.2.2",
           "Microsoft.AspNetCore.OpenApi": "10.0.14",
           "Microsoft.EntityFrameworkCore": "10.0.13",
@@ -23,6 +25,49 @@
         },
         "runtime": {
           "Orders.Api.dll": {}
+        }
+      },
+      "Aspire.StackExchange.Redis/13.6.4": {
+        "dependencies": {
+          "AspNetCore.HealthChecks.Redis": "9.0.0",
+          "Microsoft.Extensions.DependencyInjection.AutoActivation": "10.10.0",
+          "OpenTelemetry.Extensions.Hosting": "1.20.1",
+          "StackExchange.Redis": "2.13.17",
+          "System.IO.Hashing": "10.0.12"
+        },
+        "runtime": {
+          "lib/net10.0/Aspire.StackExchange.Redis.dll": {
+            "assemblyVersion": "13.6.4.0",
+            "fileVersion": "13.600.426.52311"
+          }
+        }
+      },
+      "Aspire.StackExchange.Redis.DistributedCaching/13.6.4": {
+        "dependencies": {
+          "AspNetCore.HealthChecks.Redis": "9.0.0",
+          "Aspire.StackExchange.Redis": "13.6.4",
+          "Microsoft.Extensions.Caching.StackExchangeRedis": "10.0.12",
+          "Microsoft.Extensions.DependencyInjection.AutoActivation": "10.10.0",
+          "OpenTelemetry.Extensions.Hosting": "1.20.1",
+          "StackExchange.Redis": "2.13.17",
+          "System.IO.Hashing": "10.0.12"
+        },
+        "runtime": {
+          "lib/net10.0/Aspire.StackExchange.Redis.DistributedCaching.dll": {
+            "assemblyVersion": "13.6.4.0",
+            "fileVersion": "13.600.426.52311"
+          }
+        }
+      },
+      "AspNetCore.HealthChecks.Redis/9.0.0": {
+        "dependencies": {
+          "StackExchange.Redis": "2.13.17"
+        },
+        "runtime": {
+          "lib/net8.0/HealthChecks.Redis.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.0.0"
+          }
         }
       },
       "AutoMapper/16.2.0": {
@@ -60,6 +105,84 @@
           "lib/net8.0/FluentValidation.DependencyInjectionExtensions.dll": {
             "assemblyVersion": "12.0.0.0",
             "fileVersion": "12.2.0.0"
+          }
+        }
+      },
+      "Google.Protobuf/3.36.2": {
+        "runtime": {
+          "lib/net8.0/Google.Protobuf.dll": {
+            "assemblyVersion": "3.36.2.0",
+            "fileVersion": "3.36.2.0"
+          }
+        }
+      },
+      "Grpc.AspNetCore/2.85.0": {
+        "dependencies": {
+          "Google.Protobuf": "3.36.2",
+          "Grpc.AspNetCore.Server.ClientFactory": "2.85.0"
+        }
+      },
+      "Grpc.AspNetCore.Server/2.85.0": {
+        "dependencies": {
+          "Grpc.Net.Common": "2.85.0"
+        },
+        "runtime": {
+          "lib/net10.0/Grpc.AspNetCore.Server.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.85.0.0"
+          }
+        }
+      },
+      "Grpc.AspNetCore.Server.ClientFactory/2.85.0": {
+        "dependencies": {
+          "Grpc.AspNetCore.Server": "2.85.0",
+          "Grpc.Net.ClientFactory": "2.85.0"
+        },
+        "runtime": {
+          "lib/net10.0/Grpc.AspNetCore.Server.ClientFactory.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.85.0.0"
+          }
+        }
+      },
+      "Grpc.Core.Api/2.85.0": {
+        "runtime": {
+          "lib/netstandard2.1/Grpc.Core.Api.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.85.0.0"
+          }
+        }
+      },
+      "Grpc.Net.Client/2.85.0": {
+        "dependencies": {
+          "Grpc.Net.Common": "2.85.0"
+        },
+        "runtime": {
+          "lib/net10.0/Grpc.Net.Client.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.85.0.0"
+          }
+        }
+      },
+      "Grpc.Net.ClientFactory/2.85.0": {
+        "dependencies": {
+          "Grpc.Net.Client": "2.85.0"
+        },
+        "runtime": {
+          "lib/net10.0/Grpc.Net.ClientFactory.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.85.0.0"
+          }
+        }
+      },
+      "Grpc.Net.Common/2.85.0": {
+        "dependencies": {
+          "Grpc.Core.Api": "2.85.0"
+        },
+        "runtime": {
+          "lib/net10.0/Grpc.Net.Common.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.85.0.0"
           }
         }
       },
@@ -610,6 +733,17 @@
           }
         }
       },
+      "Microsoft.Extensions.Caching.StackExchangeRedis/10.0.12": {
+        "dependencies": {
+          "StackExchange.Redis": "2.13.17"
+        },
+        "runtime": {
+          "lib/net10.0/Microsoft.Extensions.Caching.StackExchangeRedis.dll": {
+            "assemblyVersion": "10.0.12.0",
+            "fileVersion": "10.0.1226.42308"
+          }
+        }
+      },
       "Microsoft.Extensions.Compliance.Abstractions/10.10.0": {
         "runtime": {
           "lib/net10.0/Microsoft.Extensions.Compliance.Abstractions.dll": {
@@ -970,6 +1104,14 @@
           }
         }
       },
+      "Pipelines.Sockets.Unofficial/2.2.16": {
+        "runtime": {
+          "lib/net9.0/Pipelines.Sockets.Unofficial.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "2.2.16.21791"
+          }
+        }
+      },
       "Polly.Core/8.4.2": {
         "runtime": {
           "lib/net8.0/Polly.Core.dll": {
@@ -1142,6 +1284,18 @@
           }
         }
       },
+      "StackExchange.Redis/2.13.17": {
+        "dependencies": {
+          "Pipelines.Sockets.Unofficial": "2.2.16",
+          "System.IO.Hashing": "10.0.12"
+        },
+        "runtime": {
+          "lib/net10.0/StackExchange.Redis.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.13.17.28173"
+          }
+        }
+      },
       "Swashbuckle.AspNetCore.Swagger/10.3.1": {
         "dependencies": {
           "Microsoft.OpenApi": "2.12.2"
@@ -1255,6 +1409,14 @@
           }
         }
       },
+      "System.IO.Hashing/10.0.12": {
+        "runtime": {
+          "lib/net10.0/System.IO.Hashing.dll": {
+            "assemblyVersion": "10.0.0.12",
+            "fileVersion": "10.0.1226.42308"
+          }
+        }
+      },
       "System.Security.Cryptography.ProtectedData/9.0.18": {
         "runtime": {
           "lib/net9.0/System.Security.Cryptography.ProtectedData.dll": {
@@ -1345,6 +1507,27 @@
       "serviceable": false,
       "sha512": ""
     },
+    "Aspire.StackExchange.Redis/13.6.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-DvCqdDJxkQWsMxSWklp4d0b8DvcZtNj0d+Bt+h6mqrS2pB887V+ZeX3fUKA3EuSW/ghpC9yrNMa93ZxBqGHzvA==",
+      "path": "aspire.stackexchange.redis/13.6.4",
+      "hashPath": "aspire.stackexchange.redis.13.6.4.nupkg.sha512"
+    },
+    "Aspire.StackExchange.Redis.DistributedCaching/13.6.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-8A2L8+R2d3+4E00fAFQi+meQcZIp5Hkib2joh34ZFix9VD8918ECUXvQBZW6RD8jfrOhhrVt6lB1XIH3kKtZfg==",
+      "path": "aspire.stackexchange.redis.distributedcaching/13.6.4",
+      "hashPath": "aspire.stackexchange.redis.distributedcaching.13.6.4.nupkg.sha512"
+    },
+    "AspNetCore.HealthChecks.Redis/9.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-yNH0h8GLRbAf+PU5HNVLZ5hNeyq9mDVmRKO9xuZsme/znUYoBJlQvI0gq45gaZNlLncCHkMhR4o90MuT+gxxPw==",
+      "path": "aspnetcore.healthchecks.redis/9.0.0",
+      "hashPath": "aspnetcore.healthchecks.redis.9.0.0.nupkg.sha512"
+    },
     "AutoMapper/16.2.0": {
       "type": "package",
       "serviceable": true,
@@ -1372,6 +1555,62 @@
       "sha512": "sha512-QpKXgiO9E6wXCh19X2Musn8MZM0xt7KQt/QrD6GDBn3MCUfy8a+rkhCzrYJNCfoxTsTRQ7bpKP8T3geTnJNNeQ==",
       "path": "fluentvalidation.dependencyinjectionextensions/12.2.0",
       "hashPath": "fluentvalidation.dependencyinjectionextensions.12.2.0.nupkg.sha512"
+    },
+    "Google.Protobuf/3.36.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Ci1q1iJg74qAE5riTA2FbMS0wPbpruPQI/JQ9DrAsRo2VsSxgt1e/pmxGxgrci+pXJEgrSYg2vPl8rrStZkclQ==",
+      "path": "google.protobuf/3.36.2",
+      "hashPath": "google.protobuf.3.36.2.nupkg.sha512"
+    },
+    "Grpc.AspNetCore/2.85.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-i+PHjG3+aYOVvGLWen0bUGzBaTbfwKtD6ri9DpHZHTOj/0QvK7UmN1q8MF2yZmV67gUHDfq2jIb4KgJBXzVaFw==",
+      "path": "grpc.aspnetcore/2.85.0",
+      "hashPath": "grpc.aspnetcore.2.85.0.nupkg.sha512"
+    },
+    "Grpc.AspNetCore.Server/2.85.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-0ECGrMKizFFYCqgHP7SMcOmC0z3eCIRekExrgp9rPj6Lner+0ZyCTjiArJ6h5vfBV7W13D1ypPY2uwyTkBbnMg==",
+      "path": "grpc.aspnetcore.server/2.85.0",
+      "hashPath": "grpc.aspnetcore.server.2.85.0.nupkg.sha512"
+    },
+    "Grpc.AspNetCore.Server.ClientFactory/2.85.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-9rVCh9l2JiGbAfdTHL4unLisUPLtpKpx13M8QgPqarAPWVYlF98my4v5TGnOnFnuSoUvHkq/ObD1sgwKsD4Kkg==",
+      "path": "grpc.aspnetcore.server.clientfactory/2.85.0",
+      "hashPath": "grpc.aspnetcore.server.clientfactory.2.85.0.nupkg.sha512"
+    },
+    "Grpc.Core.Api/2.85.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-cpYu/nw/QhwHcRZMJbYD8lEllKrdwYMiDS4U3oH61nhYPUMNkcCcef4ulv11svHvTBThYV+ju332N9bCrfe7cQ==",
+      "path": "grpc.core.api/2.85.0",
+      "hashPath": "grpc.core.api.2.85.0.nupkg.sha512"
+    },
+    "Grpc.Net.Client/2.85.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-BPMA5mb96ihVQfXTuIUpC1aie2I0ODBD6QCc0UXYS5zQMK6sJW5yck8NZ2ffvGHfOanWyn2Yg0tJbYY3nV+zIw==",
+      "path": "grpc.net.client/2.85.0",
+      "hashPath": "grpc.net.client.2.85.0.nupkg.sha512"
+    },
+    "Grpc.Net.ClientFactory/2.85.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-JN5nbheButtbUO5kJ/h/JfOnSp5O6/Zf75n019BwC7e1oXfxPPwVolrr98SP4AGYwVDlrR0yn+X/Is2zwAeIzw==",
+      "path": "grpc.net.clientfactory/2.85.0",
+      "hashPath": "grpc.net.clientfactory.2.85.0.nupkg.sha512"
+    },
+    "Grpc.Net.Common/2.85.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-e+RczhQVHb5MacI1oMTLMK6InZLH22POZcE4gsy5SnolsElLaqhSwEhqm+cF0m4Q1JGmlhjf1nbnKh7sBbjJVg==",
+      "path": "grpc.net.common/2.85.0",
+      "hashPath": "grpc.net.common.2.85.0.nupkg.sha512"
     },
     "Humanizer.Core/2.14.1": {
       "type": "package",
@@ -1526,6 +1765,13 @@
       "sha512": "sha512-Sa4xD2ab5yNRJYt4piS05C9b5Gpd1G3TZpvVJFgHyqLYdRThUNLcLHpREI4yjkmElCjHXoPcF+SHUim9cZ8cvQ==",
       "path": "microsoft.extensions.ambientmetadata.application/10.10.0",
       "hashPath": "microsoft.extensions.ambientmetadata.application.10.10.0.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Caching.StackExchangeRedis/10.0.12": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-iQoMgbt02dl49cv7GLNeh771xstAbg9xKpuWosYmnOU0CJ9ni10F3+1IrgvbjyaV0JGulauGRrNir50QKWonKQ==",
+      "path": "microsoft.extensions.caching.stackexchangeredis/10.0.12",
+      "hashPath": "microsoft.extensions.caching.stackexchangeredis.10.0.12.nupkg.sha512"
     },
     "Microsoft.Extensions.Compliance.Abstractions/10.10.0": {
       "type": "package",
@@ -1772,6 +2018,13 @@
       "path": "opentelemetry.instrumentation.sqlclient/1.20.2",
       "hashPath": "opentelemetry.instrumentation.sqlclient.1.20.2.nupkg.sha512"
     },
+    "Pipelines.Sockets.Unofficial/2.2.16": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-nonu9l0YrZH6krVYbskBjE7uG0VMAnvOQ9PU+RmzUsy+++vHkqzzCkHRoP877OiA3iRTxJyNDLfpcU8hrJ3/YQ==",
+      "path": "pipelines.sockets.unofficial/2.2.16",
+      "hashPath": "pipelines.sockets.unofficial.2.2.16.nupkg.sha512"
+    },
     "Polly.Core/8.4.2": {
       "type": "package",
       "serviceable": true,
@@ -1884,6 +2137,13 @@
       "path": "snappier/1.0.0",
       "hashPath": "snappier.1.0.0.nupkg.sha512"
     },
+    "StackExchange.Redis/2.13.17": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-P7o7ZDBAmBrOLQEw8Pt44iIA08ioj48smRxn4Jp6yzCu6P3DOSU6lj7f+IOtN3pPvSgC9YufvM92ycukEEBCYQ==",
+      "path": "stackexchange.redis/2.13.17",
+      "hashPath": "stackexchange.redis.2.13.17.nupkg.sha512"
+    },
     "Swashbuckle.AspNetCore.Swagger/10.3.1": {
       "type": "package",
       "serviceable": true,
@@ -1960,6 +2220,13 @@
       "sha512": "sha512-rrs2u7DRMXQG2yh0oVyF/vLwosfRv20Ld2iEpYcKwQWXHjfV+gFXNQsQ9p008kR9Ou4pxBs68Q6/9zC8Gi1wjg==",
       "path": "system.identitymodel.tokens.jwt/8.16.0",
       "hashPath": "system.identitymodel.tokens.jwt.8.16.0.nupkg.sha512"
+    },
+    "System.IO.Hashing/10.0.12": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-jDix4bBMYnpZdSPcnY+KDV6ik3SRMzpMKby/bZl/XUwIiflwRNAFZ0oOl61R/pSaveIJ8t1gs2BUlrGsPs/bcg==",
+      "path": "system.io.hashing/10.0.12",
+      "hashPath": "system.io.hashing.10.0.12.nupkg.sha512"
     },
     "System.Security.Cryptography.ProtectedData/9.0.18": {
       "type": "package",

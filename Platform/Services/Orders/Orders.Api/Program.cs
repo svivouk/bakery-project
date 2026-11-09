@@ -37,7 +37,7 @@ try
             context.ProblemDetails.Extensions["traceId"] = Activity.Current?.Id ?? context.HttpContext.TraceIdentifier;
         });
     builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
-
+    builder.Services.AddMemoryCache(o => o.SizeLimit = 10_000);
     builder.Services.AddEndpointsApiExplorer();
     builder.Services.AddSwaggerGen(options =>
     {

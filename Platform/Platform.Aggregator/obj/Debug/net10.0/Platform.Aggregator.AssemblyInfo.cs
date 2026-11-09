@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Platform.Aggregator")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+00cf8211fbcac372bf2341b2270fed81677826fa")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c1947e30060a8e838373bd1c53c19e8e3a1f8b81")]
 [assembly: System.Reflection.AssemblyProductAttribute("Platform.Aggregator")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Platform.Aggregator")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -16,6 +16,7 @@ builder.Services.AddSingleton<DatabaseInitializer>();
 var connectionString = builder.Configuration.GetConnectionString("CatalogDb")
     ?? throw new InvalidOperationException("Connection string 'CatalogDb' is missing");
 
+builder.Services.AddMemoryCache(o => o.SizeLimit = 10_000);
 builder.Services.AddScoped<IUnitOfWork>(_ => new UnitOfWork(connectionString));
 builder.Services.AddAutoMapper(cfg => cfg.AddProfile<CatalogProfile>());
 builder.Services.AddScoped<ICategoryService, CategoryService>();

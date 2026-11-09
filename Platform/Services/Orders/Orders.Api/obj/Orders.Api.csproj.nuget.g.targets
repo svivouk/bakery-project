@@ -6,5 +6,8 @@
     <Import Project="$(NuGetPackageRoot)mono.texttemplating\3.0.0\buildTransitive\Mono.TextTemplating.targets" Condition="Exists('$(NuGetPackageRoot)mono.texttemplating\3.0.0\buildTransitive\Mono.TextTemplating.targets')" />
     <Import Project="$(NuGetPackageRoot)microsoft.codeanalysis.analyzers\3.11.0\buildTransitive\Microsoft.CodeAnalysis.Analyzers.targets" Condition="Exists('$(NuGetPackageRoot)microsoft.codeanalysis.analyzers\3.11.0\buildTransitive\Microsoft.CodeAnalysis.Analyzers.targets')" />
     <Import Project="$(NuGetPackageRoot)microsoft.aspnetcore.openapi\10.0.14\build\Microsoft.AspNetCore.OpenApi.targets" Condition="Exists('$(NuGetPackageRoot)microsoft.aspnetcore.openapi\10.0.14\build\Microsoft.AspNetCore.OpenApi.targets')" />
+    <Import Project="$(NuGetPackageRoot)grpc.tools\2.85.0\build\Grpc.Tools.targets" Condition="Exists('$(NuGetPackageRoot)grpc.tools\2.85.0\build\Grpc.Tools.targets')" />
+    <Import Project="$(NuGetPackageRoot)aspire.stackexchange.redis\13.6.4\buildTransitive\net10.0\Aspire.StackExchange.Redis.targets" Condition="Exists('$(NuGetPackageRoot)aspire.stackexchange.redis\13.6.4\buildTransitive\net10.0\Aspire.StackExchange.Redis.targets')" />
+    <Import Project="$(NuGetPackageRoot)aspire.stackexchange.redis.distributedcaching\13.6.4\buildTransitive\net10.0\Aspire.StackExchange.Redis.DistributedCaching.targets" Condition="Exists('$(NuGetPackageRoot)aspire.stackexchange.redis.distributedcaching\13.6.4\buildTransitive\net10.0\Aspire.StackExchange.Redis.DistributedCaching.targets')" />
   </ImportGroup>
 </Project>

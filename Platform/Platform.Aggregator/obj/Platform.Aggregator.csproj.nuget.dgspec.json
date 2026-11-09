@@ -57,6 +57,24 @@
           "framework": "net10.0",
           "targetAlias": "net10.0",
           "dependencies": {
+            "Aspire.StackExchange.Redis.DistributedCaching": {
+              "target": "Package",
+              "version": "[13.6.4, )"
+            },
+            "Google.Protobuf": {
+              "target": "Package",
+              "version": "[3.36.2, )"
+            },
+            "Grpc.Net.ClientFactory": {
+              "target": "Package",
+              "version": "[2.85.0, )"
+            },
+            "Grpc.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.85.0, )"
+            },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[10.0.12, )"

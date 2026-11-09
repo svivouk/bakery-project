@@ -947,6 +947,18 @@
           "framework": "net10.0",
           "targetAlias": "net10.0",
           "dependencies": {
+            "Aspire.StackExchange.Redis.DistributedCaching": {
+              "target": "Package",
+              "version": "[13.6.4, )"
+            },
+            "Grpc.AspNetCore": {
+              "target": "Package",
+              "version": "[2.85.0, )"
+            },
+            "Microsoft.Extensions.Caching.Memory": {
+              "target": "Package",
+              "version": "[10.0.14, )"
+            },
             "Serilog.AspNetCore": {
               "target": "Package",
               "version": "[10.0.0, )"

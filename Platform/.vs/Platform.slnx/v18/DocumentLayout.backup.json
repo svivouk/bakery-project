@@ -3,6 +3,38 @@
   "WorkspaceRootPath": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{DCF5E5C7-D21C-D6F7-7449-CF67D5DEF3E1}|Platform.Aggregator\\Platform.Aggregator.csproj|c:\\users\\krnkr\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\platform\\platform.aggregator\\platform.aggregator.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{DCF5E5C7-D21C-D6F7-7449-CF67D5DEF3E1}|Platform.Aggregator\\Platform.Aggregator.csproj|solutionrelative:platform.aggregator\\platform.aggregator.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37CD067A-C79F-4784-E33D-4F52200F844D}|Services\\Catalog\\Catlog.API\\Catalog.API.csproj|c:\\users\\krnkr\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\platform\\services\\catalog\\catlog.api\\protos\\catalog.proto||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{37CD067A-C79F-4784-E33D-4F52200F844D}|Services\\Catalog\\Catlog.API\\Catalog.API.csproj|solutionrelative:services\\catalog\\catlog.api\\protos\\catalog.proto||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40F71260-BF14-29F0-551B-FC6D1FFB0DA6}|Services\\Reviews\\Reviews.WebApi\\Reviews.WebApi.csproj|c:\\users\\krnkr\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\platform\\services\\reviews\\reviews.webapi\\reviews.webapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{40F71260-BF14-29F0-551B-FC6D1FFB0DA6}|Services\\Reviews\\Reviews.WebApi\\Reviews.WebApi.csproj|solutionrelative:services\\reviews\\reviews.webapi\\reviews.webapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48B8E81C-AF0E-B386-9717-334A1BBAA5D8}|Services\\Orders\\Orders.Api\\Orders.Api.csproj|c:\\users\\krnkr\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\platform\\services\\orders\\orders.api\\protos\\orders.proto||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{48B8E81C-AF0E-B386-9717-334A1BBAA5D8}|Services\\Orders\\Orders.Api\\Orders.Api.csproj|solutionrelative:services\\orders\\orders.api\\protos\\orders.proto||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37CD067A-C79F-4784-E33D-4F52200F844D}|Services\\Catalog\\Catlog.API\\Catalog.API.csproj|c:\\users\\krnkr\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\platform\\services\\catalog\\catlog.api\\catalog.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{37CD067A-C79F-4784-E33D-4F52200F844D}|Services\\Catalog\\Catlog.API\\Catalog.API.csproj|solutionrelative:services\\catalog\\catlog.api\\catalog.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48B8E81C-AF0E-B386-9717-334A1BBAA5D8}|Services\\Orders\\Orders.Api\\Orders.Api.csproj|c:\\users\\krnkr\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\platform\\services\\orders\\orders.api\\orders.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{48B8E81C-AF0E-B386-9717-334A1BBAA5D8}|Services\\Orders\\Orders.Api\\Orders.Api.csproj|solutionrelative:services\\orders\\orders.api\\orders.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40F71260-BF14-29F0-551B-FC6D1FFB0DA6}|Services\\Reviews\\Reviews.WebApi\\Reviews.WebApi.csproj|c:\\users\\krnkr\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\platform\\services\\reviews\\reviews.webapi\\protos\\reviews.proto||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{40F71260-BF14-29F0-551B-FC6D1FFB0DA6}|Services\\Reviews\\Reviews.WebApi\\Reviews.WebApi.csproj|solutionrelative:services\\reviews\\reviews.webapi\\protos\\reviews.proto||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0BCDF07E-108F-29EF-07FE-0CCA8C44FDBD}|Platform.AppHost\\Platform.AppHost.csproj|c:\\users\\krnkr\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\platform\\platform.apphost\\apphost.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0BCDF07E-108F-29EF-07FE-0CCA8C44FDBD}|Platform.AppHost\\Platform.AppHost.csproj|solutionrelative:platform.apphost\\apphost.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F3D26BD4-023D-5893-B7AA-B43AF2474D49}|Services\\Reviews\\Reviews.Infrastructure\\Reviews.Infrastructure.csproj|c:\\users\\krnkr\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\platform\\services\\reviews\\reviews.infrastructure\\persistence\\mongoproductratingsummaryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F3D26BD4-023D-5893-B7AA-B43AF2474D49}|Services\\Reviews\\Reviews.Infrastructure\\Reviews.Infrastructure.csproj|solutionrelative:services\\reviews\\reviews.infrastructure\\persistence\\mongoproductratingsummaryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -83,10 +115,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{F3D26BD4-023D-5893-B7AA-B43AF2474D49}|Services\\Reviews\\Reviews.Infrastructure\\Reviews.Infrastructure.csproj|c:\\users\\krnkr\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\platform\\services\\reviews\\reviews.infrastructure\\persistence\\initialization\\databaseinitializationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F3D26BD4-023D-5893-B7AA-B43AF2474D49}|Services\\Reviews\\Reviews.Infrastructure\\Reviews.Infrastructure.csproj|solutionrelative:services\\reviews\\reviews.infrastructure\\persistence\\initialization\\databaseinitializationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{40F71260-BF14-29F0-551B-FC6D1FFB0DA6}|Services\\Reviews\\Reviews.WebApi\\Reviews.WebApi.csproj|c:\\users\\krnkr\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\platform\\services\\reviews\\reviews.webapi\\reviews.webapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{40F71260-BF14-29F0-551B-FC6D1FFB0DA6}|Services\\Reviews\\Reviews.WebApi\\Reviews.WebApi.csproj|solutionrelative:services\\reviews\\reviews.webapi\\reviews.webapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{48B8E81C-AF0E-B386-9717-334A1BBAA5D8}|Services\\Orders\\Orders.Api\\Orders.Api.csproj|c:\\users\\krnkr\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\platform\\services\\orders\\orders.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -197,24 +225,12 @@
       "RelativeMoniker": "D:0:0:{4988F44A-2089-422A-4FC8-3506CAD62D3C}|Platform.ApiGateway\\Platform.ApiGateway.csproj|solutionrelative:platform.apigateway\\platform.apigateway.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0BCDF07E-108F-29EF-07FE-0CCA8C44FDBD}|Platform.AppHost\\Platform.AppHost.csproj|c:\\users\\krnkr\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\platform\\platform.apphost\\apphost.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0BCDF07E-108F-29EF-07FE-0CCA8C44FDBD}|Platform.AppHost\\Platform.AppHost.csproj|solutionrelative:platform.apphost\\apphost.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{6CF1098B-9953-CFD5-615E-054E8B89E73F}|Platform.ServiceDefaults\\Platform.ServiceDefaults.csproj|c:\\users\\krnkr\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\platform\\platform.servicedefaults\\extensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6CF1098B-9953-CFD5-615E-054E8B89E73F}|Platform.ServiceDefaults\\Platform.ServiceDefaults.csproj|solutionrelative:platform.servicedefaults\\extensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{37CD067A-C79F-4784-E33D-4F52200F844D}|Services\\Catalog\\Catlog.API\\Catalog.API.csproj|c:\\users\\krnkr\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\platform\\services\\catalog\\catlog.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{37CD067A-C79F-4784-E33D-4F52200F844D}|Services\\Catalog\\Catlog.API\\Catalog.API.csproj|solutionrelative:services\\catalog\\catlog.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{37CD067A-C79F-4784-E33D-4F52200F844D}|Services\\Catalog\\Catlog.API\\Catalog.API.csproj|c:\\users\\krnkr\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\platform\\services\\catalog\\catlog.api\\catalog.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{37CD067A-C79F-4784-E33D-4F52200F844D}|Services\\Catalog\\Catlog.API\\Catalog.API.csproj|solutionrelative:services\\catalog\\catlog.api\\catalog.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{48B8E81C-AF0E-B386-9717-334A1BBAA5D8}|Services\\Orders\\Orders.Api\\Orders.Api.csproj|c:\\users\\krnkr\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\platform\\services\\orders\\orders.api\\orders.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{48B8E81C-AF0E-B386-9717-334A1BBAA5D8}|Services\\Orders\\Orders.Api\\Orders.Api.csproj|solutionrelative:services\\orders\\orders.api\\orders.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{37CD067A-C79F-4784-E33D-4F52200F844D}|Services\\Catalog\\Catlog.API\\Catalog.API.csproj|c:\\users\\krnkr\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\platform\\services\\catalog\\catlog.api\\workers\\reservationcleanupworker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -284,58 +300,58 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "MongoProductRatingSummaryRepository.cs",
-              "DocumentMoniker": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Services\\Reviews\\Reviews.Infrastructure\\Persistence\\MongoProductRatingSummaryRepository.cs",
-              "RelativeDocumentMoniker": "Services\\Reviews\\Reviews.Infrastructure\\Persistence\\MongoProductRatingSummaryRepository.cs",
-              "ToolTip": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Services\\Reviews\\Reviews.Infrastructure\\Persistence\\MongoProductRatingSummaryRepository.cs",
-              "RelativeToolTip": "Services\\Reviews\\Reviews.Infrastructure\\Persistence\\MongoProductRatingSummaryRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-08T19:02:58.26Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "RatingSummaryService.cs",
-              "DocumentMoniker": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Services\\Reviews\\Reviews.Infrastructure\\Persistence\\RatingSummaryService.cs",
-              "RelativeDocumentMoniker": "Services\\Reviews\\Reviews.Infrastructure\\Persistence\\RatingSummaryService.cs",
-              "ToolTip": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Services\\Reviews\\Reviews.Infrastructure\\Persistence\\RatingSummaryService.cs",
-              "RelativeToolTip": "Services\\Reviews\\Reviews.Infrastructure\\Persistence\\RatingSummaryService.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAQwAQAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-08T19:02:04.815Z",
+              "Title": "Platform.Aggregator",
+              "DocumentMoniker": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Platform.Aggregator\\Platform.Aggregator.csproj",
+              "RelativeDocumentMoniker": "Platform.Aggregator\\Platform.Aggregator.csproj",
+              "ToolTip": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Platform.Aggregator\\Platform.Aggregator.csproj",
+              "RelativeToolTip": "Platform.Aggregator\\Platform.Aggregator.csproj",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABcAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-11-09T09:51:37.195Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "MappingProfile.cs",
-              "DocumentMoniker": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Services\\Reviews\\Reviews.Application\\Common\\Mapping\\MappingProfile.cs",
-              "RelativeDocumentMoniker": "Services\\Reviews\\Reviews.Application\\Common\\Mapping\\MappingProfile.cs",
-              "ToolTip": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Services\\Reviews\\Reviews.Application\\Common\\Mapping\\MappingProfile.cs",
-              "RelativeToolTip": "Services\\Reviews\\Reviews.Application\\Common\\Mapping\\MappingProfile.cs",
+              "Title": "reviews.proto",
+              "DocumentMoniker": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Services\\Reviews\\Reviews.WebApi\\Protos\\reviews.proto",
+              "RelativeDocumentMoniker": "Services\\Reviews\\Reviews.WebApi\\Protos\\reviews.proto",
+              "ToolTip": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Services\\Reviews\\Reviews.WebApi\\Protos\\reviews.proto",
+              "RelativeToolTip": "Services\\Reviews\\Reviews.WebApi\\Protos\\reviews.proto",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-08T18:52:29.431Z",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003853|",
+              "WhenOpened": "2026-11-09T09:49:33.278Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "CreateReviewCommandValidator.cs",
-              "DocumentMoniker": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Services\\Reviews\\Reviews.Application\\Reviews\\Commands\\CreateReview\\CreateReviewCommandValidator.cs",
-              "RelativeDocumentMoniker": "Services\\Reviews\\Reviews.Application\\Reviews\\Commands\\CreateReview\\CreateReviewCommandValidator.cs",
-              "ToolTip": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Services\\Reviews\\Reviews.Application\\Reviews\\Commands\\CreateReview\\CreateReviewCommandValidator.cs",
-              "RelativeToolTip": "Services\\Reviews\\Reviews.Application\\Reviews\\Commands\\CreateReview\\CreateReviewCommandValidator.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAiwBUAAABUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-08T18:51:28.553Z",
+              "DocumentIndex": 1,
+              "Title": "catalog.proto",
+              "DocumentMoniker": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Services\\Catalog\\Catlog.API\\Protos\\catalog.proto",
+              "RelativeDocumentMoniker": "Services\\Catalog\\Catlog.API\\Protos\\catalog.proto",
+              "ToolTip": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Services\\Catalog\\Catlog.API\\Protos\\catalog.proto",
+              "RelativeToolTip": "Services\\Catalog\\Catlog.API\\Protos\\catalog.proto",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003853|",
+              "WhenOpened": "2026-11-09T09:48:21.258Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
+              "Title": "orders.proto",
+              "DocumentMoniker": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Services\\Orders\\Orders.Api\\Protos\\orders.proto",
+              "RelativeDocumentMoniker": "Services\\Orders\\Orders.Api\\Protos\\orders.proto",
+              "ToolTip": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Services\\Orders\\Orders.Api\\Protos\\orders.proto",
+              "RelativeToolTip": "Services\\Orders\\Orders.Api\\Protos\\orders.proto",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003853|",
+              "WhenOpened": "2026-11-09T09:47:41.126Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "CreateReviewCommandHandler.cs",
               "DocumentMoniker": "C:\\Users\\krnkr\\AppData\\Local\\Temp\\23a83a54-9fa8-4597-b0b2-8e791bc16ead_Reviews-fixed.zip.Reviews-fixed.zip\\New folder\\Reviews.Application\\Reviews\\Commands\\CreateReview\\CreateReviewCommandHandler.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\AppData\\Local\\Temp\\23a83a54-9fa8-4597-b0b2-8e791bc16ead_Reviews-fixed.zip.Reviews-fixed.zip\\New folder\\Reviews.Application\\Reviews\\Commands\\CreateReview\\CreateReviewCommandHandler.cs",
@@ -348,7 +364,83 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
+              "Title": "Reviews.WebApi.csproj",
+              "DocumentMoniker": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Services\\Reviews\\Reviews.WebApi\\Reviews.WebApi.csproj",
+              "RelativeDocumentMoniker": "Services\\Reviews\\Reviews.WebApi\\Reviews.WebApi.csproj",
+              "ToolTip": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Services\\Reviews\\Reviews.WebApi\\Reviews.WebApi.csproj*",
+              "RelativeToolTip": "Services\\Reviews\\Reviews.WebApi\\Reviews.WebApi.csproj*",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-11-07T19:28:52.608Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Orders.Api.csproj",
+              "DocumentMoniker": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Services\\Orders\\Orders.Api\\Orders.Api.csproj",
+              "RelativeDocumentMoniker": "Services\\Orders\\Orders.Api\\Orders.Api.csproj",
+              "ToolTip": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Services\\Orders\\Orders.Api\\Orders.Api.csproj",
+              "RelativeToolTip": "Services\\Orders\\Orders.Api\\Orders.Api.csproj",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAACEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-11-08T11:29:39.038Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Catalog.API.csproj",
+              "DocumentMoniker": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Services\\Catalog\\Catlog.API\\Catalog.API.csproj",
+              "RelativeDocumentMoniker": "Services\\Catalog\\Catlog.API\\Catalog.API.csproj",
+              "ToolTip": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Services\\Catalog\\Catlog.API\\Catalog.API.csproj",
+              "RelativeToolTip": "Services\\Catalog\\Catlog.API\\Catalog.API.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-11-08T11:37:08.986Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "CreateReviewCommandValidator.cs",
+              "DocumentMoniker": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Services\\Reviews\\Reviews.Application\\Reviews\\Commands\\CreateReview\\CreateReviewCommandValidator.cs",
+              "RelativeDocumentMoniker": "Services\\Reviews\\Reviews.Application\\Reviews\\Commands\\CreateReview\\CreateReviewCommandValidator.cs",
+              "ToolTip": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Services\\Reviews\\Reviews.Application\\Reviews\\Commands\\CreateReview\\CreateReviewCommandValidator.cs",
+              "RelativeToolTip": "Services\\Reviews\\Reviews.Application\\Reviews\\Commands\\CreateReview\\CreateReviewCommandValidator.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAiwBUAAABUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-08T18:51:28.553Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "MappingProfile.cs",
+              "DocumentMoniker": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Services\\Reviews\\Reviews.Application\\Common\\Mapping\\MappingProfile.cs",
+              "RelativeDocumentMoniker": "Services\\Reviews\\Reviews.Application\\Common\\Mapping\\MappingProfile.cs",
+              "ToolTip": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Services\\Reviews\\Reviews.Application\\Common\\Mapping\\MappingProfile.cs",
+              "RelativeToolTip": "Services\\Reviews\\Reviews.Application\\Common\\Mapping\\MappingProfile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-08T18:52:29.431Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "MongoProductRatingSummaryRepository.cs",
+              "DocumentMoniker": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Services\\Reviews\\Reviews.Infrastructure\\Persistence\\MongoProductRatingSummaryRepository.cs",
+              "RelativeDocumentMoniker": "Services\\Reviews\\Reviews.Infrastructure\\Persistence\\MongoProductRatingSummaryRepository.cs",
+              "ToolTip": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Services\\Reviews\\Reviews.Infrastructure\\Persistence\\MongoProductRatingSummaryRepository.cs",
+              "RelativeToolTip": "Services\\Reviews\\Reviews.Infrastructure\\Persistence\\MongoProductRatingSummaryRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-08T19:02:58.26Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Services\\Reviews\\Reviews.WebApi\\Program.cs",
               "RelativeDocumentMoniker": "Services\\Reviews\\Reviews.WebApi\\Program.cs",
@@ -356,12 +448,36 @@
               "RelativeToolTip": "Services\\Reviews\\Reviews.WebApi\\Program.cs",
               "ViewState": "AgIAADYAAAAAAAAAAAAnwEgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-07T21:19:43.826Z",
+              "WhenOpened": "2026-11-07T21:19:43.826Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AppHost.cs",
+              "DocumentMoniker": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Platform.AppHost\\AppHost.cs",
+              "RelativeDocumentMoniker": "Platform.AppHost\\AppHost.cs",
+              "ToolTip": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Platform.AppHost\\AppHost.cs",
+              "RelativeToolTip": "Platform.AppHost\\AppHost.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAkwA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-07T17:37:52.469Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 10,
+              "Title": "RatingSummaryService.cs",
+              "DocumentMoniker": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Services\\Reviews\\Reviews.Infrastructure\\Persistence\\RatingSummaryService.cs",
+              "RelativeDocumentMoniker": "Services\\Reviews\\Reviews.Infrastructure\\Persistence\\RatingSummaryService.cs",
+              "ToolTip": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Services\\Reviews\\Reviews.Infrastructure\\Persistence\\RatingSummaryService.cs",
+              "RelativeToolTip": "Services\\Reviews\\Reviews.Infrastructure\\Persistence\\RatingSummaryService.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAQwAQAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-08T19:02:04.815Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "DependencyInjection.cs",
               "DocumentMoniker": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Services\\Reviews\\Reviews.Infrastructure\\DependencyInjection.cs",
               "RelativeDocumentMoniker": "Services\\Reviews\\Reviews.Infrastructure\\DependencyInjection.cs",
@@ -369,12 +485,11 @@
               "RelativeToolTip": "Services\\Reviews\\Reviews.Infrastructure\\DependencyInjection.cs",
               "ViewState": "AgIAABAAAAAAAAAAAAA4wB0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-07T17:57:44.305Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-07T17:57:44.305Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 15,
               "Title": "MongoReviewEligibilityRepository.cs",
               "DocumentMoniker": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Services\\Reviews\\Reviews.Infrastructure\\Persistence\\MongoReviewEligibilityRepository.cs",
               "RelativeDocumentMoniker": "Services\\Reviews\\Reviews.Infrastructure\\Persistence\\MongoReviewEligibilityRepository.cs",
@@ -382,12 +497,11 @@
               "RelativeToolTip": "Services\\Reviews\\Reviews.Infrastructure\\Persistence\\MongoReviewEligibilityRepository.cs",
               "ViewState": "AgIAADIAAAAAAAAAAAA2wDoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-08T18:53:13.974Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-08T18:53:13.974Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 17,
               "Title": "ReviewEligibilityService.cs",
               "DocumentMoniker": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Services\\Reviews\\Reviews.Infrastructure\\Persistence\\ReviewEligibilityService.cs",
               "RelativeDocumentMoniker": "Services\\Reviews\\Reviews.Infrastructure\\Persistence\\ReviewEligibilityService.cs",
@@ -395,12 +509,11 @@
               "RelativeToolTip": "Services\\Reviews\\Reviews.Infrastructure\\Persistence\\ReviewEligibilityService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-08T18:53:40.125Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-08T18:53:40.125Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 16,
               "Title": "IReviewRepository.cs",
               "DocumentMoniker": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Services\\Reviews\\Reviews.Domain\\Interfaces\\IReviewRepository.cs",
               "RelativeDocumentMoniker": "Services\\Reviews\\Reviews.Domain\\Interfaces\\IReviewRepository.cs",
@@ -408,12 +521,11 @@
               "RelativeToolTip": "Services\\Reviews\\Reviews.Domain\\Interfaces\\IReviewRepository.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAA1wBMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-08T18:54:56.269Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-08T18:54:56.269Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 20,
               "Title": "CreateReviewCommand.cs",
               "DocumentMoniker": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Services\\Reviews\\Reviews.Application\\Reviews\\Commands\\CreateReview\\CreateReviewCommand.cs",
               "RelativeDocumentMoniker": "Services\\Reviews\\Reviews.Application\\Reviews\\Commands\\CreateReview\\CreateReviewCommand.cs",
@@ -421,12 +533,11 @@
               "RelativeToolTip": "Services\\Reviews\\Reviews.Application\\Reviews\\Commands\\CreateReview\\CreateReviewCommand.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-08T18:44:55.975Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-08T18:44:55.975Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 18,
               "Title": "MongoReviewRepository.cs",
               "DocumentMoniker": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Services\\Reviews\\Reviews.Infrastructure\\Persistence\\MongoReviewRepository.cs",
               "RelativeDocumentMoniker": "Services\\Reviews\\Reviews.Infrastructure\\Persistence\\MongoReviewRepository.cs",
@@ -434,12 +545,11 @@
               "RelativeToolTip": "Services\\Reviews\\Reviews.Infrastructure\\Persistence\\MongoReviewRepository.cs",
               "ViewState": "AgIAAHUAAAAAAAAAAAA+wIIAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-08T17:43:46.409Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-08T17:43:46.409Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 22,
               "Title": "CreateReviewCommand.cs",
               "DocumentMoniker": "C:\\Users\\krnkr\\AppData\\Local\\Temp\\e1de5568-09d5-47e4-a061-0436c88fa27e_Reviews-fixed.zip.Reviews-fixed.zip\\New folder\\Reviews.Application\\Reviews\\Commands\\CreateReview\\CreateReviewCommand.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\AppData\\Local\\Temp\\e1de5568-09d5-47e4-a061-0436c88fa27e_Reviews-fixed.zip.Reviews-fixed.zip\\New folder\\Reviews.Application\\Reviews\\Commands\\CreateReview\\CreateReviewCommand.cs",
@@ -452,7 +562,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 21,
               "Title": "GlobalExceptionHandler.cs",
               "DocumentMoniker": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Services\\Reviews\\Reviews.WebApi\\Infrastructure\\GlobalExceptionHandler.cs",
               "RelativeDocumentMoniker": "Services\\Reviews\\Reviews.WebApi\\Infrastructure\\GlobalExceptionHandler.cs",
@@ -460,12 +570,11 @@
               "RelativeToolTip": "Services\\Reviews\\Reviews.WebApi\\Infrastructure\\GlobalExceptionHandler.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAADUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-08T18:40:35.149Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-08T18:40:35.149Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 19,
               "Title": "CreateReviewCommandHandler.cs",
               "DocumentMoniker": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Services\\Reviews\\Reviews.Application\\Reviews\\Commands\\CreateReview\\CreateReviewCommandHandler.cs",
               "RelativeDocumentMoniker": "Services\\Reviews\\Reviews.Application\\Reviews\\Commands\\CreateReview\\CreateReviewCommandHandler.cs",
@@ -473,12 +582,11 @@
               "RelativeToolTip": "Services\\Reviews\\Reviews.Application\\Reviews\\Commands\\CreateReview\\CreateReviewCommandHandler.cs",
               "ViewState": "AgIAACIAAAAAAAAAAAAQwC8AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-07T20:54:55.194Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-07T20:54:55.194Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 23,
               "Title": "ReviewsController.cs",
               "DocumentMoniker": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Services\\Reviews\\Reviews.WebApi\\Controllers\\ReviewsController.cs",
               "RelativeDocumentMoniker": "Services\\Reviews\\Reviews.WebApi\\Controllers\\ReviewsController.cs",
@@ -486,12 +594,11 @@
               "RelativeToolTip": "Services\\Reviews\\Reviews.WebApi\\Controllers\\ReviewsController.cs",
               "ViewState": "AgIAABIAAAAAAAAAAAASwB0AAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-08T18:36:02.038Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-08T18:36:02.038Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 25,
               "Title": "ApiMappingProfile.cs",
               "DocumentMoniker": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Services\\Reviews\\Reviews.WebApi\\Mapping\\ApiMappingProfile.cs",
               "RelativeDocumentMoniker": "Services\\Reviews\\Reviews.WebApi\\Mapping\\ApiMappingProfile.cs",
@@ -499,12 +606,11 @@
               "RelativeToolTip": "Services\\Reviews\\Reviews.WebApi\\Mapping\\ApiMappingProfile.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-08T18:39:14.377Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-08T18:39:14.377Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 27,
               "Title": "ExceptionMapper.cs",
               "DocumentMoniker": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Services\\Reviews\\Reviews.WebApi\\Infrastructure\\ExceptionMapper.cs",
               "RelativeDocumentMoniker": "Services\\Reviews\\Reviews.WebApi\\Infrastructure\\ExceptionMapper.cs",
@@ -512,12 +618,11 @@
               "RelativeToolTip": "Services\\Reviews\\Reviews.WebApi\\Infrastructure\\ExceptionMapper.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-08T18:40:02.382Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-08T18:40:02.382Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 24,
               "Title": "Order.cs",
               "DocumentMoniker": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Services\\Orders\\Orders.Domain\\Orders\\Order.cs",
               "RelativeDocumentMoniker": "Services\\Orders\\Orders.Domain\\Orders\\Order.cs",
@@ -525,12 +630,11 @@
               "RelativeToolTip": "Services\\Orders\\Orders.Domain\\Orders\\Order.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-08T18:24:22.992Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-08T18:24:22.992Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 26,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Services\\Orders\\Orders.Api\\Program.cs",
               "RelativeDocumentMoniker": "Services\\Orders\\Orders.Api\\Program.cs",
@@ -538,12 +642,11 @@
               "RelativeToolTip": "Services\\Orders\\Orders.Api\\Program.cs",
               "ViewState": "AgIAAFgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-07T21:18:10.046Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-07T21:18:10.046Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 28,
               "Title": "DatabaseInitializationService.cs",
               "DocumentMoniker": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Services\\Reviews\\Reviews.Infrastructure\\Persistence\\Initialization\\DatabaseInitializationService.cs",
               "RelativeDocumentMoniker": "Services\\Reviews\\Reviews.Infrastructure\\Persistence\\Initialization\\DatabaseInitializationService.cs",
@@ -551,12 +654,11 @@
               "RelativeToolTip": "Services\\Reviews\\Reviews.Infrastructure\\Persistence\\Initialization\\DatabaseInitializationService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAoAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-08T17:30:00.153Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-08T17:30:00.153Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 30,
               "Title": "CorrelationIdMiddleware.cs",
               "DocumentMoniker": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Platform.ServiceDefaults\\Correlation\\CorrelationIdMiddleware.cs",
               "RelativeDocumentMoniker": "Platform.ServiceDefaults\\Correlation\\CorrelationIdMiddleware.cs",
@@ -564,12 +666,11 @@
               "RelativeToolTip": "Platform.ServiceDefaults\\Correlation\\CorrelationIdMiddleware.cs",
               "ViewState": "AgIAAAoAAAAAAAAAAAAzwA0AAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-08T11:49:08.491Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-08T11:49:08.491Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 31,
               "Title": "OrderService.cs",
               "DocumentMoniker": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Services\\Orders\\Orders.Bll\\Services\\OrderService.cs",
               "RelativeDocumentMoniker": "Services\\Orders\\Orders.Bll\\Services\\OrderService.cs",
@@ -577,12 +678,11 @@
               "RelativeToolTip": "Services\\Orders\\Orders.Bll\\Services\\OrderService.cs",
               "ViewState": "AgIAABUAAAAAAAAAAAAAwBkAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-07T19:39:54.974Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-07T19:39:54.974Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 29,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Services\\Orders\\Orders.Api\\appsettings.json",
               "RelativeDocumentMoniker": "Services\\Orders\\Orders.Api\\appsettings.json",
@@ -590,26 +690,12 @@
               "RelativeToolTip": "Services\\Orders\\Orders.Api\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-11-07T21:20:55.059Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-07T21:20:55.059Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "Reviews.WebApi.csproj",
-              "DocumentMoniker": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Services\\Reviews\\Reviews.WebApi\\Reviews.WebApi.csproj",
-              "RelativeDocumentMoniker": "Services\\Reviews\\Reviews.WebApi\\Reviews.WebApi.csproj",
-              "ToolTip": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Services\\Reviews\\Reviews.WebApi\\Reviews.WebApi.csproj",
-              "RelativeToolTip": "Services\\Reviews\\Reviews.WebApi\\Reviews.WebApi.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-11-07T19:28:52.608Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "Reviews.Infrastructure",
+              "DocumentIndex": 37,
+              "Title": "Reviews.Infrastructure.csproj",
               "DocumentMoniker": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Services\\Reviews\\Reviews.Infrastructure\\Reviews.Infrastructure.csproj",
               "RelativeDocumentMoniker": "Services\\Reviews\\Reviews.Infrastructure\\Reviews.Infrastructure.csproj",
               "ToolTip": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Services\\Reviews\\Reviews.Infrastructure\\Reviews.Infrastructure.csproj",
@@ -621,7 +707,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 36,
               "Title": "MongoDbSettings.cs",
               "DocumentMoniker": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Services\\Reviews\\Reviews.Infrastructure\\Persistence\\MongoDbSettings.cs",
               "RelativeDocumentMoniker": "Services\\Reviews\\Reviews.Infrastructure\\Persistence\\MongoDbSettings.cs",
@@ -629,12 +715,11 @@
               "RelativeToolTip": "Services\\Reviews\\Reviews.Infrastructure\\Persistence\\MongoDbSettings.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-08T17:42:18.141Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-08T17:42:18.141Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 32,
               "Title": "OrdersController.cs",
               "DocumentMoniker": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Services\\Orders\\Orders.Api\\Controllers\\OrdersController.cs",
               "RelativeDocumentMoniker": "Services\\Orders\\Orders.Api\\Controllers\\OrdersController.cs",
@@ -642,12 +727,11 @@
               "RelativeToolTip": "Services\\Orders\\Orders.Api\\Controllers\\OrdersController.cs",
               "ViewState": "AgIAACwAAAAAAAAAAAAQwD4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-08T18:15:03.63Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-08T18:15:03.63Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 33,
               "Title": "OrdersClient.cs",
               "DocumentMoniker": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Platform.Aggregator\\Clients\\OrdersClient.cs",
               "RelativeDocumentMoniker": "Platform.Aggregator\\Clients\\OrdersClient.cs",
@@ -655,12 +739,11 @@
               "RelativeToolTip": "Platform.Aggregator\\Clients\\OrdersClient.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-08T14:30:13.414Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-08T14:30:13.414Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 35,
               "Title": "MongoMappings.cs",
               "DocumentMoniker": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Services\\Reviews\\Reviews.Infrastructure\\Persistence\\MongoMappings.cs",
               "RelativeDocumentMoniker": "Services\\Reviews\\Reviews.Infrastructure\\Persistence\\MongoMappings.cs",
@@ -668,12 +751,11 @@
               "RelativeToolTip": "Services\\Reviews\\Reviews.Infrastructure\\Persistence\\MongoMappings.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-08T17:42:21.812Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-08T17:42:21.812Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 34,
               "Title": "BaseEntity.cs",
               "DocumentMoniker": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Services\\Reviews\\Reviews.Domain\\Common\\BaseEntity.cs",
               "RelativeDocumentMoniker": "Services\\Reviews\\Reviews.Domain\\Common\\BaseEntity.cs",
@@ -681,12 +763,11 @@
               "RelativeToolTip": "Services\\Reviews\\Reviews.Domain\\Common\\BaseEntity.cs",
               "ViewState": "AgIAACEAAAAAAAAAAAAiwDIAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-08T17:45:35.536Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-08T17:45:35.536Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 42,
               "Title": "GatewayLoggingMiddleware.cs",
               "DocumentMoniker": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Platform.ApiGateway\\GatewayLoggingMiddleware.cs",
               "RelativeDocumentMoniker": "Platform.ApiGateway\\GatewayLoggingMiddleware.cs",
@@ -698,7 +779,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 38,
               "Title": "IDataSeeder.cs",
               "DocumentMoniker": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Services\\Reviews\\Reviews.Infrastructure\\Seeding\\IDataSeeder.cs",
               "RelativeDocumentMoniker": "Services\\Reviews\\Reviews.Infrastructure\\Seeding\\IDataSeeder.cs",
@@ -706,12 +787,11 @@
               "RelativeToolTip": "Services\\Reviews\\Reviews.Infrastructure\\Seeding\\IDataSeeder.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-08T17:15:27.036Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-08T17:15:27.036Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 45,
               "Title": "CatalogClient.cs",
               "DocumentMoniker": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Platform.Aggregator\\Clients\\CatalogClient.cs",
               "RelativeDocumentMoniker": "Platform.Aggregator\\Clients\\CatalogClient.cs",
@@ -723,7 +803,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 44,
               "Title": "ReviewsClient.cs",
               "DocumentMoniker": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Platform.Aggregator\\Clients\\ReviewsClient.cs",
               "RelativeDocumentMoniker": "Platform.Aggregator\\Clients\\ReviewsClient.cs",
@@ -735,7 +815,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 39,
               "Title": "SeedData.cs",
               "DocumentMoniker": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Services\\Reviews\\Reviews.Infrastructure\\Seeding\\SeedData.cs",
               "RelativeDocumentMoniker": "Services\\Reviews\\Reviews.Infrastructure\\Seeding\\SeedData.cs",
@@ -743,12 +823,11 @@
               "RelativeToolTip": "Services\\Reviews\\Reviews.Infrastructure\\Seeding\\SeedData.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAzwAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-08T17:16:07.482Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-08T17:16:07.482Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 41,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Platform.Aggregator\\Program.cs",
               "RelativeDocumentMoniker": "Platform.Aggregator\\Program.cs",
@@ -756,12 +835,11 @@
               "RelativeToolTip": "Platform.Aggregator\\Program.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAAIAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-07T18:00:41.796Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-07T18:00:41.796Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 40,
               "Title": "MongoDataSeeder.cs",
               "DocumentMoniker": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Services\\Reviews\\Reviews.Infrastructure\\Seeding\\MongoDataSeeder.cs",
               "RelativeDocumentMoniker": "Services\\Reviews\\Reviews.Infrastructure\\Seeding\\MongoDataSeeder.cs",
@@ -769,12 +847,11 @@
               "RelativeToolTip": "Services\\Reviews\\Reviews.Infrastructure\\Seeding\\MongoDataSeeder.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-08T17:15:32.991Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-08T17:15:32.991Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 47,
               "Title": "PromoCodesDtos.cs",
               "DocumentMoniker": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Services\\Orders\\Orders.Bll\\Dtos\\PromoCodesDtos.cs",
               "RelativeDocumentMoniker": "Services\\Orders\\Orders.Bll\\Dtos\\PromoCodesDtos.cs",
@@ -786,7 +863,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 43,
               "Title": "OrderCompositionService.cs",
               "DocumentMoniker": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Platform.Aggregator\\Services\\OrderCompositionService.cs",
               "RelativeDocumentMoniker": "Platform.Aggregator\\Services\\OrderCompositionService.cs",
@@ -798,7 +875,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 48,
               "Title": "PaymentDtos.cs",
               "DocumentMoniker": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Services\\Orders\\Orders.Bll\\Dtos\\PaymentDtos.cs",
               "RelativeDocumentMoniker": "Services\\Orders\\Orders.Bll\\Dtos\\PaymentDtos.cs",
@@ -810,7 +887,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 49,
               "Title": "Paging.cs",
               "DocumentMoniker": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Services\\Orders\\Orders.Bll\\Dtos\\Paging.cs",
               "RelativeDocumentMoniker": "Services\\Orders\\Orders.Bll\\Dtos\\Paging.cs",
@@ -822,7 +899,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 50,
               "Title": "OrderDto.cs",
               "DocumentMoniker": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Services\\Orders\\Orders.Bll\\Dtos\\OrderDto.cs",
               "RelativeDocumentMoniker": "Services\\Orders\\Orders.Bll\\Dtos\\OrderDto.cs",
@@ -834,7 +911,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 51,
               "Title": "Dtos.cs",
               "DocumentMoniker": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Services\\Catalog\\Catlog.BLL\\Dto\\Dtos.cs",
               "RelativeDocumentMoniker": "Services\\Catalog\\Catlog.BLL\\Dto\\Dtos.cs",
@@ -846,7 +923,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 46,
               "Title": "Contracts.cs",
               "DocumentMoniker": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Platform.Aggregator\\Contracts\\Contracts.cs",
               "RelativeDocumentMoniker": "Platform.Aggregator\\Contracts\\Contracts.cs",
@@ -858,7 +935,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 53,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Platform.Aggregator\\appsettings.json",
               "RelativeDocumentMoniker": "Platform.Aggregator\\appsettings.json",
@@ -870,7 +947,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 52,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Platform.ApiGateway\\appsettings.json",
               "RelativeDocumentMoniker": "Platform.ApiGateway\\appsettings.json",
@@ -882,7 +959,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 55,
               "Title": "Platform.ApiGateway.csproj",
               "DocumentMoniker": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Platform.ApiGateway\\Platform.ApiGateway.csproj",
               "RelativeDocumentMoniker": "Platform.ApiGateway\\Platform.ApiGateway.csproj",
@@ -895,7 +972,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 56,
               "Title": "Extensions.cs",
               "DocumentMoniker": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Platform.ServiceDefaults\\Extensions.cs",
               "RelativeDocumentMoniker": "Platform.ServiceDefaults\\Extensions.cs",
@@ -907,7 +984,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 54,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Platform.ApiGateway\\Program.cs",
               "RelativeDocumentMoniker": "Platform.ApiGateway\\Program.cs",
@@ -919,19 +996,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
-              "Title": "AppHost.cs",
-              "DocumentMoniker": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Platform.AppHost\\AppHost.cs",
-              "RelativeDocumentMoniker": "Platform.AppHost\\AppHost.cs",
-              "ToolTip": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Platform.AppHost\\AppHost.cs",
-              "RelativeToolTip": "Platform.AppHost\\AppHost.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAcwB4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-07T17:37:52.469Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 57,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Services\\Catalog\\Catlog.API\\Program.cs",
               "RelativeDocumentMoniker": "Services\\Catalog\\Catlog.API\\Program.cs",
@@ -943,33 +1008,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
-              "Title": "Catalog.API.csproj",
-              "DocumentMoniker": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Services\\Catalog\\Catlog.API\\Catalog.API.csproj",
-              "RelativeDocumentMoniker": "Services\\Catalog\\Catlog.API\\Catalog.API.csproj",
-              "ToolTip": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Services\\Catalog\\Catlog.API\\Catalog.API.csproj",
-              "RelativeToolTip": "Services\\Catalog\\Catlog.API\\Catalog.API.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-11-08T11:37:08.986Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 53,
-              "Title": "Orders.Api.csproj",
-              "DocumentMoniker": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Services\\Orders\\Orders.Api\\Orders.Api.csproj",
-              "RelativeDocumentMoniker": "Services\\Orders\\Orders.Api\\Orders.Api.csproj",
-              "ToolTip": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Services\\Orders\\Orders.Api\\Orders.Api.csproj",
-              "RelativeToolTip": "Services\\Orders\\Orders.Api\\Orders.Api.csproj",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABcAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-11-08T11:29:39.038Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 57,
+              "DocumentIndex": 61,
               "Title": "OrdersDbContext.cs",
               "DocumentMoniker": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Services\\Orders\\Orders.Dal\\OrdersDbContext.cs",
               "RelativeDocumentMoniker": "Services\\Orders\\Orders.Dal\\OrdersDbContext.cs",
@@ -981,7 +1020,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 56,
+              "DocumentIndex": 60,
               "Title": "DatabaseInitializer.cs",
               "DocumentMoniker": "C:\\Users\\krnkr\\Downloads\\DatabaseInitializer.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\Downloads\\DatabaseInitializer.cs",
@@ -993,7 +1032,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
+              "DocumentIndex": 58,
               "Title": "ReservationCleanupWorker.cs",
               "DocumentMoniker": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Services\\Catalog\\Catlog.API\\Workers\\ReservationCleanupWorker.cs",
               "RelativeDocumentMoniker": "Services\\Catalog\\Catlog.API\\Workers\\ReservationCleanupWorker.cs",
@@ -1005,7 +1044,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 55,
+              "DocumentIndex": 59,
               "Title": "DatabaseOptions.cs",
               "DocumentMoniker": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Services\\Orders\\Orders.Api\\Middleware\\DatabaseOptions.cs",
               "RelativeDocumentMoniker": "Services\\Orders\\Orders.Api\\Middleware\\DatabaseOptions.cs",
@@ -1017,7 +1056,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 58,
+              "DocumentIndex": 62,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Services\\Catalog\\Catlog.API\\appsettings.json",
               "RelativeDocumentMoniker": "Services\\Catalog\\Catlog.API\\appsettings.json",
@@ -1029,7 +1068,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 59,
+              "DocumentIndex": 63,
               "Title": "DeleteReviewHandler.cs",
               "DocumentMoniker": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Services\\Reviews\\Reviews.Application\\Reviews\\Commands\\DeleteReview\\DeleteReviewHandler.cs",
               "RelativeDocumentMoniker": "Services\\Reviews\\Reviews.Application\\Reviews\\Commands\\DeleteReview\\DeleteReviewHandler.cs",
@@ -1041,7 +1080,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 60,
+              "DocumentIndex": 64,
               "Title": "DeleteReviewCommandValidator .cs",
               "DocumentMoniker": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Services\\Reviews\\Reviews.Application\\Reviews\\Commands\\DeleteReview\\DeleteReviewCommandValidator .cs",
               "RelativeDocumentMoniker": "Services\\Reviews\\Reviews.Application\\Reviews\\Commands\\DeleteReview\\DeleteReviewCommandValidator .cs",
@@ -1053,7 +1092,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 61,
+              "DocumentIndex": 65,
               "Title": "UpdateReviewCommandHandler.cs",
               "DocumentMoniker": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Services\\Reviews\\Reviews.Application\\Reviews\\Commands\\UpdateReview\\UpdateReviewCommandHandler.cs",
               "RelativeDocumentMoniker": "Services\\Reviews\\Reviews.Application\\Reviews\\Commands\\UpdateReview\\UpdateReviewCommandHandler.cs",
@@ -1065,7 +1104,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 62,
+              "DocumentIndex": 66,
               "Title": "PaymentService.cs",
               "DocumentMoniker": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Services\\Orders\\Orders.Bll\\Services\\PaymentService.cs",
               "RelativeDocumentMoniker": "Services\\Orders\\Orders.Bll\\Services\\PaymentService.cs",
@@ -1077,7 +1116,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 63,
+              "DocumentIndex": 67,
               "Title": "PromoCodeServices.cs",
               "DocumentMoniker": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Services\\Orders\\Orders.Bll\\Services\\PromoCodeServices.cs",
               "RelativeDocumentMoniker": "Services\\Orders\\Orders.Bll\\Services\\PromoCodeServices.cs",
@@ -1089,7 +1128,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 64,
+              "DocumentIndex": 68,
               "Title": "Telemetry.cs",
               "DocumentMoniker": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Services\\Reviews\\Reviews.Application\\Telemetry.cs",
               "RelativeDocumentMoniker": "Services\\Reviews\\Reviews.Application\\Telemetry.cs",
@@ -1101,7 +1140,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 65,
+              "DocumentIndex": 69,
               "Title": "Telemetry.cs",
               "DocumentMoniker": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Services\\Orders\\Orders.Bll\\Telemetry.cs",
               "RelativeDocumentMoniker": "Services\\Orders\\Orders.Bll\\Telemetry.cs",
@@ -1113,7 +1152,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 66,
+              "DocumentIndex": 70,
               "Title": "Catlog.API.http",
               "DocumentMoniker": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Services\\Catalog\\Catlog.API\\Catlog.API.http",
               "RelativeDocumentMoniker": "Services\\Catalog\\Catlog.API\\Catlog.API.http",
@@ -1125,7 +1164,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 67,
+              "DocumentIndex": 71,
               "Title": "Platform.ServiceDefaults.csproj",
               "DocumentMoniker": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Platform.ServiceDefaults\\Platform.ServiceDefaults.csproj",
               "RelativeDocumentMoniker": "Platform.ServiceDefaults\\Platform.ServiceDefaults.csproj",

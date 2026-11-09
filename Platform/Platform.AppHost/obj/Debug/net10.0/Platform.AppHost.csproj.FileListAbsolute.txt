@@ -167,3 +167,7 @@ C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Platform
 C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Platform.AppHost\obj\Debug\net10.0\Aspire\references\Reviews_WebApi.ProjectMetadata.g.cs
 C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Platform.AppHost\obj\Debug\net10.0\Aspire\references\Platform_ApiGateway.ProjectMetadata.g.cs
 C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Platform.AppHost\obj\Debug\net10.0\Aspire\references\Platform_Aggregator.ProjectMetadata.g.cs
+C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Platform.AppHost\bin\Debug\net10.0\Aspire.Hosting.Redis.dll
+C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Platform.AppHost\bin\Debug\net10.0\HealthChecks.Redis.dll
+C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Platform.AppHost\bin\Debug\net10.0\Pipelines.Sockets.Unofficial.dll
+C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Platform.AppHost\bin\Debug\net10.0\StackExchange.Redis.dll
