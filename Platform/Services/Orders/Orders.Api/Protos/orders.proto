@@ -1,20 +1,36 @@
 syntax = "proto3";
+package orders;
 
 import "google/protobuf/timestamp.proto";
 
 option csharp_namespace = "Orders.Grpc";
-package orders;
 
 service OrdersGrpc {
   rpc GetOrder (GetOrderRequest) returns (OrderInfo);
+  rpc ListOrders (ListOrdersRequest) returns (ListOrdersReply);
 }
 
 message GetOrderRequest {
   string order_id = 1;
 }
 
+message ListOrdersRequest {
+  optional string customer_id = 1;
+  string status = 2;
+  int32 page = 3;
+  int32 page_size = 4;
+  string sort = 5;
+}
+
+message ListOrdersReply {
+  repeated OrderSummaryInfo items = 1;
+  int32 page = 2;
+  int32 page_size = 3;
+  int32 total_count = 4;
+}
+
 message OrderItemInfo {
-  string id = 1;
+  string item_id = 1;
   string product_id = 2;
   string variant_id = 3;
   string product_name = 4;
@@ -24,15 +40,44 @@ message OrderItemInfo {
   string line_total = 8;
 }
 
+message DeliveryInfo {
+  string type = 1;
+  string status = 2;
+  optional string city = 3;
+  optional string street = 4;
+  optional string building = 5;
+  optional string apartment = 6;
+  optional string address_note = 7;
+  optional string courier_name = 8;
+  optional string courier_phone = 9;
+  optional google.protobuf.Timestamp delivered_at = 10;
+}
+
 message OrderInfo {
-  string id = 1;
+  string order_id = 1;
   int64 order_number = 2;
   string customer_id = 3;
   string status = 4;
   google.protobuf.Timestamp desired_ready_at = 5;
-  string subtotal = 6;
-  string discount_amount = 7;
-  string delivery_fee = 8;
-  string total_amount = 9;
-  repeated OrderItemInfo items = 10;
+  optional string comment = 6;
+  optional string promo_code_id = 7;
+  string subtotal = 8;
+  string discount_amount = 9;
+  string delivery_fee = 10;
+  string total_amount = 11;
+  repeated OrderItemInfo items = 12;
+  optional DeliveryInfo delivery = 13;
+}
+
+message OrderSummaryInfo {
+  string order_id = 1;
+  int64 order_number = 2;
+  string customer_id = 3;
+  string status = 4;
+  google.protobuf.Timestamp created_at = 5;
+  google.protobuf.Timestamp desired_ready_at = 6;
+  string subtotal = 7;
+  string discount_amount = 8;
+  string delivery_fee = 9;
+  string total_amount = 10;
 }

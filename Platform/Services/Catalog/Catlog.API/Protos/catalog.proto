@@ -39,32 +39,24 @@ message GetProductBySlugRequest {
 }
 
 message ListProductsRequest {
-  // Фільтр за категорією; порожній рядок = без фільтра.
   string category_slug = 1;
-  // Пошук за назвою; порожній рядок = без пошуку.
   string search = 2;
-  // Лише товари, що є в наявності.
   bool in_stock_only = 3;
-  // Межі ціни (десятковий рядок); відсутнє поле = без обмеження.
   optional string min_price = 4;
   optional string max_price = 5;
   ProductSortOrder sort = 6;
-  // Номер сторінки з 1; 0 трактується як 1.
   int32 page = 7;
-  // Розмір сторінки 1–100; 0 трактується як 20.
   int32 page_size = 8;
 }
 
 message ListProductsReply {
   repeated ProductListItemInfo items = 1;
-  // Загальна кількість товарів за фільтром.
   int32 total = 2;
   int32 page = 3;
   int32 page_size = 4;
 }
 
 message GetTopRatedRequest {
-  // Кількість товарів 1–100; 0 трактується як 10.
   int32 count = 1;
 }
 
@@ -73,7 +65,6 @@ message GetTopRatedReply {
 }
 
 message ListCategoriesRequest {
-  // true — лише активні категорії.
   bool active_only = 1;
 }
 

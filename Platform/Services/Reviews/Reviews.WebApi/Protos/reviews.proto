@@ -1,29 +1,69 @@
 syntax = "proto3";
+package reviews;
 
 import "google/protobuf/timestamp.proto";
 
 option csharp_namespace = "Reviews.Grpc";
-package reviews;
 
 service ReviewsGrpc {
-  rpc GetReviewsForProducts (GetReviewsRequest) returns (GetReviewsReply);
+  rpc GetReview (GetReviewRequest) returns (ReviewInfo);
+  rpc ListReviews (ListReviewsRequest) returns (ListReviewsReply);
+  rpc GetReviewsForProducts (GetReviewsForProductsRequest) returns (GetReviewsForProductsReply);
 }
 
-message GetReviewsRequest {
+message GetReviewRequest {
+  string review_id = 1;
+}
+
+message ListReviewsRequest {
+  optional string product_id = 1;
+  optional string author_id = 2;
+  string status = 3;
+  optional int32 min_rating = 4;
+  optional int32 max_rating = 5;
+  string sort = 6;
+  int32 page = 7;
+  int32 page_size = 8;
+}
+
+message ListReviewsReply {
+  repeated ReviewInfo items = 1;
+  int32 page = 2;
+  int32 page_size = 3;
+  int64 total_count = 4;
+}
+
+message GetReviewsForProductsRequest {
   repeated string product_ids = 1;
-  int32 page_size = 2;
+  int32 per_product_limit = 2;
 }
 
-message GetReviewsReply {
-  repeated ReviewInfo reviews = 1;
+message GetReviewsForProductsReply {
+  repeated ProductReviewsInfo products = 1;
+}
+
+message ProductReviewsInfo {
+  string product_id = 1;
+  repeated ReviewInfo reviews = 2;
+  int64 total_count = 3;
+}
+
+message ReviewReplyInfo {
+  string text = 1;
+  string author_name = 2;
+  google.protobuf.Timestamp created_at = 3;
 }
 
 message ReviewInfo {
-  string id = 1;
+  string review_id = 1;
   string product_id = 2;
   string product_name = 3;
   string author_name = 4;
   int32 rating = 5;
   optional string text = 6;
-  google.protobuf.Timestamp created_at = 7;
+  string status = 7;
+  int32 photos_count = 8;
+  optional ReviewReplyInfo reply = 9;
+  google.protobuf.Timestamp created_at = 10;
+  int32 version = 11;
 }

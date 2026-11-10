@@ -1009,9 +1009,6 @@ namespace Platform.Contracts.Catalog {
     /// <summary>Field number for the "category_slug" field.</summary>
     public const int CategorySlugFieldNumber = 1;
     private string categorySlug_ = "";
-    /// <summary>
-    /// Фільтр за категорією; порожній рядок = без фільтра.
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CategorySlug {
@@ -1024,9 +1021,6 @@ namespace Platform.Contracts.Catalog {
     /// <summary>Field number for the "search" field.</summary>
     public const int SearchFieldNumber = 2;
     private string search_ = "";
-    /// <summary>
-    /// Пошук за назвою; порожній рядок = без пошуку.
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Search {
@@ -1039,9 +1033,6 @@ namespace Platform.Contracts.Catalog {
     /// <summary>Field number for the "in_stock_only" field.</summary>
     public const int InStockOnlyFieldNumber = 3;
     private bool inStockOnly_;
-    /// <summary>
-    /// Лише товари, що є в наявності.
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool InStockOnly {
@@ -1056,9 +1047,6 @@ namespace Platform.Contracts.Catalog {
     private readonly static string MinPriceDefaultValue = "";
 
     private string minPrice_;
-    /// <summary>
-    /// Межі ціни (десятковий рядок); відсутнє поле = без обмеження.
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string MinPrice {
@@ -1121,9 +1109,6 @@ namespace Platform.Contracts.Catalog {
     /// <summary>Field number for the "page" field.</summary>
     public const int PageFieldNumber = 7;
     private int page_;
-    /// <summary>
-    /// Номер сторінки з 1; 0 трактується як 1.
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int Page {
@@ -1136,9 +1121,6 @@ namespace Platform.Contracts.Catalog {
     /// <summary>Field number for the "page_size" field.</summary>
     public const int PageSizeFieldNumber = 8;
     private int pageSize_;
-    /// <summary>
-    /// Розмір сторінки 1–100; 0 трактується як 20.
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int PageSize {
@@ -1519,9 +1501,6 @@ namespace Platform.Contracts.Catalog {
     /// <summary>Field number for the "total" field.</summary>
     public const int TotalFieldNumber = 2;
     private int total_;
-    /// <summary>
-    /// Загальна кількість товарів за фільтром.
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int Total {
@@ -1806,9 +1785,6 @@ namespace Platform.Contracts.Catalog {
     /// <summary>Field number for the "count" field.</summary>
     public const int CountFieldNumber = 1;
     private int count_;
-    /// <summary>
-    /// Кількість товарів 1–100; 0 трактується як 10.
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int Count {
@@ -2194,9 +2170,6 @@ namespace Platform.Contracts.Catalog {
     /// <summary>Field number for the "active_only" field.</summary>
     public const int ActiveOnlyFieldNumber = 1;
     private bool activeOnly_;
-    /// <summary>
-    /// true — лише активні категорії.
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool ActiveOnly {

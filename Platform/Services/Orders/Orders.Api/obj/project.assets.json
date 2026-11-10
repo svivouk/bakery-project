@@ -2147,6 +2147,26 @@
           "bin/placeholder/Orders.Domain.dll": {}
         }
       },
+      "Platform.Aggregator/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "Aspire.StackExchange.Redis.DistributedCaching": "13.6.4",
+          "Google.Protobuf": "3.36.2",
+          "Grpc.Net.ClientFactory": "2.85.0",
+          "Microsoft.AspNetCore.OpenApi": "10.0.12",
+          "Platform.ServiceDefaults": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Platform.Aggregator.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Platform.Aggregator.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
       "Platform.ServiceDefaults/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v10.0",
@@ -5817,6 +5837,11 @@
       "path": "../Orders.Domain/Orders.Domain.csproj",
       "msbuildProject": "../Orders.Domain/Orders.Domain.csproj"
     },
+    "Platform.Aggregator/1.0.0": {
+      "type": "project",
+      "path": "../../../Platform.Aggregator/Platform.Aggregator.csproj",
+      "msbuildProject": "../../../Platform.Aggregator/Platform.Aggregator.csproj"
+    },
     "Platform.ServiceDefaults/1.0.0": {
       "type": "project",
       "path": "../../../Platform.ServiceDefaults/Platform.ServiceDefaults.csproj",
@@ -5837,6 +5862,7 @@
       "Microsoft.EntityFrameworkCore.SqlServer >= 10.0.13",
       "Microsoft.Extensions.Caching.Memory >= 10.0.14",
       "Orders.Bll >= 1.0.0",
+      "Platform.Aggregator >= 1.0.0",
       "Platform.ServiceDefaults >= 1.0.0",
       "Serilog.AspNetCore >= 10.0.0",
       "Swashbuckle.AspNetCore.Swagger >= 10.3.1",
@@ -5878,6 +5904,9 @@
           "framework": "net10.0",
           "targetAlias": "net10.0",
           "projectReferences": {
+            "C:\\Users\\krnkr\\OneDrive\\Рабочий стол\\bakery-project\\Platform\\Platform.Aggregator\\Platform.Aggregator.csproj": {
+              "projectPath": "C:\\Users\\krnkr\\OneDrive\\Рабочий стол\\bakery-project\\Platform\\Platform.Aggregator\\Platform.Aggregator.csproj"
+            },
             "C:\\Users\\krnkr\\OneDrive\\Рабочий стол\\bakery-project\\Platform\\Platform.ServiceDefaults\\Platform.ServiceDefaults.csproj": {
               "projectPath": "C:\\Users\\krnkr\\OneDrive\\Рабочий стол\\bakery-project\\Platform\\Platform.ServiceDefaults\\Platform.ServiceDefaults.csproj"
             },

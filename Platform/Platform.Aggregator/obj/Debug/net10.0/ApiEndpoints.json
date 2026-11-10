@@ -1,7 +1,7 @@
 [
   {
     "ContainingType": "Program\u002B\u003C\u003Ec",
-    "Method": "\u003C\u003CMain\u003E$\u003Eb__0_4",
+    "Method": "\u003C\u003CMain\u003E$\u003Eb__0_2",
     "RelativePath": "api/aggregator/orders/{id:guid}/cache",
     "HttpMethod": "DELETE",
     "IsController": false,
@@ -23,7 +23,7 @@
   },
   {
     "ContainingType": "Program\u002B\u003C\u003Ec",
-    "Method": "\u003C\u003CMain\u003E$\u003Eb__0_3",
+    "Method": "\u003C\u003CMain\u003E$\u003Eb__0_1",
     "RelativePath": "api/aggregator/orders/{id:guid}/full",
     "HttpMethod": "GET",
     "IsController": false,
@@ -45,7 +45,7 @@
   },
   {
     "ContainingType": "Platform.Aggregator.GrpcClients.GrpcClientsExtensions\u002B\u003C\u003Ec",
-    "Method": "\u003CMapGrpcCheckEndpoints\u003Eb__1_0",
+    "Method": "\u003CMapGrpcCheckEndpoints\u003Eb__3_0",
     "RelativePath": "api/grpc-check/catalog/{slug}",
     "HttpMethod": "GET",
     "IsController": false,

@@ -18,7 +18,8 @@ public static class DependencyInjection
             cfg.RegisterServicesFromAssembly(assembly);       
             cfg.AddOpenBehavior(typeof(LoggingBehavior<,>));       
             cfg.AddOpenBehavior(typeof(ValidationBehavior<,>));  
-            cfg.AddOpenBehavior(typeof(PerformanceBehavior<,>));  
+            cfg.AddOpenBehavior(typeof(PerformanceBehavior<,>));
+            cfg.AddOpenBehavior(typeof(CachingBehavior<,>));
         });
         services.AddSingleton(new PerformanceOptions
         {

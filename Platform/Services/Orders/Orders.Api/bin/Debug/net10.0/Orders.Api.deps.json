@@ -19,6 +19,7 @@
           "Microsoft.EntityFrameworkCore.Design": "10.0.13",
           "Microsoft.EntityFrameworkCore.SqlServer": "10.0.13",
           "Orders.Bll": "1.0.0",
+          "Platform.Aggregator": "1.0.0",
           "Platform.ServiceDefaults": "1.0.0",
           "Serilog.AspNetCore": "10.0.0",
           "Swashbuckle.AspNetCore.Swagger": "10.3.1",
@@ -1485,6 +1486,21 @@
           }
         }
       },
+      "Platform.Aggregator/1.0.0": {
+        "dependencies": {
+          "Aspire.StackExchange.Redis.DistributedCaching": "13.6.4",
+          "Google.Protobuf": "3.36.2",
+          "Grpc.Net.ClientFactory": "2.85.0",
+          "Microsoft.AspNetCore.OpenApi": "10.0.14",
+          "Platform.ServiceDefaults": "1.0.0"
+        },
+        "runtime": {
+          "Platform.Aggregator.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
       "Platform.ServiceDefaults/1.0.0": {
         "dependencies": {
           "Microsoft.Extensions.Http.Resilience": "10.10.0",
@@ -2269,6 +2285,11 @@
       "sha512": ""
     },
     "Orders.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Platform.Aggregator/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

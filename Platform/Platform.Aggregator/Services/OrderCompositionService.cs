@@ -6,7 +6,7 @@ using Platform.Aggregator.Contracts;
 namespace Platform.Aggregator.Services;
 
 public sealed class OrderCompositionService(
-    OrdersClient orders, CatalogClient catalog, ReviewsClient reviews,
+    IOrdersSource orders, ICatalogSource catalog, IReviewsSource reviews,
     ILogger<OrderCompositionService> logger)
 {
     public async Task<FullOrderDto?> GetFullOrderAsync(Guid orderId, CancellationToken ct)

@@ -46,17 +46,41 @@ namespace Reviews.Grpc {
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Reviews.Grpc.GetReviewsRequest> __Marshaller_reviews_GetReviewsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Reviews.Grpc.GetReviewsRequest.Parser));
+    static readonly grpc::Marshaller<global::Reviews.Grpc.GetReviewRequest> __Marshaller_reviews_GetReviewRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Reviews.Grpc.GetReviewRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Reviews.Grpc.GetReviewsReply> __Marshaller_reviews_GetReviewsReply = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Reviews.Grpc.GetReviewsReply.Parser));
+    static readonly grpc::Marshaller<global::Reviews.Grpc.ReviewInfo> __Marshaller_reviews_ReviewInfo = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Reviews.Grpc.ReviewInfo.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Reviews.Grpc.ListReviewsRequest> __Marshaller_reviews_ListReviewsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Reviews.Grpc.ListReviewsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Reviews.Grpc.ListReviewsReply> __Marshaller_reviews_ListReviewsReply = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Reviews.Grpc.ListReviewsReply.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Reviews.Grpc.GetReviewsForProductsRequest> __Marshaller_reviews_GetReviewsForProductsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Reviews.Grpc.GetReviewsForProductsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Reviews.Grpc.GetReviewsForProductsReply> __Marshaller_reviews_GetReviewsForProductsReply = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Reviews.Grpc.GetReviewsForProductsReply.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::Reviews.Grpc.GetReviewsRequest, global::Reviews.Grpc.GetReviewsReply> __Method_GetReviewsForProducts = new grpc::Method<global::Reviews.Grpc.GetReviewsRequest, global::Reviews.Grpc.GetReviewsReply>(
+    static readonly grpc::Method<global::Reviews.Grpc.GetReviewRequest, global::Reviews.Grpc.ReviewInfo> __Method_GetReview = new grpc::Method<global::Reviews.Grpc.GetReviewRequest, global::Reviews.Grpc.ReviewInfo>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetReview",
+        __Marshaller_reviews_GetReviewRequest,
+        __Marshaller_reviews_ReviewInfo);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Reviews.Grpc.ListReviewsRequest, global::Reviews.Grpc.ListReviewsReply> __Method_ListReviews = new grpc::Method<global::Reviews.Grpc.ListReviewsRequest, global::Reviews.Grpc.ListReviewsReply>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListReviews",
+        __Marshaller_reviews_ListReviewsRequest,
+        __Marshaller_reviews_ListReviewsReply);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Reviews.Grpc.GetReviewsForProductsRequest, global::Reviews.Grpc.GetReviewsForProductsReply> __Method_GetReviewsForProducts = new grpc::Method<global::Reviews.Grpc.GetReviewsForProductsRequest, global::Reviews.Grpc.GetReviewsForProductsReply>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetReviewsForProducts",
-        __Marshaller_reviews_GetReviewsRequest,
-        __Marshaller_reviews_GetReviewsReply);
+        __Marshaller_reviews_GetReviewsForProductsRequest,
+        __Marshaller_reviews_GetReviewsForProductsReply);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -69,7 +93,19 @@ namespace Reviews.Grpc {
     public abstract partial class ReviewsGrpcBase
     {
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::Reviews.Grpc.GetReviewsReply> GetReviewsForProducts(global::Reviews.Grpc.GetReviewsRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Reviews.Grpc.ReviewInfo> GetReview(global::Reviews.Grpc.GetReviewRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Reviews.Grpc.ListReviewsReply> ListReviews(global::Reviews.Grpc.ListReviewsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Reviews.Grpc.GetReviewsForProductsReply> GetReviewsForProducts(global::Reviews.Grpc.GetReviewsForProductsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -82,6 +118,8 @@ namespace Reviews.Grpc {
     public static grpc::ServerServiceDefinition BindService(ReviewsGrpcBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
+          .AddMethod(__Method_GetReview, serviceImpl.GetReview)
+          .AddMethod(__Method_ListReviews, serviceImpl.ListReviews)
           .AddMethod(__Method_GetReviewsForProducts, serviceImpl.GetReviewsForProducts).Build();
     }
 
@@ -92,7 +130,9 @@ namespace Reviews.Grpc {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, ReviewsGrpcBase serviceImpl)
     {
-      serviceBinder.AddMethod(__Method_GetReviewsForProducts, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Reviews.Grpc.GetReviewsRequest, global::Reviews.Grpc.GetReviewsReply>(serviceImpl.GetReviewsForProducts));
+      serviceBinder.AddMethod(__Method_GetReview, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Reviews.Grpc.GetReviewRequest, global::Reviews.Grpc.ReviewInfo>(serviceImpl.GetReview));
+      serviceBinder.AddMethod(__Method_ListReviews, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Reviews.Grpc.ListReviewsRequest, global::Reviews.Grpc.ListReviewsReply>(serviceImpl.ListReviews));
+      serviceBinder.AddMethod(__Method_GetReviewsForProducts, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Reviews.Grpc.GetReviewsForProductsRequest, global::Reviews.Grpc.GetReviewsForProductsReply>(serviceImpl.GetReviewsForProducts));
     }
 
   }

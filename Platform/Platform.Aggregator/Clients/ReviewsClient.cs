@@ -1,8 +1,9 @@
-﻿using Platform.Aggregator.Contracts;
+using Platform.Aggregator.Contracts;
 
 namespace Platform.Aggregator.Clients;
 
-public sealed class ReviewsClient(HttpClient http)
+/// <summary>HTTP-реалізація (Лаб. 05): по одному запиту на товар.</summary>
+public sealed class ReviewsClient(HttpClient http) : IReviewsSource
 {
     public async Task<IReadOnlyList<ReviewDto>> GetForProductsAsync(IEnumerable<Guid> ids, CancellationToken ct)
     {

@@ -27,8 +27,12 @@
     <PackageReference Include="System.Security.Cryptography.Pkcs" Version="9.0.21" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\Platform.Aggregator\Platform.Aggregator.csproj" />
     <ProjectReference Include="..\Orders.Bll\Orders.Bll.csproj" />
     <ProjectReference Include="..\..\..\Platform.ServiceDefaults\Platform.ServiceDefaults.csproj" />
   </ItemGroup>
+	<ItemGroup>
+		<Protobuf Include="Protos\orders.proto" GrpcServices="Server" />
+	</ItemGroup>
 
 </Project>
