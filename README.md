@@ -10,7 +10,7 @@
 │   ├── erd.md                 ERD трьох контекстів (Mermaid) і карта контекстів
 │   ├── contexts.md            опис контекстів, агрегати, життєвий цикл, взаємодія
 │   └── mongo-documents.md     приклади документів MongoDB, індекси, типові операції
-├── Platform/    рішення .NET: Aspire AppHost + «Каталог» (API → BLL → DAL → Domain)
+├── Platform/    рішення .NET: Aspire AppHost, Gateway, Aggregator і сервіси (розділи 10–11)
 └── db/          SQL- і MongoDB-скрипти
     ├── p1/      Проєкт №1 (Каталог): schema.sql · procedures.sql · seed.sql
     ├── p2/      Проєкт №2 (Замовлення): schema.sql · seed.sql
@@ -156,7 +156,7 @@ mongosh "mongodb://localhost:27017" db/p3/seed.js
 
 ## 9. Статус
 
-- Проєкт №1 (Каталог) реалізований у `Platform/`: Web API, BLL, DAL (ADO.NET + Dapper), Aspire AppHost. Опис і запуск: розділ 10.
+- Проєкт №1 (Каталог) реалізований у `Platform/`: Web API, BLL, DAL (ADO.NET + Dapper), Aspire AppHost. Опис і запуск: розділ 10. Повна платформа (Gateway, Aggregator, Orders, Reviews, Redis): розділ 11.
 - Проєкти №2 (EF Core) і №3 (MongoDB) у цьому репозиторії поки що лише описані схемами, демо-даними й правилами узгодженості.
 - SQL-скрипти Каталогу виконуються автоматично при старті AppHost, тож перший запуск через Aspire — це і є їхня перша перевірка на живому SQL Server. Скрипти Замовлень і MongoDB на живих серверах ще не запускалися. Перед використанням перевірте плани виконання ключових запитів (`SET STATISTICS IO` або Query Store).
 - Відомий розбіг у демо-даних: `db/p2/seed.sql` (`ProductRefs`) використовує ідентифікатори товарів `b0000000-…`, а `db/p1/seed.sql` і `db/p3/seed.js` — `a0000000-…`. Для узгодженості між контекстами p2 треба привести до `a0000000-…`.
@@ -177,11 +177,11 @@ flowchart LR
 
 | Проєкт (папка) | Роль |
 |---|---|
-| `Platform/Platform` | Aspire AppHost: піднімає SQL Server, виконує `db/p1/*.sql`, запускає API і передає йому рядок підключення |
-| `Platform/Catlog.API` | Тонкі контролери, `ExceptionHandlingMiddleware` (ProblemDetails), воркер очищення прострочених резервацій, Swagger |
-| `Platform/Catlog.BLL` | Сервіси, DTO з DataAnnotations, профіль AutoMapper (`CatalogProfile`), доменні перевірки (`Check`) |
-| `Platform/Catlog.DAL` | `IUnitOfWork` (одне з'єднання й транзакція), репозиторії: ADO.NET (`CategoryRepository`) і Dapper (`BaseDapperRepository<T>`) |
-| `Platform/Catalog.Domain` | Моделі, enum-и, доменні винятки |
+| `Platform/Platform.AppHost` | Aspire AppHost: піднімає SQL Server, Redis і MongoDB, запускає сервіси, Gateway та Aggregator і передає їм рядки підключення |
+| `Platform/Services/Catalog/Catlog.API` | Тонкі контролери, `ExceptionHandlingMiddleware` (ProblemDetails), воркер очищення прострочених резервацій, Swagger |
+| `Platform/Services/Catalog/Catlog.BLL` | Сервіси, DTO з DataAnnotations, профіль AutoMapper (`CatalogProfile`), доменні перевірки (`Check`) |
+| `Platform/Services/Catalog/Catlog.DAL` | `IUnitOfWork` (одне з'єднання й транзакція), репозиторії: ADO.NET (`CategoryRepository`) і Dapper (`BaseDapperRepository<T>`) |
+| `Platform/Services/Catalog/Catalog.Domain` | Моделі, enum-и, доменні винятки |
 
 ### Що потрібно для запуску
 
@@ -192,8 +192,8 @@ flowchart LR
 ### Запуск через Aspire
 
 ```bash
-dotnet run --project Platform/Platform/Platform.csproj
-# або з каталогу Platform/Platform:  aspire run
+dotnet run --project Platform/Platform.AppHost
+# або з каталогу Platform/Platform.AppHost:  aspire run
 ```
 
 1. У консолі з'явиться посилання на Aspire Dashboard. Відкрийте його.
@@ -204,7 +204,7 @@ dotnet run --project Platform/Platform/Platform.csproj
 
 Контейнер SQL Server створюється заново при кожному запуску, тому дані повертаються до демо-стану. Щоб зберігати їх між запусками, додайте `.WithDataVolume()` разом із фіксованим паролем (`builder.AddParameter("sql-password", secret: true)` → `AddSqlServer("sql", password)`): з тимчасово згенерованим паролем том буде недоступний на наступному старті.
 
-**Запуск API без Aspire.** Розгорніть БД за розділом 4, вкажіть свій рядок підключення в `Platform/Catlog.API/appsettings.json` (`ConnectionStrings:CatalogDb`) і виконайте `dotnet run --project Platform/Catlog.API` (за замовчуванням `http://localhost:5065`).
+**Запуск API без Aspire.** Розгорніть БД за розділом 4, вкажіть свій рядок підключення в `Platform/Catlog.API/appsettings.json` (`ConnectionStrings:CatalogDb`) і виконайте `dotnet run --project Platform/Services/Catalog/Catlog.API` (за замовчуванням `http://localhost:5065`).
 
 ### Приклади запитів
 
@@ -254,7 +254,6 @@ curl -X DELETE "$API/api/stock/reservations/11111111-1111-4111-8111-111111111111
 curl -X POST "$API/api/stock/maintenance/release-expired"
 curl -X POST "$API/api/stock/maintenance/reset-daily"
 
-# Inbox: імітація події RatingSummaryChanged із контексту «Відгуки»
 curl -X POST "$API/api/events/rating-summary-changed" -H "Content-Type: application/json" \
   -d '{"eventId":"22222222-2222-4222-8222-222222222222","productId":"a0000000-0000-4000-8000-000000000001","avgRating":4.5,"reviewCount":13,"version":13}'
 ```
@@ -271,3 +270,153 @@ curl -X POST "$API/api/events/rating-summary-changed" -H "Content-Type: applicat
 | 500 | неочікувана помилка (деталі лише в лозі) |
 
 Приклад: `POST /api/categories` з `{"name":"","slug":"Bad Slug"}` повертає 400 з повідомленнями для полів `Name` і `Slug`.
+
+## 11. Мікросервісна платформа: запуск і запити через Gateway
+
+Розділ 10 описує один сервіс «Каталог». Тут описано, як запустити всю платформу й користуватися нею через єдину точку входу.
+
+### Склад платформи
+
+```mermaid
+flowchart LR
+    Client["Клієнт<br/>(curl, браузер)"] --> GW["Gateway (YARP)<br/>api-gateway"]
+    GW --> CAT["catalog-api"]
+    GW --> ORD["orders-api"]
+    GW --> REV["reviews-api"]
+    GW --> AGG["aggregator"]
+    AGG -- "gRPC" --> CAT
+    AGG -- "HTTP" --> ORD
+    AGG -- "HTTP" --> REV
+    CAT --> SQLC[("SQL Server<br/>CatalogDb")]
+    ORD --> SQLO[("SQL Server<br/>OrdersDb")]
+    REV --> MONGO[("MongoDB<br/>ReviewsDb")]
+    CAT & AGG --> REDIS[("Redis")]
+```
+
+| Ресурс | Проєкт | Роль | Протокол |
+|---|---|---|---|
+| `api-gateway` | `Platform/Platform.ApiGateway` | Єдина точка входу, маршрутизація YARP, CorrelationId, логування | HTTP/HTTPS |
+| `catalog-api` | `Platform/Services/Catalog/Catlog.API` | Каталог, залишки; REST + gRPC (`catalog.v1.CatalogGrpc`) | HTTPS (потрібен для gRPC) |
+| `orders-api` | `Platform/Services/Orders/Orders.Api` | Клієнти, кошик, замовлення, платежі, промокоди | HTTP/HTTPS |
+| `reviews-api` | `Platform/Services/Reviews/Reviews.WebApi` | Відгуки, рейтинг (MongoDB) | HTTP/HTTPS |
+| `aggregator` | `Platform/Platform.Aggregator` | Складає повне замовлення з трьох сервісів; Каталог читає через gRPC | HTTP/HTTPS |
+| `redis` | контейнер | Розподілений кеш Каталогу й Aggregator | TCP |
+| `sql`, `mongo` | контейнери | Бази даних (`CatalogDb`, `OrdersDb`, `ReviewsDb`) | TCP |
+
+gRPC-контракти: `Platform/Services/Catalog/Catlog.API/Protos/catalog.proto`. Він використовується як сервером (Catalog), так і клієнтом (Aggregator). gRPC доступний лише всередині платформи, зовнішні клієнти працюють через HTTP.
+
+### Вимоги
+
+- .NET SDK 10 і Docker Desktop (SQL Server, MongoDB і Redis піднімаються в контейнерах);
+- довірений dev-сертифікат, інакше gRPC-виклики Aggregator → Catalog завершаться помилкою SSL: `dotnet dev-certs https --trust` (один раз);
+- ручне розгортання БД не потрібне: Каталог створює схему зі скриптів при старті, Замовлення застосовують міграції EF Core, Відгуки заповнюють MongoDB сідером (лише в Development).
+
+### Запуск
+
+```bash
+dotnet run --project Platform/Platform.AppHost
+# або з каталогу Platform/Platform.AppHost:  aspire run
+```
+
+1. У консолі з'явиться посилання на Aspire Dashboard, відкрийте його.
+2. Дочекайтеся стану `Running` для всіх ресурсів: `sql`, `mongo`, `redis`, `catalog-api`, `orders-api`, `reviews-api`, `aggregator`, `api-gateway`. Перший старт довший: завантажуються образи й виконується ініціалізація баз.
+3. Адреси сервісів беріть із колонки **Endpoints** у Dashboard. Порти проєктів задані в їхніх `Properties/launchSettings.json`, у типовому запуску це:
+
+| Ресурс | HTTP | HTTPS |
+|---|---|---|
+| `api-gateway` | `http://localhost:5000` | `https://localhost:7275` |
+| `aggregator` | `http://localhost:5225` | `https://localhost:7247` |
+| `catalog-api` | `http://localhost:5065` | `https://localhost:7185` |
+| `orders-api` | `http://localhost:5188` | `https://localhost:7179` |
+| `reviews-api` | `http://localhost:5012` | `https://localhost:7276` |
+
+Якщо порти у вас інші, користуйтеся значеннями з Dashboard. У прикладах нижче `GW=http://localhost:5000`.
+
+> **Hot Reload і Aspire.** Після змін у коді конструкторів, DI або `.proto` повністю зупиніть AppHost і запустіть знову. Hot Reload тут призводить до `HotReloadException`.
+>
+> **HTTP і HTTPS.** Не надсилайте `http://` на HTTPS-порт (і навпаки): `curl` відповість `Empty reply from server`. Для HTTPS із dev-сертифікатом додайте `-k`.
+>
+> **PowerShell.** Використовуйте `curl.exe` (а не `curl`, який є псевдонімом `Invoke-WebRequest`); продовження рядка: зворотний апостроф `` ` ``.
+
+### Gateway: маршрути
+
+Усі зовнішні запити йдуть через Gateway. Маршрутизацію описує секція `ReverseProxy` у `Platform/Platform.ApiGateway/appsettings.json` (маршрути `Routes`, кластери `Clusters`, адреси сервісів за іменами ресурсів AppHost). Gateway додає `X-Correlation-Id` (якщо клієнт його не надіслав) і повертає його у відповіді.
+
+| Префікс шляху | Куди направляється | Приклад |
+|---|---|---|
+| `/api/products`, `/api/categories`, `/api/ingredients`, `/api/allergens`, `/api/stock`, `/api/events` | `catalog-api` | `GET /api/products/by-slug/medovyk` |
+| `/api/orders` | `orders-api` | `GET /api/orders/{id}` |
+| `/api/reviews` | `reviews-api` | `GET /api/reviews?productId={id}` |
+| `/api/aggregator` | `aggregator` | `GET /api/aggregator/orders/{id}/full` |
+
+Шлях, для якого немає маршруту, повертає `404`, а в логах Gateway лишається маршрут `none`. Якщо префікс у вашому `appsettings.json` відрізняється від таблиці, орієнтуйтеся на `Routes`.
+
+### Приклади запитів через Gateway
+
+```bash
+GW=http://localhost:5000
+```
+
+**Каталог** (демо-ідентифікатори з `db/p1/seed.sql`):
+
+```bash
+curl "$GW/api/categories"
+curl "$GW/api/products?categorySlug=torty&inStockOnly=true&sort=PriceAsc&page=1&pageSize=10"
+curl "$GW/api/products/top-rated?count=5"
+curl "$GW/api/products/by-slug/medovyk"
+curl "$GW/api/stock/d0000000-0000-4000-8000-000000000001"
+```
+
+**Замовлення.** У БД Замовлень демо-даних про самі замовлення немає, є клієнт `c1000000-0000-4000-8000-000000000001` і його кошик. Оформіть замовлення в Swagger Orders (`https://localhost:7179/swagger`, метод `POST /api/orders`, `customerId` = клієнт із сідера) і скопіюйте `id` із відповіді:
+
+```bash
+ORDER_ID=<id із відповіді POST /api/orders>
+curl "$GW/api/orders/$ORDER_ID"
+```
+
+**Відгуки** (`productId` = «Медовик»):
+
+```bash
+curl "$GW/api/reviews?productId=a0000000-0000-4000-8000-000000000001&pageSize=10"
+```
+
+**Aggregator: повне замовлення** (замовлення + товари з Каталогу + відгуки на ці товари):
+
+```bash
+curl -i "$GW/api/aggregator/orders/$ORDER_ID/full"
+```
+
+Відповідь `200`:
+
+```json
+{
+  "order":    { "id": "…", "orderNumber": 1001, "status": "…", "totalAmount": 1300.00, "items": [ … ] },
+  "products": [ { "productId": "a0000000-…", "name": "Медовик", "slug": "medovyk", "basePrice": 650.00 } ],
+  "reviews":  [ { "id": "…", "productId": "a0000000-…", "rating": 5, "authorName": "…" } ],
+  "warnings": []
+}
+```
+
+| Статус | Коли |
+|---|---|
+| `200` | Замовлення знайдено. Якщо `catalog-api` або `reviews-api` недоступний, відповідь **часткова**: відповідні масиви порожні, а в `warnings` є повідомлення на кшталт `"catalog-api is unavailable"` |
+| `404` | Замовлення не знайдено |
+| `503` | недоступний `orders-api` (без нього відповідь неможлива) |
+
+Aggregator викликає Каталог через gRPC і виконує запити до Каталогу та Відгуків паралельно. Успішна (повна, без `warnings`) відповідь кешується в Redis на 30 с під ключем `aggregator:order:{id}:full`, тож повторний запит у цьому вікні не звертається до сервісів. Часткові відповіді не кешуються. Перевірка часткової відповіді: зупиніть `catalog-api` у Dashboard, зачекайте 30 с і повторіть запит.
+
+Aggregator доступний і напряму (мінуючи Gateway), наприклад для налагодження: `curl "http://localhost:5225/api/aggregator/orders/$ORDER_ID/full"`.
+
+### Swagger і службові адреси
+
+Swagger UI є в середовищі Development: `catalog-api`, `orders-api` та `reviews-api` публікують його за `/swagger` на власному порту (див. таблицю портів). Стан сервісів: `/health` та `/alive`; стан кешу Каталогу: `https://localhost:7185/health/cache` (hit ratio, лічильники по рівнях L1/Redis, окремо для gRPC).
+
+### Кеш Каталогу
+
+Каталог кешує лише читання вітрини (картку товару за slug, лістинги, топ, категорії, довідники) у два рівні: пам'ять процесу (L1) і Redis (L2). Запис через REST (`POST/PUT/DELETE`) синхронно інвалідує зв'язані ключі. Після `PUT /api/products/{id}` наступний `GET /api/products/by-slug/{slug}` повертає оновлені дані. Зупинка Redis не зупиняє сервіс: запити йдуть у БД, а в логах з'являються попередження. Список товарів і топ скидаються разом через ключ-версію `catalog:lists:version`.
+
+### Телеметрія в Aspire Dashboard
+
+- **Traces:** наскрізний ланцюжок Gateway → Aggregator → Catalog (gRPC-spans клієнта й сервера в одному trace) → SQL. На серверних spans є події `cache.hit`/`cache.miss` та атрибути `correlation.id`, `cache.result`.
+- **Structured logs:** кожен запит має `CorrelationId` (його можна передати у заголовку `X-Correlation-Id`); для gRPC-викликів Каталогу є рядки `gRPC {Method} from {Peer}: {Status} in {Elapsed} ms`, для кешу `Cache hit/miss/set/invalidated`.
+- **Metrics:** meter `Catalog.Cache`: `cache.hits`, `cache.misses` (атрибут `cache.level` = `memory` або `redis`), `cache.invalidations`, `cache.evictions`, `cache.operation.duration`, `cache.memory.entries`.
