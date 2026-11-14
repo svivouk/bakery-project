@@ -32,7 +32,8 @@
         "runtime": {
           "lib/net10.0/Aspire.StackExchange.Redis.dll": {
             "assemblyVersion": "13.6.4.0",
-            "fileVersion": "13.600.426.52311"
+            "fileVersion": "13.600.426.52311",
+            "localPath": "Aspire.StackExchange.Redis.dll"
           }
         }
       },
@@ -49,7 +50,8 @@
         "runtime": {
           "lib/net10.0/Aspire.StackExchange.Redis.DistributedCaching.dll": {
             "assemblyVersion": "13.6.4.0",
-            "fileVersion": "13.600.426.52311"
+            "fileVersion": "13.600.426.52311",
+            "localPath": "Aspire.StackExchange.Redis.DistributedCaching.dll"
           }
         }
       },
@@ -60,7 +62,8 @@
         "runtime": {
           "lib/net8.0/HealthChecks.Redis.dll": {
             "assemblyVersion": "9.0.0.0",
-            "fileVersion": "9.0.0.0"
+            "fileVersion": "9.0.0.0",
+            "localPath": "HealthChecks.Redis.dll"
           }
         }
       },
@@ -71,7 +74,8 @@
         "runtime": {
           "lib/net10.0/AutoMapper.dll": {
             "assemblyVersion": "16.0.0.0",
-            "fileVersion": "16.2.0.0"
+            "fileVersion": "16.2.0.0",
+            "localPath": "AutoMapper.dll"
           }
         }
       },
@@ -79,7 +83,8 @@
         "runtime": {
           "lib/net5.0/DnsClient.dll": {
             "assemblyVersion": "1.6.1.0",
-            "fileVersion": "1.6.1.0"
+            "fileVersion": "1.6.1.0",
+            "localPath": "DnsClient.dll"
           }
         }
       },
@@ -87,7 +92,8 @@
         "runtime": {
           "lib/net8.0/FluentValidation.dll": {
             "assemblyVersion": "12.0.0.0",
-            "fileVersion": "12.2.0.0"
+            "fileVersion": "12.2.0.0",
+            "localPath": "FluentValidation.dll"
           }
         }
       },
@@ -98,7 +104,8 @@
         "runtime": {
           "lib/net8.0/FluentValidation.DependencyInjectionExtensions.dll": {
             "assemblyVersion": "12.0.0.0",
-            "fileVersion": "12.2.0.0"
+            "fileVersion": "12.2.0.0",
+            "localPath": "FluentValidation.DependencyInjectionExtensions.dll"
           }
         }
       },
@@ -106,7 +113,8 @@
         "runtime": {
           "lib/net8.0/Google.Protobuf.dll": {
             "assemblyVersion": "3.36.2.0",
-            "fileVersion": "3.36.2.0"
+            "fileVersion": "3.36.2.0",
+            "localPath": "Google.Protobuf.dll"
           }
         }
       },
@@ -123,7 +131,8 @@
         "runtime": {
           "lib/net10.0/Grpc.AspNetCore.Server.dll": {
             "assemblyVersion": "2.0.0.0",
-            "fileVersion": "2.85.0.0"
+            "fileVersion": "2.85.0.0",
+            "localPath": "Grpc.AspNetCore.Server.dll"
           }
         }
       },
@@ -135,7 +144,8 @@
         "runtime": {
           "lib/net10.0/Grpc.AspNetCore.Server.ClientFactory.dll": {
             "assemblyVersion": "2.0.0.0",
-            "fileVersion": "2.85.0.0"
+            "fileVersion": "2.85.0.0",
+            "localPath": "Grpc.AspNetCore.Server.ClientFactory.dll"
           }
         }
       },
@@ -143,7 +153,8 @@
         "runtime": {
           "lib/netstandard2.1/Grpc.Core.Api.dll": {
             "assemblyVersion": "2.0.0.0",
-            "fileVersion": "2.85.0.0"
+            "fileVersion": "2.85.0.0",
+            "localPath": "Grpc.Core.Api.dll"
           }
         }
       },
@@ -154,7 +165,8 @@
         "runtime": {
           "lib/net10.0/Grpc.Net.Client.dll": {
             "assemblyVersion": "2.0.0.0",
-            "fileVersion": "2.85.0.0"
+            "fileVersion": "2.85.0.0",
+            "localPath": "Grpc.Net.Client.dll"
           }
         }
       },
@@ -165,7 +177,8 @@
         "runtime": {
           "lib/net10.0/Grpc.Net.ClientFactory.dll": {
             "assemblyVersion": "2.0.0.0",
-            "fileVersion": "2.85.0.0"
+            "fileVersion": "2.85.0.0",
+            "localPath": "Grpc.Net.ClientFactory.dll"
           }
         }
       },
@@ -176,7 +189,8 @@
         "runtime": {
           "lib/net10.0/Grpc.Net.Common.dll": {
             "assemblyVersion": "2.0.0.0",
-            "fileVersion": "2.85.0.0"
+            "fileVersion": "2.85.0.0",
+            "localPath": "Grpc.Net.Common.dll"
           }
         }
       },
@@ -188,7 +202,8 @@
         "runtime": {
           "lib/net10.0/MediatR.dll": {
             "assemblyVersion": "14.0.0.0",
-            "fileVersion": "14.2.0.0"
+            "fileVersion": "14.2.0.0",
+            "localPath": "MediatR.dll"
           }
         }
       },
@@ -196,7 +211,8 @@
         "runtime": {
           "lib/netstandard2.0/MediatR.Contracts.dll": {
             "assemblyVersion": "2.0.1.0",
-            "fileVersion": "2.0.1.0"
+            "fileVersion": "2.0.1.0",
+            "localPath": "MediatR.Contracts.dll"
           }
         }
       },
@@ -207,7 +223,8 @@
         "runtime": {
           "lib/net10.0/Microsoft.AspNetCore.OpenApi.dll": {
             "assemblyVersion": "10.0.12.0",
-            "fileVersion": "10.0.1226.42308"
+            "fileVersion": "10.0.1226.42308",
+            "localPath": "Microsoft.AspNetCore.OpenApi.dll"
           }
         }
       },
@@ -215,7 +232,8 @@
         "runtime": {
           "lib/net10.0/Microsoft.Extensions.AmbientMetadata.Application.dll": {
             "assemblyVersion": "10.10.0.0",
-            "fileVersion": "10.1000.26.45902"
+            "fileVersion": "10.1000.26.45902",
+            "localPath": "Microsoft.Extensions.AmbientMetadata.Application.dll"
           }
         }
       },
@@ -226,7 +244,8 @@
         "runtime": {
           "lib/net10.0/Microsoft.Extensions.Caching.StackExchangeRedis.dll": {
             "assemblyVersion": "10.0.12.0",
-            "fileVersion": "10.0.1226.42308"
+            "fileVersion": "10.0.1226.42308",
+            "localPath": "Microsoft.Extensions.Caching.StackExchangeRedis.dll"
           }
         }
       },
@@ -234,7 +253,8 @@
         "runtime": {
           "lib/net10.0/Microsoft.Extensions.Compliance.Abstractions.dll": {
             "assemblyVersion": "10.10.0.0",
-            "fileVersion": "10.1000.26.45902"
+            "fileVersion": "10.1000.26.45902",
+            "localPath": "Microsoft.Extensions.Compliance.Abstractions.dll"
           }
         }
       },
@@ -242,7 +262,8 @@
         "runtime": {
           "lib/net10.0/Microsoft.Extensions.DependencyInjection.AutoActivation.dll": {
             "assemblyVersion": "10.10.0.0",
-            "fileVersion": "10.1000.26.45902"
+            "fileVersion": "10.1000.26.45902",
+            "localPath": "Microsoft.Extensions.DependencyInjection.AutoActivation.dll"
           }
         }
       },
@@ -250,7 +271,8 @@
         "runtime": {
           "lib/net10.0/Microsoft.Extensions.DependencyModel.dll": {
             "assemblyVersion": "10.0.0.0",
-            "fileVersion": "10.0.25.52411"
+            "fileVersion": "10.0.25.52411",
+            "localPath": "Microsoft.Extensions.DependencyModel.dll"
           }
         }
       },
@@ -258,7 +280,8 @@
         "runtime": {
           "lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.dll": {
             "assemblyVersion": "10.10.0.0",
-            "fileVersion": "10.1000.26.45902"
+            "fileVersion": "10.1000.26.45902",
+            "localPath": "Microsoft.Extensions.Diagnostics.ExceptionSummarization.dll"
           }
         }
       },
@@ -269,7 +292,8 @@
         "runtime": {
           "lib/net10.0/Microsoft.Extensions.Http.Diagnostics.dll": {
             "assemblyVersion": "10.10.0.0",
-            "fileVersion": "10.1000.26.45902"
+            "fileVersion": "10.1000.26.45902",
+            "localPath": "Microsoft.Extensions.Http.Diagnostics.dll"
           }
         }
       },
@@ -281,7 +305,8 @@
         "runtime": {
           "lib/net10.0/Microsoft.Extensions.Http.Resilience.dll": {
             "assemblyVersion": "10.10.0.0",
-            "fileVersion": "10.1000.26.45902"
+            "fileVersion": "10.1000.26.45902",
+            "localPath": "Microsoft.Extensions.Http.Resilience.dll"
           }
         }
       },
@@ -295,7 +320,8 @@
         "runtime": {
           "lib/net10.0/Microsoft.Extensions.Resilience.dll": {
             "assemblyVersion": "10.10.0.0",
-            "fileVersion": "10.1000.26.45902"
+            "fileVersion": "10.1000.26.45902",
+            "localPath": "Microsoft.Extensions.Resilience.dll"
           }
         }
       },
@@ -306,7 +332,8 @@
         "runtime": {
           "lib/net10.0/Microsoft.Extensions.ServiceDiscovery.dll": {
             "assemblyVersion": "10.10.0.0",
-            "fileVersion": "10.1000.26.45902"
+            "fileVersion": "10.1000.26.45902",
+            "localPath": "Microsoft.Extensions.ServiceDiscovery.dll"
           }
         }
       },
@@ -314,7 +341,8 @@
         "runtime": {
           "lib/net10.0/Microsoft.Extensions.ServiceDiscovery.Abstractions.dll": {
             "assemblyVersion": "10.10.0.0",
-            "fileVersion": "10.1000.26.45902"
+            "fileVersion": "10.1000.26.45902",
+            "localPath": "Microsoft.Extensions.ServiceDiscovery.Abstractions.dll"
           }
         }
       },
@@ -327,7 +355,8 @@
         "runtime": {
           "lib/net10.0/Microsoft.Extensions.Telemetry.dll": {
             "assemblyVersion": "10.10.0.0",
-            "fileVersion": "10.1000.26.45902"
+            "fileVersion": "10.1000.26.45902",
+            "localPath": "Microsoft.Extensions.Telemetry.dll"
           }
         }
       },
@@ -338,7 +367,8 @@
         "runtime": {
           "lib/net10.0/Microsoft.Extensions.Telemetry.Abstractions.dll": {
             "assemblyVersion": "10.10.0.0",
-            "fileVersion": "10.1000.26.45902"
+            "fileVersion": "10.1000.26.45902",
+            "localPath": "Microsoft.Extensions.Telemetry.Abstractions.dll"
           }
         }
       },
@@ -346,7 +376,8 @@
         "runtime": {
           "lib/net9.0/Microsoft.IdentityModel.Abstractions.dll": {
             "assemblyVersion": "8.14.0.0",
-            "fileVersion": "8.14.0.60815"
+            "fileVersion": "8.14.0.60815",
+            "localPath": "Microsoft.IdentityModel.Abstractions.dll"
           }
         }
       },
@@ -357,7 +388,8 @@
         "runtime": {
           "lib/net9.0/Microsoft.IdentityModel.JsonWebTokens.dll": {
             "assemblyVersion": "8.14.0.0",
-            "fileVersion": "8.14.0.60815"
+            "fileVersion": "8.14.0.60815",
+            "localPath": "Microsoft.IdentityModel.JsonWebTokens.dll"
           }
         }
       },
@@ -368,7 +400,8 @@
         "runtime": {
           "lib/net9.0/Microsoft.IdentityModel.Logging.dll": {
             "assemblyVersion": "8.14.0.0",
-            "fileVersion": "8.14.0.60815"
+            "fileVersion": "8.14.0.60815",
+            "localPath": "Microsoft.IdentityModel.Logging.dll"
           }
         }
       },
@@ -379,7 +412,8 @@
         "runtime": {
           "lib/net9.0/Microsoft.IdentityModel.Tokens.dll": {
             "assemblyVersion": "8.14.0.0",
-            "fileVersion": "8.14.0.60815"
+            "fileVersion": "8.14.0.60815",
+            "localPath": "Microsoft.IdentityModel.Tokens.dll"
           }
         }
       },
@@ -387,7 +421,8 @@
         "runtime": {
           "lib/net8.0/Microsoft.OpenApi.dll": {
             "assemblyVersion": "2.12.0.0",
-            "fileVersion": "2.12.0.0"
+            "fileVersion": "2.12.0.0",
+            "localPath": "Microsoft.OpenApi.dll"
           }
         }
       },
@@ -395,7 +430,8 @@
         "runtime": {
           "lib/net6.0/MongoDB.Bson.dll": {
             "assemblyVersion": "3.13.0.0",
-            "fileVersion": "3.13.0.0"
+            "fileVersion": "3.13.0.0",
+            "localPath": "MongoDB.Bson.dll"
           }
         }
       },
@@ -410,7 +446,8 @@
         "runtime": {
           "lib/net6.0/MongoDB.Driver.dll": {
             "assemblyVersion": "3.13.0.0",
-            "fileVersion": "3.13.0.0"
+            "fileVersion": "3.13.0.0",
+            "localPath": "MongoDB.Driver.dll"
           }
         }
       },
@@ -421,7 +458,8 @@
         "runtime": {
           "lib/net10.0/MongoDB.Driver.Core.Extensions.DiagnosticSources.dll": {
             "assemblyVersion": "3.0.0.0",
-            "fileVersion": "3.0.0.0"
+            "fileVersion": "3.0.0.0",
+            "localPath": "MongoDB.Driver.Core.Extensions.DiagnosticSources.dll"
           }
         }
       },
@@ -432,7 +470,8 @@
         "runtime": {
           "lib/net10.0/OpenTelemetry.dll": {
             "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.20.1.2236"
+            "fileVersion": "1.20.1.2236",
+            "localPath": "OpenTelemetry.dll"
           }
         }
       },
@@ -440,7 +479,8 @@
         "runtime": {
           "lib/net10.0/OpenTelemetry.Api.dll": {
             "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.20.1.2236"
+            "fileVersion": "1.20.1.2236",
+            "localPath": "OpenTelemetry.Api.dll"
           }
         }
       },
@@ -451,7 +491,8 @@
         "runtime": {
           "lib/net10.0/OpenTelemetry.Api.ProviderBuilderExtensions.dll": {
             "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.20.1.2236"
+            "fileVersion": "1.20.1.2236",
+            "localPath": "OpenTelemetry.Api.ProviderBuilderExtensions.dll"
           }
         }
       },
@@ -462,7 +503,8 @@
         "runtime": {
           "lib/net10.0/OpenTelemetry.Exporter.OpenTelemetryProtocol.dll": {
             "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.20.1.2236"
+            "fileVersion": "1.20.1.2236",
+            "localPath": "OpenTelemetry.Exporter.OpenTelemetryProtocol.dll"
           }
         }
       },
@@ -473,7 +515,8 @@
         "runtime": {
           "lib/net10.0/OpenTelemetry.Extensions.Hosting.dll": {
             "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.20.1.2236"
+            "fileVersion": "1.20.1.2236",
+            "localPath": "OpenTelemetry.Extensions.Hosting.dll"
           }
         }
       },
@@ -484,7 +527,8 @@
         "runtime": {
           "lib/net10.0/OpenTelemetry.Instrumentation.AspNetCore.dll": {
             "assemblyVersion": "1.17.0.1204",
-            "fileVersion": "1.17.0.1204"
+            "fileVersion": "1.17.0.1204",
+            "localPath": "OpenTelemetry.Instrumentation.AspNetCore.dll"
           }
         }
       },
@@ -495,7 +539,8 @@
         "runtime": {
           "lib/net10.0/OpenTelemetry.Instrumentation.Http.dll": {
             "assemblyVersion": "1.17.0.1210",
-            "fileVersion": "1.17.0.1210"
+            "fileVersion": "1.17.0.1210",
+            "localPath": "OpenTelemetry.Instrumentation.Http.dll"
           }
         }
       },
@@ -506,7 +551,8 @@
         "runtime": {
           "lib/net10.0/OpenTelemetry.Instrumentation.Runtime.dll": {
             "assemblyVersion": "1.17.0.1215",
-            "fileVersion": "1.17.0.1215"
+            "fileVersion": "1.17.0.1215",
+            "localPath": "OpenTelemetry.Instrumentation.Runtime.dll"
           }
         }
       },
@@ -517,7 +563,8 @@
         "runtime": {
           "lib/net10.0/OpenTelemetry.Instrumentation.SqlClient.dll": {
             "assemblyVersion": "1.20.2.1576",
-            "fileVersion": "1.20.2.1576"
+            "fileVersion": "1.20.2.1576",
+            "localPath": "OpenTelemetry.Instrumentation.SqlClient.dll"
           }
         }
       },
@@ -525,7 +572,8 @@
         "runtime": {
           "lib/net9.0/Pipelines.Sockets.Unofficial.dll": {
             "assemblyVersion": "1.0.0.0",
-            "fileVersion": "2.2.16.21791"
+            "fileVersion": "2.2.16.21791",
+            "localPath": "Pipelines.Sockets.Unofficial.dll"
           }
         }
       },
@@ -533,7 +581,8 @@
         "runtime": {
           "lib/net8.0/Polly.Core.dll": {
             "assemblyVersion": "8.0.0.0",
-            "fileVersion": "8.4.2.3950"
+            "fileVersion": "8.4.2.3950",
+            "localPath": "Polly.Core.dll"
           }
         }
       },
@@ -544,7 +593,8 @@
         "runtime": {
           "lib/net8.0/Polly.Extensions.dll": {
             "assemblyVersion": "8.0.0.0",
-            "fileVersion": "8.4.2.3950"
+            "fileVersion": "8.4.2.3950",
+            "localPath": "Polly.Extensions.dll"
           }
         }
       },
@@ -555,7 +605,8 @@
         "runtime": {
           "lib/net8.0/Polly.RateLimiting.dll": {
             "assemblyVersion": "8.0.0.0",
-            "fileVersion": "8.4.2.3950"
+            "fileVersion": "8.4.2.3950",
+            "localPath": "Polly.RateLimiting.dll"
           }
         }
       },
@@ -563,7 +614,8 @@
         "runtime": {
           "lib/net10.0/Serilog.dll": {
             "assemblyVersion": "4.4.0.0",
-            "fileVersion": "4.4.0.0"
+            "fileVersion": "4.4.0.0",
+            "localPath": "Serilog.dll"
           }
         }
       },
@@ -580,7 +632,8 @@
         "runtime": {
           "lib/net10.0/Serilog.AspNetCore.dll": {
             "assemblyVersion": "10.0.0.0",
-            "fileVersion": "10.0.0.0"
+            "fileVersion": "10.0.0.0",
+            "localPath": "Serilog.AspNetCore.dll"
           }
         }
       },
@@ -591,7 +644,8 @@
         "runtime": {
           "lib/net8.0/Serilog.Enrichers.Environment.dll": {
             "assemblyVersion": "3.0.0.0",
-            "fileVersion": "3.0.0.0"
+            "fileVersion": "3.0.0.0",
+            "localPath": "Serilog.Enrichers.Environment.dll"
           }
         }
       },
@@ -602,7 +656,8 @@
         "runtime": {
           "lib/net8.0/Serilog.Enrichers.Thread.dll": {
             "assemblyVersion": "4.0.0.0",
-            "fileVersion": "4.0.0.0"
+            "fileVersion": "4.0.0.0",
+            "localPath": "Serilog.Enrichers.Thread.dll"
           }
         }
       },
@@ -614,7 +669,8 @@
         "runtime": {
           "lib/net10.0/Serilog.Extensions.Hosting.dll": {
             "assemblyVersion": "10.0.0.0",
-            "fileVersion": "10.0.0.0"
+            "fileVersion": "10.0.0.0",
+            "localPath": "Serilog.Extensions.Hosting.dll"
           }
         }
       },
@@ -625,7 +681,8 @@
         "runtime": {
           "lib/net10.0/Serilog.Extensions.Logging.dll": {
             "assemblyVersion": "10.0.0.0",
-            "fileVersion": "10.0.0.0"
+            "fileVersion": "10.0.0.0",
+            "localPath": "Serilog.Extensions.Logging.dll"
           }
         }
       },
@@ -636,7 +693,8 @@
         "runtime": {
           "lib/net8.0/Serilog.Formatting.Compact.dll": {
             "assemblyVersion": "3.0.0.0",
-            "fileVersion": "3.0.0.0"
+            "fileVersion": "3.0.0.0",
+            "localPath": "Serilog.Formatting.Compact.dll"
           }
         }
       },
@@ -648,7 +706,8 @@
         "runtime": {
           "lib/net10.0/Serilog.Settings.Configuration.dll": {
             "assemblyVersion": "10.0.0.0",
-            "fileVersion": "10.0.0.0"
+            "fileVersion": "10.0.0.0",
+            "localPath": "Serilog.Settings.Configuration.dll"
           }
         }
       },
@@ -659,7 +718,8 @@
         "runtime": {
           "lib/net8.0/Serilog.Sinks.Console.dll": {
             "assemblyVersion": "6.1.1.0",
-            "fileVersion": "6.1.1.0"
+            "fileVersion": "6.1.1.0",
+            "localPath": "Serilog.Sinks.Console.dll"
           }
         }
       },
@@ -670,7 +730,8 @@
         "runtime": {
           "lib/net8.0/Serilog.Sinks.Debug.dll": {
             "assemblyVersion": "3.0.0.0",
-            "fileVersion": "3.0.0.0"
+            "fileVersion": "3.0.0.0",
+            "localPath": "Serilog.Sinks.Debug.dll"
           }
         }
       },
@@ -681,7 +742,8 @@
         "runtime": {
           "lib/net9.0/Serilog.Sinks.File.dll": {
             "assemblyVersion": "7.0.0.0",
-            "fileVersion": "7.0.0.0"
+            "fileVersion": "7.0.0.0",
+            "localPath": "Serilog.Sinks.File.dll"
           }
         }
       },
@@ -689,7 +751,8 @@
         "runtime": {
           "lib/net10.0/SharpCompress.dll": {
             "assemblyVersion": "0.48.1.0",
-            "fileVersion": "0.48.1.0"
+            "fileVersion": "0.48.1.0",
+            "localPath": "SharpCompress.dll"
           }
         }
       },
@@ -697,7 +760,8 @@
         "runtime": {
           "lib/net8.0/Snappier.dll": {
             "assemblyVersion": "1.3.1.0",
-            "fileVersion": "1.3.1.0"
+            "fileVersion": "1.3.1.0",
+            "localPath": "Snappier.dll"
           }
         }
       },
@@ -709,7 +773,8 @@
         "runtime": {
           "lib/net10.0/StackExchange.Redis.dll": {
             "assemblyVersion": "2.0.0.0",
-            "fileVersion": "2.13.17.28173"
+            "fileVersion": "2.13.17.28173",
+            "localPath": "StackExchange.Redis.dll"
           }
         }
       },
@@ -727,7 +792,8 @@
         "runtime": {
           "lib/net10.0/Swashbuckle.AspNetCore.Swagger.dll": {
             "assemblyVersion": "10.3.1.0",
-            "fileVersion": "10.3.1.3201"
+            "fileVersion": "10.3.1.3201",
+            "localPath": "Swashbuckle.AspNetCore.Swagger.dll"
           }
         }
       },
@@ -738,7 +804,8 @@
         "runtime": {
           "lib/net10.0/Swashbuckle.AspNetCore.SwaggerGen.dll": {
             "assemblyVersion": "10.3.1.0",
-            "fileVersion": "10.3.1.3201"
+            "fileVersion": "10.3.1.3201",
+            "localPath": "Swashbuckle.AspNetCore.SwaggerGen.dll"
           }
         }
       },
@@ -746,7 +813,8 @@
         "runtime": {
           "lib/net10.0/Swashbuckle.AspNetCore.SwaggerUI.dll": {
             "assemblyVersion": "10.3.1.0",
-            "fileVersion": "10.3.1.3201"
+            "fileVersion": "10.3.1.3201",
+            "localPath": "Swashbuckle.AspNetCore.SwaggerUI.dll"
           }
         }
       },
@@ -754,7 +822,8 @@
         "runtime": {
           "lib/net10.0/System.IO.Hashing.dll": {
             "assemblyVersion": "10.0.0.12",
-            "fileVersion": "10.0.1226.42308"
+            "fileVersion": "10.0.1226.42308",
+            "localPath": "System.IO.Hashing.dll"
           }
         }
       },
@@ -762,7 +831,8 @@
         "runtime": {
           "lib/net7.0/ZstdSharp.dll": {
             "assemblyVersion": "0.7.3.0",
-            "fileVersion": "0.7.3.0"
+            "fileVersion": "0.7.3.0",
+            "localPath": "ZstdSharp.dll"
           }
         }
       },

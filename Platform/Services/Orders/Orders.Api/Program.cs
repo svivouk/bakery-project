@@ -2,6 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi;
 using OpenTelemetry.Trace;
 using Orders.Api;
+using Orders.Api.GrpcServices;
 using Orders.Api.Middleware;
 using Orders.Bll;
 using Orders.Dal;
@@ -40,6 +41,7 @@ try
     builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
     builder.Services.AddMemoryCache(o => o.SizeLimit = 10_000);
     builder.Services.AddEndpointsApiExplorer();
+    builder.Services.AddGrpc(o => o.Interceptors.Add<GrpcServerInterceptor>());   
     builder.Services.AddSwaggerGen(options =>
     {
         options.SwaggerDoc("v1", new OpenApiInfo
@@ -61,7 +63,7 @@ try
     var dbOptions = app.Configuration.GetSection(DatabaseOptions.SectionName).Get<DatabaseOptions>() ?? new DatabaseOptions();
     var isProduction = app.Environment.IsProduction();
     var runSeed = dbOptions.ShouldSeed(isProduction);
-
+    app.MapGrpcService<OrdersGrpcService>();                                       // додати
     if (dbOptions.SeedOnStartup && !runSeed)
         app.Logger.LogWarning(
             "Database:SeedOnStartup ігнорується в Production: програмний сідінг пропущено. " +

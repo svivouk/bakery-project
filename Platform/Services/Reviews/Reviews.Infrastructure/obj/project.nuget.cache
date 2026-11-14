@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "wBQBBUHvi4M=",
+  "dgSpecHash": "uq/+jiue4qI=",
   "success": true,
   "projectFilePath": "C:\\Users\\krnkr\\OneDrive\\Рабочий стол\\bakery-project\\Platform\\Services\\Reviews\\Reviews.Infrastructure\\Reviews.Infrastructure.csproj",
   "expectedPackageFiles": [
@@ -51,5 +51,30 @@
     "C:\\Users\\krnkr\\.nuget\\packages\\system.diagnostics.eventlog\\10.0.12\\system.diagnostics.eventlog.10.0.12.nupkg.sha512",
     "C:\\Users\\krnkr\\.nuget\\packages\\zstdsharp.port\\0.7.3\\zstdsharp.port.0.7.3.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "message": "Package 'AutoMapper' 16.2.0 has a known high severity vulnerability, https://github.com/advisories/GHSA-6vhm-j9h7-f9gh",
+      "projectPath": "C:\\Users\\krnkr\\OneDrive\\Рабочий стол\\bakery-project\\Platform\\Services\\Reviews\\Reviews.Infrastructure\\Reviews.Infrastructure.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\krnkr\\OneDrive\\Рабочий стол\\bakery-project\\Platform\\Services\\Reviews\\Reviews.Infrastructure\\Reviews.Infrastructure.csproj",
+      "libraryId": "AutoMapper",
+      "targetGraphs": [
+        "net10.0"
+      ]
+    },
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "message": "Package 'AutoMapper' 16.2.0 has a known high severity vulnerability, https://github.com/advisories/GHSA-gpwp-5797-mjff",
+      "projectPath": "C:\\Users\\krnkr\\OneDrive\\Рабочий стол\\bakery-project\\Platform\\Services\\Reviews\\Reviews.Infrastructure\\Reviews.Infrastructure.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\krnkr\\OneDrive\\Рабочий стол\\bakery-project\\Platform\\Services\\Reviews\\Reviews.Infrastructure\\Reviews.Infrastructure.csproj",
+      "libraryId": "AutoMapper",
+      "targetGraphs": [
+        "net10.0"
+      ]
+    }
+  ]
 }

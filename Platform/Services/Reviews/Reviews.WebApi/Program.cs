@@ -1,12 +1,13 @@
-using System.Diagnostics;
-using System.Reflection;
-using System.Text.Json.Serialization;
 using Microsoft.OpenApi;
 using MongoDB.Driver;
 using Reviews.Application;
 using Reviews.Infrastructure;
 using Reviews.Infrastructure.Persistence;
+using Reviews.WebApi.GrpcServices;
 using Reviews.WebApi.Infrastructure;
+using System.Diagnostics;
+using System.Reflection;
+using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -44,7 +45,7 @@ builder.Services.AddProblemDetails(options =>
     options.CustomizeProblemDetails = context =>
         context.ProblemDetails.Extensions["traceId"] = Activity.Current?.Id ?? context.HttpContext.TraceIdentifier);
 builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
-
+builder.Services.AddGrpc(o => o.Interceptors.Add<GrpcServerInterceptor>()); 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(options =>
 {
@@ -64,7 +65,7 @@ var app = builder.Build();
 app.UseCorrelationId();     
 app.UseExceptionHandler();  
 app.UseStatusCodePages();
-
+app.MapGrpcService<ReviewsGrpcService>();
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();

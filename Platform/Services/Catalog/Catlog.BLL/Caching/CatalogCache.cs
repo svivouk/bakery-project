@@ -38,10 +38,8 @@ public sealed class CatalogCache
         DistributedCacheEntryOptions options, CancellationToken ct = default) where T : class
     {
         var area = CatalogCacheKeys.AreaOf(key);
-        var protocol = CacheCallContext.Protocol;   // "http" або "grpc": для окремого обліку й логів
+        var protocol = CacheCallContext.Protocol;   
         var tracker = CacheCallContext.Current;
-
-        // L1: найшвидше, без мережі. Лише для типів з незмінними DTO (записи/колекції лише для читання).
         var l1Start = Stopwatch.GetTimestamp();
         var l1Found = _memory.TryGetValue(key, out object? local);
         _stats.Duration("get", "memory", Stopwatch.GetElapsedTime(l1Start).TotalMilliseconds);
@@ -89,8 +87,6 @@ public sealed class CatalogCache
 
         var created = await factory(ct);
         if (created is null) return null;
-
-        // БД → L1 незалежно від успіху запису в Redis: так сервіс витримує його відмову.
         SetLocal(key, created, options);
 
         try
@@ -113,8 +109,6 @@ public sealed class CatalogCache
     }
 
     // ====================== інвалідація ======================
-
-    /// <summary>Видаляє ключі. Викликати <b>одразу після коміту</b> запису в БД, у тому самому запиті.</summary>
     public async Task InvalidateAsync(string reason, CancellationToken ct, params string?[] keys)
     {
         var removed = new List<string>();

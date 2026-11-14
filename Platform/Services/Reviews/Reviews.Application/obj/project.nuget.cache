@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "ZBE42Y8iNmw=",
+  "dgSpecHash": "OTltW3uBm1M=",
   "success": true,
   "projectFilePath": "C:\\Users\\krnkr\\OneDrive\\Рабочий стол\\bakery-project\\Platform\\Services\\Reviews\\Reviews.Application\\Reviews.Application.csproj",
   "expectedPackageFiles": [
@@ -23,5 +23,30 @@
     "C:\\Users\\krnkr\\.nuget\\packages\\microsoft.identitymodel.tokens\\8.14.0\\microsoft.identitymodel.tokens.8.14.0.nupkg.sha512",
     "C:\\Users\\krnkr\\.nuget\\packages\\mongodb.bson\\3.13.0\\mongodb.bson.3.13.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "message": "Package 'AutoMapper' 16.2.0 has a known high severity vulnerability, https://github.com/advisories/GHSA-6vhm-j9h7-f9gh",
+      "projectPath": "C:\\Users\\krnkr\\OneDrive\\Рабочий стол\\bakery-project\\Platform\\Services\\Reviews\\Reviews.Application\\Reviews.Application.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\krnkr\\OneDrive\\Рабочий стол\\bakery-project\\Platform\\Services\\Reviews\\Reviews.Application\\Reviews.Application.csproj",
+      "libraryId": "AutoMapper",
+      "targetGraphs": [
+        "net10.0"
+      ]
+    },
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "message": "Package 'AutoMapper' 16.2.0 has a known high severity vulnerability, https://github.com/advisories/GHSA-gpwp-5797-mjff",
+      "projectPath": "C:\\Users\\krnkr\\OneDrive\\Рабочий стол\\bakery-project\\Platform\\Services\\Reviews\\Reviews.Application\\Reviews.Application.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\krnkr\\OneDrive\\Рабочий стол\\bakery-project\\Platform\\Services\\Reviews\\Reviews.Application\\Reviews.Application.csproj",
+      "libraryId": "AutoMapper",
+      "targetGraphs": [
+        "net10.0"
+      ]
+    }
+  ]
 }

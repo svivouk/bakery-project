@@ -30,7 +30,8 @@
         "runtime": {
           "lib/net10.0/AutoMapper.dll": {
             "assemblyVersion": "16.0.0.0",
-            "fileVersion": "16.2.0.0"
+            "fileVersion": "16.2.0.0",
+            "localPath": "AutoMapper.dll"
           }
         }
       },
@@ -38,7 +39,8 @@
         "runtime": {
           "lib/net8.0/FluentValidation.dll": {
             "assemblyVersion": "12.0.0.0",
-            "fileVersion": "12.2.0.0"
+            "fileVersion": "12.2.0.0",
+            "localPath": "FluentValidation.dll"
           }
         }
       },
@@ -50,7 +52,8 @@
         "runtime": {
           "lib/net8.0/FluentValidation.DependencyInjectionExtensions.dll": {
             "assemblyVersion": "12.0.0.0",
-            "fileVersion": "12.2.0.0"
+            "fileVersion": "12.2.0.0",
+            "localPath": "FluentValidation.DependencyInjectionExtensions.dll"
           }
         }
       },
@@ -64,7 +67,8 @@
         "runtime": {
           "lib/net10.0/MediatR.dll": {
             "assemblyVersion": "14.0.0.0",
-            "fileVersion": "14.2.0.0"
+            "fileVersion": "14.2.0.0",
+            "localPath": "MediatR.dll"
           }
         }
       },
@@ -72,7 +76,8 @@
         "runtime": {
           "lib/netstandard2.0/MediatR.Contracts.dll": {
             "assemblyVersion": "2.0.1.0",
-            "fileVersion": "2.0.1.0"
+            "fileVersion": "2.0.1.0",
+            "localPath": "MediatR.Contracts.dll"
           }
         }
       },
@@ -83,7 +88,8 @@
         "runtime": {
           "lib/net10.0/Microsoft.Extensions.Caching.Abstractions.dll": {
             "assemblyVersion": "10.0.0.0",
-            "fileVersion": "10.0.1426.52326"
+            "fileVersion": "10.0.1426.52326",
+            "localPath": "Microsoft.Extensions.Caching.Abstractions.dll"
           }
         }
       },
@@ -95,7 +101,8 @@
         "runtime": {
           "lib/net10.0/Microsoft.Extensions.Configuration.dll": {
             "assemblyVersion": "10.0.0.0",
-            "fileVersion": "10.0.1426.52326"
+            "fileVersion": "10.0.1426.52326",
+            "localPath": "Microsoft.Extensions.Configuration.dll"
           }
         }
       },
@@ -106,7 +113,8 @@
         "runtime": {
           "lib/net10.0/Microsoft.Extensions.Configuration.Abstractions.dll": {
             "assemblyVersion": "10.0.0.0",
-            "fileVersion": "10.0.1426.52326"
+            "fileVersion": "10.0.1426.52326",
+            "localPath": "Microsoft.Extensions.Configuration.Abstractions.dll"
           }
         }
       },
@@ -118,7 +126,8 @@
         "runtime": {
           "lib/net10.0/Microsoft.Extensions.Configuration.Binder.dll": {
             "assemblyVersion": "10.0.0.0",
-            "fileVersion": "10.0.1426.52326"
+            "fileVersion": "10.0.1426.52326",
+            "localPath": "Microsoft.Extensions.Configuration.Binder.dll"
           }
         }
       },
@@ -126,7 +135,8 @@
         "runtime": {
           "lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
             "assemblyVersion": "10.0.0.0",
-            "fileVersion": "10.0.25.52411"
+            "fileVersion": "10.0.25.52411",
+            "localPath": "Microsoft.Extensions.DependencyInjection.Abstractions.dll"
           }
         }
       },
@@ -137,7 +147,8 @@
         "runtime": {
           "lib/net10.0/Microsoft.Extensions.Logging.Abstractions.dll": {
             "assemblyVersion": "10.0.0.0",
-            "fileVersion": "10.0.25.52411"
+            "fileVersion": "10.0.25.52411",
+            "localPath": "Microsoft.Extensions.Logging.Abstractions.dll"
           }
         }
       },
@@ -149,7 +160,8 @@
         "runtime": {
           "lib/net10.0/Microsoft.Extensions.Options.dll": {
             "assemblyVersion": "10.0.0.0",
-            "fileVersion": "10.0.25.52411"
+            "fileVersion": "10.0.25.52411",
+            "localPath": "Microsoft.Extensions.Options.dll"
           }
         }
       },
@@ -157,7 +169,8 @@
         "runtime": {
           "lib/net10.0/Microsoft.Extensions.Primitives.dll": {
             "assemblyVersion": "10.0.0.0",
-            "fileVersion": "10.0.1426.52326"
+            "fileVersion": "10.0.1426.52326",
+            "localPath": "Microsoft.Extensions.Primitives.dll"
           }
         }
       },
@@ -165,7 +178,8 @@
         "runtime": {
           "lib/net9.0/Microsoft.IdentityModel.Abstractions.dll": {
             "assemblyVersion": "8.14.0.0",
-            "fileVersion": "8.14.0.60815"
+            "fileVersion": "8.14.0.60815",
+            "localPath": "Microsoft.IdentityModel.Abstractions.dll"
           }
         }
       },
@@ -176,7 +190,8 @@
         "runtime": {
           "lib/net9.0/Microsoft.IdentityModel.JsonWebTokens.dll": {
             "assemblyVersion": "8.14.0.0",
-            "fileVersion": "8.14.0.60815"
+            "fileVersion": "8.14.0.60815",
+            "localPath": "Microsoft.IdentityModel.JsonWebTokens.dll"
           }
         }
       },
@@ -187,7 +202,8 @@
         "runtime": {
           "lib/net9.0/Microsoft.IdentityModel.Logging.dll": {
             "assemblyVersion": "8.14.0.0",
-            "fileVersion": "8.14.0.60815"
+            "fileVersion": "8.14.0.60815",
+            "localPath": "Microsoft.IdentityModel.Logging.dll"
           }
         }
       },
@@ -199,7 +215,8 @@
         "runtime": {
           "lib/net9.0/Microsoft.IdentityModel.Tokens.dll": {
             "assemblyVersion": "8.14.0.0",
-            "fileVersion": "8.14.0.60815"
+            "fileVersion": "8.14.0.60815",
+            "localPath": "Microsoft.IdentityModel.Tokens.dll"
           }
         }
       },
@@ -207,7 +224,8 @@
         "runtime": {
           "lib/net6.0/MongoDB.Bson.dll": {
             "assemblyVersion": "3.13.0.0",
-            "fileVersion": "3.13.0.0"
+            "fileVersion": "3.13.0.0",
+            "localPath": "MongoDB.Bson.dll"
           }
         }
       },

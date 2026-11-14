@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "dhQL/YIv50s=",
+  "dgSpecHash": "JbH0SvNmt+s=",
   "success": true,
   "projectFilePath": "C:\\Users\\krnkr\\OneDrive\\Рабочий стол\\bakery-project\\Platform\\Services\\Orders\\Orders.Api\\Orders.Api.csproj",
   "expectedPackageFiles": [
@@ -125,6 +125,30 @@
       "warningLevel": 1,
       "filePath": "C:\\Users\\krnkr\\OneDrive\\Рабочий стол\\bakery-project\\Platform\\Services\\Orders\\Orders.Api\\Orders.Api.csproj",
       "libraryId": "Microsoft.Extensions.Caching.Memory",
+      "targetGraphs": [
+        "net10.0"
+      ]
+    },
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "message": "Package 'AutoMapper' 16.2.0 has a known high severity vulnerability, https://github.com/advisories/GHSA-6vhm-j9h7-f9gh",
+      "projectPath": "C:\\Users\\krnkr\\OneDrive\\Рабочий стол\\bakery-project\\Platform\\Services\\Orders\\Orders.Api\\Orders.Api.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\krnkr\\OneDrive\\Рабочий стол\\bakery-project\\Platform\\Services\\Orders\\Orders.Api\\Orders.Api.csproj",
+      "libraryId": "AutoMapper",
+      "targetGraphs": [
+        "net10.0"
+      ]
+    },
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "message": "Package 'AutoMapper' 16.2.0 has a known high severity vulnerability, https://github.com/advisories/GHSA-gpwp-5797-mjff",
+      "projectPath": "C:\\Users\\krnkr\\OneDrive\\Рабочий стол\\bakery-project\\Platform\\Services\\Orders\\Orders.Api\\Orders.Api.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\krnkr\\OneDrive\\Рабочий стол\\bakery-project\\Platform\\Services\\Orders\\Orders.Api\\Orders.Api.csproj",
+      "libraryId": "AutoMapper",
       "targetGraphs": [
         "net10.0"
       ]

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "XeiBl8apwYw=",
+  "dgSpecHash": "0WrgdylWO2U=",
   "success": true,
   "projectFilePath": "C:\\Users\\krnkr\\OneDrive\\Рабочий стол\\bakery-project\\Platform\\Platform.AppHost\\Platform.AppHost.csproj",
   "expectedPackageFiles": [
@@ -109,6 +109,30 @@
     "C:\\Users\\krnkr\\.nuget\\packages\\zstdsharp.port\\0.7.3\\zstdsharp.port.0.7.3.nupkg.sha512"
   ],
   "logs": [
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "message": "Package 'Aspire.Hosting' 13.6.4 has a known high severity vulnerability, https://github.com/advisories/GHSA-f7vh-h5g3-7jrh",
+      "projectPath": "C:\\Users\\krnkr\\OneDrive\\Рабочий стол\\bakery-project\\Platform\\Platform.AppHost\\Platform.AppHost.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\krnkr\\OneDrive\\Рабочий стол\\bakery-project\\Platform\\Platform.AppHost\\Platform.AppHost.csproj",
+      "libraryId": "Aspire.Hosting",
+      "targetGraphs": [
+        "net10.0"
+      ]
+    },
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "message": "Package 'Aspire.Hosting.AppHost' 13.6.4 has a known high severity vulnerability, https://github.com/advisories/GHSA-f7vh-h5g3-7jrh",
+      "projectPath": "C:\\Users\\krnkr\\OneDrive\\Рабочий стол\\bakery-project\\Platform\\Platform.AppHost\\Platform.AppHost.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\krnkr\\OneDrive\\Рабочий стол\\bakery-project\\Platform\\Platform.AppHost\\Platform.AppHost.csproj",
+      "libraryId": "Aspire.Hosting.AppHost",
+      "targetGraphs": [
+        "net10.0"
+      ]
+    },
     {
       "code": "NU1902",
       "level": "Warning",

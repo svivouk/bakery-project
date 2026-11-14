@@ -40,7 +40,8 @@
         "runtime": {
           "lib/net10.0/Aspire.StackExchange.Redis.dll": {
             "assemblyVersion": "13.6.4.0",
-            "fileVersion": "13.600.426.52311"
+            "fileVersion": "13.600.426.52311",
+            "localPath": "Aspire.StackExchange.Redis.dll"
           }
         }
       },
@@ -57,7 +58,8 @@
         "runtime": {
           "lib/net10.0/Aspire.StackExchange.Redis.DistributedCaching.dll": {
             "assemblyVersion": "13.6.4.0",
-            "fileVersion": "13.600.426.52311"
+            "fileVersion": "13.600.426.52311",
+            "localPath": "Aspire.StackExchange.Redis.DistributedCaching.dll"
           }
         }
       },
@@ -68,7 +70,8 @@
         "runtime": {
           "lib/net8.0/HealthChecks.Redis.dll": {
             "assemblyVersion": "9.0.0.0",
-            "fileVersion": "9.0.0.0"
+            "fileVersion": "9.0.0.0",
+            "localPath": "HealthChecks.Redis.dll"
           }
         }
       },
@@ -79,7 +82,8 @@
         "runtime": {
           "lib/net10.0/AutoMapper.dll": {
             "assemblyVersion": "16.0.0.0",
-            "fileVersion": "16.2.0.0"
+            "fileVersion": "16.2.0.0",
+            "localPath": "AutoMapper.dll"
           }
         }
       },
@@ -87,7 +91,8 @@
         "runtime": {
           "lib/net5.0/DnsClient.dll": {
             "assemblyVersion": "1.6.1.0",
-            "fileVersion": "1.6.1.0"
+            "fileVersion": "1.6.1.0",
+            "localPath": "DnsClient.dll"
           }
         }
       },
@@ -95,7 +100,8 @@
         "runtime": {
           "lib/net8.0/FluentValidation.dll": {
             "assemblyVersion": "12.0.0.0",
-            "fileVersion": "12.2.0.0"
+            "fileVersion": "12.2.0.0",
+            "localPath": "FluentValidation.dll"
           }
         }
       },
@@ -106,7 +112,8 @@
         "runtime": {
           "lib/net8.0/FluentValidation.DependencyInjectionExtensions.dll": {
             "assemblyVersion": "12.0.0.0",
-            "fileVersion": "12.2.0.0"
+            "fileVersion": "12.2.0.0",
+            "localPath": "FluentValidation.DependencyInjectionExtensions.dll"
           }
         }
       },
@@ -114,7 +121,8 @@
         "runtime": {
           "lib/net8.0/Google.Protobuf.dll": {
             "assemblyVersion": "3.36.2.0",
-            "fileVersion": "3.36.2.0"
+            "fileVersion": "3.36.2.0",
+            "localPath": "Google.Protobuf.dll"
           }
         }
       },
@@ -131,7 +139,8 @@
         "runtime": {
           "lib/net10.0/Grpc.AspNetCore.Server.dll": {
             "assemblyVersion": "2.0.0.0",
-            "fileVersion": "2.85.0.0"
+            "fileVersion": "2.85.0.0",
+            "localPath": "Grpc.AspNetCore.Server.dll"
           }
         }
       },
@@ -143,7 +152,8 @@
         "runtime": {
           "lib/net10.0/Grpc.AspNetCore.Server.ClientFactory.dll": {
             "assemblyVersion": "2.0.0.0",
-            "fileVersion": "2.85.0.0"
+            "fileVersion": "2.85.0.0",
+            "localPath": "Grpc.AspNetCore.Server.ClientFactory.dll"
           }
         }
       },
@@ -151,7 +161,8 @@
         "runtime": {
           "lib/netstandard2.1/Grpc.Core.Api.dll": {
             "assemblyVersion": "2.0.0.0",
-            "fileVersion": "2.85.0.0"
+            "fileVersion": "2.85.0.0",
+            "localPath": "Grpc.Core.Api.dll"
           }
         }
       },
@@ -162,7 +173,8 @@
         "runtime": {
           "lib/net10.0/Grpc.Net.Client.dll": {
             "assemblyVersion": "2.0.0.0",
-            "fileVersion": "2.85.0.0"
+            "fileVersion": "2.85.0.0",
+            "localPath": "Grpc.Net.Client.dll"
           }
         }
       },
@@ -173,7 +185,8 @@
         "runtime": {
           "lib/net10.0/Grpc.Net.ClientFactory.dll": {
             "assemblyVersion": "2.0.0.0",
-            "fileVersion": "2.85.0.0"
+            "fileVersion": "2.85.0.0",
+            "localPath": "Grpc.Net.ClientFactory.dll"
           }
         }
       },
@@ -184,7 +197,8 @@
         "runtime": {
           "lib/net10.0/Grpc.Net.Common.dll": {
             "assemblyVersion": "2.0.0.0",
-            "fileVersion": "2.85.0.0"
+            "fileVersion": "2.85.0.0",
+            "localPath": "Grpc.Net.Common.dll"
           }
         }
       },
@@ -192,7 +206,8 @@
         "runtime": {
           "lib/net6.0/Humanizer.dll": {
             "assemblyVersion": "2.14.0.0",
-            "fileVersion": "2.14.1.48190"
+            "fileVersion": "2.14.1.48190",
+            "localPath": "Humanizer.dll"
           }
         }
       },
@@ -203,7 +218,8 @@
         "runtime": {
           "lib/net10.0/MicroElements.OpenApi.FluentValidation.dll": {
             "assemblyVersion": "7.2.2.0",
-            "fileVersion": "7.2.2.0"
+            "fileVersion": "7.2.2.0",
+            "localPath": "MicroElements.OpenApi.FluentValidation.dll"
           }
         }
       },
@@ -215,7 +231,8 @@
         "runtime": {
           "lib/net10.0/MicroElements.Swashbuckle.FluentValidation.dll": {
             "assemblyVersion": "7.2.2.0",
-            "fileVersion": "7.2.2.0"
+            "fileVersion": "7.2.2.0",
+            "localPath": "MicroElements.Swashbuckle.FluentValidation.dll"
           }
         }
       },
@@ -226,7 +243,8 @@
         "runtime": {
           "lib/net10.0/Microsoft.AspNetCore.OpenApi.dll": {
             "assemblyVersion": "10.0.14.0",
-            "fileVersion": "10.0.1426.52326"
+            "fileVersion": "10.0.1426.52326",
+            "localPath": "Microsoft.AspNetCore.OpenApi.dll"
           }
         }
       },
@@ -234,7 +252,8 @@
         "runtime": {
           "lib/net9.0/Microsoft.Bcl.Cryptography.dll": {
             "assemblyVersion": "9.0.0.18",
-            "fileVersion": "9.0.1826.31522"
+            "fileVersion": "9.0.1826.31522",
+            "localPath": "Microsoft.Bcl.Cryptography.dll"
           }
         }
       },
@@ -242,7 +261,8 @@
         "runtime": {
           "lib/net10.0/Microsoft.Build.Framework.dll": {
             "assemblyVersion": "15.1.0.0",
-            "fileVersion": "18.0.2.52102"
+            "fileVersion": "18.0.2.52102",
+            "localPath": "Microsoft.Build.Framework.dll"
           }
         }
       },
@@ -250,48 +270,62 @@
         "runtime": {
           "lib/net9.0/Microsoft.CodeAnalysis.dll": {
             "assemblyVersion": "5.0.0.0",
-            "fileVersion": "5.0.25.56712"
+            "fileVersion": "5.0.25.56712",
+            "localPath": "Microsoft.CodeAnalysis.dll"
           }
         },
         "resources": {
           "lib/net9.0/cs/Microsoft.CodeAnalysis.resources.dll": {
-            "locale": "cs"
+            "locale": "cs",
+            "localPath": "cs/Microsoft.CodeAnalysis.resources.dll"
           },
           "lib/net9.0/de/Microsoft.CodeAnalysis.resources.dll": {
-            "locale": "de"
+            "locale": "de",
+            "localPath": "de/Microsoft.CodeAnalysis.resources.dll"
           },
           "lib/net9.0/es/Microsoft.CodeAnalysis.resources.dll": {
-            "locale": "es"
+            "locale": "es",
+            "localPath": "es/Microsoft.CodeAnalysis.resources.dll"
           },
           "lib/net9.0/fr/Microsoft.CodeAnalysis.resources.dll": {
-            "locale": "fr"
+            "locale": "fr",
+            "localPath": "fr/Microsoft.CodeAnalysis.resources.dll"
           },
           "lib/net9.0/it/Microsoft.CodeAnalysis.resources.dll": {
-            "locale": "it"
+            "locale": "it",
+            "localPath": "it/Microsoft.CodeAnalysis.resources.dll"
           },
           "lib/net9.0/ja/Microsoft.CodeAnalysis.resources.dll": {
-            "locale": "ja"
+            "locale": "ja",
+            "localPath": "ja/Microsoft.CodeAnalysis.resources.dll"
           },
           "lib/net9.0/ko/Microsoft.CodeAnalysis.resources.dll": {
-            "locale": "ko"
+            "locale": "ko",
+            "localPath": "ko/Microsoft.CodeAnalysis.resources.dll"
           },
           "lib/net9.0/pl/Microsoft.CodeAnalysis.resources.dll": {
-            "locale": "pl"
+            "locale": "pl",
+            "localPath": "pl/Microsoft.CodeAnalysis.resources.dll"
           },
           "lib/net9.0/pt-BR/Microsoft.CodeAnalysis.resources.dll": {
-            "locale": "pt-BR"
+            "locale": "pt-BR",
+            "localPath": "pt-BR/Microsoft.CodeAnalysis.resources.dll"
           },
           "lib/net9.0/ru/Microsoft.CodeAnalysis.resources.dll": {
-            "locale": "ru"
+            "locale": "ru",
+            "localPath": "ru/Microsoft.CodeAnalysis.resources.dll"
           },
           "lib/net9.0/tr/Microsoft.CodeAnalysis.resources.dll": {
-            "locale": "tr"
+            "locale": "tr",
+            "localPath": "tr/Microsoft.CodeAnalysis.resources.dll"
           },
           "lib/net9.0/zh-Hans/Microsoft.CodeAnalysis.resources.dll": {
-            "locale": "zh-Hans"
+            "locale": "zh-Hans",
+            "localPath": "zh-Hans/Microsoft.CodeAnalysis.resources.dll"
           },
           "lib/net9.0/zh-Hant/Microsoft.CodeAnalysis.resources.dll": {
-            "locale": "zh-Hant"
+            "locale": "zh-Hant",
+            "localPath": "zh-Hant/Microsoft.CodeAnalysis.resources.dll"
           }
         }
       },
@@ -302,48 +336,62 @@
         "runtime": {
           "lib/net9.0/Microsoft.CodeAnalysis.CSharp.dll": {
             "assemblyVersion": "5.0.0.0",
-            "fileVersion": "5.0.25.56712"
+            "fileVersion": "5.0.25.56712",
+            "localPath": "Microsoft.CodeAnalysis.CSharp.dll"
           }
         },
         "resources": {
           "lib/net9.0/cs/Microsoft.CodeAnalysis.CSharp.resources.dll": {
-            "locale": "cs"
+            "locale": "cs",
+            "localPath": "cs/Microsoft.CodeAnalysis.CSharp.resources.dll"
           },
           "lib/net9.0/de/Microsoft.CodeAnalysis.CSharp.resources.dll": {
-            "locale": "de"
+            "locale": "de",
+            "localPath": "de/Microsoft.CodeAnalysis.CSharp.resources.dll"
           },
           "lib/net9.0/es/Microsoft.CodeAnalysis.CSharp.resources.dll": {
-            "locale": "es"
+            "locale": "es",
+            "localPath": "es/Microsoft.CodeAnalysis.CSharp.resources.dll"
           },
           "lib/net9.0/fr/Microsoft.CodeAnalysis.CSharp.resources.dll": {
-            "locale": "fr"
+            "locale": "fr",
+            "localPath": "fr/Microsoft.CodeAnalysis.CSharp.resources.dll"
           },
           "lib/net9.0/it/Microsoft.CodeAnalysis.CSharp.resources.dll": {
-            "locale": "it"
+            "locale": "it",
+            "localPath": "it/Microsoft.CodeAnalysis.CSharp.resources.dll"
           },
           "lib/net9.0/ja/Microsoft.CodeAnalysis.CSharp.resources.dll": {
-            "locale": "ja"
+            "locale": "ja",
+            "localPath": "ja/Microsoft.CodeAnalysis.CSharp.resources.dll"
           },
           "lib/net9.0/ko/Microsoft.CodeAnalysis.CSharp.resources.dll": {
-            "locale": "ko"
+            "locale": "ko",
+            "localPath": "ko/Microsoft.CodeAnalysis.CSharp.resources.dll"
           },
           "lib/net9.0/pl/Microsoft.CodeAnalysis.CSharp.resources.dll": {
-            "locale": "pl"
+            "locale": "pl",
+            "localPath": "pl/Microsoft.CodeAnalysis.CSharp.resources.dll"
           },
           "lib/net9.0/pt-BR/Microsoft.CodeAnalysis.CSharp.resources.dll": {
-            "locale": "pt-BR"
+            "locale": "pt-BR",
+            "localPath": "pt-BR/Microsoft.CodeAnalysis.CSharp.resources.dll"
           },
           "lib/net9.0/ru/Microsoft.CodeAnalysis.CSharp.resources.dll": {
-            "locale": "ru"
+            "locale": "ru",
+            "localPath": "ru/Microsoft.CodeAnalysis.CSharp.resources.dll"
           },
           "lib/net9.0/tr/Microsoft.CodeAnalysis.CSharp.resources.dll": {
-            "locale": "tr"
+            "locale": "tr",
+            "localPath": "tr/Microsoft.CodeAnalysis.CSharp.resources.dll"
           },
           "lib/net9.0/zh-Hans/Microsoft.CodeAnalysis.CSharp.resources.dll": {
-            "locale": "zh-Hans"
+            "locale": "zh-Hans",
+            "localPath": "zh-Hans/Microsoft.CodeAnalysis.CSharp.resources.dll"
           },
           "lib/net9.0/zh-Hant/Microsoft.CodeAnalysis.CSharp.resources.dll": {
-            "locale": "zh-Hant"
+            "locale": "zh-Hant",
+            "localPath": "zh-Hant/Microsoft.CodeAnalysis.CSharp.resources.dll"
           }
         }
       },
@@ -358,48 +406,62 @@
         "runtime": {
           "lib/net9.0/Microsoft.CodeAnalysis.CSharp.Workspaces.dll": {
             "assemblyVersion": "5.0.0.0",
-            "fileVersion": "5.0.25.56712"
+            "fileVersion": "5.0.25.56712",
+            "localPath": "Microsoft.CodeAnalysis.CSharp.Workspaces.dll"
           }
         },
         "resources": {
           "lib/net9.0/cs/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll": {
-            "locale": "cs"
+            "locale": "cs",
+            "localPath": "cs/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll"
           },
           "lib/net9.0/de/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll": {
-            "locale": "de"
+            "locale": "de",
+            "localPath": "de/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll"
           },
           "lib/net9.0/es/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll": {
-            "locale": "es"
+            "locale": "es",
+            "localPath": "es/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll"
           },
           "lib/net9.0/fr/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll": {
-            "locale": "fr"
+            "locale": "fr",
+            "localPath": "fr/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll"
           },
           "lib/net9.0/it/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll": {
-            "locale": "it"
+            "locale": "it",
+            "localPath": "it/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll"
           },
           "lib/net9.0/ja/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll": {
-            "locale": "ja"
+            "locale": "ja",
+            "localPath": "ja/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll"
           },
           "lib/net9.0/ko/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll": {
-            "locale": "ko"
+            "locale": "ko",
+            "localPath": "ko/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll"
           },
           "lib/net9.0/pl/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll": {
-            "locale": "pl"
+            "locale": "pl",
+            "localPath": "pl/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll"
           },
           "lib/net9.0/pt-BR/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll": {
-            "locale": "pt-BR"
+            "locale": "pt-BR",
+            "localPath": "pt-BR/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll"
           },
           "lib/net9.0/ru/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll": {
-            "locale": "ru"
+            "locale": "ru",
+            "localPath": "ru/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll"
           },
           "lib/net9.0/tr/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll": {
-            "locale": "tr"
+            "locale": "tr",
+            "localPath": "tr/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll"
           },
           "lib/net9.0/zh-Hans/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll": {
-            "locale": "zh-Hans"
+            "locale": "zh-Hans",
+            "localPath": "zh-Hans/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll"
           },
           "lib/net9.0/zh-Hant/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll": {
-            "locale": "zh-Hant"
+            "locale": "zh-Hant",
+            "localPath": "zh-Hant/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll"
           }
         }
       },
@@ -412,48 +474,62 @@
         "runtime": {
           "lib/net9.0/Microsoft.CodeAnalysis.Workspaces.dll": {
             "assemblyVersion": "5.0.0.0",
-            "fileVersion": "5.0.25.56712"
+            "fileVersion": "5.0.25.56712",
+            "localPath": "Microsoft.CodeAnalysis.Workspaces.dll"
           }
         },
         "resources": {
           "lib/net9.0/cs/Microsoft.CodeAnalysis.Workspaces.resources.dll": {
-            "locale": "cs"
+            "locale": "cs",
+            "localPath": "cs/Microsoft.CodeAnalysis.Workspaces.resources.dll"
           },
           "lib/net9.0/de/Microsoft.CodeAnalysis.Workspaces.resources.dll": {
-            "locale": "de"
+            "locale": "de",
+            "localPath": "de/Microsoft.CodeAnalysis.Workspaces.resources.dll"
           },
           "lib/net9.0/es/Microsoft.CodeAnalysis.Workspaces.resources.dll": {
-            "locale": "es"
+            "locale": "es",
+            "localPath": "es/Microsoft.CodeAnalysis.Workspaces.resources.dll"
           },
           "lib/net9.0/fr/Microsoft.CodeAnalysis.Workspaces.resources.dll": {
-            "locale": "fr"
+            "locale": "fr",
+            "localPath": "fr/Microsoft.CodeAnalysis.Workspaces.resources.dll"
           },
           "lib/net9.0/it/Microsoft.CodeAnalysis.Workspaces.resources.dll": {
-            "locale": "it"
+            "locale": "it",
+            "localPath": "it/Microsoft.CodeAnalysis.Workspaces.resources.dll"
           },
           "lib/net9.0/ja/Microsoft.CodeAnalysis.Workspaces.resources.dll": {
-            "locale": "ja"
+            "locale": "ja",
+            "localPath": "ja/Microsoft.CodeAnalysis.Workspaces.resources.dll"
           },
           "lib/net9.0/ko/Microsoft.CodeAnalysis.Workspaces.resources.dll": {
-            "locale": "ko"
+            "locale": "ko",
+            "localPath": "ko/Microsoft.CodeAnalysis.Workspaces.resources.dll"
           },
           "lib/net9.0/pl/Microsoft.CodeAnalysis.Workspaces.resources.dll": {
-            "locale": "pl"
+            "locale": "pl",
+            "localPath": "pl/Microsoft.CodeAnalysis.Workspaces.resources.dll"
           },
           "lib/net9.0/pt-BR/Microsoft.CodeAnalysis.Workspaces.resources.dll": {
-            "locale": "pt-BR"
+            "locale": "pt-BR",
+            "localPath": "pt-BR/Microsoft.CodeAnalysis.Workspaces.resources.dll"
           },
           "lib/net9.0/ru/Microsoft.CodeAnalysis.Workspaces.resources.dll": {
-            "locale": "ru"
+            "locale": "ru",
+            "localPath": "ru/Microsoft.CodeAnalysis.Workspaces.resources.dll"
           },
           "lib/net9.0/tr/Microsoft.CodeAnalysis.Workspaces.resources.dll": {
-            "locale": "tr"
+            "locale": "tr",
+            "localPath": "tr/Microsoft.CodeAnalysis.Workspaces.resources.dll"
           },
           "lib/net9.0/zh-Hans/Microsoft.CodeAnalysis.Workspaces.resources.dll": {
-            "locale": "zh-Hans"
+            "locale": "zh-Hans",
+            "localPath": "zh-Hans/Microsoft.CodeAnalysis.Workspaces.resources.dll"
           },
           "lib/net9.0/zh-Hant/Microsoft.CodeAnalysis.Workspaces.resources.dll": {
-            "locale": "zh-Hant"
+            "locale": "zh-Hant",
+            "localPath": "zh-Hant/Microsoft.CodeAnalysis.Workspaces.resources.dll"
           }
         }
       },
@@ -469,52 +545,67 @@
         "runtime": {
           "lib/net9.0/Microsoft.CodeAnalysis.ExternalAccess.RazorCompiler.dll": {
             "assemblyVersion": "5.0.0.0",
-            "fileVersion": "5.0.25.56712"
+            "fileVersion": "5.0.25.56712",
+            "localPath": "Microsoft.CodeAnalysis.ExternalAccess.RazorCompiler.dll"
           },
           "lib/net9.0/Microsoft.CodeAnalysis.Workspaces.MSBuild.dll": {
             "assemblyVersion": "5.0.0.0",
-            "fileVersion": "5.0.25.56712"
+            "fileVersion": "5.0.25.56712",
+            "localPath": "Microsoft.CodeAnalysis.Workspaces.MSBuild.dll"
           }
         },
         "resources": {
           "lib/net9.0/cs/Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll": {
-            "locale": "cs"
+            "locale": "cs",
+            "localPath": "cs/Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll"
           },
           "lib/net9.0/de/Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll": {
-            "locale": "de"
+            "locale": "de",
+            "localPath": "de/Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll"
           },
           "lib/net9.0/es/Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll": {
-            "locale": "es"
+            "locale": "es",
+            "localPath": "es/Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll"
           },
           "lib/net9.0/fr/Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll": {
-            "locale": "fr"
+            "locale": "fr",
+            "localPath": "fr/Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll"
           },
           "lib/net9.0/it/Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll": {
-            "locale": "it"
+            "locale": "it",
+            "localPath": "it/Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll"
           },
           "lib/net9.0/ja/Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll": {
-            "locale": "ja"
+            "locale": "ja",
+            "localPath": "ja/Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll"
           },
           "lib/net9.0/ko/Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll": {
-            "locale": "ko"
+            "locale": "ko",
+            "localPath": "ko/Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll"
           },
           "lib/net9.0/pl/Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll": {
-            "locale": "pl"
+            "locale": "pl",
+            "localPath": "pl/Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll"
           },
           "lib/net9.0/pt-BR/Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll": {
-            "locale": "pt-BR"
+            "locale": "pt-BR",
+            "localPath": "pt-BR/Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll"
           },
           "lib/net9.0/ru/Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll": {
-            "locale": "ru"
+            "locale": "ru",
+            "localPath": "ru/Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll"
           },
           "lib/net9.0/tr/Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll": {
-            "locale": "tr"
+            "locale": "tr",
+            "localPath": "tr/Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll"
           },
           "lib/net9.0/zh-Hans/Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll": {
-            "locale": "zh-Hans"
+            "locale": "zh-Hans",
+            "localPath": "zh-Hans/Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll"
           },
           "lib/net9.0/zh-Hant/Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll": {
-            "locale": "zh-Hant"
+            "locale": "zh-Hant",
+            "localPath": "zh-Hant/Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll"
           }
         }
       },
@@ -522,36 +613,46 @@
         "runtime": {
           "lib/netstandard1.1/Microsoft.Data.Edm.dll": {
             "assemblyVersion": "5.8.5.0",
-            "fileVersion": "5.8.5.64339"
+            "fileVersion": "5.8.5.64339",
+            "localPath": "Microsoft.Data.Edm.dll"
           }
         },
         "resources": {
           "lib/netstandard1.1/de/Microsoft.Data.Edm.resources.dll": {
-            "locale": "de"
+            "locale": "de",
+            "localPath": "de/Microsoft.Data.Edm.resources.dll"
           },
           "lib/netstandard1.1/es/Microsoft.Data.Edm.resources.dll": {
-            "locale": "es"
+            "locale": "es",
+            "localPath": "es/Microsoft.Data.Edm.resources.dll"
           },
           "lib/netstandard1.1/fr/Microsoft.Data.Edm.resources.dll": {
-            "locale": "fr"
+            "locale": "fr",
+            "localPath": "fr/Microsoft.Data.Edm.resources.dll"
           },
           "lib/netstandard1.1/it/Microsoft.Data.Edm.resources.dll": {
-            "locale": "it"
+            "locale": "it",
+            "localPath": "it/Microsoft.Data.Edm.resources.dll"
           },
           "lib/netstandard1.1/ja/Microsoft.Data.Edm.resources.dll": {
-            "locale": "ja"
+            "locale": "ja",
+            "localPath": "ja/Microsoft.Data.Edm.resources.dll"
           },
           "lib/netstandard1.1/ko/Microsoft.Data.Edm.resources.dll": {
-            "locale": "ko"
+            "locale": "ko",
+            "localPath": "ko/Microsoft.Data.Edm.resources.dll"
           },
           "lib/netstandard1.1/ru/Microsoft.Data.Edm.resources.dll": {
-            "locale": "ru"
+            "locale": "ru",
+            "localPath": "ru/Microsoft.Data.Edm.resources.dll"
           },
           "lib/netstandard1.1/zh-Hans/Microsoft.Data.Edm.resources.dll": {
-            "locale": "zh-Hans"
+            "locale": "zh-Hans",
+            "localPath": "zh-Hans/Microsoft.Data.Edm.resources.dll"
           },
           "lib/netstandard1.1/zh-Hant/Microsoft.Data.Edm.resources.dll": {
-            "locale": "zh-Hant"
+            "locale": "zh-Hant",
+            "localPath": "zh-Hant/Microsoft.Data.Edm.resources.dll"
           }
         }
       },
@@ -569,48 +670,62 @@
         "runtime": {
           "lib/net9.0/Microsoft.Data.SqlClient.dll": {
             "assemblyVersion": "7.0.0.0",
-            "fileVersion": "7.1.1.26272"
+            "fileVersion": "7.1.1.26272",
+            "localPath": "Microsoft.Data.SqlClient.dll"
           }
         },
         "resources": {
           "lib/net9.0/cs/Microsoft.Data.SqlClient.resources.dll": {
-            "locale": "cs"
+            "locale": "cs",
+            "localPath": "cs/Microsoft.Data.SqlClient.resources.dll"
           },
           "lib/net9.0/de/Microsoft.Data.SqlClient.resources.dll": {
-            "locale": "de"
+            "locale": "de",
+            "localPath": "de/Microsoft.Data.SqlClient.resources.dll"
           },
           "lib/net9.0/es/Microsoft.Data.SqlClient.resources.dll": {
-            "locale": "es"
+            "locale": "es",
+            "localPath": "es/Microsoft.Data.SqlClient.resources.dll"
           },
           "lib/net9.0/fr/Microsoft.Data.SqlClient.resources.dll": {
-            "locale": "fr"
+            "locale": "fr",
+            "localPath": "fr/Microsoft.Data.SqlClient.resources.dll"
           },
           "lib/net9.0/it/Microsoft.Data.SqlClient.resources.dll": {
-            "locale": "it"
+            "locale": "it",
+            "localPath": "it/Microsoft.Data.SqlClient.resources.dll"
           },
           "lib/net9.0/ja/Microsoft.Data.SqlClient.resources.dll": {
-            "locale": "ja"
+            "locale": "ja",
+            "localPath": "ja/Microsoft.Data.SqlClient.resources.dll"
           },
           "lib/net9.0/ko/Microsoft.Data.SqlClient.resources.dll": {
-            "locale": "ko"
+            "locale": "ko",
+            "localPath": "ko/Microsoft.Data.SqlClient.resources.dll"
           },
           "lib/net9.0/pl/Microsoft.Data.SqlClient.resources.dll": {
-            "locale": "pl"
+            "locale": "pl",
+            "localPath": "pl/Microsoft.Data.SqlClient.resources.dll"
           },
           "lib/net9.0/pt-BR/Microsoft.Data.SqlClient.resources.dll": {
-            "locale": "pt-BR"
+            "locale": "pt-BR",
+            "localPath": "pt-BR/Microsoft.Data.SqlClient.resources.dll"
           },
           "lib/net9.0/ru/Microsoft.Data.SqlClient.resources.dll": {
-            "locale": "ru"
+            "locale": "ru",
+            "localPath": "ru/Microsoft.Data.SqlClient.resources.dll"
           },
           "lib/net9.0/tr/Microsoft.Data.SqlClient.resources.dll": {
-            "locale": "tr"
+            "locale": "tr",
+            "localPath": "tr/Microsoft.Data.SqlClient.resources.dll"
           },
           "lib/net9.0/zh-Hans/Microsoft.Data.SqlClient.resources.dll": {
-            "locale": "zh-Hans"
+            "locale": "zh-Hans",
+            "localPath": "zh-Hans/Microsoft.Data.SqlClient.resources.dll"
           },
           "lib/net9.0/zh-Hant/Microsoft.Data.SqlClient.resources.dll": {
-            "locale": "zh-Hant"
+            "locale": "zh-Hant",
+            "localPath": "zh-Hant/Microsoft.Data.SqlClient.resources.dll"
           }
         },
         "runtimeTargets": {
@@ -618,13 +733,15 @@
             "rid": "unix",
             "assetType": "runtime",
             "assemblyVersion": "7.0.0.0",
-            "fileVersion": "7.1.1.26272"
+            "fileVersion": "7.1.1.26272",
+            "localPath": "runtimes/unix/lib/net9.0/Microsoft.Data.SqlClient.dll"
           },
           "runtimes/win/lib/net9.0/Microsoft.Data.SqlClient.dll": {
             "rid": "win",
             "assetType": "runtime",
             "assemblyVersion": "7.0.0.0",
-            "fileVersion": "7.1.1.26272"
+            "fileVersion": "7.1.1.26272",
+            "localPath": "runtimes/win/lib/net9.0/Microsoft.Data.SqlClient.dll"
           }
         }
       },
@@ -635,7 +752,8 @@
         "runtime": {
           "lib/netstandard2.0/Microsoft.Data.SqlClient.Extensions.Abstractions.dll": {
             "assemblyVersion": "7.0.0.0",
-            "fileVersion": "7.1.1.26272"
+            "fileVersion": "7.1.1.26272",
+            "localPath": "Microsoft.Data.SqlClient.Extensions.Abstractions.dll"
           }
         }
       },
@@ -643,7 +761,8 @@
         "runtime": {
           "lib/netstandard2.0/Microsoft.Data.SqlClient.Internal.Logging.dll": {
             "assemblyVersion": "7.0.0.0",
-            "fileVersion": "7.1.1.26272"
+            "fileVersion": "7.1.1.26272",
+            "localPath": "Microsoft.Data.SqlClient.Internal.Logging.dll"
           }
         }
       },
@@ -652,17 +771,20 @@
           "runtimes/win-arm64/native/Microsoft.Data.SqlClient.SNI.dll": {
             "rid": "win-arm64",
             "assetType": "native",
-            "fileVersion": "7.1.0.0"
+            "fileVersion": "7.1.0.0",
+            "localPath": "runtimes/win-arm64/native/Microsoft.Data.SqlClient.SNI.dll"
           },
           "runtimes/win-x64/native/Microsoft.Data.SqlClient.SNI.dll": {
             "rid": "win-x64",
             "assetType": "native",
-            "fileVersion": "7.1.0.0"
+            "fileVersion": "7.1.0.0",
+            "localPath": "runtimes/win-x64/native/Microsoft.Data.SqlClient.SNI.dll"
           },
           "runtimes/win-x86/native/Microsoft.Data.SqlClient.SNI.dll": {
             "rid": "win-x86",
             "assetType": "native",
-            "fileVersion": "7.1.0.0"
+            "fileVersion": "7.1.0.0",
+            "localPath": "runtimes/win-x86/native/Microsoft.Data.SqlClient.SNI.dll"
           }
         }
       },
@@ -673,7 +795,8 @@
         "runtime": {
           "lib/net10.0/Microsoft.EntityFrameworkCore.dll": {
             "assemblyVersion": "10.0.13.0",
-            "fileVersion": "10.0.1326.50504"
+            "fileVersion": "10.0.1326.50504",
+            "localPath": "Microsoft.EntityFrameworkCore.dll"
           }
         }
       },
@@ -681,7 +804,8 @@
         "runtime": {
           "lib/net10.0/Microsoft.EntityFrameworkCore.Abstractions.dll": {
             "assemblyVersion": "10.0.13.0",
-            "fileVersion": "10.0.1326.50504"
+            "fileVersion": "10.0.1326.50504",
+            "localPath": "Microsoft.EntityFrameworkCore.Abstractions.dll"
           }
         }
       },
@@ -700,7 +824,8 @@
         "runtime": {
           "lib/net10.0/Microsoft.EntityFrameworkCore.Design.dll": {
             "assemblyVersion": "10.0.13.0",
-            "fileVersion": "10.0.1326.50504"
+            "fileVersion": "10.0.1326.50504",
+            "localPath": "Microsoft.EntityFrameworkCore.Design.dll"
           }
         }
       },
@@ -711,7 +836,8 @@
         "runtime": {
           "lib/net10.0/Microsoft.EntityFrameworkCore.Relational.dll": {
             "assemblyVersion": "10.0.13.0",
-            "fileVersion": "10.0.1326.50504"
+            "fileVersion": "10.0.1326.50504",
+            "localPath": "Microsoft.EntityFrameworkCore.Relational.dll"
           }
         }
       },
@@ -723,7 +849,8 @@
         "runtime": {
           "lib/net10.0/Microsoft.EntityFrameworkCore.SqlServer.dll": {
             "assemblyVersion": "10.0.13.0",
-            "fileVersion": "10.0.1326.50504"
+            "fileVersion": "10.0.1326.50504",
+            "localPath": "Microsoft.EntityFrameworkCore.SqlServer.dll"
           }
         }
       },
@@ -731,7 +858,8 @@
         "runtime": {
           "lib/net10.0/Microsoft.Extensions.AmbientMetadata.Application.dll": {
             "assemblyVersion": "10.10.0.0",
-            "fileVersion": "10.1000.26.45902"
+            "fileVersion": "10.1000.26.45902",
+            "localPath": "Microsoft.Extensions.AmbientMetadata.Application.dll"
           }
         }
       },
@@ -742,7 +870,8 @@
         "runtime": {
           "lib/net10.0/Microsoft.Extensions.Caching.StackExchangeRedis.dll": {
             "assemblyVersion": "10.0.12.0",
-            "fileVersion": "10.0.1226.42308"
+            "fileVersion": "10.0.1226.42308",
+            "localPath": "Microsoft.Extensions.Caching.StackExchangeRedis.dll"
           }
         }
       },
@@ -750,7 +879,8 @@
         "runtime": {
           "lib/net10.0/Microsoft.Extensions.Compliance.Abstractions.dll": {
             "assemblyVersion": "10.10.0.0",
-            "fileVersion": "10.1000.26.45902"
+            "fileVersion": "10.1000.26.45902",
+            "localPath": "Microsoft.Extensions.Compliance.Abstractions.dll"
           }
         }
       },
@@ -758,7 +888,8 @@
         "runtime": {
           "lib/net10.0/Microsoft.Extensions.DependencyInjection.AutoActivation.dll": {
             "assemblyVersion": "10.10.0.0",
-            "fileVersion": "10.1000.26.45902"
+            "fileVersion": "10.1000.26.45902",
+            "localPath": "Microsoft.Extensions.DependencyInjection.AutoActivation.dll"
           }
         }
       },
@@ -766,7 +897,8 @@
         "runtime": {
           "lib/net10.0/Microsoft.Extensions.DependencyModel.dll": {
             "assemblyVersion": "10.0.0.13",
-            "fileVersion": "10.0.1326.50504"
+            "fileVersion": "10.0.1326.50504",
+            "localPath": "Microsoft.Extensions.DependencyModel.dll"
           }
         }
       },
@@ -774,7 +906,8 @@
         "runtime": {
           "lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.dll": {
             "assemblyVersion": "10.10.0.0",
-            "fileVersion": "10.1000.26.45902"
+            "fileVersion": "10.1000.26.45902",
+            "localPath": "Microsoft.Extensions.Diagnostics.ExceptionSummarization.dll"
           }
         }
       },
@@ -785,7 +918,8 @@
         "runtime": {
           "lib/net10.0/Microsoft.Extensions.Http.Diagnostics.dll": {
             "assemblyVersion": "10.10.0.0",
-            "fileVersion": "10.1000.26.45902"
+            "fileVersion": "10.1000.26.45902",
+            "localPath": "Microsoft.Extensions.Http.Diagnostics.dll"
           }
         }
       },
@@ -797,7 +931,8 @@
         "runtime": {
           "lib/net10.0/Microsoft.Extensions.Http.Resilience.dll": {
             "assemblyVersion": "10.10.0.0",
-            "fileVersion": "10.1000.26.45902"
+            "fileVersion": "10.1000.26.45902",
+            "localPath": "Microsoft.Extensions.Http.Resilience.dll"
           }
         }
       },
@@ -811,7 +946,8 @@
         "runtime": {
           "lib/net10.0/Microsoft.Extensions.Resilience.dll": {
             "assemblyVersion": "10.10.0.0",
-            "fileVersion": "10.1000.26.45902"
+            "fileVersion": "10.1000.26.45902",
+            "localPath": "Microsoft.Extensions.Resilience.dll"
           }
         }
       },
@@ -822,7 +958,8 @@
         "runtime": {
           "lib/net10.0/Microsoft.Extensions.ServiceDiscovery.dll": {
             "assemblyVersion": "10.10.0.0",
-            "fileVersion": "10.1000.26.45902"
+            "fileVersion": "10.1000.26.45902",
+            "localPath": "Microsoft.Extensions.ServiceDiscovery.dll"
           }
         }
       },
@@ -830,7 +967,8 @@
         "runtime": {
           "lib/net10.0/Microsoft.Extensions.ServiceDiscovery.Abstractions.dll": {
             "assemblyVersion": "10.10.0.0",
-            "fileVersion": "10.1000.26.45902"
+            "fileVersion": "10.1000.26.45902",
+            "localPath": "Microsoft.Extensions.ServiceDiscovery.Abstractions.dll"
           }
         }
       },
@@ -843,7 +981,8 @@
         "runtime": {
           "lib/net10.0/Microsoft.Extensions.Telemetry.dll": {
             "assemblyVersion": "10.10.0.0",
-            "fileVersion": "10.1000.26.45902"
+            "fileVersion": "10.1000.26.45902",
+            "localPath": "Microsoft.Extensions.Telemetry.dll"
           }
         }
       },
@@ -854,7 +993,8 @@
         "runtime": {
           "lib/net10.0/Microsoft.Extensions.Telemetry.Abstractions.dll": {
             "assemblyVersion": "10.10.0.0",
-            "fileVersion": "10.1000.26.45902"
+            "fileVersion": "10.1000.26.45902",
+            "localPath": "Microsoft.Extensions.Telemetry.Abstractions.dll"
           }
         }
       },
@@ -865,7 +1005,8 @@
         "runtime": {
           "lib/net8.0/Microsoft.Identity.Client.dll": {
             "assemblyVersion": "4.91.1.0",
-            "fileVersion": "4.91.1.0"
+            "fileVersion": "4.91.1.0",
+            "localPath": "Microsoft.Identity.Client.dll"
           }
         }
       },
@@ -873,7 +1014,8 @@
         "runtime": {
           "lib/net10.0/Microsoft.IdentityModel.Abstractions.dll": {
             "assemblyVersion": "8.16.0.0",
-            "fileVersion": "8.16.0.26043"
+            "fileVersion": "8.16.0.26043",
+            "localPath": "Microsoft.IdentityModel.Abstractions.dll"
           }
         }
       },
@@ -884,7 +1026,8 @@
         "runtime": {
           "lib/net10.0/Microsoft.IdentityModel.JsonWebTokens.dll": {
             "assemblyVersion": "8.16.0.0",
-            "fileVersion": "8.16.0.26043"
+            "fileVersion": "8.16.0.26043",
+            "localPath": "Microsoft.IdentityModel.JsonWebTokens.dll"
           }
         }
       },
@@ -895,7 +1038,8 @@
         "runtime": {
           "lib/net10.0/Microsoft.IdentityModel.Logging.dll": {
             "assemblyVersion": "8.16.0.0",
-            "fileVersion": "8.16.0.26043"
+            "fileVersion": "8.16.0.26043",
+            "localPath": "Microsoft.IdentityModel.Logging.dll"
           }
         }
       },
@@ -906,7 +1050,8 @@
         "runtime": {
           "lib/net10.0/Microsoft.IdentityModel.Protocols.dll": {
             "assemblyVersion": "8.16.0.0",
-            "fileVersion": "8.16.0.26043"
+            "fileVersion": "8.16.0.26043",
+            "localPath": "Microsoft.IdentityModel.Protocols.dll"
           }
         }
       },
@@ -918,7 +1063,8 @@
         "runtime": {
           "lib/net10.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll": {
             "assemblyVersion": "8.16.0.0",
-            "fileVersion": "8.16.0.26043"
+            "fileVersion": "8.16.0.26043",
+            "localPath": "Microsoft.IdentityModel.Protocols.OpenIdConnect.dll"
           }
         }
       },
@@ -929,7 +1075,8 @@
         "runtime": {
           "lib/net10.0/Microsoft.IdentityModel.Tokens.dll": {
             "assemblyVersion": "8.16.0.0",
-            "fileVersion": "8.16.0.26043"
+            "fileVersion": "8.16.0.26043",
+            "localPath": "Microsoft.IdentityModel.Tokens.dll"
           }
         }
       },
@@ -937,7 +1084,8 @@
         "runtime": {
           "lib/net8.0/Microsoft.OpenApi.dll": {
             "assemblyVersion": "2.12.2.0",
-            "fileVersion": "2.12.2.0"
+            "fileVersion": "2.12.2.0",
+            "localPath": "Microsoft.OpenApi.dll"
           }
         }
       },
@@ -945,7 +1093,8 @@
         "runtime": {
           "lib/netstandard2.0/Microsoft.SqlServer.Server.dll": {
             "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
+            "fileVersion": "1.0.0.0",
+            "localPath": "Microsoft.SqlServer.Server.dll"
           }
         }
       },
@@ -953,7 +1102,8 @@
         "runtime": {
           "lib/net8.0/Microsoft.VisualStudio.SolutionPersistence.dll": {
             "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.52.6595"
+            "fileVersion": "1.0.52.6595",
+            "localPath": "Microsoft.VisualStudio.SolutionPersistence.dll"
           }
         }
       },
@@ -961,7 +1111,8 @@
         "runtime": {
           "lib/net6.0/MongoDB.Bson.dll": {
             "assemblyVersion": "3.0.0.0",
-            "fileVersion": "3.0.0.0"
+            "fileVersion": "3.0.0.0",
+            "localPath": "MongoDB.Bson.dll"
           }
         }
       },
@@ -976,7 +1127,8 @@
         "runtime": {
           "lib/net6.0/MongoDB.Driver.dll": {
             "assemblyVersion": "3.0.0.0",
-            "fileVersion": "3.0.0.0"
+            "fileVersion": "3.0.0.0",
+            "localPath": "MongoDB.Driver.dll"
           }
         }
       },
@@ -987,7 +1139,8 @@
         "runtime": {
           "lib/net10.0/MongoDB.Driver.Core.Extensions.DiagnosticSources.dll": {
             "assemblyVersion": "3.0.0.0",
-            "fileVersion": "3.0.0.0"
+            "fileVersion": "3.0.0.0",
+            "localPath": "MongoDB.Driver.Core.Extensions.DiagnosticSources.dll"
           }
         }
       },
@@ -998,7 +1151,8 @@
         "runtime": {
           "lib/net6.0/Mono.TextTemplating.dll": {
             "assemblyVersion": "3.0.0.0",
-            "fileVersion": "3.0.0.1"
+            "fileVersion": "3.0.0.1",
+            "localPath": "Mono.TextTemplating.dll"
           }
         }
       },
@@ -1006,7 +1160,8 @@
         "runtime": {
           "lib/net6.0/Newtonsoft.Json.dll": {
             "assemblyVersion": "13.0.0.0",
-            "fileVersion": "13.0.4.30916"
+            "fileVersion": "13.0.4.30916",
+            "localPath": "Newtonsoft.Json.dll"
           }
         }
       },
@@ -1017,7 +1172,8 @@
         "runtime": {
           "lib/net10.0/OpenTelemetry.dll": {
             "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.20.1.2236"
+            "fileVersion": "1.20.1.2236",
+            "localPath": "OpenTelemetry.dll"
           }
         }
       },
@@ -1025,7 +1181,8 @@
         "runtime": {
           "lib/net10.0/OpenTelemetry.Api.dll": {
             "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.20.1.2236"
+            "fileVersion": "1.20.1.2236",
+            "localPath": "OpenTelemetry.Api.dll"
           }
         }
       },
@@ -1036,7 +1193,8 @@
         "runtime": {
           "lib/net10.0/OpenTelemetry.Api.ProviderBuilderExtensions.dll": {
             "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.20.1.2236"
+            "fileVersion": "1.20.1.2236",
+            "localPath": "OpenTelemetry.Api.ProviderBuilderExtensions.dll"
           }
         }
       },
@@ -1047,7 +1205,8 @@
         "runtime": {
           "lib/net10.0/OpenTelemetry.Exporter.OpenTelemetryProtocol.dll": {
             "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.20.1.2236"
+            "fileVersion": "1.20.1.2236",
+            "localPath": "OpenTelemetry.Exporter.OpenTelemetryProtocol.dll"
           }
         }
       },
@@ -1058,7 +1217,8 @@
         "runtime": {
           "lib/net10.0/OpenTelemetry.Extensions.Hosting.dll": {
             "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.20.1.2236"
+            "fileVersion": "1.20.1.2236",
+            "localPath": "OpenTelemetry.Extensions.Hosting.dll"
           }
         }
       },
@@ -1069,7 +1229,8 @@
         "runtime": {
           "lib/net10.0/OpenTelemetry.Instrumentation.AspNetCore.dll": {
             "assemblyVersion": "1.17.0.1204",
-            "fileVersion": "1.17.0.1204"
+            "fileVersion": "1.17.0.1204",
+            "localPath": "OpenTelemetry.Instrumentation.AspNetCore.dll"
           }
         }
       },
@@ -1080,7 +1241,8 @@
         "runtime": {
           "lib/net10.0/OpenTelemetry.Instrumentation.Http.dll": {
             "assemblyVersion": "1.17.0.1210",
-            "fileVersion": "1.17.0.1210"
+            "fileVersion": "1.17.0.1210",
+            "localPath": "OpenTelemetry.Instrumentation.Http.dll"
           }
         }
       },
@@ -1091,7 +1253,8 @@
         "runtime": {
           "lib/net10.0/OpenTelemetry.Instrumentation.Runtime.dll": {
             "assemblyVersion": "1.17.0.1215",
-            "fileVersion": "1.17.0.1215"
+            "fileVersion": "1.17.0.1215",
+            "localPath": "OpenTelemetry.Instrumentation.Runtime.dll"
           }
         }
       },
@@ -1102,7 +1265,8 @@
         "runtime": {
           "lib/net10.0/OpenTelemetry.Instrumentation.SqlClient.dll": {
             "assemblyVersion": "1.20.2.1576",
-            "fileVersion": "1.20.2.1576"
+            "fileVersion": "1.20.2.1576",
+            "localPath": "OpenTelemetry.Instrumentation.SqlClient.dll"
           }
         }
       },
@@ -1110,7 +1274,8 @@
         "runtime": {
           "lib/net9.0/Pipelines.Sockets.Unofficial.dll": {
             "assemblyVersion": "1.0.0.0",
-            "fileVersion": "2.2.16.21791"
+            "fileVersion": "2.2.16.21791",
+            "localPath": "Pipelines.Sockets.Unofficial.dll"
           }
         }
       },
@@ -1118,7 +1283,8 @@
         "runtime": {
           "lib/net8.0/Polly.Core.dll": {
             "assemblyVersion": "8.0.0.0",
-            "fileVersion": "8.4.2.3950"
+            "fileVersion": "8.4.2.3950",
+            "localPath": "Polly.Core.dll"
           }
         }
       },
@@ -1129,7 +1295,8 @@
         "runtime": {
           "lib/net8.0/Polly.Extensions.dll": {
             "assemblyVersion": "8.0.0.0",
-            "fileVersion": "8.4.2.3950"
+            "fileVersion": "8.4.2.3950",
+            "localPath": "Polly.Extensions.dll"
           }
         }
       },
@@ -1140,7 +1307,8 @@
         "runtime": {
           "lib/net8.0/Polly.RateLimiting.dll": {
             "assemblyVersion": "8.0.0.0",
-            "fileVersion": "8.4.2.3950"
+            "fileVersion": "8.4.2.3950",
+            "localPath": "Polly.RateLimiting.dll"
           }
         }
       },
@@ -1148,7 +1316,8 @@
         "runtime": {
           "lib/net9.0/Serilog.dll": {
             "assemblyVersion": "4.3.0.0",
-            "fileVersion": "4.3.0.0"
+            "fileVersion": "4.3.0.0",
+            "localPath": "Serilog.dll"
           }
         }
       },
@@ -1165,7 +1334,8 @@
         "runtime": {
           "lib/net10.0/Serilog.AspNetCore.dll": {
             "assemblyVersion": "10.0.0.0",
-            "fileVersion": "10.0.0.0"
+            "fileVersion": "10.0.0.0",
+            "localPath": "Serilog.AspNetCore.dll"
           }
         }
       },
@@ -1176,7 +1346,8 @@
         "runtime": {
           "lib/net8.0/Serilog.Enrichers.Environment.dll": {
             "assemblyVersion": "3.0.0.0",
-            "fileVersion": "3.0.0.0"
+            "fileVersion": "3.0.0.0",
+            "localPath": "Serilog.Enrichers.Environment.dll"
           }
         }
       },
@@ -1187,7 +1358,8 @@
         "runtime": {
           "lib/net8.0/Serilog.Enrichers.Thread.dll": {
             "assemblyVersion": "4.0.0.0",
-            "fileVersion": "4.0.0.0"
+            "fileVersion": "4.0.0.0",
+            "localPath": "Serilog.Enrichers.Thread.dll"
           }
         }
       },
@@ -1199,7 +1371,8 @@
         "runtime": {
           "lib/net10.0/Serilog.Extensions.Hosting.dll": {
             "assemblyVersion": "10.0.0.0",
-            "fileVersion": "10.0.0.0"
+            "fileVersion": "10.0.0.0",
+            "localPath": "Serilog.Extensions.Hosting.dll"
           }
         }
       },
@@ -1210,7 +1383,8 @@
         "runtime": {
           "lib/net10.0/Serilog.Extensions.Logging.dll": {
             "assemblyVersion": "10.0.0.0",
-            "fileVersion": "10.0.0.0"
+            "fileVersion": "10.0.0.0",
+            "localPath": "Serilog.Extensions.Logging.dll"
           }
         }
       },
@@ -1221,7 +1395,8 @@
         "runtime": {
           "lib/net8.0/Serilog.Formatting.Compact.dll": {
             "assemblyVersion": "3.0.0.0",
-            "fileVersion": "3.0.0.0"
+            "fileVersion": "3.0.0.0",
+            "localPath": "Serilog.Formatting.Compact.dll"
           }
         }
       },
@@ -1233,7 +1408,8 @@
         "runtime": {
           "lib/net10.0/Serilog.Settings.Configuration.dll": {
             "assemblyVersion": "10.0.0.0",
-            "fileVersion": "10.0.0.0"
+            "fileVersion": "10.0.0.0",
+            "localPath": "Serilog.Settings.Configuration.dll"
           }
         }
       },
@@ -1244,7 +1420,8 @@
         "runtime": {
           "lib/net8.0/Serilog.Sinks.Console.dll": {
             "assemblyVersion": "6.1.1.0",
-            "fileVersion": "6.1.1.0"
+            "fileVersion": "6.1.1.0",
+            "localPath": "Serilog.Sinks.Console.dll"
           }
         }
       },
@@ -1255,7 +1432,8 @@
         "runtime": {
           "lib/net8.0/Serilog.Sinks.Debug.dll": {
             "assemblyVersion": "3.0.0.0",
-            "fileVersion": "3.0.0.0"
+            "fileVersion": "3.0.0.0",
+            "localPath": "Serilog.Sinks.Debug.dll"
           }
         }
       },
@@ -1266,7 +1444,8 @@
         "runtime": {
           "lib/net9.0/Serilog.Sinks.File.dll": {
             "assemblyVersion": "7.0.0.0",
-            "fileVersion": "7.0.0.0"
+            "fileVersion": "7.0.0.0",
+            "localPath": "Serilog.Sinks.File.dll"
           }
         }
       },
@@ -1274,7 +1453,8 @@
         "runtime": {
           "lib/net5.0/SharpCompress.dll": {
             "assemblyVersion": "0.30.1.0",
-            "fileVersion": "0.30.1.0"
+            "fileVersion": "0.30.1.0",
+            "localPath": "SharpCompress.dll"
           }
         }
       },
@@ -1282,7 +1462,8 @@
         "runtime": {
           "lib/net5.0/Snappier.dll": {
             "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
+            "fileVersion": "1.0.0.0",
+            "localPath": "Snappier.dll"
           }
         }
       },
@@ -1294,7 +1475,8 @@
         "runtime": {
           "lib/net10.0/StackExchange.Redis.dll": {
             "assemblyVersion": "2.0.0.0",
-            "fileVersion": "2.13.17.28173"
+            "fileVersion": "2.13.17.28173",
+            "localPath": "StackExchange.Redis.dll"
           }
         }
       },
@@ -1305,7 +1487,8 @@
         "runtime": {
           "lib/net10.0/Swashbuckle.AspNetCore.Swagger.dll": {
             "assemblyVersion": "10.3.1.0",
-            "fileVersion": "10.3.1.3201"
+            "fileVersion": "10.3.1.3201",
+            "localPath": "Swashbuckle.AspNetCore.Swagger.dll"
           }
         }
       },
@@ -1316,7 +1499,8 @@
         "runtime": {
           "lib/net10.0/Swashbuckle.AspNetCore.SwaggerGen.dll": {
             "assemblyVersion": "10.2.1.0",
-            "fileVersion": "10.2.1.2634"
+            "fileVersion": "10.2.1.2634",
+            "localPath": "Swashbuckle.AspNetCore.SwaggerGen.dll"
           }
         }
       },
@@ -1324,7 +1508,8 @@
         "runtime": {
           "lib/net10.0/Swashbuckle.AspNetCore.SwaggerUI.dll": {
             "assemblyVersion": "10.3.1.0",
-            "fileVersion": "10.3.1.3201"
+            "fileVersion": "10.3.1.3201",
+            "localPath": "Swashbuckle.AspNetCore.SwaggerUI.dll"
           }
         }
       },
@@ -1332,7 +1517,8 @@
         "runtime": {
           "lib/net6.0/System.CodeDom.dll": {
             "assemblyVersion": "6.0.0.0",
-            "fileVersion": "6.0.21.52210"
+            "fileVersion": "6.0.21.52210",
+            "localPath": "System.CodeDom.dll"
           }
         }
       },
@@ -1349,7 +1535,8 @@
         "runtime": {
           "lib/net9.0/System.Composition.AttributedModel.dll": {
             "assemblyVersion": "9.0.0.0",
-            "fileVersion": "9.0.24.52809"
+            "fileVersion": "9.0.24.52809",
+            "localPath": "System.Composition.AttributedModel.dll"
           }
         }
       },
@@ -1360,7 +1547,8 @@
         "runtime": {
           "lib/net9.0/System.Composition.Convention.dll": {
             "assemblyVersion": "9.0.0.0",
-            "fileVersion": "9.0.24.52809"
+            "fileVersion": "9.0.24.52809",
+            "localPath": "System.Composition.Convention.dll"
           }
         }
       },
@@ -1371,7 +1559,8 @@
         "runtime": {
           "lib/net9.0/System.Composition.Hosting.dll": {
             "assemblyVersion": "9.0.0.0",
-            "fileVersion": "9.0.24.52809"
+            "fileVersion": "9.0.24.52809",
+            "localPath": "System.Composition.Hosting.dll"
           }
         }
       },
@@ -1379,7 +1568,8 @@
         "runtime": {
           "lib/net9.0/System.Composition.Runtime.dll": {
             "assemblyVersion": "9.0.0.0",
-            "fileVersion": "9.0.24.52809"
+            "fileVersion": "9.0.24.52809",
+            "localPath": "System.Composition.Runtime.dll"
           }
         }
       },
@@ -1392,7 +1582,8 @@
         "runtime": {
           "lib/net9.0/System.Composition.TypedParts.dll": {
             "assemblyVersion": "9.0.0.0",
-            "fileVersion": "9.0.24.52809"
+            "fileVersion": "9.0.24.52809",
+            "localPath": "System.Composition.TypedParts.dll"
           }
         }
       },
@@ -1403,7 +1594,8 @@
         "runtime": {
           "lib/net9.0/System.Configuration.ConfigurationManager.dll": {
             "assemblyVersion": "9.0.0.0",
-            "fileVersion": "9.0.1826.31522"
+            "fileVersion": "9.0.1826.31522",
+            "localPath": "System.Configuration.ConfigurationManager.dll"
           }
         }
       },
@@ -1415,7 +1607,8 @@
         "runtime": {
           "lib/net10.0/System.IdentityModel.Tokens.Jwt.dll": {
             "assemblyVersion": "8.16.0.0",
-            "fileVersion": "8.16.0.26043"
+            "fileVersion": "8.16.0.26043",
+            "localPath": "System.IdentityModel.Tokens.Jwt.dll"
           }
         }
       },
@@ -1423,7 +1616,8 @@
         "runtime": {
           "lib/net10.0/System.IO.Hashing.dll": {
             "assemblyVersion": "10.0.0.12",
-            "fileVersion": "10.0.1226.42308"
+            "fileVersion": "10.0.1226.42308",
+            "localPath": "System.IO.Hashing.dll"
           }
         }
       },
@@ -1431,7 +1625,8 @@
         "runtime": {
           "lib/net9.0/System.Security.Cryptography.ProtectedData.dll": {
             "assemblyVersion": "9.0.0.0",
-            "fileVersion": "9.0.1826.31522"
+            "fileVersion": "9.0.1826.31522",
+            "localPath": "System.Security.Cryptography.ProtectedData.dll"
           }
         }
       },
@@ -1439,7 +1634,8 @@
         "runtime": {
           "lib/net7.0/ZstdSharp.dll": {
             "assemblyVersion": "0.7.3.0",
-            "fileVersion": "0.7.3.0"
+            "fileVersion": "0.7.3.0",
+            "localPath": "ZstdSharp.dll"
           }
         }
       },

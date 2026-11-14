@@ -21,7 +21,12 @@ builder.Services.AddSingleton<DatabaseInitializer>();
 var connectionString = builder.Configuration.GetConnectionString("CatalogDb")
     ?? throw new InvalidOperationException("Connection string 'CatalogDb' is missing");
 
-builder.AddRedisDistributedCache("redis");   
+builder.AddRedisDistributedCache("redis", configureOptions: o =>
+{
+    o.ConnectTimeout = 1000;
+    o.SyncTimeout = 500;
+    o.AsyncTimeout = 500;
+});
 builder.Services.AddMemoryCache(o =>
 {
     o.SizeLimit = 10_000;

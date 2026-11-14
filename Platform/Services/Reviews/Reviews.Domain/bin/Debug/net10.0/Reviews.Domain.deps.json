@@ -18,7 +18,8 @@
         "runtime": {
           "lib/net6.0/MongoDB.Bson.dll": {
             "assemblyVersion": "3.13.0.0",
-            "fileVersion": "3.13.0.0"
+            "fileVersion": "3.13.0.0",
+            "localPath": "MongoDB.Bson.dll"
           }
         }
       }

@@ -11,10 +11,18 @@ builder.Services.AddProblemDetails();
 builder.Services.ConfigureHttpJsonOptions(o =>
     o.SerializerOptions.DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull);
 
-builder.AddRedisDistributedCache("redis");   
+builder.AddRedisDistributedCache("redis", configureOptions: o =>
+{
+    o.ConnectTimeout = 1000;
+    o.SyncTimeout = 500;
+    o.AsyncTimeout = 500;
+}); 
+
 builder.Services.AddScoped<OrderCompositionService>();
 builder.Services.AddScoped<CachedOrderComposition>();
-builder.Services.AddAggregatorSources(builder.Configuration);   
+builder.Services.AddAggregatorSources(builder.Configuration);
+
+
 
 var app = builder.Build();
 app.Logger.LogInformation("Aggregator transport: {Transport}", GrpcClientsExtensions.TransportName(app.Configuration));
