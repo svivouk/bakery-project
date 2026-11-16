@@ -3,6 +3,7 @@ using Microsoft.OpenApi;
 using OpenTelemetry.Trace;
 using Orders.Api;
 using Orders.Api.GrpcServices;
+using Orders.Api.Metrics;
 using Orders.Api.Middleware;
 using Orders.Bll;
 using Orders.Dal;
@@ -17,7 +18,7 @@ try
 {
     var builder = WebApplication.CreateBuilder(args);
     builder.AddServiceDefaults();
-
+    
     var connectionString = builder.Configuration.GetConnectionString("OrdersDb")
         ?? throw new InvalidOperationException("Не задано рядок підключення ConnectionStrings:OrdersDb.");
     builder.Services.AddHttpContextAccessor();
@@ -25,6 +26,7 @@ try
     builder.Services.AddOrdersDb(connectionString);                                          // DbContext + Unit of Work + сідер
     builder.Services.AddOrdersApplication(builder.Configuration["AutoMapper:LicenseKey"]);   // BLL, валідатори, AutoMapper
     builder.Services.ConfigureOpenTelemetryTracerProvider(t => t.AddSource(Telemetry.SourceName));
+    builder.Services.AddSingleton<OrdersMetrics>();
     builder.Services
         .AddControllers()
         // enum передаються рядками ("Percentage"), а не числами

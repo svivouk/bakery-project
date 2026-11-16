@@ -77,6 +77,17 @@ public static class Extensions
                 .AddHttpClientInstrumentation()
                 .AddRuntimeInstrumentation()
                 .AddMeter("Polly")
+                .AddMeter("Orders.Api")
+                .AddMeter("Catalog.Api")
+                .AddMeter("Reviews.Api")
+                .AddView("orders.operation.duration", new ExplicitBucketHistogramConfiguration
+                {
+                    Boundaries = new double[] { 5, 10, 25, 50, 100, 250, 500, 1000, 2500, 5000 }
+                })
+                .AddView("catalog.operation.duration", new ExplicitBucketHistogramConfiguration
+                {
+                    Boundaries = new double[] { 1, 2, 5, 10, 25, 50, 100, 250, 500, 1000 }
+                })
                 )
             .WithTracing(t =>
             {

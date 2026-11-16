@@ -13,6 +13,7 @@ using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Orders.Api.Middleware;
 using OpenTelemetry.Metrics;
 using Serilog;
+using Catlog.Api.Metrics;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.AddServiceDefaults();
@@ -41,6 +42,7 @@ builder.Services.AddAutoMapper(cfg => cfg.AddProfile<CatalogProfile>());
 builder.Services.AddScoped<ICategoryService, CategoryService>();
 builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddScoped<IStockService, StockService>();
+builder.Services.AddSingleton<CatalogMetrics>();
 
 builder.Services.AddHostedService<ReservationCleanupWorker>();
 builder.Services.AddHostedService<CacheWarmupWorker>();

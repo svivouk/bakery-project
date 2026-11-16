@@ -6,6 +6,7 @@ using Reviews.Infrastructure.Persistence;
 using Reviews.WebApi;
 using Reviews.WebApi.GrpcServices;
 using Reviews.WebApi.Infrastructure;
+using Reviews.WebApi.Metrics;
 using System.Diagnostics;
 using System.Reflection;
 using System.Text.Json.Serialization;
@@ -29,6 +30,7 @@ builder.Services.PostConfigure<MongoDbSettings>(o =>
     var dbName = MongoUrl.Create(cs).DatabaseName;
     if (!string.IsNullOrWhiteSpace(dbName)) o.DatabaseName = dbName;
 });
+builder.Services.AddSingleton<ReviewsMetrics>();
 
 // AutoMapper: профіль сутність → DTO (Application) і HTTP-контракт → команда (WebApi); один реєстр на обидві збірки.
 builder.Services.AddAutoMapper(
