@@ -3,6 +3,7 @@ using MongoDB.Driver;
 using Reviews.Application;
 using Reviews.Infrastructure;
 using Reviews.Infrastructure.Persistence;
+using Reviews.WebApi;
 using Reviews.WebApi.GrpcServices;
 using Reviews.WebApi.Infrastructure;
 using System.Diagnostics;
@@ -68,6 +69,7 @@ app.UseStatusCodePages();
 app.MapGrpcService<ReviewsGrpcService>();
 if (app.Environment.IsDevelopment())
 {
+    app.UseChaos();
     app.UseSwagger();
     app.UseSwaggerUI();      
 }

@@ -75,10 +75,12 @@ public static class Extensions
             .WithMetrics(m => m
                 .AddAspNetCoreInstrumentation()
                 .AddHttpClientInstrumentation()
-                .AddRuntimeInstrumentation())
+                .AddRuntimeInstrumentation()
+                .AddMeter("Polly")
+                )
             .WithTracing(t =>
             {
-                t.AddSource(serviceName)                                            // власні spans (3.3)
+                t.AddSource(serviceName)                                            
                  .AddSource("MongoDB.Driver.Core.Extensions.DiagnosticSources")     // MongoDB
                  .AddAspNetCoreInstrumentation(o => o.Filter = ctx =>
                      !ctx.Request.Path.StartsWithSegments("/health") &&
