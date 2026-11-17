@@ -102,3 +102,5 @@ C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Platform
 C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Platform.Aggregator\obj\Debug\net10.0\Platform.Aggregator.pdb
 C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Platform.Aggregator\obj\Debug\net10.0\Platform.Aggregator.genruntimeconfig.cache
 C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Platform.Aggregator\obj\Debug\net10.0\ref\Platform.Aggregator.dll
+C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Platform.Aggregator\bin\Debug\net10.0\HealthChecks.Uris.dll
+C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Platform.Aggregator\bin\Debug\net10.0\Grpc.HealthCheck.dll

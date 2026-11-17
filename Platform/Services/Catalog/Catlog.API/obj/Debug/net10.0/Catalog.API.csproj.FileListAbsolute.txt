@@ -235,3 +235,6 @@ C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Services
 C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Services\Catalog\Catlog.API\obj\Debug\net10.0\Catalog.API.pdb
 C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Services\Catalog\Catlog.API\obj\Debug\net10.0\Catalog.API.genruntimeconfig.cache
 C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Services\Catalog\Catlog.API\obj\Debug\net10.0\ref\Catalog.API.dll
+C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Services\Catalog\Catlog.API\bin\Debug\net10.0\HealthChecks.SqlServer.dll
+C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Services\Catalog\Catlog.API\bin\Debug\net10.0\Grpc.AspNetCore.HealthChecks.dll
+C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Services\Catalog\Catlog.API\bin\Debug\net10.0\Grpc.HealthCheck.dll

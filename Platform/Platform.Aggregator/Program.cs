@@ -1,8 +1,11 @@
-using System.Text.Json.Serialization;
 using Grpc.Core;
+using Grpc.Health.V1;
+using Microsoft.Extensions.Diagnostics.HealthChecks;
 using Platform.Aggregator.Clients;
 using Platform.Aggregator.GrpcClients;
+using Platform.Aggregator.Health;
 using Platform.Aggregator.Services;
+using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.AddServiceDefaults();
@@ -22,7 +25,18 @@ builder.Services.AddScoped<OrderCompositionService>();
 builder.Services.AddScoped<CachedOrderComposition>();
 builder.Services.AddAggregatorSources(builder.Configuration);
 
+foreach (var name in new[] { "catalog-api", "orders-api", "reviews-api" })
+{
+    builder.Services.AddGrpcClient<Health.HealthClient>(name, o => o.Address = new Uri($"https://{name}"));
+}
 
+builder.Services.AddHealthChecks()
+    .AddTypeActivatedCheck<GrpcServiceHealthCheck>("catalog-api",
+        failureStatus: HealthStatus.Unhealthy, tags: ["grpc", "downstream", "ready"], args: ["catalog-api"])
+    .AddTypeActivatedCheck<GrpcServiceHealthCheck>("orders-api",
+        failureStatus: HealthStatus.Unhealthy, tags: ["grpc", "downstream", "ready"], args: ["orders-api"])
+    .AddTypeActivatedCheck<GrpcServiceHealthCheck>("reviews-api",
+        failureStatus: HealthStatus.Degraded, tags: ["grpc", "downstream"], args: ["reviews-api"]);
 
 var app = builder.Build();
 app.Logger.LogInformation("Aggregator transport: {Transport}", GrpcClientsExtensions.TransportName(app.Configuration));

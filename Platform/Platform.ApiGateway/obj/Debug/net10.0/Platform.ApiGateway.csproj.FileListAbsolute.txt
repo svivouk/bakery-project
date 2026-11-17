@@ -93,3 +93,4 @@ C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Platform
 C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Platform.ApiGateway\obj\Debug\net10.0\Platform.ApiGateway.pdb
 C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Platform.ApiGateway\obj\Debug\net10.0\Platform.ApiGateway.genruntimeconfig.cache
 C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Platform.ApiGateway\obj\Debug\net10.0\ref\Platform.ApiGateway.dll
+C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Platform.ApiGateway\bin\Debug\net10.0\HealthChecks.Uris.dll

@@ -66,6 +66,35 @@
           }
         }
       },
+      "AspNetCore.HealthChecks.SqlServer/9.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Data.SqlClient": "5.2.2"
+        },
+        "compile": {
+          "lib/net8.0/HealthChecks.SqlServer.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/HealthChecks.SqlServer.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "AspNetCore.HealthChecks.Uris/9.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/HealthChecks.Uris.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/HealthChecks.Uris.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "AutoMapper/16.2.0": {
         "type": "package",
         "dependencies": {
@@ -151,6 +180,26 @@
           "lib/net10.0/_._": {}
         }
       },
+      "Grpc.AspNetCore.HealthChecks/2.85.0": {
+        "type": "package",
+        "dependencies": {
+          "Grpc.AspNetCore.Server": "2.85.0",
+          "Grpc.HealthCheck": "2.85.0"
+        },
+        "compile": {
+          "lib/net10.0/Grpc.AspNetCore.HealthChecks.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/Grpc.AspNetCore.HealthChecks.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
       "Grpc.AspNetCore.Server/2.85.0": {
         "type": "package",
         "dependencies": {
@@ -199,6 +248,23 @@
         },
         "runtime": {
           "lib/netstandard2.1/Grpc.Core.Api.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Grpc.HealthCheck/2.85.0": {
+        "type": "package",
+        "dependencies": {
+          "Google.Protobuf": "3.36.2",
+          "Grpc.Core.Api": "2.85.0"
+        },
+        "compile": {
+          "lib/net10.0/Grpc.HealthCheck.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/Grpc.HealthCheck.dll": {
             "related": ".pdb;.xml"
           }
         }
@@ -2151,8 +2217,11 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v10.0",
         "dependencies": {
+          "AspNetCore.HealthChecks.Redis": "9.0.0",
+          "AspNetCore.HealthChecks.Uris": "9.0.0",
           "Aspire.StackExchange.Redis.DistributedCaching": "13.6.4",
           "Google.Protobuf": "3.36.2",
+          "Grpc.HealthCheck": "2.85.0",
           "Grpc.Net.ClientFactory": "2.85.0",
           "Microsoft.AspNetCore.OpenApi": "10.0.12",
           "Platform.ServiceDefaults": "1.0.0"
@@ -2260,6 +2329,38 @@
         "lib/net8.0/HealthChecks.Redis.xml",
         "lib/netstandard2.0/HealthChecks.Redis.dll",
         "lib/netstandard2.0/HealthChecks.Redis.xml"
+      ]
+    },
+    "AspNetCore.HealthChecks.SqlServer/9.0.0": {
+      "sha512": "UxCf65iCF2nU1u7AcB320abjL4CRg5swCgJECY6mKk1j5lrGMfVtskWwriGs1T29pYdRig9Vra3SPnP+4G82pA==",
+      "type": "package",
+      "path": "aspnetcore.healthchecks.sqlserver/9.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "aspnetcore.healthchecks.sqlserver.9.0.0.nupkg.sha512",
+        "aspnetcore.healthchecks.sqlserver.nuspec",
+        "icon.png",
+        "lib/net8.0/HealthChecks.SqlServer.dll",
+        "lib/net8.0/HealthChecks.SqlServer.xml",
+        "lib/netstandard2.0/HealthChecks.SqlServer.dll",
+        "lib/netstandard2.0/HealthChecks.SqlServer.xml"
+      ]
+    },
+    "AspNetCore.HealthChecks.Uris/9.0.0": {
+      "sha512": "XYdNlA437KeF8p9qOpZFyNqAN+c0FXt/JjTvzH/Qans0q0O3pPE8KPnn39ucQQjR/Roum1vLTP3kXiUs8VHyuA==",
+      "type": "package",
+      "path": "aspnetcore.healthchecks.uris/9.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "aspnetcore.healthchecks.uris.9.0.0.nupkg.sha512",
+        "aspnetcore.healthchecks.uris.nuspec",
+        "icon.png",
+        "lib/net8.0/HealthChecks.Uris.dll",
+        "lib/net8.0/HealthChecks.Uris.xml",
+        "lib/netstandard2.0/HealthChecks.Uris.dll",
+        "lib/netstandard2.0/HealthChecks.Uris.xml"
       ]
     },
     "AutoMapper/16.2.0": {
@@ -2373,6 +2474,27 @@
         "packageIcon.png"
       ]
     },
+    "Grpc.AspNetCore.HealthChecks/2.85.0": {
+      "sha512": "MKnaKAEf1JHf3QjT4r3SSmn1TUeu+2PrLEit2SuToeehPJ9vO2VOAF2PzFxXUD7/AzOu0C02mBuLFmtEUHlc/A==",
+      "type": "package",
+      "path": "grpc.aspnetcore.healthchecks/2.85.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "grpc.aspnetcore.healthchecks.2.85.0.nupkg.sha512",
+        "grpc.aspnetcore.healthchecks.nuspec",
+        "lib/net10.0/Grpc.AspNetCore.HealthChecks.dll",
+        "lib/net10.0/Grpc.AspNetCore.HealthChecks.pdb",
+        "lib/net10.0/Grpc.AspNetCore.HealthChecks.xml",
+        "lib/net8.0/Grpc.AspNetCore.HealthChecks.dll",
+        "lib/net8.0/Grpc.AspNetCore.HealthChecks.pdb",
+        "lib/net8.0/Grpc.AspNetCore.HealthChecks.xml",
+        "lib/net9.0/Grpc.AspNetCore.HealthChecks.dll",
+        "lib/net9.0/Grpc.AspNetCore.HealthChecks.pdb",
+        "lib/net9.0/Grpc.AspNetCore.HealthChecks.xml",
+        "packageIcon.png"
+      ]
+    },
     "Grpc.AspNetCore.Server/2.85.0": {
       "sha512": "0ECGrMKizFFYCqgHP7SMcOmC0z3eCIRekExrgp9rPj6Lner+0ZyCTjiArJ6h5vfBV7W13D1ypPY2uwyTkBbnMg==",
       "type": "package",
@@ -2435,6 +2557,34 @@
         "lib/netstandard2.1/Grpc.Core.Api.dll",
         "lib/netstandard2.1/Grpc.Core.Api.pdb",
         "lib/netstandard2.1/Grpc.Core.Api.xml",
+        "packageIcon.png"
+      ]
+    },
+    "Grpc.HealthCheck/2.85.0": {
+      "sha512": "cuHDmUdXSSR+xeXPJ65lcCOuH5gHCqjaA/jXnTKNpl0jysdOoqGpeyElhaeIyEtJlenLth9VGGpGL7VYWKIsKA==",
+      "type": "package",
+      "path": "grpc.healthcheck/2.85.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "grpc.healthcheck.2.85.0.nupkg.sha512",
+        "grpc.healthcheck.nuspec",
+        "lib/net10.0/Grpc.HealthCheck.dll",
+        "lib/net10.0/Grpc.HealthCheck.pdb",
+        "lib/net10.0/Grpc.HealthCheck.xml",
+        "lib/net462/Grpc.HealthCheck.dll",
+        "lib/net462/Grpc.HealthCheck.pdb",
+        "lib/net462/Grpc.HealthCheck.xml",
+        "lib/net8.0/Grpc.HealthCheck.dll",
+        "lib/net8.0/Grpc.HealthCheck.pdb",
+        "lib/net8.0/Grpc.HealthCheck.xml",
+        "lib/net9.0/Grpc.HealthCheck.dll",
+        "lib/net9.0/Grpc.HealthCheck.pdb",
+        "lib/net9.0/Grpc.HealthCheck.xml",
+        "lib/netstandard2.0/Grpc.HealthCheck.dll",
+        "lib/netstandard2.0/Grpc.HealthCheck.pdb",
+        "lib/netstandard2.0/Grpc.HealthCheck.xml",
         "packageIcon.png"
       ]
     },
@@ -5850,11 +6000,13 @@
   },
   "projectFileDependencyGroups": {
     "net10.0": [
+      "AspNetCore.HealthChecks.SqlServer >= 9.0.0",
       "Aspire.StackExchange.Redis.DistributedCaching >= 13.6.4",
       "AutoMapper >= 16.2.0",
       "FluentValidation >= 12.2.0",
       "FluentValidation.DependencyInjectionExtensions >= 12.2.0",
       "Grpc.AspNetCore >= 2.85.0",
+      "Grpc.AspNetCore.HealthChecks >= 2.85.0",
       "MicroElements.Swashbuckle.FluentValidation >= 7.2.2",
       "Microsoft.AspNetCore.OpenApi >= 10.0.14",
       "Microsoft.EntityFrameworkCore >= 10.0.13",
@@ -5933,6 +6085,10 @@
         "framework": "net10.0",
         "targetAlias": "net10.0",
         "dependencies": {
+          "AspNetCore.HealthChecks.SqlServer": {
+            "target": "Package",
+            "version": "[9.0.0, )"
+          },
           "Aspire.StackExchange.Redis.DistributedCaching": {
             "target": "Package",
             "version": "[13.6.4, )"
@@ -5950,6 +6106,10 @@
             "version": "[12.2.0, )"
           },
           "Grpc.AspNetCore": {
+            "target": "Package",
+            "version": "[2.85.0, )"
+          },
+          "Grpc.AspNetCore.HealthChecks": {
             "target": "Package",
             "version": "[2.85.0, )"
           },

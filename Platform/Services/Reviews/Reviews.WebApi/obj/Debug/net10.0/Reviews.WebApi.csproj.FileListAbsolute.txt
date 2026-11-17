@@ -241,3 +241,6 @@ C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Services
 C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Services\Reviews\Reviews.WebApi\obj\Debug\net10.0\Reviews.WebApi.pdb
 C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Services\Reviews\Reviews.WebApi\obj\Debug\net10.0\Reviews.WebApi.genruntimeconfig.cache
 C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Services\Reviews\Reviews.WebApi\obj\Debug\net10.0\ref\Reviews.WebApi.dll
+C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Services\Reviews\Reviews.WebApi\bin\Debug\net10.0\HealthChecks.MongoDb.dll
+C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Services\Reviews\Reviews.WebApi\bin\Debug\net10.0\Grpc.AspNetCore.HealthChecks.dll
+C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Services\Reviews\Reviews.WebApi\bin\Debug\net10.0\Grpc.HealthCheck.dll

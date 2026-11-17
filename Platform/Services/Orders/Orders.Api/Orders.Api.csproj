@@ -10,10 +10,12 @@
 
   <ItemGroup>
     <PackageReference Include="Aspire.StackExchange.Redis.DistributedCaching" Version="13.6.4" />
+    <PackageReference Include="AspNetCore.HealthChecks.SqlServer" Version="9.0.0" />
     <PackageReference Include="AutoMapper" Version="16.2.0" />
     <PackageReference Include="FluentValidation" Version="12.2.0" />
     <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="12.2.0" />
     <PackageReference Include="Grpc.AspNetCore" Version="2.85.0" />
+    <PackageReference Include="Grpc.AspNetCore.HealthChecks" Version="2.85.0" />
     <PackageReference Include="MicroElements.Swashbuckle.FluentValidation" Version="7.2.2" />
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.14" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="10.0.13" />

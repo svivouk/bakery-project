@@ -145,29 +145,50 @@ public static class Extensions
 
     public static TBuilder AddDefaultHealthChecks<TBuilder>(this TBuilder builder) where TBuilder : IHostApplicationBuilder
     {
+        builder.Services.AddSingleton<StartupState>();
+
         builder.Services.AddHealthChecks()
-            // Add a default liveness check to ensure app is responsive
-            .AddCheck("self", () => HealthCheckResult.Healthy(), ["live"]);
+            .AddCheck("self", () => HealthCheckResult.Healthy(), ["live"])
+            .AddCheck<StartupHealthCheck>("startup", tags: ["startup"]);
 
         return builder;
     }
 
     public static WebApplication MapDefaultEndpoints(this WebApplication app)
     {
-        // Adding health checks endpoints to applications in non-development environments has security implications.
-        // See https://aka.ms/aspire/healthchecks for details before enabling these endpoints in non-development environments.
-        if (app.Environment.IsDevelopment())
-        {
-            // All health checks must pass for app to be considered ready to accept traffic after starting
-            app.MapHealthChecks(HealthEndpointPath);
+        // Стан запуску: сервіси без повільного старту вважаються запущеними одразу
+        var startup = app.Services.GetRequiredService<StartupState>();
+        if (app.Configuration["Startup:Manual"] != "true")
+            app.Lifetime.ApplicationStarted.Register(startup.MarkCompleted);
 
-            // Only health checks tagged with the "live" tag must pass for app to be considered alive
-            app.MapHealthChecks(AlivenessEndpointPath, new HealthCheckOptions
-            {
-                Predicate = r => r.Tags.Contains("live")
-            });
-        }
+        app.MapHealthChecks("/health", new HealthCheckOptions
+        {
+            Predicate = check => !check.Tags.Contains("startup")
+        });
+        app.MapHealthChecks("/alive", new HealthCheckOptions
+        {
+            Predicate = check => check.Tags.Contains("live")
+        });
+        app.MapHealthChecks("/health/live", new HealthCheckOptions
+        {
+            Predicate = check => check.Tags.Contains("live")
+        });
+        app.MapHealthChecks("/health/ready", new HealthCheckOptions
+        {
+            Predicate = check => check.Tags.Contains("ready"),
+            ResponseWriter = HealthResponseWriter.WriteJsonResponse
+        });
+        app.MapHealthChecks("/health/startup", new HealthCheckOptions
+        {
+            Predicate = check => check.Tags.Contains("startup"),
+            ResponseWriter = HealthResponseWriter.WriteJsonResponse
+        });
 
         return app;
     }
-}
+
+        
+    }
+
+
+

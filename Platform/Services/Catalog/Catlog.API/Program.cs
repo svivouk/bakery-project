@@ -2,18 +2,19 @@ using AutoMapper;
 using Catalog.Api.GrpcServices;
 using Catalog.Api.Health;
 using Catalog.Api.Middleware;
-using Catalog.Bll.Caching;
 using Catalog.Api.Workers;
+using Catalog.Bll.Caching;
 using Catalog.Bll.Interfaces;
 using Catalog.Bll.Mapping;
 using Catalog.Bll.Services;
 using Catalog.Dal.Interfaces;
 using Catalog.Dal.Repositories;
-using Microsoft.AspNetCore.Diagnostics.HealthChecks;
-using Orders.Api.Middleware;
-using OpenTelemetry.Metrics;
-using Serilog;
 using Catlog.Api.Metrics;
+using Microsoft.AspNetCore.Diagnostics.HealthChecks;
+using Microsoft.Extensions.Diagnostics.HealthChecks;
+using OpenTelemetry.Metrics;
+using Orders.Api.Middleware;
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.AddServiceDefaults();
@@ -21,6 +22,23 @@ builder.Services.AddSingleton<DatabaseInitializer>();
 
 var connectionString = builder.Configuration.GetConnectionString("CatalogDb")
     ?? throw new InvalidOperationException("Connection string 'CatalogDb' is missing");
+
+builder.Services.AddHealthChecks()
+    .AddSqlServer(
+        connectionString: connectionString!,
+        name: "orders-db",
+        failureStatus: HealthStatus.Unhealthy,
+        tags: ["database", "sql", "ready"],
+        timeout: TimeSpan.FromSeconds(5))
+    .AddRedis(
+    redisConnectionString: builder.Configuration.GetConnectionString("redis")!,
+    name: "redis-cache",
+    failureStatus: HealthStatus.Degraded,       
+    tags: ["cache", "redis"],
+    timeout: TimeSpan.FromSeconds(3)); ;
+
+builder.Services.AddGrpcHealthChecks(o =>
+    o.Services.MapService("", r => r.Tags.Contains("ready")));
 
 builder.AddRedisDistributedCache("redis", configureOptions: o =>
 {
@@ -43,7 +61,6 @@ builder.Services.AddScoped<ICategoryService, CategoryService>();
 builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddScoped<IStockService, StockService>();
 builder.Services.AddSingleton<CatalogMetrics>();
-
 builder.Services.AddHostedService<ReservationCleanupWorker>();
 builder.Services.AddHostedService<CacheWarmupWorker>();
 
@@ -61,7 +78,7 @@ var app = builder.Build();
 await app.Services.GetRequiredService<DatabaseInitializer>().InitializeAsync();
 app.UseCorrelationId();
 app.UseMiddleware<ExceptionHandlingMiddleware>();
-
+app.MapGrpcHealthChecksService();
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -76,6 +93,11 @@ if (app.Environment.IsDevelopment())
     {
         Predicate = r => r.Tags.Contains("cache"),
         ResponseWriter = CacheHealthCheck.WriteResponse
+    });
+
+    app.MapHealthChecks("/health", new HealthCheckOptions
+    {
+        Predicate = check => !check.Tags.Contains("startup")
     });
 }
 

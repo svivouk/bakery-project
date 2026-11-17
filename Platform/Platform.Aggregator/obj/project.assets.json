@@ -66,6 +66,19 @@
           }
         }
       },
+      "AspNetCore.HealthChecks.Uris/9.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/HealthChecks.Uris.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/HealthChecks.Uris.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "DnsClient/1.6.1": {
         "type": "package",
         "compile": {
@@ -101,6 +114,23 @@
         },
         "runtime": {
           "lib/netstandard2.1/Grpc.Core.Api.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Grpc.HealthCheck/2.85.0": {
+        "type": "package",
+        "dependencies": {
+          "Google.Protobuf": "3.36.2",
+          "Grpc.Core.Api": "2.85.0"
+        },
+        "compile": {
+          "lib/net10.0/Grpc.HealthCheck.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/Grpc.HealthCheck.dll": {
             "related": ".pdb;.xml"
           }
         }
@@ -1012,6 +1042,22 @@
         "lib/netstandard2.0/HealthChecks.Redis.xml"
       ]
     },
+    "AspNetCore.HealthChecks.Uris/9.0.0": {
+      "sha512": "XYdNlA437KeF8p9qOpZFyNqAN+c0FXt/JjTvzH/Qans0q0O3pPE8KPnn39ucQQjR/Roum1vLTP3kXiUs8VHyuA==",
+      "type": "package",
+      "path": "aspnetcore.healthchecks.uris/9.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "aspnetcore.healthchecks.uris.9.0.0.nupkg.sha512",
+        "aspnetcore.healthchecks.uris.nuspec",
+        "icon.png",
+        "lib/net8.0/HealthChecks.Uris.dll",
+        "lib/net8.0/HealthChecks.Uris.xml",
+        "lib/netstandard2.0/HealthChecks.Uris.dll",
+        "lib/netstandard2.0/HealthChecks.Uris.xml"
+      ]
+    },
     "DnsClient/1.6.1": {
       "sha512": "4H/f2uYJOZ+YObZjpY9ABrKZI+JNw3uizp6oMzTXwDw6F+2qIPhpRl/1t68O/6e98+vqNiYGu+lswmwdYUy3gg==",
       "type": "package",
@@ -1072,6 +1118,34 @@
         "lib/netstandard2.1/Grpc.Core.Api.dll",
         "lib/netstandard2.1/Grpc.Core.Api.pdb",
         "lib/netstandard2.1/Grpc.Core.Api.xml",
+        "packageIcon.png"
+      ]
+    },
+    "Grpc.HealthCheck/2.85.0": {
+      "sha512": "cuHDmUdXSSR+xeXPJ65lcCOuH5gHCqjaA/jXnTKNpl0jysdOoqGpeyElhaeIyEtJlenLth9VGGpGL7VYWKIsKA==",
+      "type": "package",
+      "path": "grpc.healthcheck/2.85.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "grpc.healthcheck.2.85.0.nupkg.sha512",
+        "grpc.healthcheck.nuspec",
+        "lib/net10.0/Grpc.HealthCheck.dll",
+        "lib/net10.0/Grpc.HealthCheck.pdb",
+        "lib/net10.0/Grpc.HealthCheck.xml",
+        "lib/net462/Grpc.HealthCheck.dll",
+        "lib/net462/Grpc.HealthCheck.pdb",
+        "lib/net462/Grpc.HealthCheck.xml",
+        "lib/net8.0/Grpc.HealthCheck.dll",
+        "lib/net8.0/Grpc.HealthCheck.pdb",
+        "lib/net8.0/Grpc.HealthCheck.xml",
+        "lib/net9.0/Grpc.HealthCheck.dll",
+        "lib/net9.0/Grpc.HealthCheck.pdb",
+        "lib/net9.0/Grpc.HealthCheck.xml",
+        "lib/netstandard2.0/Grpc.HealthCheck.dll",
+        "lib/netstandard2.0/Grpc.HealthCheck.pdb",
+        "lib/netstandard2.0/Grpc.HealthCheck.xml",
         "packageIcon.png"
       ]
     },
@@ -2365,8 +2439,11 @@
   },
   "projectFileDependencyGroups": {
     "net10.0": [
+      "AspNetCore.HealthChecks.Redis >= 9.0.0",
+      "AspNetCore.HealthChecks.Uris >= 9.0.0",
       "Aspire.StackExchange.Redis.DistributedCaching >= 13.6.4",
       "Google.Protobuf >= 3.36.2",
+      "Grpc.HealthCheck >= 2.85.0",
       "Grpc.Net.ClientFactory >= 2.85.0",
       "Grpc.Tools >= 2.85.0",
       "Microsoft.AspNetCore.OpenApi >= 10.0.12",
@@ -2430,6 +2507,14 @@
         "framework": "net10.0",
         "targetAlias": "net10.0",
         "dependencies": {
+          "AspNetCore.HealthChecks.Redis": {
+            "target": "Package",
+            "version": "[9.0.0, )"
+          },
+          "AspNetCore.HealthChecks.Uris": {
+            "target": "Package",
+            "version": "[9.0.0, )"
+          },
           "Aspire.StackExchange.Redis.DistributedCaching": {
             "target": "Package",
             "version": "[13.6.4, )"
@@ -2437,6 +2522,10 @@
           "Google.Protobuf": {
             "target": "Package",
             "version": "[3.36.2, )"
+          },
+          "Grpc.HealthCheck": {
+            "target": "Package",
+            "version": "[2.85.0, )"
           },
           "Grpc.Net.ClientFactory": {
             "target": "Package",

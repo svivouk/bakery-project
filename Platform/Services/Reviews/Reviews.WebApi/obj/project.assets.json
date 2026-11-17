@@ -50,6 +50,22 @@
           "buildTransitive/net10.0/Aspire.StackExchange.Redis.DistributedCaching.targets": {}
         }
       },
+      "AspNetCore.HealthChecks.MongoDb/9.0.0": {
+        "type": "package",
+        "dependencies": {
+          "MongoDB.Driver": "3.0.0"
+        },
+        "compile": {
+          "lib/net8.0/HealthChecks.MongoDb.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/HealthChecks.MongoDb.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "AspNetCore.HealthChecks.Redis/9.0.0": {
         "type": "package",
         "dependencies": {
@@ -151,6 +167,26 @@
           "lib/net10.0/_._": {}
         }
       },
+      "Grpc.AspNetCore.HealthChecks/2.85.0": {
+        "type": "package",
+        "dependencies": {
+          "Grpc.AspNetCore.Server": "2.85.0",
+          "Grpc.HealthCheck": "2.85.0"
+        },
+        "compile": {
+          "lib/net10.0/Grpc.AspNetCore.HealthChecks.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/Grpc.AspNetCore.HealthChecks.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
       "Grpc.AspNetCore.Server/2.85.0": {
         "type": "package",
         "dependencies": {
@@ -199,6 +235,23 @@
         },
         "runtime": {
           "lib/netstandard2.1/Grpc.Core.Api.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Grpc.HealthCheck/2.85.0": {
+        "type": "package",
+        "dependencies": {
+          "Google.Protobuf": "3.36.2",
+          "Grpc.Core.Api": "2.85.0"
+        },
+        "compile": {
+          "lib/net10.0/Grpc.HealthCheck.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/Grpc.HealthCheck.dll": {
             "related": ".pdb;.xml"
           }
         }
@@ -1326,6 +1379,25 @@
         "lib/net9.0/Aspire.StackExchange.Redis.DistributedCaching.xml"
       ]
     },
+    "AspNetCore.HealthChecks.MongoDb/9.0.0": {
+      "sha512": "WAmROqEXlVzjgCdEa9Zor2l6T29jsnKMJQPGbTnkrgpyqPcjwOomuh91CiAebmeWJ/CKenVX+fV/VFffnskgvw==",
+      "type": "package",
+      "path": "aspnetcore.healthchecks.mongodb/9.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "aspnetcore.healthchecks.mongodb.9.0.0.nupkg.sha512",
+        "aspnetcore.healthchecks.mongodb.nuspec",
+        "icon.png",
+        "lib/net472/HealthChecks.MongoDb.dll",
+        "lib/net472/HealthChecks.MongoDb.xml",
+        "lib/net8.0/HealthChecks.MongoDb.dll",
+        "lib/net8.0/HealthChecks.MongoDb.xml",
+        "lib/netstandard2.1/HealthChecks.MongoDb.dll",
+        "lib/netstandard2.1/HealthChecks.MongoDb.xml"
+      ]
+    },
     "AspNetCore.HealthChecks.Redis/9.0.0": {
       "sha512": "yNH0h8GLRbAf+PU5HNVLZ5hNeyq9mDVmRKO9xuZsme/znUYoBJlQvI0gq45gaZNlLncCHkMhR4o90MuT+gxxPw==",
       "type": "package",
@@ -1453,6 +1525,27 @@
         "packageIcon.png"
       ]
     },
+    "Grpc.AspNetCore.HealthChecks/2.85.0": {
+      "sha512": "MKnaKAEf1JHf3QjT4r3SSmn1TUeu+2PrLEit2SuToeehPJ9vO2VOAF2PzFxXUD7/AzOu0C02mBuLFmtEUHlc/A==",
+      "type": "package",
+      "path": "grpc.aspnetcore.healthchecks/2.85.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "grpc.aspnetcore.healthchecks.2.85.0.nupkg.sha512",
+        "grpc.aspnetcore.healthchecks.nuspec",
+        "lib/net10.0/Grpc.AspNetCore.HealthChecks.dll",
+        "lib/net10.0/Grpc.AspNetCore.HealthChecks.pdb",
+        "lib/net10.0/Grpc.AspNetCore.HealthChecks.xml",
+        "lib/net8.0/Grpc.AspNetCore.HealthChecks.dll",
+        "lib/net8.0/Grpc.AspNetCore.HealthChecks.pdb",
+        "lib/net8.0/Grpc.AspNetCore.HealthChecks.xml",
+        "lib/net9.0/Grpc.AspNetCore.HealthChecks.dll",
+        "lib/net9.0/Grpc.AspNetCore.HealthChecks.pdb",
+        "lib/net9.0/Grpc.AspNetCore.HealthChecks.xml",
+        "packageIcon.png"
+      ]
+    },
     "Grpc.AspNetCore.Server/2.85.0": {
       "sha512": "0ECGrMKizFFYCqgHP7SMcOmC0z3eCIRekExrgp9rPj6Lner+0ZyCTjiArJ6h5vfBV7W13D1ypPY2uwyTkBbnMg==",
       "type": "package",
@@ -1515,6 +1608,34 @@
         "lib/netstandard2.1/Grpc.Core.Api.dll",
         "lib/netstandard2.1/Grpc.Core.Api.pdb",
         "lib/netstandard2.1/Grpc.Core.Api.xml",
+        "packageIcon.png"
+      ]
+    },
+    "Grpc.HealthCheck/2.85.0": {
+      "sha512": "cuHDmUdXSSR+xeXPJ65lcCOuH5gHCqjaA/jXnTKNpl0jysdOoqGpeyElhaeIyEtJlenLth9VGGpGL7VYWKIsKA==",
+      "type": "package",
+      "path": "grpc.healthcheck/2.85.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "grpc.healthcheck.2.85.0.nupkg.sha512",
+        "grpc.healthcheck.nuspec",
+        "lib/net10.0/Grpc.HealthCheck.dll",
+        "lib/net10.0/Grpc.HealthCheck.pdb",
+        "lib/net10.0/Grpc.HealthCheck.xml",
+        "lib/net462/Grpc.HealthCheck.dll",
+        "lib/net462/Grpc.HealthCheck.pdb",
+        "lib/net462/Grpc.HealthCheck.xml",
+        "lib/net8.0/Grpc.HealthCheck.dll",
+        "lib/net8.0/Grpc.HealthCheck.pdb",
+        "lib/net8.0/Grpc.HealthCheck.xml",
+        "lib/net9.0/Grpc.HealthCheck.dll",
+        "lib/net9.0/Grpc.HealthCheck.pdb",
+        "lib/net9.0/Grpc.HealthCheck.xml",
+        "lib/netstandard2.0/Grpc.HealthCheck.dll",
+        "lib/netstandard2.0/Grpc.HealthCheck.pdb",
+        "lib/netstandard2.0/Grpc.HealthCheck.xml",
         "packageIcon.png"
       ]
     },
@@ -3330,8 +3451,11 @@
   },
   "projectFileDependencyGroups": {
     "net10.0": [
+      "AspNetCore.HealthChecks.MongoDb >= 9.0.0",
+      "AspNetCore.HealthChecks.Redis >= 9.0.0",
       "Aspire.StackExchange.Redis.DistributedCaching >= 13.6.4",
       "Grpc.AspNetCore >= 2.85.0",
+      "Grpc.AspNetCore.HealthChecks >= 2.85.0",
       "Microsoft.AspNetCore.OpenApi >= 10.0.12",
       "Microsoft.Extensions.Caching.Memory >= 10.0.14",
       "Platform.ServiceDefaults >= 1.0.0",
@@ -3404,11 +3528,23 @@
         "framework": "net10.0",
         "targetAlias": "net10.0",
         "dependencies": {
+          "AspNetCore.HealthChecks.MongoDb": {
+            "target": "Package",
+            "version": "[9.0.0, )"
+          },
+          "AspNetCore.HealthChecks.Redis": {
+            "target": "Package",
+            "version": "[9.0.0, )"
+          },
           "Aspire.StackExchange.Redis.DistributedCaching": {
             "target": "Package",
             "version": "[13.6.4, )"
           },
           "Grpc.AspNetCore": {
+            "target": "Package",
+            "version": "[2.85.0, )"
+          },
+          "Grpc.AspNetCore.HealthChecks": {
             "target": "Package",
             "version": "[2.85.0, )"
           },

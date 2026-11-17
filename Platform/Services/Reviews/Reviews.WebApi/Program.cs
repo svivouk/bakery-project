@@ -1,3 +1,4 @@
+using Microsoft.Extensions.Diagnostics.HealthChecks;
 using Microsoft.OpenApi;
 using MongoDB.Driver;
 using Reviews.Application;
@@ -14,6 +15,19 @@ using System.Text.Json.Serialization;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.AddServiceDefaults();
+builder.Services.AddHealthChecks()
+    .AddMongoDb(
+        sp => sp.GetRequiredService<IMongoClient>(),
+        name: "reviews-db",
+        failureStatus: HealthStatus.Unhealthy,
+        tags: ["database", "mongodb", "ready"],
+        timeout: TimeSpan.FromSeconds(5))
+        .AddRedis(
+        redisConnectionString: builder.Configuration.GetConnectionString("redis")!,
+        name: "redis-cache",
+        failureStatus: HealthStatus.Degraded,        
+        tags: ["cache", "redis"],
+        timeout: TimeSpan.FromSeconds(3)); ;
 
 builder.Services.AddApplication(builder.Configuration);
 // MongoDB: контекст, транзакції, запис (MongoReviewRepository) і читання (ReviewQueries)

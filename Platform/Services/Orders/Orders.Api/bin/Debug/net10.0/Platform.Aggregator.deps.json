@@ -8,8 +8,11 @@
     ".NETCoreApp,Version=v10.0": {
       "Platform.Aggregator/1.0.0": {
         "dependencies": {
+          "AspNetCore.HealthChecks.Redis": "9.0.0",
+          "AspNetCore.HealthChecks.Uris": "9.0.0",
           "Aspire.StackExchange.Redis.DistributedCaching": "13.6.4",
           "Google.Protobuf": "3.36.2",
+          "Grpc.HealthCheck": "2.85.0",
           "Grpc.Net.ClientFactory": "2.85.0",
           "Microsoft.AspNetCore.OpenApi": "10.0.12",
           "Platform.ServiceDefaults": "1.0.0"
@@ -64,6 +67,15 @@
           }
         }
       },
+      "AspNetCore.HealthChecks.Uris/9.0.0": {
+        "runtime": {
+          "lib/net8.0/HealthChecks.Uris.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.0.0",
+            "localPath": "HealthChecks.Uris.dll"
+          }
+        }
+      },
       "DnsClient/1.6.1": {
         "runtime": {
           "lib/net5.0/DnsClient.dll": {
@@ -88,6 +100,19 @@
             "assemblyVersion": "2.0.0.0",
             "fileVersion": "2.85.0.0",
             "localPath": "Grpc.Core.Api.dll"
+          }
+        }
+      },
+      "Grpc.HealthCheck/2.85.0": {
+        "dependencies": {
+          "Google.Protobuf": "3.36.2",
+          "Grpc.Core.Api": "2.85.0"
+        },
+        "runtime": {
+          "lib/net10.0/Grpc.HealthCheck.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.85.0.0",
+            "localPath": "Grpc.HealthCheck.dll"
           }
         }
       },
@@ -714,6 +739,13 @@
       "path": "aspnetcore.healthchecks.redis/9.0.0",
       "hashPath": "aspnetcore.healthchecks.redis.9.0.0.nupkg.sha512"
     },
+    "AspNetCore.HealthChecks.Uris/9.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-XYdNlA437KeF8p9qOpZFyNqAN+c0FXt/JjTvzH/Qans0q0O3pPE8KPnn39ucQQjR/Roum1vLTP3kXiUs8VHyuA==",
+      "path": "aspnetcore.healthchecks.uris/9.0.0",
+      "hashPath": "aspnetcore.healthchecks.uris.9.0.0.nupkg.sha512"
+    },
     "DnsClient/1.6.1": {
       "type": "package",
       "serviceable": true,
@@ -734,6 +766,13 @@
       "sha512": "sha512-cpYu/nw/QhwHcRZMJbYD8lEllKrdwYMiDS4U3oH61nhYPUMNkcCcef4ulv11svHvTBThYV+ju332N9bCrfe7cQ==",
       "path": "grpc.core.api/2.85.0",
       "hashPath": "grpc.core.api.2.85.0.nupkg.sha512"
+    },
+    "Grpc.HealthCheck/2.85.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-cuHDmUdXSSR+xeXPJ65lcCOuH5gHCqjaA/jXnTKNpl0jysdOoqGpeyElhaeIyEtJlenLth9VGGpGL7VYWKIsKA==",
+      "path": "grpc.healthcheck/2.85.0",
+      "hashPath": "grpc.healthcheck.2.85.0.nupkg.sha512"
     },
     "Grpc.Net.Client/2.85.0": {
       "type": "package",

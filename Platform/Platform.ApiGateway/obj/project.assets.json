@@ -2,6 +2,19 @@
   "version": 4,
   "targets": {
     "net10.0": {
+      "AspNetCore.HealthChecks.Uris/9.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/HealthChecks.Uris.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/HealthChecks.Uris.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "DnsClient/1.6.1": {
         "type": "package",
         "compile": {
@@ -797,6 +810,22 @@
     }
   },
   "libraries": {
+    "AspNetCore.HealthChecks.Uris/9.0.0": {
+      "sha512": "XYdNlA437KeF8p9qOpZFyNqAN+c0FXt/JjTvzH/Qans0q0O3pPE8KPnn39ucQQjR/Roum1vLTP3kXiUs8VHyuA==",
+      "type": "package",
+      "path": "aspnetcore.healthchecks.uris/9.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "aspnetcore.healthchecks.uris.9.0.0.nupkg.sha512",
+        "aspnetcore.healthchecks.uris.nuspec",
+        "icon.png",
+        "lib/net8.0/HealthChecks.Uris.dll",
+        "lib/net8.0/HealthChecks.Uris.xml",
+        "lib/netstandard2.0/HealthChecks.Uris.dll",
+        "lib/netstandard2.0/HealthChecks.Uris.xml"
+      ]
+    },
     "DnsClient/1.6.1": {
       "sha512": "4H/f2uYJOZ+YObZjpY9ABrKZI+JNw3uizp6oMzTXwDw6F+2qIPhpRl/1t68O/6e98+vqNiYGu+lswmwdYUy3gg==",
       "type": "package",
@@ -1951,6 +1980,7 @@
   },
   "projectFileDependencyGroups": {
     "net10.0": [
+      "AspNetCore.HealthChecks.Uris >= 9.0.0",
       "Microsoft.AspNetCore.OpenApi >= 10.0.12",
       "Microsoft.Extensions.ServiceDiscovery.Yarp >= 10.11.0",
       "Platform.ServiceDefaults >= 1.0.0",
@@ -2014,6 +2044,10 @@
         "framework": "net10.0",
         "targetAlias": "net10.0",
         "dependencies": {
+          "AspNetCore.HealthChecks.Uris": {
+            "target": "Package",
+            "version": "[9.0.0, )"
+          },
           "Microsoft.AspNetCore.OpenApi": {
             "target": "Package",
             "version": "[10.0.12, )"

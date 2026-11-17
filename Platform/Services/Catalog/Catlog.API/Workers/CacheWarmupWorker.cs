@@ -11,20 +11,22 @@ public sealed class CacheWarmupWorker : BackgroundService
     private readonly ILogger<CacheWarmupWorker> _logger;
     private readonly TimeSpan _interval;
     private readonly int _topCount;
+    private readonly StartupState _startup;
 
-    public CacheWarmupWorker(IServiceScopeFactory scopes, IConfiguration configuration, ILogger<CacheWarmupWorker> logger)
+    public CacheWarmupWorker(IServiceScopeFactory scopes, IConfiguration configuration, ILogger<CacheWarmupWorker> logger, StartupState startup)
     {
         _scopes = scopes;
         _logger = logger;
         _interval = TimeSpan.FromSeconds(Math.Max(10, configuration.GetValue("Cache:WarmupIntervalSeconds", 60)));
         _topCount = Math.Clamp(configuration.GetValue("Cache:WarmupTopProducts", 10), 1, 50);
+        _startup = startup;
     }
 
     protected override async Task ExecuteAsync(CancellationToken stoppingToken)
     {
         try
         {
-            await WarmAsync("startup", stoppingToken);   
+            await WarmAsync("startup", stoppingToken);
 
             using var timer = new PeriodicTimer(_interval);
             while (await timer.WaitForNextTickAsync(stoppingToken))
@@ -32,6 +34,9 @@ public sealed class CacheWarmupWorker : BackgroundService
         }
         catch (OperationCanceledException)
         {
+        }
+        finally {
+            _startup.MarkCompleted();
         }
     }
 
