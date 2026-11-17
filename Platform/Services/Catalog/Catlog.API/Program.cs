@@ -26,7 +26,7 @@ var connectionString = builder.Configuration.GetConnectionString("CatalogDb")
 builder.Services.AddHealthChecks()
     .AddSqlServer(
         connectionString: connectionString!,
-        name: "orders-db",
+        name: "catalog-db",
         failureStatus: HealthStatus.Unhealthy,
         tags: ["database", "sql", "ready"],
         timeout: TimeSpan.FromSeconds(5))
@@ -38,7 +38,9 @@ builder.Services.AddHealthChecks()
     timeout: TimeSpan.FromSeconds(3)); ;
 
 builder.Services.AddGrpcHealthChecks(o =>
-    o.Services.MapService("", r => r.Tags.Contains("ready")));
+{
+    o.Services.Map("", r => r.Tags.Contains("ready"));
+});
 
 builder.AddRedisDistributedCache("redis", configureOptions: o =>
 {
@@ -87,19 +89,6 @@ if (app.Environment.IsDevelopment())
     scope.ServiceProvider.GetRequiredService<IMapper>().ConfigurationProvider.AssertConfigurationIsValid();
 }
 app.MapDefaultEndpoints();
-if (app.Environment.IsDevelopment())
-{
-    app.MapHealthChecks("/health/cache", new HealthCheckOptions
-    {
-        Predicate = r => r.Tags.Contains("cache"),
-        ResponseWriter = CacheHealthCheck.WriteResponse
-    });
-
-    app.MapHealthChecks("/health", new HealthCheckOptions
-    {
-        Predicate = check => !check.Tags.Contains("startup")
-    });
-}
 
 app.MapControllers();
 app.MapGrpcService<CatalogGrpcService>();  

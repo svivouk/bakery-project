@@ -44,8 +44,6 @@ public static class Extensions
             .WriteTo.Console(new CompactJsonFormatter()),
             writeToProviders: true);
 
-        builder.Services.AddHttpContextAccessor();
-        builder.Services.AddTransient<CorrelationIdHandler>();
         builder.ConfigureOpenTelemetry();
         builder.AddDefaultHealthChecks();
         builder.Services.AddServiceDiscovery();

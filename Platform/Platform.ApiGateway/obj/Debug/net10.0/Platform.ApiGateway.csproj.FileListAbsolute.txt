@@ -78,7 +78,6 @@ C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Platform
 C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Platform.ApiGateway\obj\Debug\net10.0\scopedcss\scopedcss.cache
 C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Platform.ApiGateway\obj\Debug\net10.0\scopedcss\bundle\Platform.ApiGateway.styles.css
 C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Platform.ApiGateway\obj\Debug\net10.0\compressed\9y2g6kgved-{0}-tchfgznwy8-tchfgznwy8.gz
-C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Platform.ApiGateway\obj\Debug\net10.0\compressed\m6x6kjxioh-{0}-ofmvo1ff39-ofmvo1ff39.gz
 C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Platform.ApiGateway\obj\Debug\net10.0\compressed\0vqaqvdr2n-{0}-v1vy2to33n-v1vy2to33n.gz
 C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Platform.ApiGateway\obj\Debug\net10.0\compressed\wz0j1xabhq-{0}-ysew0n4kjn-ysew0n4kjn.gz
 C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Platform.ApiGateway\obj\Debug\net10.0\staticwebassets.build.json
@@ -94,3 +93,4 @@ C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Platform
 C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Platform.ApiGateway\obj\Debug\net10.0\Platform.ApiGateway.genruntimeconfig.cache
 C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Platform.ApiGateway\obj\Debug\net10.0\ref\Platform.ApiGateway.dll
 C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Platform.ApiGateway\bin\Debug\net10.0\HealthChecks.Uris.dll
+C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Platform.ApiGateway\obj\Debug\net10.0\compressed\m6x6kjxioh-{0}-ybjdwnlaaz-ybjdwnlaaz.gz

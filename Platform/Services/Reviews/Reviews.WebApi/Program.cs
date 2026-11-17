@@ -44,6 +44,10 @@ builder.Services.PostConfigure<MongoDbSettings>(o =>
     var dbName = MongoUrl.Create(cs).DatabaseName;
     if (!string.IsNullOrWhiteSpace(dbName)) o.DatabaseName = dbName;
 });
+builder.Services.AddGrpcHealthChecks(o =>
+{
+    o.Services.Map("", r => r.Tags.Contains("ready"));
+});
 builder.Services.AddSingleton<ReviewsMetrics>();
 
 // AutoMapper: профіль сутність → DTO (Application) і HTTP-контракт → команда (WebApi); один реєстр на обидві збірки.
@@ -89,7 +93,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();      
 }
-
+app.MapGrpcHealthChecksService();
 app.UseAuthorization();
 app.MapControllers();
 app.MapDefaultEndpoints();

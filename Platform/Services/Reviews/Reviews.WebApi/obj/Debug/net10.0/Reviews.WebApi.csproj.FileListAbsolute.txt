@@ -226,7 +226,6 @@ C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Services
 C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Services\Reviews\Reviews.WebApi\obj\Debug\net10.0\scopedcss\scopedcss.cache
 C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Services\Reviews\Reviews.WebApi\obj\Debug\net10.0\scopedcss\bundle\Reviews.WebApi.styles.css
 C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Services\Reviews\Reviews.WebApi\obj\Debug\net10.0\compressed\ib4v903ks0-{0}-tchfgznwy8-tchfgznwy8.gz
-C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Services\Reviews\Reviews.WebApi\obj\Debug\net10.0\compressed\p4cisvrwgo-{0}-exjf14g21n-exjf14g21n.gz
 C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Services\Reviews\Reviews.WebApi\obj\Debug\net10.0\compressed\7322n412hd-{0}-v1vy2to33n-v1vy2to33n.gz
 C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Services\Reviews\Reviews.WebApi\obj\Debug\net10.0\compressed\9ddq7h1t0l-{0}-ysew0n4kjn-ysew0n4kjn.gz
 C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Services\Reviews\Reviews.WebApi\obj\Debug\net10.0\staticwebassets.build.json
@@ -244,3 +243,4 @@ C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Services
 C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Services\Reviews\Reviews.WebApi\bin\Debug\net10.0\HealthChecks.MongoDb.dll
 C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Services\Reviews\Reviews.WebApi\bin\Debug\net10.0\Grpc.AspNetCore.HealthChecks.dll
 C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Services\Reviews\Reviews.WebApi\bin\Debug\net10.0\Grpc.HealthCheck.dll
+C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Services\Reviews\Reviews.WebApi\obj\Debug\net10.0\compressed\p4cisvrwgo-{0}-5esrujknpq-5esrujknpq.gz

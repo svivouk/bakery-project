@@ -51,8 +51,7 @@ public sealed class CatalogGrpcSource(CatalogGrpcGateway gateway) : ICatalogSour
 }
 public sealed class ReviewsGrpcSource(ReviewsGrpc.ReviewsGrpcClient client) : IReviewsSource
 {
-    private static readonly TimeSpan Deadline = TimeSpan.FromSeconds(5);
-
+    private static readonly TimeSpan Deadline = TimeSpan.FromSeconds(2);   
     public async Task<IReadOnlyList<ReviewDto>> GetForProductsAsync(IEnumerable<Guid> ids, CancellationToken ct)
     {
         var request = new GetReviewsForProductsRequest { PerProductLimit = 50 };   

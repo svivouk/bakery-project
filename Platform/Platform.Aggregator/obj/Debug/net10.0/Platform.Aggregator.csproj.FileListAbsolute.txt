@@ -87,7 +87,6 @@ C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Platform
 C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Platform.Aggregator\obj\Debug\net10.0\scopedcss\scopedcss.cache
 C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Platform.Aggregator\obj\Debug\net10.0\scopedcss\bundle\Platform.Aggregator.styles.css
 C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Platform.Aggregator\obj\Debug\net10.0\compressed\8nt97ggavh-{0}-tchfgznwy8-tchfgznwy8.gz
-C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Platform.Aggregator\obj\Debug\net10.0\compressed\inh50xmsun-{0}-hbgrvoimd3-hbgrvoimd3.gz
 C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Platform.Aggregator\obj\Debug\net10.0\compressed\iy5cf4mj8h-{0}-v1vy2to33n-v1vy2to33n.gz
 C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Platform.Aggregator\obj\Debug\net10.0\compressed\ckpr4i77md-{0}-ysew0n4kjn-ysew0n4kjn.gz
 C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Platform.Aggregator\obj\Debug\net10.0\staticwebassets.build.json
@@ -104,3 +103,4 @@ C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Platform
 C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Platform.Aggregator\obj\Debug\net10.0\ref\Platform.Aggregator.dll
 C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Platform.Aggregator\bin\Debug\net10.0\HealthChecks.Uris.dll
 C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Platform.Aggregator\bin\Debug\net10.0\Grpc.HealthCheck.dll
+C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Platform.Aggregator\obj\Debug\net10.0\compressed\inh50xmsun-{0}-vlvu313ki3-vlvu313ki3.gz

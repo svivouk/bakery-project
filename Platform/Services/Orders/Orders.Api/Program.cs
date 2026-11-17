@@ -51,7 +51,7 @@ try
     builder.Services.AddGrpc(o => o.Interceptors.Add<GrpcServerInterceptor>());
     builder.Services.AddGrpcHealthChecks(o =>
     {
-        o.Services.MapService("", r => r.Tags.Contains("ready"));
+        o.Services.Map("", r => r.Tags.Contains("ready"));
     });
     builder.Services.AddOrdersDb(conectionString);
     builder.Services.AddSwaggerGen(options =>
