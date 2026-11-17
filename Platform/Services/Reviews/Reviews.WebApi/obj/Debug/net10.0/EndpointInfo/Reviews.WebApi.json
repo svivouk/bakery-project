@@ -345,36 +345,6 @@
           }
         }
       }
-    },
-    "/test/chaos": {
-      "post": {
-        "tags": [
-          "Reviews.WebApi"
-        ],
-        "parameters": [
-          {
-            "name": "delayMs",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "failPercent",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
     }
   },
   "components": {
@@ -632,9 +602,6 @@
   "tags": [
     {
       "name": "Reviews"
-    },
-    {
-      "name": "Reviews.WebApi"
     }
   ]
 }

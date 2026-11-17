@@ -1,20 +1,31 @@
 using Microsoft.Extensions.Diagnostics.HealthChecks;
 using Microsoft.OpenApi;
 using MongoDB.Driver;
+using Platform.EventBus;
+using Platform.EventBus.Consuming;
+using Platform.EventBus.Events;
+using Platform.EventBus.Monitoring;
 using Reviews.Application;
 using Reviews.Infrastructure;
 using Reviews.Infrastructure.Persistence;
 using Reviews.WebApi;
 using Reviews.WebApi.GrpcServices;
 using Reviews.WebApi.Infrastructure;
+using Reviews.WebApi.Messaging;
+using Reviews.WebApi.Messaging.Handlers;
 using Reviews.WebApi.Metrics;
 using System.Diagnostics;
 using System.Reflection;
 using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
-
 builder.AddServiceDefaults();
+builder.AddRabbitMQClient("messaging");
+builder.AddEventBus();
+builder.Services.AddEventHandler<ProductRenamedEvent, ProductRenamedHandler>();
+builder.Services.AddEventHandler<ProductDeletedEvent, ProductDeletedHandler>();
+builder.Services.AddHostedService<CatalogEventsConsumer>();  
+
 builder.Services.AddHealthChecks()
     .AddMongoDb(
         sp => sp.GetRequiredService<IMongoClient>(),
@@ -22,12 +33,12 @@ builder.Services.AddHealthChecks()
         failureStatus: HealthStatus.Unhealthy,
         tags: ["database", "mongodb", "ready"],
         timeout: TimeSpan.FromSeconds(5))
-        .AddRedis(
+    .AddRedis(
         redisConnectionString: builder.Configuration.GetConnectionString("redis")!,
         name: "redis-cache",
-        failureStatus: HealthStatus.Degraded,        
+        failureStatus: HealthStatus.Degraded,
         tags: ["cache", "redis"],
-        timeout: TimeSpan.FromSeconds(3)); ;
+        timeout: TimeSpan.FromSeconds(3));
 
 builder.Services.AddApplication(builder.Configuration);
 // MongoDB: контекст, транзакції, запис (MongoReviewRepository) і читання (ReviewQueries)
@@ -68,6 +79,7 @@ builder.Services.AddProblemDetails(options =>
 builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
 builder.Services.AddGrpc(o => o.Interceptors.Add<GrpcServerInterceptor>()); 
 builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddDeadLetterMonitoring(Queues.ReviewsCatalogSync);
 builder.Services.AddSwaggerGen(options =>
 {
     options.SwaggerDoc("v1", new OpenApiInfo
@@ -89,7 +101,6 @@ app.UseStatusCodePages();
 app.MapGrpcService<ReviewsGrpcService>();
 if (app.Environment.IsDevelopment())
 {
-    app.UseChaos();
     app.UseSwagger();
     app.UseSwaggerUI();      
 }

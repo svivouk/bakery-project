@@ -7,6 +7,9 @@ var catalogDb = sql.AddDatabase("CatalogDb");
 var redis = builder.AddRedis("redis").WithDataVolume().WithRedisInsight();
 var mongo = builder.AddMongoDB("mongo").WithDataVolume();
 var reviewsDb = mongo.AddDatabase("ReviewsDb");
+var rabbit = builder.AddRabbitMQ("messaging")
+    .WithDataVolume()
+    .WithManagementPlugin();
 
 var orders = builder.AddProject<Projects.Orders_Api>("orders-api")
     .WithReference(ordersDb).WaitFor(ordersDb)
@@ -36,5 +39,9 @@ builder.AddProject<Projects.Platform_ApiGateway>("api-gateway")
     .WithReference(aggregator).WaitFor(aggregator)
     .WithExternalHttpEndpoints()
     .WithHttpHealthCheck("/health/ready");
+
+catalog.WithReference(rabbit).WaitFor(rabbit);     
+orders.WithReference(rabbit).WaitFor(rabbit);      
+reviews.WithReference(rabbit).WaitFor(rabbit);
 
 builder.Build().Run();

@@ -244,3 +244,8 @@ C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Services
 C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Services\Reviews\Reviews.WebApi\bin\Debug\net10.0\Grpc.AspNetCore.HealthChecks.dll
 C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Services\Reviews\Reviews.WebApi\bin\Debug\net10.0\Grpc.HealthCheck.dll
 C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Services\Reviews\Reviews.WebApi\obj\Debug\net10.0\compressed\p4cisvrwgo-{0}-5esrujknpq-5esrujknpq.gz
+C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Services\Reviews\Reviews.WebApi\bin\Debug\net10.0\Aspire.RabbitMQ.Client.dll
+C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Services\Reviews\Reviews.WebApi\bin\Debug\net10.0\HealthChecks.Rabbitmq.dll
+C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Services\Reviews\Reviews.WebApi\bin\Debug\net10.0\RabbitMQ.Client.dll
+C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Services\Reviews\Reviews.WebApi\bin\Debug\net10.0\Platform.EventBus.dll
+C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Services\Reviews\Reviews.WebApi\bin\Debug\net10.0\Platform.EventBus.pdb

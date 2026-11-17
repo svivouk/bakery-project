@@ -17,6 +17,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Orders.Dal\Orders.Dal.csproj" />
+    <ProjectReference Include="..\..\..\Platform.EventBus\Platform.EventBus.csproj" />
   </ItemGroup>
 
 </Project>

@@ -23,11 +23,6 @@ public sealed class ProductService : IProductService
         _mapper = mapper;
         _cache = cache;
     }
-
-    // ====================== кеш ======================
-
-    /// <summary>Після коміту: картки за slug (якщо є) і, за потреби, усі лістинги/топ через ключ-версію.
-    /// Виконується синхронно в запиті запису, тому наступний GET уже не побачить старих даних.</summary>
     private async Task InvalidateAsync(string reason, CancellationToken ct, bool lists, params string?[] slugs)
     {
         var keys = slugs.Where(s => !string.IsNullOrWhiteSpace(s))
@@ -35,15 +30,11 @@ public sealed class ProductService : IProductService
         await _cache.InvalidateAsync(reason, ct, keys);
         if (lists) await _cache.BumpListsVersionAsync(reason, ct);
     }
-
-    /// <summary>Для змін варіантів: slug товару не відомий викликачу, тож беремо його з БД.</summary>
     private async Task InvalidateProductByIdAsync(string reason, Guid productId, CancellationToken ct)
     {
         var product = await _uow.Products.GetByIdAsync(productId, ct);
         await InvalidateAsync(reason, ct, lists: true, product?.Slug);
     }
-
-    // ====================== вітрина ======================
 
     public async Task<PagedResultDto<ProductListItemDto>> GetListingAsync(ListingQuery query,
         CancellationToken ct = default)
@@ -66,8 +57,6 @@ public sealed class ProductService : IProductService
             Sort = query.Sort
         };
 
-        // Ключ містить версію списків: будь-який запис у каталозі міняє версію й скидає всі лістинги разом.
-        // TTL 1 хв лишається страховкою від змін, що не проходять через цей сервіс (резерви залишків).
         var version = await _cache.GetListsVersionAsync(ct);
         var listing = await _cache.GetOrCreateAsync<PagedResultDto<ProductListItemDto>>(
             CatalogCacheKeys.Listing(version, query, page, pageSize),
@@ -97,9 +86,6 @@ public sealed class ProductService : IProductService
     public async Task<ProductDetailsDto> GetDetailsBySlugAsync(string slug, CancellationToken ct = default)
     {
         var normalized = slug.Trim().ToLowerInvariant();
-
-        // Найчастіше читана сторінка: sliding 10 хв (максимум 1 год), скидається при зміні товару чи його варіантів.
-        // Відсутній товар у кеш не потрапляє (factory повертає null).
         var details = await _cache.GetOrCreateAsync<ProductDetailsDto>(
             CatalogCacheKeys.ProductDetails(normalized),
             async token =>
@@ -112,10 +98,6 @@ public sealed class ProductService : IProductService
         return details ?? throw new NotFoundException("Product", slug);
     }
 
-    // ====================== адмін-частина ======================
-
-    // Адмін-читання навмисно без кешу: клієнт бере звідси RowVersion для оптимістичної конкурентності,
-    // і застарілий токен давав би хибні конфлікти 409.
     public async Task<ProductDto> GetByIdAsync(Guid id, CancellationToken ct = default)
     {
         var product = await _uow.Products.GetWithVariantsAsync(id, ct)
@@ -152,9 +134,7 @@ public sealed class ProductService : IProductService
                 await _uow.Products.ReplaceAllergensAsync(
                     id, request.Allergens.Select(a => (a.AllergenId, a.Presence)), ct);
 
-            foreach (var variant in request.Variants ?? Array.Empty<CreateVariantRequest>())
-                await AddVariantCoreAsync(id, variant, ct);
-
+            // Подія про товар раніше за події його варіантів: споживачі спершу створюють товар, потім варіанти.
             await EventPublisher.PublishAsync(_uow, EventTypes.ProductCreated, id, new
             {
                 productId = id,
@@ -163,6 +143,9 @@ public sealed class ProductService : IProductService
                 slug = product.Slug,
                 basePrice = product.BasePrice
             }, ct);
+
+            foreach (var variant in request.Variants ?? Array.Empty<CreateVariantRequest>())
+                await AddVariantCoreAsync(id, variant, ct);
 
             return id;
         }, ct);
@@ -226,13 +209,14 @@ public sealed class ProductService : IProductService
                 {
                     productId = id,
                     variantId = (Guid?)null,
+                    productName = updated.Name,
                     oldPrice = existing.BasePrice,
                     newPrice = updated.BasePrice
                 }, ct);
 
             if (existing.Status == ProductStatus.Active && updated.Status == ProductStatus.Hidden)
                 await EventPublisher.PublishAsync(_uow, EventTypes.ProductDeactivated, id,
-                    new { productId = id }, ct);
+                    new { productId = id, productName = updated.Name }, ct);
         }, ct);
 
         // Після коміту: старий і новий slug (на випадок перейменування).
@@ -243,7 +227,9 @@ public sealed class ProductService : IProductService
 
     public async Task DeleteAsync(Guid id, CancellationToken ct = default)
     {
-        var slug = (await _uow.Products.GetByIdAsync(id, ct))?.Slug;   // після видалення slug уже не прочитати
+        var existing = await _uow.Products.GetByIdAsync(id, ct);
+        var slug = existing?.Slug;            // після видалення slug і назву вже не прочитати
+        var name = existing?.Name;
 
         await _uow.InTransactionAsync(async () =>
         {
@@ -251,13 +237,11 @@ public sealed class ProductService : IProductService
                 throw new NotFoundException("Product", id);
 
             await EventPublisher.PublishAsync(_uow, EventTypes.ProductDeactivated, id,
-                new { productId = id }, ct);
+                new { productId = id, productName = name }, ct);
         }, ct);
 
         await InvalidateAsync("ProductDeleted", ct, lists: true, slug);
     }
-
-    // ====================== варіанти ======================
 
     public async Task<VariantDto> AddVariantAsync(Guid productId, CreateVariantRequest request,
         CancellationToken ct = default)
@@ -333,7 +317,6 @@ public sealed class ProductService : IProductService
         await InvalidateProductByIdAsync("VariantDeleted", productId, ct);
     }
 
-    ///  Створює варіант і його рядок залишків. Викликається всередині транзакції. 
     private async Task<Guid> AddVariantCoreAsync(Guid productId, CreateVariantRequest request, CancellationToken ct)
     {
         var variant = new ProductVariant
@@ -363,6 +346,7 @@ public sealed class ProductService : IProductService
         {
             productId,
             variantId,
+            variantName = variant.Name,
             oldPrice = (decimal?)null,
             newPrice = variant.Price
         }, ct);
@@ -377,8 +361,6 @@ public sealed class ProductService : IProductService
 
         return variantId;
     }
-
-    // ====================== довідники та Inbox ======================
 
     public async Task<IReadOnlyList<IngredientDto>> GetIngredientsAsync(CancellationToken ct = default)
     {
@@ -408,12 +390,8 @@ public sealed class ProductService : IProductService
             throw new ValidationException("avgRating має бути в діапазоні 0–5.");
         if (e.ReviewCount < 0)
             throw new ValidationException("reviewCount не може бути від'ємним.");
-
-        // Ідемпотентність і відсікання застарілих версій — всередині usp_ProductRating_Apply (одна транзакція).
         var applied = await _uow.Products.ApplyRatingAsync(
             e.EventId, e.ProductId, decimal.Round(e.AvgRating, 2), e.ReviewCount, e.Version, ct);
-
-        // Рейтинг показують картка, лістинг і топ: скидаємо їх лише якщо подію справді застосовано (не дубль/застаріла).
         if (applied)
             await InvalidateProductByIdAsync("RatingChanged", e.ProductId, ct);
 
