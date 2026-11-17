@@ -11,10 +11,13 @@ using Reviews.WebApi.Metrics;
 using System.Diagnostics;
 using System.Reflection;
 using System.Text.Json.Serialization;
+using Platform.EventBus;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.AddServiceDefaults();
+builder.AddEventBus();
+
 builder.Services.AddHealthChecks()
     .AddMongoDb(
         sp => sp.GetRequiredService<IMongoClient>(),
@@ -28,7 +31,7 @@ builder.Services.AddHealthChecks()
         failureStatus: HealthStatus.Degraded,        
         tags: ["cache", "redis"],
         timeout: TimeSpan.FromSeconds(3)); ;
-
+builder.AddRabbitMQClient("messaging");
 builder.Services.AddApplication(builder.Configuration);
 // MongoDB: контекст, транзакції, запис (MongoReviewRepository) і читання (ReviewQueries)
 builder.Services.AddInfrastructure(builder.Configuration);
@@ -89,7 +92,6 @@ app.UseStatusCodePages();
 app.MapGrpcService<ReviewsGrpcService>();
 if (app.Environment.IsDevelopment())
 {
-    app.UseChaos();
     app.UseSwagger();
     app.UseSwaggerUI();      
 }

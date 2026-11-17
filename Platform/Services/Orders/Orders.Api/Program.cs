@@ -14,12 +14,15 @@ using Serilog;
 using System.Diagnostics;
 using System.Reflection;
 using System.Text.Json.Serialization;
+using Platform.EventBus;
 
 Log.Logger = new LoggerConfiguration().WriteTo.Console().CreateBootstrapLogger();   
 try
 {
     var builder = WebApplication.CreateBuilder(args);
     builder.AddServiceDefaults();
+    builder.AddEventBus();
+
     var conectionString = builder.Configuration.GetConnectionString("OrdersDb")
         ?? throw new InvalidOperationException("Connection string 'OrdersDb' is missing");
 
@@ -30,7 +33,8 @@ try
             failureStatus: HealthStatus.Unhealthy,
             tags: ["database", "sql", "ready"],
             timeout: TimeSpan.FromSeconds(5));
-
+    builder.AddRabbitMQClient("messaging");
+    builder.AddRabbitMQClient("messaging");
     builder.Services.AddHttpContextAccessor();
     builder.Services.AddScoped<ICurrentActor, HttpContextActor>();
     builder.Services.AddOrdersApplication(builder.Configuration["AutoMapper:LicenseKey"]);

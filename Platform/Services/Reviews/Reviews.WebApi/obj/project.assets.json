@@ -2,6 +2,29 @@
   "version": 4,
   "targets": {
     "net10.0": {
+      "Aspire.RabbitMQ.Client/13.6.5": {
+        "type": "package",
+        "dependencies": {
+          "AspNetCore.HealthChecks.Rabbitmq": "9.0.0",
+          "Microsoft.Extensions.DependencyInjection.AutoActivation": "10.10.0",
+          "OpenTelemetry.Extensions.Hosting": "1.17.0",
+          "Polly.Core": "8.7.0",
+          "RabbitMQ.Client": "7.2.2"
+        },
+        "compile": {
+          "lib/net10.0/Aspire.RabbitMQ.Client.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/Aspire.RabbitMQ.Client.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net10.0/Aspire.RabbitMQ.Client.targets": {}
+        }
+      },
       "Aspire.StackExchange.Redis/13.6.4": {
         "type": "package",
         "dependencies": {
@@ -62,6 +85,22 @@
         },
         "runtime": {
           "lib/net8.0/HealthChecks.MongoDb.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "AspNetCore.HealthChecks.Rabbitmq/9.0.0": {
+        "type": "package",
+        "dependencies": {
+          "RabbitMQ.Client": "7.0.0"
+        },
+        "compile": {
+          "lib/net8.0/HealthChecks.Rabbitmq.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/HealthChecks.Rabbitmq.dll": {
             "related": ".xml"
           }
         }
@@ -890,7 +929,7 @@
           }
         }
       },
-      "Polly.Core/8.4.2": {
+      "Polly.Core/8.7.0": {
         "type": "package",
         "compile": {
           "lib/net8.0/Polly.Core.dll": {
@@ -932,6 +971,19 @@
         "runtime": {
           "lib/net8.0/Polly.RateLimiting.dll": {
             "related": ".pdb;.xml"
+          }
+        }
+      },
+      "RabbitMQ.Client/7.2.2": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/RabbitMQ.Client.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/RabbitMQ.Client.dll": {
+            "related": ".xml"
           }
         }
       },
@@ -1252,6 +1304,19 @@
           "lib/net7.0/ZstdSharp.dll": {}
         }
       },
+      "Platform.EventBus/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "Aspire.RabbitMQ.Client": "13.6.4"
+        },
+        "compile": {
+          "bin/placeholder/Platform.EventBus.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Platform.EventBus.dll": {}
+        }
+      },
       "Platform.ServiceDefaults/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v10.0",
@@ -1331,6 +1396,30 @@
     }
   },
   "libraries": {
+    "Aspire.RabbitMQ.Client/13.6.5": {
+      "sha512": "79UjVya2EXzXhc1INyWTixKv0dP4K9h/duTESRc2QRashp+UkIxCPkycTnBOLiLeUsMK4moRQ62ahIMrtST4Pw==",
+      "type": "package",
+      "path": "aspire.rabbitmq.client/13.6.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ConfigurationSchema.json",
+        "Icon.png",
+        "README.md",
+        "THIRD-PARTY-NOTICES.TXT",
+        "aspire.rabbitmq.client.13.6.5.nupkg.sha512",
+        "aspire.rabbitmq.client.nuspec",
+        "buildTransitive/net10.0/Aspire.RabbitMQ.Client.targets",
+        "buildTransitive/net8.0/Aspire.RabbitMQ.Client.targets",
+        "buildTransitive/net9.0/Aspire.RabbitMQ.Client.targets",
+        "lib/net10.0/Aspire.RabbitMQ.Client.dll",
+        "lib/net10.0/Aspire.RabbitMQ.Client.xml",
+        "lib/net8.0/Aspire.RabbitMQ.Client.dll",
+        "lib/net8.0/Aspire.RabbitMQ.Client.xml",
+        "lib/net9.0/Aspire.RabbitMQ.Client.dll",
+        "lib/net9.0/Aspire.RabbitMQ.Client.xml"
+      ]
+    },
     "Aspire.StackExchange.Redis/13.6.4": {
       "sha512": "DvCqdDJxkQWsMxSWklp4d0b8DvcZtNj0d+Bt+h6mqrS2pB887V+ZeX3fUKA3EuSW/ghpC9yrNMa93ZxBqGHzvA==",
       "type": "package",
@@ -1396,6 +1485,23 @@
         "lib/net8.0/HealthChecks.MongoDb.xml",
         "lib/netstandard2.1/HealthChecks.MongoDb.dll",
         "lib/netstandard2.1/HealthChecks.MongoDb.xml"
+      ]
+    },
+    "AspNetCore.HealthChecks.Rabbitmq/9.0.0": {
+      "sha512": "7WSQ7EwioA5niakzzLtGVcZMEOh+42fSwrI24vnNsT7gZuVGOViNekyz38G6wBPYKcpL/lUkMdg3ZaCiZTi/Dw==",
+      "type": "package",
+      "path": "aspnetcore.healthchecks.rabbitmq/9.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "aspnetcore.healthchecks.rabbitmq.9.0.0.nupkg.sha512",
+        "aspnetcore.healthchecks.rabbitmq.nuspec",
+        "icon.png",
+        "lib/net8.0/HealthChecks.Rabbitmq.dll",
+        "lib/net8.0/HealthChecks.Rabbitmq.xml",
+        "lib/netstandard2.0/HealthChecks.Rabbitmq.dll",
+        "lib/netstandard2.0/HealthChecks.Rabbitmq.xml"
       ]
     },
     "AspNetCore.HealthChecks.Redis/9.0.0": {
@@ -2889,13 +2995,14 @@
         "pipelines.sockets.unofficial.nuspec"
       ]
     },
-    "Polly.Core/8.4.2": {
-      "sha512": "BpE2I6HBYYA5tF0Vn4eoQOGYTYIK1BlF5EXVgkWGn3mqUUjbXAr13J6fZVbp7Q3epRR8yshacBMlsHMhpOiV3g==",
+    "Polly.Core/8.7.0": {
+      "sha512": "BS2t+nsBer16PIebCEPNBK5fgMisADQyRCd7K+BgkMWpFmSaiYE+rVVNpFhGRqUkJmNSLmw0uCNzHHWfgml28Q==",
       "type": "package",
-      "path": "polly.core/8.4.2",
+      "path": "polly.core/8.7.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
+        "LICENSE",
         "lib/net462/Polly.Core.dll",
         "lib/net462/Polly.Core.pdb",
         "lib/net462/Polly.Core.xml",
@@ -2913,7 +3020,7 @@
         "lib/netstandard2.0/Polly.Core.xml",
         "package-icon.png",
         "package-readme.md",
-        "polly.core.8.4.2.nupkg.sha512",
+        "polly.core.8.7.0.nupkg.sha512",
         "polly.core.nuspec"
       ]
     },
@@ -2971,6 +3078,23 @@
         "package-readme.md",
         "polly.ratelimiting.8.4.2.nupkg.sha512",
         "polly.ratelimiting.nuspec"
+      ]
+    },
+    "RabbitMQ.Client/7.2.2": {
+      "sha512": "k4b6RnTXpLbsF96V93ooNYxgPMnoA2tEm24B6AXNJr1mG8wwNYdA1XJtgU66L5xqeGyveS7SJriRzlX3cbqQNA==",
+      "type": "package",
+      "path": "rabbitmq.client/7.2.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "icon.png",
+        "lib/net8.0/RabbitMQ.Client.dll",
+        "lib/net8.0/RabbitMQ.Client.xml",
+        "lib/netstandard2.0/RabbitMQ.Client.dll",
+        "lib/netstandard2.0/RabbitMQ.Client.xml",
+        "rabbitmq.client.7.2.2.nupkg.sha512",
+        "rabbitmq.client.nuspec"
       ]
     },
     "Serilog/4.4.0": {
@@ -3428,6 +3552,11 @@
         "zstdsharp.port.nuspec"
       ]
     },
+    "Platform.EventBus/1.0.0": {
+      "type": "project",
+      "path": "../../../Platform.EventBus/Platform.EventBus.csproj",
+      "msbuildProject": "../../../Platform.EventBus/Platform.EventBus.csproj"
+    },
     "Platform.ServiceDefaults/1.0.0": {
       "type": "project",
       "path": "../../../Platform.ServiceDefaults/Platform.ServiceDefaults.csproj",
@@ -3453,11 +3582,13 @@
     "net10.0": [
       "AspNetCore.HealthChecks.MongoDb >= 9.0.0",
       "AspNetCore.HealthChecks.Redis >= 9.0.0",
+      "Aspire.RabbitMQ.Client >= 13.6.5",
       "Aspire.StackExchange.Redis.DistributedCaching >= 13.6.4",
       "Grpc.AspNetCore >= 2.85.0",
       "Grpc.AspNetCore.HealthChecks >= 2.85.0",
       "Microsoft.AspNetCore.OpenApi >= 10.0.12",
       "Microsoft.Extensions.Caching.Memory >= 10.0.14",
+      "Platform.EventBus >= 1.0.0",
       "Platform.ServiceDefaults >= 1.0.0",
       "Reviews.Application >= 1.0.0",
       "Reviews.Infrastructure >= 1.0.0",
@@ -3499,6 +3630,9 @@
           "framework": "net10.0",
           "targetAlias": "net10.0",
           "projectReferences": {
+            "C:\\Users\\krnkr\\OneDrive\\Рабочий стол\\bakery-project\\Platform\\Platform.EventBus\\Platform.EventBus.csproj": {
+              "projectPath": "C:\\Users\\krnkr\\OneDrive\\Рабочий стол\\bakery-project\\Platform\\Platform.EventBus\\Platform.EventBus.csproj"
+            },
             "C:\\Users\\krnkr\\OneDrive\\Рабочий стол\\bakery-project\\Platform\\Platform.ServiceDefaults\\Platform.ServiceDefaults.csproj": {
               "projectPath": "C:\\Users\\krnkr\\OneDrive\\Рабочий стол\\bakery-project\\Platform\\Platform.ServiceDefaults\\Platform.ServiceDefaults.csproj"
             },
@@ -3535,6 +3669,10 @@
           "AspNetCore.HealthChecks.Redis": {
             "target": "Package",
             "version": "[9.0.0, )"
+          },
+          "Aspire.RabbitMQ.Client": {
+            "target": "Package",
+            "version": "[13.6.5, )"
           },
           "Aspire.StackExchange.Redis.DistributedCaching": {
             "target": "Package",

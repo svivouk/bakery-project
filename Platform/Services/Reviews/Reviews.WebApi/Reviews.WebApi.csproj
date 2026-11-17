@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Aspire.RabbitMQ.Client" Version="13.6.5" />
     <PackageReference Include="Aspire.StackExchange.Redis.DistributedCaching" Version="13.6.4" />
     <PackageReference Include="AspNetCore.HealthChecks.MongoDb" Version="9.0.0" />
     <PackageReference Include="AspNetCore.HealthChecks.Redis" Version="9.0.0" />
@@ -22,6 +23,7 @@
     <ProjectReference Include="..\Reviews.Application\Reviews.Application.csproj" />
     <ProjectReference Include="..\Reviews.Infrastructure\Reviews.Infrastructure.csproj" />
     <ProjectReference Include="..\..\..\Platform.ServiceDefaults\Platform.ServiceDefaults.csproj" />
+    <ProjectReference Include="..\..\..\Platform.EventBus\Platform.EventBus.csproj" />
   </ItemGroup>
 
   <ItemGroup>

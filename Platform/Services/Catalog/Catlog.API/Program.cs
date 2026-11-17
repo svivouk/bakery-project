@@ -10,14 +10,14 @@ using Catalog.Bll.Services;
 using Catalog.Dal.Interfaces;
 using Catalog.Dal.Repositories;
 using Catlog.Api.Metrics;
-using Microsoft.AspNetCore.Diagnostics.HealthChecks;
+using Platform.EventBus;
 using Microsoft.Extensions.Diagnostics.HealthChecks;
 using OpenTelemetry.Metrics;
 using Orders.Api.Middleware;
-using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.AddServiceDefaults();
+builder.AddEventBus();
 builder.Services.AddSingleton<DatabaseInitializer>();
 
 var connectionString = builder.Configuration.GetConnectionString("CatalogDb")
@@ -53,6 +53,7 @@ builder.Services.AddMemoryCache(o =>
     o.SizeLimit = 10_000;
     o.TrackStatistics = true;  
 });
+builder.AddRabbitMQClient("messaging");
 builder.Services.AddSingleton<CacheStatistics>();
 builder.Services.AddSingleton<CatalogCache>();
 builder.Services.AddOpenTelemetry().WithMetrics(m => m.AddMeter(CacheStatistics.MeterName));
