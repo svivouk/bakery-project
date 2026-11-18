@@ -1,4 +1,5 @@
-﻿using AutoMapper;
+﻿
+using AutoMapper;
 using Microsoft.Extensions.Logging;
 using Orders.Bll.Dtos;
 using Orders.Dal.Repositories;
@@ -9,6 +10,7 @@ using Orders.Domain.Orders;
 using Orders.Domain.Payments;
 using Orders.Domain.Promotions;
 using Orders.Domain.Specification;
+using Platform.EventBus.Tracing;
 using System.Text.Json;
 
 namespace Orders.Bll.Services
@@ -19,8 +21,9 @@ namespace Orders.Bll.Services
 
         public async Task<OrderDto> PlaceAsync(PlaceOrderRequest request, CancellationToken cancellationToken = default)
         {
+
             ArgumentNullException.ThrowIfNull(request);
-            using var activity = Telemetry.Source.StartActivity("PlaceOrder"); 
+            using var activity = Telemetry.Source.StartActivity("PlaceOrder");
             var now = _clock.GetUtcNow().UtcDateTime;
 
             var customer = await uow.Customers.GetByIdAsync(request.CustomerId, cancellationToken)
@@ -40,6 +43,7 @@ namespace Orders.Bll.Services
                 if (variant is null || product is null || !variant.IsActive || !product.IsActive)
                     throw new ConflictException("Один із товарів у кошику більше недоступний.");
                 lines.Add(new OrderLine(product.Id, variant.Id, product.Name, variant.Name, variant.Price, item.Quantity));
+
             }
 
             PromoCode? promo = null;
@@ -62,14 +66,16 @@ namespace Orders.Bll.Services
                 promo.RegisterUse();
             }
 
-            await uow.Orders.AddAsync(order, cancellationToken);   
+            await uow.Orders.AddAsync(order, cancellationToken);
             await uow.Payments.AddAsync(new Payment(order.Id, request.PaymentMethod, order.TotalAmount), cancellationToken);
 
             var payload = JsonSerializer.Serialize(new
             {
                 orderId = order.Id,
                 customerId = order.CustomerId,
-                total = order.TotalAmount
+                total = order.TotalAmount,
+                lines = order.Items.Select(i => new { productId = i.ProductId, variantId = i.VariantId, quantity = i.Quantity }),
+                correlationId = CorrelationLookup.Current()
             });
             await uow.Outbox.AddAsync(new OutboxMessage("OrderPlaced", order.Id, payload), cancellationToken);
 
@@ -101,16 +107,27 @@ namespace Orders.Bll.Services
                 case OrderStatus.Cancelled: order.Cancel(); break;
                 default: throw new InvalidStateException($"Перехід у статус {request.Status} неможливий.");
             }
+            await uow.Outbox.AddAsync(new OutboxMessage("OrderStatusChanged", order.Id, JsonSerializer.Serialize(new
+            {
+                orderId = order.Id,
+                customerId = order.CustomerId,
+                oldStatus = oldStatus.ToString(),
+                newStatus = order.Status.ToString(),
+                lines = order.Items.Select(i => new { productId = i.ProductId, variantId = i.VariantId, quantity = i.Quantity }),
+                correlationId = CorrelationLookup.Current()
+            })), cancellationToken);
 
             await uow.SaveChangesAsync(cancellationToken);
             activity?.SetTag("order.id", order.Id);
             activity?.SetTag("order.Status", order.Status);
-            logger.LogInformation("Order {OrderId} status changed {OldStatus} → {NewStatus}", id, oldStatus, order.Status); 
+            logger.LogInformation("Order {OrderId} status changed {OldStatus} → {NewStatus}", id, oldStatus, order.Status);
         }
 
         private async Task<Order> LoadAsync(Guid id, CancellationToken cancellationToken)
             => await uow.Orders.GetWithDetailsAsync(id, cancellationToken)
                ?? throw NotFoundException.For("Замовлення", id);
+
+
         public async Task<PagedResult<OrderSummaryDto>> ListAsync(OrderListQuery query, CancellationToken cancellationToken = default)
         {
             ArgumentNullException.ThrowIfNull(query);

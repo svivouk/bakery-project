@@ -3,40 +3,15 @@
   "WorkspaceRootPath": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{48B8E81C-AF0E-B386-9717-334A1BBAA5D8}|Services\\Orders\\Orders.Api\\Orders.Api.csproj|c:\\users\\krnkr\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\platform\\services\\orders\\orders.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{48B8E81C-AF0E-B386-9717-334A1BBAA5D8}|Services\\Orders\\Orders.Api\\Orders.Api.csproj|solutionrelative:services\\orders\\orders.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C4919EF1-7E28-0979-CE19-8015CF40B2C3}|Services\\Orders\\Orders.Bll\\Orders.Bll.csproj|c:\\users\\krnkr\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\platform\\services\\orders\\orders.bll\\services\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C4919EF1-7E28-0979-CE19-8015CF40B2C3}|Services\\Orders\\Orders.Bll\\Orders.Bll.csproj|solutionrelative:services\\orders\\orders.bll\\services\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{40F71260-BF14-29F0-551B-FC6D1FFB0DA6}|Services\\Reviews\\Reviews.WebApi\\Reviews.WebApi.csproj|c:\\users\\krnkr\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\platform\\services\\reviews\\reviews.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{40F71260-BF14-29F0-551B-FC6D1FFB0DA6}|Services\\Reviews\\Reviews.WebApi\\Reviews.WebApi.csproj|solutionrelative:services\\reviews\\reviews.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DB787497-B2C7-FBE1-83BF-3FD60385CC0D}|Services\\Catalog\\Catlog.BLL\\Catalog.BLL.csproj|c:\\users\\krnkr\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\platform\\services\\catalog\\catlog.bll\\services\\eventpublisher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB787497-B2C7-FBE1-83BF-3FD60385CC0D}|Services\\Catalog\\Catlog.BLL\\Catalog.BLL.csproj|solutionrelative:services\\catalog\\catlog.bll\\services\\eventpublisher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{821E348C-6895-1BC9-A750-942798B66B68}|Platform.EventBus\\Platform.EventBus.csproj|c:\\users\\krnkr\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\platform\\platform.eventbus\\messagingtopology.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{821E348C-6895-1BC9-A750-942798B66B68}|Platform.EventBus\\Platform.EventBus.csproj|solutionrelative:platform.eventbus\\messagingtopology.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{821E348C-6895-1BC9-A750-942798B66B68}|Platform.EventBus\\Platform.EventBus.csproj|c:\\users\\krnkr\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\platform\\platform.eventbus\\messagingnames.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{821E348C-6895-1BC9-A750-942798B66B68}|Platform.EventBus\\Platform.EventBus.csproj|solutionrelative:platform.eventbus\\messagingnames.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{821E348C-6895-1BC9-A750-942798B66B68}|Platform.EventBus\\Platform.EventBus.csproj|c:\\users\\krnkr\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\platform\\platform.eventbus\\topologyinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{821E348C-6895-1BC9-A750-942798B66B68}|Platform.EventBus\\Platform.EventBus.csproj|solutionrelative:platform.eventbus\\topologyinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{821E348C-6895-1BC9-A750-942798B66B68}|Platform.EventBus\\Platform.EventBus.csproj|c:\\users\\krnkr\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\platform\\platform.eventbus\\platform.eventbus.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{821E348C-6895-1BC9-A750-942798B66B68}|Platform.EventBus\\Platform.EventBus.csproj|solutionrelative:platform.eventbus\\platform.eventbus.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{40F71260-BF14-29F0-551B-FC6D1FFB0DA6}|Services\\Reviews\\Reviews.WebApi\\Reviews.WebApi.csproj|c:\\users\\krnkr\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\platform\\services\\reviews\\reviews.webapi\\reviews.webapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{40F71260-BF14-29F0-551B-FC6D1FFB0DA6}|Services\\Reviews\\Reviews.WebApi\\Reviews.WebApi.csproj|solutionrelative:services\\reviews\\reviews.webapi\\reviews.webapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0BCDF07E-108F-29EF-07FE-0CCA8C44FDBD}|Platform.AppHost\\Platform.AppHost.csproj|c:\\users\\krnkr\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\platform\\platform.apphost\\apphost.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0BCDF07E-108F-29EF-07FE-0CCA8C44FDBD}|Platform.AppHost\\Platform.AppHost.csproj|solutionrelative:platform.apphost\\apphost.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0BCDF07E-108F-29EF-07FE-0CCA8C44FDBD}|Platform.AppHost\\Platform.AppHost.csproj|c:\\users\\krnkr\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\platform\\platform.apphost\\platform.apphost.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{0BCDF07E-108F-29EF-07FE-0CCA8C44FDBD}|Platform.AppHost\\Platform.AppHost.csproj|solutionrelative:platform.apphost\\platform.apphost.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\krnkr\\AppData\\Local\\Temp\\01ea4c59-0257-4445-af80-95048ff60f8a_EventBus-format.zip.EventBus-format.zip\\Catalog\\Catlog.BLL\\Services\\EventPublisher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,137 +21,49 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "TopologyInitializer.cs",
-              "DocumentMoniker": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Platform.EventBus\\TopologyInitializer.cs",
-              "RelativeDocumentMoniker": "Platform.EventBus\\TopologyInitializer.cs",
-              "ToolTip": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Platform.EventBus\\TopologyInitializer.cs",
-              "RelativeToolTip": "Platform.EventBus\\TopologyInitializer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "OrderService.cs",
+              "DocumentMoniker": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Services\\Orders\\Orders.Bll\\Services\\OrderService.cs",
+              "RelativeDocumentMoniker": "Services\\Orders\\Orders.Bll\\Services\\OrderService.cs",
+              "ToolTip": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Services\\Orders\\Orders.Bll\\Services\\OrderService.cs",
+              "RelativeToolTip": "Services\\Orders\\Orders.Bll\\Services\\OrderService.cs",
+              "ViewState": "AgIAAG8AAAAAAAAAAAAuwIoAAABNAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-17T09:55:08.731Z",
+              "WhenOpened": "2026-11-18T12:51:02.932Z",
+              "EditorCaption": "",
+              "OwnerCaption": "%2"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "EventPublisher.cs",
+              "DocumentMoniker": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Services\\Catalog\\Catlog.BLL\\Services\\EventPublisher.cs",
+              "RelativeDocumentMoniker": "Services\\Catalog\\Catlog.BLL\\Services\\EventPublisher.cs",
+              "ToolTip": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Services\\Catalog\\Catlog.BLL\\Services\\EventPublisher.cs",
+              "RelativeToolTip": "Services\\Catalog\\Catlog.BLL\\Services\\EventPublisher.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-18T12:47:48.603Z",
               "EditorCaption": "",
               "OwnerCaption": "%2"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "MessagingTopology.cs",
-              "DocumentMoniker": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Platform.EventBus\\MessagingTopology.cs",
-              "RelativeDocumentMoniker": "Platform.EventBus\\MessagingTopology.cs",
-              "ToolTip": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Platform.EventBus\\MessagingTopology.cs",
-              "RelativeToolTip": "Platform.EventBus\\MessagingTopology.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAqwAwAAAAAAAAAAAAAAA==",
+              "Title": "EventPublisher.cs",
+              "DocumentMoniker": "C:\\Users\\krnkr\\AppData\\Local\\Temp\\01ea4c59-0257-4445-af80-95048ff60f8a_EventBus-format.zip.EventBus-format.zip\\Catalog\\Catlog.BLL\\Services\\EventPublisher.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\AppData\\Local\\Temp\\01ea4c59-0257-4445-af80-95048ff60f8a_EventBus-format.zip.EventBus-format.zip\\Catalog\\Catlog.BLL\\Services\\EventPublisher.cs",
+              "ToolTip": "C:\\Users\\krnkr\\AppData\\Local\\Temp\\01ea4c59-0257-4445-af80-95048ff60f8a_EventBus-format.zip.EventBus-format.zip\\Catalog\\Catlog.BLL\\Services\\EventPublisher.cs [Read Only]",
+              "RelativeToolTip": "..\\..\\..\\..\\AppData\\Local\\Temp\\01ea4c59-0257-4445-af80-95048ff60f8a_EventBus-format.zip.EventBus-format.zip\\Catalog\\Catlog.BLL\\Services\\EventPublisher.cs [Read Only]",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-17T09:55:07.167Z",
-              "EditorCaption": "",
-              "OwnerCaption": "%2"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "MessagingNames.cs",
-              "DocumentMoniker": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Platform.EventBus\\MessagingNames.cs",
-              "RelativeDocumentMoniker": "Platform.EventBus\\MessagingNames.cs",
-              "ToolTip": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Platform.EventBus\\MessagingNames.cs",
-              "RelativeToolTip": "Platform.EventBus\\MessagingNames.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAowBMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-17T09:55:05.373Z",
-              "EditorCaption": "",
-              "OwnerCaption": "%2"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Platform.EventBus",
-              "DocumentMoniker": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Platform.EventBus\\Platform.EventBus.csproj",
-              "RelativeDocumentMoniker": "Platform.EventBus\\Platform.EventBus.csproj",
-              "ToolTip": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Platform.EventBus\\Platform.EventBus.csproj",
-              "RelativeToolTip": "Platform.EventBus\\Platform.EventBus.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-11-17T09:53:36.491Z",
-              "EditorCaption": "",
-              "OwnerCaption": "Platform.EventBus"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Services\\Reviews\\Reviews.WebApi\\Program.cs",
-              "RelativeDocumentMoniker": "Services\\Reviews\\Reviews.WebApi\\Program.cs",
-              "ToolTip": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Services\\Reviews\\Reviews.WebApi\\Program.cs",
-              "RelativeToolTip": "Services\\Reviews\\Reviews.WebApi\\Program.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAqwA0AAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-17T09:46:29.313Z",
-              "EditorCaption": "",
-              "OwnerCaption": "%2"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Reviews.WebApi",
-              "DocumentMoniker": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Services\\Reviews\\Reviews.WebApi\\Reviews.WebApi.csproj",
-              "RelativeDocumentMoniker": "Services\\Reviews\\Reviews.WebApi\\Reviews.WebApi.csproj",
-              "ToolTip": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Services\\Reviews\\Reviews.WebApi\\Reviews.WebApi.csproj",
-              "RelativeToolTip": "Services\\Reviews\\Reviews.WebApi\\Reviews.WebApi.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-11-17T09:46:26.081Z",
-              "EditorCaption": "",
-              "OwnerCaption": "Reviews.WebApi"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Services\\Orders\\Orders.Api\\Program.cs",
-              "RelativeDocumentMoniker": "Services\\Orders\\Orders.Api\\Program.cs",
-              "ToolTip": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Services\\Orders\\Orders.Api\\Program.cs",
-              "RelativeToolTip": "Services\\Orders\\Orders.Api\\Program.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAASwBAAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-17T09:46:05.895Z",
-              "EditorCaption": "",
-              "OwnerCaption": "%2"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "AppHost.cs",
-              "DocumentMoniker": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Platform.AppHost\\AppHost.cs",
-              "RelativeDocumentMoniker": "Platform.AppHost\\AppHost.cs",
-              "ToolTip": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Platform.AppHost\\AppHost.cs",
-              "RelativeToolTip": "Platform.AppHost\\AppHost.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACsAAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-17T09:41:20.179Z",
-              "EditorCaption": "",
-              "OwnerCaption": "%2"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Platform.AppHost",
-              "DocumentMoniker": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Platform.AppHost\\Platform.AppHost.csproj",
-              "RelativeDocumentMoniker": "Platform.AppHost\\Platform.AppHost.csproj",
-              "ToolTip": "C:\\Users\\krnkr\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\bakery-project\\Platform\\Platform.AppHost\\Platform.AppHost.csproj",
-              "RelativeToolTip": "Platform.AppHost\\Platform.AppHost.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-11-17T09:39:22.746Z",
-              "EditorCaption": "",
-              "OwnerCaption": "Platform.AppHost"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{c6f34f0d-7ae5-4f3a-be61-fe0c21ae9eb8}"
+              "WhenOpened": "2026-11-18T12:47:39.308Z",
+              "EditorCaption": " [Read Only]",
+              "OwnerCaption": "%3"
             }
           ]
         }

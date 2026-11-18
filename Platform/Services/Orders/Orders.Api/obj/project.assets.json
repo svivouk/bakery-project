@@ -2224,6 +2224,7 @@
           "Microsoft.EntityFrameworkCore": "10.0.13",
           "Microsoft.EntityFrameworkCore.SqlServer": "10.0.13",
           "Orders.Dal": "1.0.0",
+          "Platform.EventBus": "1.0.0",
           "System.Security.Cryptography.Pkcs": "9.0.21"
         },
         "compile": {

@@ -16,6 +16,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Catlog.DAL\Catalog.DAL.csproj" />
+    <ProjectReference Include="..\..\..\Platform.EventBus\Platform.EventBus.csproj" />
   </ItemGroup>
 
   <ItemGroup>

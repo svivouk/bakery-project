@@ -7,6 +7,10 @@ internal static class EventPublisher
     private static readonly JsonSerializerOptions Json = new(JsonSerializerDefaults.Web);
 
     public static Task PublishAsync(IUnitOfWork uow, string eventType, Guid aggregateId, object payload,
-        CancellationToken ct) =>
-        uow.Outbox.AddAsync(eventType, aggregateId, JsonSerializer.Serialize(payload, Json), ct);
+        CancellationToken ct)
+    {
+        var node = JsonSerializer.SerializeToNode(payload, Json)!.AsObject();
+        node["correlationId"] = CorrelationLookup.Current();
+        return uow.Outbox.AddAsync(eventType, aggregateId, node.ToJsonString(Json), ct);
+    }
 }

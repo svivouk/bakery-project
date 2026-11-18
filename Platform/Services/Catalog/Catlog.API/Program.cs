@@ -1,8 +1,10 @@
 using AutoMapper;
 using Catalog.Api.GrpcServices;
 using Catalog.Api.Health;
+using Catalog.Api.Messaging;
 using Catalog.Api.Middleware;
 using Catalog.Api.Workers;
+using Catalog.API.Messaging;
 using Catalog.Bll.Caching;
 using Catalog.Bll.Interfaces;
 using Catalog.Bll.Mapping;
@@ -10,15 +12,17 @@ using Catalog.Bll.Services;
 using Catalog.Dal.Interfaces;
 using Catalog.Dal.Repositories;
 using Catlog.Api.Metrics;
-using Platform.EventBus;
 using Microsoft.Extensions.Diagnostics.HealthChecks;
 using OpenTelemetry.Metrics;
 using Orders.Api.Middleware;
+using Platform.EventBus;
+using Platform.EventBus.Outbox;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.AddServiceDefaults();
 builder.AddEventBus();
 builder.Services.AddSingleton<DatabaseInitializer>();
+builder.Services.AddOutboxRelay<CatalogOutboxStore, CatalogOutboxMapper>();
 
 var connectionString = builder.Configuration.GetConnectionString("CatalogDb")
     ?? throw new InvalidOperationException("Connection string 'CatalogDb' is missing");

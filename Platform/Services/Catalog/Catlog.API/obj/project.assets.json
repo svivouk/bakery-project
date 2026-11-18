@@ -1497,7 +1497,8 @@
           "AutoMapper": "16.2.0",
           "Catalog.DAL": "1.0.0",
           "Dapper": "2.1.89",
-          "Microsoft.Data.SqlClient": "7.1.1"
+          "Microsoft.Data.SqlClient": "7.1.1",
+          "Platform.EventBus": "1.0.0"
         },
         "compile": {
           "bin/placeholder/Catalog.BLL.dll": {}

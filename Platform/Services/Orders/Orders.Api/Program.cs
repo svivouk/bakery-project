@@ -15,6 +15,8 @@ using System.Diagnostics;
 using System.Reflection;
 using System.Text.Json.Serialization;
 using Platform.EventBus;
+using Platform.EventBus.Outbox;
+using Orders.Api.Messaging;
 
 Log.Logger = new LoggerConfiguration().WriteTo.Console().CreateBootstrapLogger();   
 try
@@ -22,6 +24,7 @@ try
     var builder = WebApplication.CreateBuilder(args);
     builder.AddServiceDefaults();
     builder.AddEventBus();
+    builder.Services.AddOutboxRelay<OrdersOutboxStore, OrdersOutboxMapper>();
 
     var conectionString = builder.Configuration.GetConnectionString("OrdersDb")
         ?? throw new InvalidOperationException("Connection string 'OrdersDb' is missing");

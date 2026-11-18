@@ -1,4 +1,5 @@
 namespace Platform.EventBus;
+
 public static class Exchanges
 {
     public const string CatalogEvents = "catalog-events";
@@ -14,8 +15,7 @@ public static class RoutingKeys
     public const string ProductRenamed = "product.renamed";
     public const string ProductDeleted = "product.deleted";
 
-    public const string OrderPlaced = "order.placed";
-    public const string OrderCancelled = "order.cancelled";
+    public const string OrderStatusChanged = "order.status_changed";
 }
 public static class Queues
 {

@@ -1,0 +1,6 @@
+C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Platform.EventBus\obj\Debug\net10.0\Platform.EventBus.csproj.AssemblyReference.cache
+C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Platform.EventBus\obj\Debug\net10.0\Platform.EventBus.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Platform.EventBus\obj\Debug\net10.0\Platform.EventBus.AssemblyInfoInputs.cache
+C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Platform.EventBus\obj\Debug\net10.0\Platform.EventBus.AssemblyInfo.cs
+C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Platform.EventBus\obj\Debug\net10.0\Platform.EventBus.csproj.CoreCompileInputs.cache
+C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Platform.EventBus\obj\Debug\net10.0\Platform.EventBus.sourcelink.json
