@@ -78,6 +78,7 @@ public static class Extensions
                 .AddMeter("Orders.Api")
                 .AddMeter("Catalog.Api")
                 .AddMeter("Reviews.Api")
+                .AddMeter("Platform.Messaging")
                 .AddView("orders.operation.duration", new ExplicitBucketHistogramConfiguration
                 {
                     Boundaries = new double[] { 5, 10, 25, 50, 100, 250, 500, 1000, 2500, 5000 }
@@ -94,6 +95,7 @@ public static class Extensions
                  .AddAspNetCoreInstrumentation(o => o.Filter = ctx =>
                      !ctx.Request.Path.StartsWithSegments("/health") &&
                      !ctx.Request.Path.StartsWithSegments("/alive"))
+                 .AddSource("Platform.EventBus")
                  .AddHttpClientInstrumentation()
                  .AddSqlClientInstrumentation()                                     // Dapper та EF Core
                  .AddProcessor(new ServiceTagsProcessor(serviceName, envName));

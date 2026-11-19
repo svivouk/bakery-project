@@ -1,9 +1,12 @@
+using System.Text.Json.Serialization;
+
 namespace Platform.EventBus.Events;
 // Базова подія. Незмінна (record + init) і самодостатня: споживач не має звертатися до сервісу-видавця по дані
 public abstract record IntegrationEvent
 {
     //Версія схеми повідомлення. Передається і в тілі, і в заголовку x-schema-version
     public int SchemaVersion { get; init; } = 1;
+    public long SourceVersion { get; init; }
 
     //Ідентифікатор події: споживач за ним відкидає дублікати 
     public Guid EventId { get; init; } = Guid.NewGuid();
@@ -13,6 +16,9 @@ public abstract record IntegrationEvent
 
     //Наскрізний ідентифікатор запиту для трасування від HTTP-запиту до споживача
     public string? CorrelationId { get; init; }
+    
+    [JsonIgnore]
+    public string? TraceParent { get; init; }
 }
 
 //Куди публікувати подію: exchange і routing key. Publisher бере їх з атрибута, а не з рядків у коді

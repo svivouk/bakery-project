@@ -5,18 +5,22 @@ using MongoDB.Driver.Core.Configuration;
 using OpenTelemetry.Trace;
 using Orders.Api;
 using Orders.Api.GrpcServices;
+using Orders.Api.Messaging;
+using Orders.Api.Messaging.Handlers;
 using Orders.Api.Metrics;
 using Orders.Api.Middleware;
 using Orders.Bll;
 using Orders.Dal;
 using Orders.Dal.Seeding;
+using Platform.EventBus;
+using Platform.EventBus.Consuming;
+using Platform.EventBus.Events;
+using Platform.EventBus.Monitoring;
+using Platform.EventBus.Outbox;
 using Serilog;
 using System.Diagnostics;
 using System.Reflection;
 using System.Text.Json.Serialization;
-using Platform.EventBus;
-using Platform.EventBus.Outbox;
-using Orders.Api.Messaging;
 
 Log.Logger = new LoggerConfiguration().WriteTo.Console().CreateBootstrapLogger();   
 try
@@ -24,6 +28,11 @@ try
     var builder = WebApplication.CreateBuilder(args);
     builder.AddServiceDefaults();
     builder.AddEventBus();
+    builder.Services.AddEventHandler<ProductCreatedEvent, ProductCreatedHandler>();
+    builder.Services.AddEventHandler<ProductPriceChangedEvent, ProductPriceChangedHandler>();
+    builder.Services.AddEventHandler<ProductRenamedEvent, ProductRenamedHandler>();
+    builder.Services.AddEventHandler<ProductDeletedEvent, ProductDeletedHandler>();
+    builder.Services.AddHostedService<CatalogEventsConsumer>();
     builder.Services.AddOutboxRelay<OrdersOutboxStore, OrdersOutboxMapper>();
 
     var conectionString = builder.Configuration.GetConnectionString("OrdersDb")
@@ -52,6 +61,7 @@ try
             context.ProblemDetails.Instance ??= context.HttpContext.Request.Path;
             context.ProblemDetails.Extensions["traceId"] = Activity.Current?.Id ?? context.HttpContext.TraceIdentifier;
         });
+    builder.Services.AddHostedService<CatalogEventsConsumer>();
     builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
     builder.Services.AddMemoryCache(o => o.SizeLimit = 10_000);
     builder.Services.AddEndpointsApiExplorer();
@@ -60,6 +70,7 @@ try
     {
         o.Services.Map("", r => r.Tags.Contains("ready"));
     });
+    builder.Services.AddDeadLetterMonitoring(Queues.OrdersCatalogSync);
     builder.Services.AddOrdersDb(conectionString);
     builder.Services.AddSwaggerGen(options =>
     {

@@ -11,6 +11,7 @@ public static class Exchanges
 
 public static class RoutingKeys
 {
+    public const string ProductCreated = "product.created";
     public const string ProductPriceChanged = "product.price_changed";
     public const string ProductRenamed = "product.renamed";
     public const string ProductDeleted = "product.deleted";

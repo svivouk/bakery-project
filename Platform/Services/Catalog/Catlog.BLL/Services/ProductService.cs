@@ -134,9 +134,7 @@ public sealed class ProductService : IProductService
                 await _uow.Products.ReplaceAllergensAsync(
                     id, request.Allergens.Select(a => (a.AllergenId, a.Presence)), ct);
 
-            foreach (var variant in request.Variants ?? Array.Empty<CreateVariantRequest>())
-                await AddVariantCoreAsync(id, variant, ct);
-
+            // Подія про товар раніше за події його варіантів: споживачі спершу створюють товар, потім варіанти.
             await EventPublisher.PublishAsync(_uow, EventTypes.ProductCreated, id, new
             {
                 productId = id,
@@ -145,6 +143,9 @@ public sealed class ProductService : IProductService
                 slug = product.Slug,
                 basePrice = product.BasePrice
             }, ct);
+
+            foreach (var variant in request.Variants ?? Array.Empty<CreateVariantRequest>())
+                await AddVariantCoreAsync(id, variant, ct);
 
             return id;
         }, ct);
@@ -183,6 +184,7 @@ public sealed class ProductService : IProductService
                 && await _uow.Categories.GetByIdAsync(updated.CategoryId, ct) is null)
                 throw new NotFoundException("Category", updated.CategoryId);
 
+            // Оновлення з умовою на RowVersion: false означає, що товар змінили після того, як клієнт його прочитав.
             if (!await _uow.Products.UpdateAsync(updated, ct))
                 throw new ConcurrencyException("Product", id);
 
@@ -217,6 +219,7 @@ public sealed class ProductService : IProductService
                     new { productId = id, productName = updated.Name }, ct);
         }, ct);
 
+        // Після коміту: старий і новий slug (на випадок перейменування).
         await InvalidateAsync("ProductUpdated", ct, lists: true, previousSlug, updated.Slug);
 
         return await GetByIdAsync(id, ct);
@@ -225,7 +228,7 @@ public sealed class ProductService : IProductService
     public async Task DeleteAsync(Guid id, CancellationToken ct = default)
     {
         var existing = await _uow.Products.GetByIdAsync(id, ct);
-        var slug = existing?.Slug;           
+        var slug = existing?.Slug;            // після видалення slug і назву вже не прочитати
         var name = existing?.Name;
 
         await _uow.InTransactionAsync(async () =>
@@ -307,6 +310,7 @@ public sealed class ProductService : IProductService
         if (existing is null || existing.ProductId != productId)
             throw new NotFoundException("Variant", variantId);
 
+        // М'яке видалення: IsDeleted = 1, IsActive = 0 (варіант не видаляють фізично).
         if (!await _uow.Variants.DeleteAsync(variantId, ct))
             throw new NotFoundException("Variant", variantId);
 
@@ -342,6 +346,7 @@ public sealed class ProductService : IProductService
         {
             productId,
             variantId,
+            variantName = variant.Name,
             oldPrice = (decimal?)null,
             newPrice = variant.Price
         }, ct);

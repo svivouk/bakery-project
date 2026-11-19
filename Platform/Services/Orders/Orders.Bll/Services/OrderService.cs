@@ -1,8 +1,6 @@
-﻿
-using AutoMapper;
+﻿using AutoMapper;
 using Microsoft.Extensions.Logging;
 using Orders.Bll.Dtos;
-using Orders.Dal.Repositories;
 using Orders.Dal.Repositories.Interfaces;
 using Orders.Domain;
 using Orders.Domain.Messaging;
@@ -75,7 +73,8 @@ namespace Orders.Bll.Services
                 customerId = order.CustomerId,
                 total = order.TotalAmount,
                 lines = order.Items.Select(i => new { productId = i.ProductId, variantId = i.VariantId, quantity = i.Quantity }),
-                correlationId = CorrelationLookup.Current()
+                correlationId = CorrelationLookup.Current(),
+                traceParent = TracePropagation.CurrentTraceParent()
             });
             await uow.Outbox.AddAsync(new OutboxMessage("OrderPlaced", order.Id, payload), cancellationToken);
 
@@ -114,7 +113,8 @@ namespace Orders.Bll.Services
                 oldStatus = oldStatus.ToString(),
                 newStatus = order.Status.ToString(),
                 lines = order.Items.Select(i => new { productId = i.ProductId, variantId = i.VariantId, quantity = i.Quantity }),
-                correlationId = CorrelationLookup.Current()
+                correlationId = CorrelationLookup.Current(),
+                traceParent = TracePropagation.CurrentTraceParent()
             })), cancellationToken);
 
             await uow.SaveChangesAsync(cancellationToken);

@@ -1,6 +1,8 @@
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Platform.EventBus.Consuming;
+using Platform.EventBus.Publishing;
 using RabbitMQ.Client;
 
 namespace Platform.EventBus;
@@ -32,6 +34,8 @@ public static class EventBusHostingExtensions
         builder.AddRabbitMQClient("messaging");
         builder.Services.AddEventBusTopology();
         builder.Services.AddSingleton<IEventPublisher, RabbitMqEventPublisher>();
+        builder.Services.AddSingleton<EventHandlerRegistry>();
+        builder.Services.AddSingleton<EventMessageProcessor>();
         return builder;
     }
 }

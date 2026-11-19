@@ -1,7 +1,7 @@
-﻿using Platform.EventBus.Events;
+using System.Text.Json;
+using Platform.EventBus.Events;
 using Platform.EventBus.Outbox;
 using Platform.EventBus.Serialization;
-using System.Text.Json;
 
 namespace Orders.Api.Messaging;
 
@@ -28,12 +28,12 @@ public sealed class OrdersOutboxMapper : IOutboxEventMapper
         {
             EventId = r.EventId,
             OccurredAt = r.CreatedAtUtc,
-            CorrelationId = p.CorrelationId
+            SourceVersion = r.Id,
+            CorrelationId = p.CorrelationId,
+            TraceParent = p.TraceParent
         };
     }
 
-    private sealed record Payload(Guid OrderId, Guid CustomerId, string? OldStatus, string? NewStatus, List<Line>? Lines, string? CorrelationId);
+    private sealed record Payload(Guid OrderId, Guid CustomerId, string? OldStatus, string? NewStatus, List<Line>? Lines, string? CorrelationId, string? TraceParent);
     private sealed record Line(Guid ProductId, Guid VariantId, int Quantity);
 }
-
-

@@ -3,7 +3,6 @@ C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Services
 C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Services\Orders\Orders.Api\obj\Debug\net10.0\Orders.Api.AssemblyInfoInputs.cache
 C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Services\Orders\Orders.Api\obj\Debug\net10.0\Orders.Api.AssemblyInfo.cs
 C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Services\Orders\Orders.Api\obj\Debug\net10.0\Orders.Api.csproj.CoreCompileInputs.cache
-C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Services\Orders\Orders.Api\obj\Debug\net10.0\Orders.Api.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Services\Orders\Orders.Api\obj\Debug\net10.0\Orders.Api.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Services\Orders\Orders.Api\obj\Debug\net10.0\Orders.Api.sourcelink.json
 C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Services\Orders\Orders.Api\obj\Debug\net10.0\Orders.Api.dll
@@ -236,3 +235,8 @@ C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Services
 C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Services\Orders\Orders.Api\bin\Debug\net10.0\HealthChecks.Uris.dll
 C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Services\Orders\Orders.Api\bin\Debug\net10.0\Grpc.AspNetCore.HealthChecks.dll
 C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Services\Orders\Orders.Api\bin\Debug\net10.0\Grpc.HealthCheck.dll
+C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Services\Orders\Orders.Api\bin\Debug\net10.0\Aspire.RabbitMQ.Client.dll
+C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Services\Orders\Orders.Api\bin\Debug\net10.0\HealthChecks.Rabbitmq.dll
+C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Services\Orders\Orders.Api\bin\Debug\net10.0\RabbitMQ.Client.dll
+C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Services\Orders\Orders.Api\bin\Debug\net10.0\Platform.EventBus.dll
+C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Services\Orders\Orders.Api\bin\Debug\net10.0\Platform.EventBus.pdb

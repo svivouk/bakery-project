@@ -16,3 +16,5 @@ C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Services
 C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Services\Orders\Orders.Bll\obj\Debug\net10.0\refint\Orders.Bll.dll
 C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Services\Orders\Orders.Bll\obj\Debug\net10.0\Orders.Bll.pdb
 C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Services\Orders\Orders.Bll\obj\Debug\net10.0\ref\Orders.Bll.dll
+C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Services\Orders\Orders.Bll\bin\Debug\net10.0\Platform.EventBus.dll
+C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Services\Orders\Orders.Bll\bin\Debug\net10.0\Platform.EventBus.pdb

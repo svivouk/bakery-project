@@ -13,14 +13,14 @@ public static class MessagingTopology
         // ---- черги споживачів подій каталогу ----
         await DeclareConsumerQueueAsync(ch, Queues.OrdersCatalogSync,
             Exchanges.CatalogEvents, Exchanges.CatalogDlx,
-            [RoutingKeys.ProductPriceChanged, RoutingKeys.ProductRenamed, RoutingKeys.ProductDeleted], ct);
+            [RoutingKeys.ProductCreated, RoutingKeys.ProductPriceChanged, RoutingKeys.ProductRenamed, RoutingKeys.ProductDeleted], ct);
 
         await DeclareConsumerQueueAsync(ch, Queues.ReviewsCatalogSync,
             Exchanges.CatalogEvents, Exchanges.CatalogDlx,
             [RoutingKeys.ProductRenamed, RoutingKeys.ProductDeleted], ct);
 
         // ---- черга споживача подій замовлень (приклад: Каталог реагує на замовлення) ----
-        await DeclareConsumerQueueAsync(ch, Queues.CatalogOrdersSync,
+      await DeclareConsumerQueueAsync(ch, Queues.CatalogOrdersSync,
             Exchanges.OrdersEvents, Exchanges.OrdersDlx,
             ["order.*"], ct);
     }

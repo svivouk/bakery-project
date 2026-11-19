@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "dgSpecHash": "gcVUG3f1QTs=",
-  "success": false,
+  "dgSpecHash": "IGXXFLwn7U8=",
+  "success": true,
   "projectFilePath": "C:\\Users\\krnkr\\OneDrive\\Рабочий стол\\bakery-project\\Platform\\Services\\Catalog\\Catlog.BLL\\Catalog.BLL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\krnkr\\.nuget\\packages\\aspire.rabbitmq.client\\13.6.4\\aspire.rabbitmq.client.13.6.4.nupkg.sha512",
@@ -13,7 +13,7 @@
     "C:\\Users\\krnkr\\.nuget\\packages\\microsoft.data.sqlclient.extensions.abstractions\\7.1.1\\microsoft.data.sqlclient.extensions.abstractions.7.1.1.nupkg.sha512",
     "C:\\Users\\krnkr\\.nuget\\packages\\microsoft.data.sqlclient.internal.logging\\7.1.1\\microsoft.data.sqlclient.internal.logging.7.1.1.nupkg.sha512",
     "C:\\Users\\krnkr\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\7.1.0\\microsoft.data.sqlclient.sni.runtime.7.1.0.nupkg.sha512",
-    "C:\\Users\\krnkr\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\10.0.14\\microsoft.extensions.caching.abstractions.10.0.14.nupkg.sha512",
+    "C:\\Users\\krnkr\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\10.0.15\\microsoft.extensions.caching.abstractions.10.0.15.nupkg.sha512",
     "C:\\Users\\krnkr\\.nuget\\packages\\microsoft.extensions.caching.memory\\9.0.18\\microsoft.extensions.caching.memory.9.0.18.nupkg.sha512",
     "C:\\Users\\krnkr\\.nuget\\packages\\microsoft.extensions.configuration\\10.0.12\\microsoft.extensions.configuration.10.0.12.nupkg.sha512",
     "C:\\Users\\krnkr\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\10.0.15\\microsoft.extensions.configuration.abstractions.10.0.15.nupkg.sha512",
@@ -28,7 +28,7 @@
     "C:\\Users\\krnkr\\.nuget\\packages\\microsoft.extensions.fileproviders.abstractions\\10.0.15\\microsoft.extensions.fileproviders.abstractions.10.0.15.nupkg.sha512",
     "C:\\Users\\krnkr\\.nuget\\packages\\microsoft.extensions.hosting.abstractions\\10.0.15\\microsoft.extensions.hosting.abstractions.10.0.15.nupkg.sha512",
     "C:\\Users\\krnkr\\.nuget\\packages\\microsoft.extensions.logging\\10.0.12\\microsoft.extensions.logging.10.0.12.nupkg.sha512",
-    "C:\\Users\\krnkr\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\10.0.14\\microsoft.extensions.logging.abstractions.10.0.14.nupkg.sha512",
+    "C:\\Users\\krnkr\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\10.0.15\\microsoft.extensions.logging.abstractions.10.0.15.nupkg.sha512",
     "C:\\Users\\krnkr\\.nuget\\packages\\microsoft.extensions.logging.configuration\\10.0.0\\microsoft.extensions.logging.configuration.10.0.0.nupkg.sha512",
     "C:\\Users\\krnkr\\.nuget\\packages\\microsoft.extensions.options\\10.0.15\\microsoft.extensions.options.10.0.15.nupkg.sha512",
     "C:\\Users\\krnkr\\.nuget\\packages\\microsoft.extensions.options.configurationextensions\\10.0.0\\microsoft.extensions.options.configurationextensions.10.0.0.nupkg.sha512",
@@ -74,17 +74,6 @@
       "warningLevel": 1,
       "filePath": "C:\\Users\\krnkr\\OneDrive\\Рабочий стол\\bakery-project\\Platform\\Services\\Catalog\\Catlog.BLL\\Catalog.BLL.csproj",
       "libraryId": "AutoMapper",
-      "targetGraphs": [
-        "net10.0"
-      ]
-    },
-    {
-      "code": "NU1605",
-      "level": "Error",
-      "message": "Warning As Error: Detected package downgrade: Microsoft.Extensions.Logging.Abstractions from 10.0.15 to 10.0.14. Reference the package directly from the project to select a different version. \r\n Catalog.BLL -> Platform.EventBus -> Microsoft.Extensions.Hosting.Abstractions 10.0.15 -> Microsoft.Extensions.Logging.Abstractions (>= 10.0.15) \r\n Catalog.BLL -> Microsoft.Extensions.Logging.Abstractions (>= 10.0.14)",
-      "projectPath": "C:\\Users\\krnkr\\OneDrive\\Рабочий стол\\bakery-project\\Platform\\Services\\Catalog\\Catlog.BLL\\Catalog.BLL.csproj",
-      "filePath": "C:\\Users\\krnkr\\OneDrive\\Рабочий стол\\bakery-project\\Platform\\Services\\Catalog\\Catlog.BLL\\Catalog.BLL.csproj",
-      "libraryId": "Microsoft.Extensions.Logging.Abstractions",
       "targetGraphs": [
         "net10.0"
       ]

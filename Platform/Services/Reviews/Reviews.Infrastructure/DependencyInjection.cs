@@ -27,7 +27,8 @@ public static class DependencyInjection
         services.AddScoped<IReviewEligibilityService, ReviewEligibilityService>();
         services.AddScoped<IProductRatingSummaryRepository, MongoProductRatingSummaryRepository>();
         services.AddScoped<IRatingSummaryService, RatingSummaryService>();
-
+        services.AddScoped<IProductNameVersionStore, MongoProductNameVersionStore>();
+        services.AddScoped<IInbox, MongoInbox>();
         services.AddSingleton<MongoCallTracker>();
         services.AddSingleton<IDatabaseCallTracker>(sp => sp.GetRequiredService<MongoCallTracker>());
         services.AddSingleton<IMongoClient>(sp =>
@@ -56,6 +57,7 @@ public static class DependencyInjection
 
         services.AddSingleton<MongoTransactionSupport>();
         services.AddScoped<MongoDbContext>();
+        services.AddScoped<IProductNameVersionStore, MongoProductNameVersionStore>();
         services.AddScoped<IUnitOfWork, MongoUnitOfWork>();
         services.AddScoped<IReviewQueries, ReviewQueries>();
 

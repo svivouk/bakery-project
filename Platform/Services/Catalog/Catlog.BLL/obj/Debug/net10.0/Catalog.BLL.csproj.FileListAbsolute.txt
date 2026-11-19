@@ -34,3 +34,5 @@ C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Services
 C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Services\Catalog\Catlog.BLL\obj\Debug\net10.0\refint\Catalog.BLL.dll
 C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Services\Catalog\Catlog.BLL\obj\Debug\net10.0\Catalog.BLL.pdb
 C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Services\Catalog\Catlog.BLL\obj\Debug\net10.0\ref\Catalog.BLL.dll
+C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Services\Catalog\Catlog.BLL\bin\Debug\net10.0\Platform.EventBus.dll
+C:\Users\krnkr\OneDrive\Рабочий стол\bakery-project\Platform\Services\Catalog\Catlog.BLL\bin\Debug\net10.0\Platform.EventBus.pdb

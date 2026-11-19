@@ -40,5 +40,8 @@
 	<ItemGroup>
 		<Protobuf Include="Protos\orders.proto" GrpcServices="Server" />
 	</ItemGroup>
+	<ItemGroup>
+	  <Folder Include="Messaging\Handlers\" />
+	</ItemGroup>
 
 </Project>
